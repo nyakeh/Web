@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> <meta charset="utf-8">
+    <title>Form Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header><h1>Example</h1></header>
+
+    <section>
+        <form id="order" method="post" action="">
+            <fieldset id="userDetails"> <legend>User Details</legend>
+                <p><label>First name: <input type="text" name="fname"></label></p>
+                <p><label>Last name: <input type="text" name="lname"></label></p>
+            </fieldset>
+
+            <fieldset id="colour"> <legend>Pick your colour</legend>
+            <p><label><input type="checkbox" name="colour" value="red"> red</label></p>
+            <p><label><input type="checkbox" name="colour" value="green"> green</label></p>
+            <p><label><input type="checkbox" name="colour" value="blue"> blue</label></p>
+            </fieldset> <p style="clear: left;">
+
+            <label>Choose file: <input type="file" name="file"></label></p>
+
+            <p> <label id="lblTown">Choose your town: <select name="town">
+                <option value="">Please Select ...</option>
+                <option value="Swindon">Swindon</option>
+                <option value="London">London</option>
+                <option value="Stafford">Stafford</option> </select>
+                </label> </p>
+
+            <p><label>Message: <textarea name="message"></textarea></label></p>
+            <p><input type="submit"></p>
+            <p><input type="reset"></p>
+        </form>
+    </section>
+</body>
+</html>

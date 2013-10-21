@@ -1,0 +1,48 @@
+header {
+    background: dodgerblue;
+    background-size: cover;
+    padding: 20px 0 0 0;
+}
+
+h1 {
+    font-size: 70px;
+    text-align: center;
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    padding: 10px 0;
+    background: rgba(0,0,0,0.5);
+}
+
+nav li
+{
+    display:inline;
+    padding: 0px 10px 0px 10px;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+}
+
+form {
+    float: left;
+}
+
+#loginDetails {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#username {
+    opacity: 0;
+}
+
+.hide {
+    opacity: 1;
+}

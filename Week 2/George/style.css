@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+section {
+    margin: 0 auto;
+    max-width: 800px;
+}
+fieldset {
+    min-height: 150px;
+    margin-bottom: 20px;
+}
+p {
+    margin-bottom: 15px;
+}
+#userDetails, #colour {
+    float: left;
+    width: 49%;
+    font-family: "Arial";
+    background-color: aliceblue;
+}
+
+#lblTown {
+    font-size: large;
+    font-family: "wasco sans";
+}
+
+
+/*
+* {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+        }
+        section {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        fieldset {
+            min-height: 150px;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        #userDetails, #colour {
+            float: left;
+            width: 49%;
+        }
+
+*/
