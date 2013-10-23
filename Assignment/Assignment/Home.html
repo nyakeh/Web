@@ -5,16 +5,17 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles.css">
     <script src="script.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header>
     <h1>Car Catalogue</h1>
     <nav>
         <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="register/">Register</a></li>
-            <li><a href="search.html">Search</a></li>
-            <li><a href="account/">Your Account</a></li>
+            <a href="home.html"><li>Home</li></a>
+            <a href="register/"><li>Register</li></a>
+            <a href="search.html"><li>Search</li></a>
+            <a href="account/"><li>Your Account</li></a>
         </ul>
     </nav>
 </header>
@@ -27,14 +28,18 @@
         sed consectetur nisi porttitor. Integer urna eros, rutrum et lectus in, vehicula bibendum metus. Nulla cursus
         ipsum vitae diam congue rutrum. Mauris viverra vestibulum varius. Maecenas posuere quis dui in tincidunt.
         Praesent a erat in ante sodales tempor.</p>
-    <button id="register">Register</button></div>
+    </div>
+    New customers register here <button id="register" onclick="changeText();">register</button>
     <form id="login" method="post" action="login">
-        <fieldset id="loginDetails"> <legend>Existing customers Login</legend>
+        <div id="loginBox">
+            <fieldset id="loginDetails">
             <p><label>Email Address: <input type="text" name="email"></label></p>
-            <p id="Username"><label>Username<input type="text" name="username"></label></p>
+                <div id="new"></div>
+            <!--<p id="Username"><label>Username<input type="text" name="username"></label></p>-->
             <p><label>Password: <input type="text" name="password"></label></p>
             <p><input type="submit"></p>
         </fieldset>
+        </div>
     </form>
 </section>
 </body>

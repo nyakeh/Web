@@ -1,13 +1,17 @@
 header {
-    background: dodgerblue;
-    background-size: cover;
     padding: 20px 0 0 0;
+    width: 1000px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.1);
+    background: -webkit-radial-gradient(50% 100%, circle, rgba(0,0,0,0.1), transparent)
 }
 
 h1 {
     font-size: 70px;
     text-align: center;
     margin: 0;
+    font-family: 'Slackey', cursive;
+    color: rgba(72,61,139, 1);
 }
 
 nav {
@@ -15,14 +19,19 @@ nav {
 }
 
 nav ul {
-    padding: 10px 0;
-    background: rgba(0,0,0,0.5);
+    padding: 9px;
+    background: rgba(72,61,139, 0.5);
 }
 
 nav li
 {
     display:inline;
-    padding: 0px 10px 0px 10px;
+    padding: 12px;
+}
+
+nav li:hover
+{
+    background-color: rgba(72,61,139, 1) ;
 }
 
 a {
@@ -35,14 +44,26 @@ form {
 }
 
 #loginDetails {
-    max-width: 300px;
-    max-height: 300px;
 }
 
-#username {
+.show {
     opacity: 0;
 }
 
-.hide {
-    opacity: 1;
+p {
+    width: 500px;
+}
+section {
+    width: 600px;
+    margin: 0 auto;
+}
+
+html {
+    background: -webkit-radial-gradient(50% 50%, circle, white, lightblue) no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
+#loginBox {
+    background: lightblue;
+    width: 530px;
 }

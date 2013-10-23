@@ -10,7 +10,7 @@ $('div').on('click', function() {
     alert(" world");
 });
 */
-
+var btnText = 0;
 function initialise() {
     /*var button = document.getElementById('register');
     var username = document.getElementById('username');
@@ -24,10 +24,26 @@ function initialise() {
  $('username').toggleClass('hide');
  });
 */
-    $('#register').on('click', function() {
-        $('#username').toggleClass('hide');
-    });
+    $('#Username').toggleClass('show');
+    /*alert("hi");*/
+    /*$('#register').on('click', function() {
+        $('#Username').toggleClass('show');
+    });*/
 }
+function changeText() {
+
+    $('#Username').toggleClass('show');
+    if (btnText == 0){
+        btnText = 1;
+        $('#register').html('login');
+        $('#new').html('<p id="Username"><label>Username<input type="text" name="username"></label></p>');
+    } else {
+        $('#register').html('register');
+        $('#new').html('');
+        btnText = 0;
+    }
+}
+
 window.onload=initialise;
 
 
