@@ -1,11 +1,14 @@
+html {
+    background: -webkit-radial-gradient(50% 50%, circle, white, lightblue) no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
 header {
     padding: 20px 0 0 0;
     width: 1000px;
     margin: 0 auto;
-    background: rgba(0,0,0,0.1);
-    background: -webkit-radial-gradient(50% 100%, circle, rgba(0,0,0,0.1), transparent)
+    background: rgba(72,61,139,0.1);
+    background: -webkit-radial-gradient(50% 100%, circle, rgba(72,61,139,0.1), transparent);
 }
-
 h1 {
     font-size: 70px;
     text-align: center;
@@ -13,43 +16,38 @@ h1 {
     font-family: 'Slackey', cursive;
     color: rgba(72,61,139, 1);
 }
-
 nav {
     text-align: center;
 }
-
 nav ul {
     padding: 9px;
     background: rgba(72,61,139, 0.5);
 }
-
 nav li
 {
     display:inline;
     padding: 12px;
 }
-
 nav li:hover
 {
     background-color: rgba(72,61,139, 1) ;
 }
-
 a {
     color: white;
     font-size: 20px;
 }
-
 form {
-    float: left;
+    background: rgba(72,61,139, 0.5);
+
 }
 
-#loginDetails {
+#login {
+    border: 2px solid #ffffff;
+    padding: 5px 15px;
 }
-
 .show {
     opacity: 0;
 }
-
 p {
     width: 500px;
 }
@@ -58,12 +56,13 @@ section {
     margin: 0 auto;
 }
 
-html {
-    background: -webkit-radial-gradient(50% 50%, circle, white, lightblue) no-repeat center center fixed;
-    -webkit-background-size: cover;
-}
+footer {
+    width: 50%;
+    background: rgba(72,61,139, 0.5);
+    padding: 10px 0 0 0;
+    position:absolute;
+    bottom:0;
+    left: 20%;
+    right: 20%;
 
-#loginBox {
-    background: lightblue;
-    width: 530px;
 }

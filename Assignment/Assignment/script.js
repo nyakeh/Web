@@ -31,12 +31,11 @@ function initialise() {
     });*/
 }
 function changeText() {
-
     $('#Username').toggleClass('show');
     if (btnText == 0){
         btnText = 1;
         $('#register').html('login');
-        $('#new').html('<p id="Username"><label>Username<input type="text" name="username"></label></p>');
+        $('#new').html('<p><label>Email Address: <input type="text" name="email"></label></p>');
     } else {
         $('#register').html('register');
         $('#new').html('');

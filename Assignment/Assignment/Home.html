@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
     <title>Car Catalogue</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="Styles.css">
     <script src="script.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
 <header>
     <h1>Car Catalogue</h1>
@@ -29,18 +31,14 @@
         ipsum vitae diam congue rutrum. Mauris viverra vestibulum varius. Maecenas posuere quis dui in tincidunt.
         Praesent a erat in ante sodales tempor.</p>
     </div>
-    New customers register here <button id="register" onclick="changeText();">register</button>
+    <p>New customers register here <button onclick="changeText();">register</button></p>
     <form id="login" method="post" action="login">
-        <div id="loginBox">
-            <fieldset id="loginDetails">
-            <p><label>Email Address: <input type="text" name="email"></label></p>
-                <div id="new"></div>
-            <!--<p id="Username"><label>Username<input type="text" name="username"></label></p>-->
-            <p><label>Password: <input type="text" name="password"></label></p>
-            <p><input type="submit"></p>
-        </fieldset>
-        </div>
+        <p><label>Username<input type="text" name="username"></label></p>
+        <div id="new"></div>
+        <p><label>Password: <input type="text" name="password"></label></p>
+        <p><input type="submit"></p>
     </form>
 </section>
+<footer>Made by Nyakeh Rogers</footer>
 </body>
 </html>
