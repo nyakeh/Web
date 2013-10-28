@@ -16,6 +16,3 @@ function changeText() {
 }
 
 window.onload=initialise;
-
-
-
