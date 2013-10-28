@@ -15,7 +15,7 @@ function changeText() {
     if (btnText == 0){
         btnText = 1;
         $('#register').html('login');
-        $('#new').html('<p><label>Email Address: <input type="email" id="email" name="email"> <span id="emailMsg"></span></label></p>');
+        $('#new').html('<p><label>Email Address: <input type="email" id="email" name="email"/> <span id="emailMsg"></span></label></p>');
         registerValidation(document.getElementById('email'), document.getElementById('emailMsg'));
     } else {
         $('#register').html('register');
@@ -23,5 +23,10 @@ function changeText() {
         btnText = 0;
     }
 }
+
+function logout() {
+
+}
+
 
 window.onload=initialise;

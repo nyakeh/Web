@@ -32,10 +32,10 @@
         Praesent a erat in ante sodales tempor.</p>
     </div>
     <p>New customers register here <button onclick="changeText();">register</button></p>
-    <form id="login"  method="get" action="login">
-        <p><label>Username<input type="text" name="username" id="username"> <span id="usernameMsg"></span></label></p>
+    <form id="login" method="post" action="login.php">
+        <p><label>Username<input type="text" name="username" id="username"/> <span id="usernameMsg"></span></label></p>
         <div id="new"></div>
-        <p><label>Password: <input type="password" name="userPassword" id="userPassword"> <span id="passwordMsg"></span></label></p>
+        <p><label>Password: <input type="password" name="userPassword" id="userPassword"/> <span id="passwordMsg"></span></label></p>
         <p><input type="submit"></p>
     </form>
 </section>
