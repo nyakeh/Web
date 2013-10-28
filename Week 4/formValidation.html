@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Form Example</title>
+</head>
+<body>
+<header><h1>Validation Example</h1></header>
+<section>
+    <form method="get" action="Process.php">
+        <fieldset>
+            <legend>HTML5 form input types with built in validation</legend>
+            <p><label>URL: <input type="url" name="url" id="url"><span id="urlMsg"></span></label></p>
+            <fieldset id="userDetails">
+                <legend>Validating immediately with JavaScript</legend>
+                <p><label>Number: <input type="number" name="number" id="number" min="2" max="5"><span id="numMsg"></span></label></p>
+                <p><label>Email: <input type="email" id="email" name="email"> <span id="emailMsg"></span></label></p>
+            </fieldset>
+        </fieldset>
+        <p><input type="submit" id="submit"></p>
+        <p><input type="reset"></p>
+    </form>
+</section>
+<script src="emailValidator.js"></script>
+</body>
+</html>

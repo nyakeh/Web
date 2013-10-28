@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fa705a6-a5ff-4f2f-ace6-65eca6d97d70" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Home.html" afterPath="$PROJECT_DIR$/Home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script.js" afterPath="$PROJECT_DIR$/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Assignment.iws" />
@@ -28,7 +30,7 @@
       <file leaf-file-name="Home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="61" selection-start="914" selection-end="914" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="833">
+            <state line="34" column="54" selection-start="1650" selection-end="1650" vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="833">
               <folding />
             </state>
           </provider>
@@ -46,7 +48,7 @@
       <file leaf-file-name="Styles.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="3" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="1258">
+            <state line="50" column="3" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
               <folding />
             </state>
           </provider>
@@ -55,7 +57,7 @@
       <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="25" selection-start="504" selection-end="504" vertical-scroll-proportion="0.31863284" vertical-offset="0" max-vertical-offset="907">
+            <state line="15" column="5" selection-start="371" selection-end="371" vertical-scroll-proportion="0.28114665" vertical-offset="0" max-vertical-offset="907">
               <folding />
             </state>
           </provider>
@@ -232,7 +234,11 @@
       <created>1382972232044</created>
       <updated>1382972232044</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Changed form types to use new HTML5 types">
+      <created>1382972265095</created>
+      <updated>1382972265095</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -361,13 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="3" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="1258">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="9" selection-end="9" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
@@ -375,16 +374,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="3" selection-start="888" selection-end="888" vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="1258">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="61" selection-start="914" selection-end="914" vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="833">
+        <state line="34" column="54" selection-start="1650" selection-end="1650" vertical-scroll-proportion="-22.23077" vertical-offset="0" max-vertical-offset="833">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="25" selection-start="504" selection-end="504" vertical-scroll-proportion="0.31863284" vertical-offset="0" max-vertical-offset="907">
+        <state line="15" column="5" selection-start="371" selection-end="371" vertical-scroll-proportion="0.28114665" vertical-offset="0" max-vertical-offset="907">
           <folding />
         </state>
       </provider>
