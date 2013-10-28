@@ -228,7 +228,11 @@
       <created>1382972209416</created>
       <updated>1382972209416</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed form types to use new HTML5 types">
+      <created>1382972232044</created>
+      <updated>1382972232044</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
