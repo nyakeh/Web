@@ -23,22 +23,31 @@
 </header>
 
 <section>
+    <form method="get" action="Process.php">
+        <p><label>URL: <input type="url" name="url" id="url"><span id="urlMsg"></span></label></p>
+        <p><input type="submit" id="submit"></p>
+    </form>
+</section>
+
+<section>
     <div><p>Intro blurb. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus enim, mollis in ante non,
         aliquam ullamcorper lacus. Fusce gravida tincidunt nulla eu varius. Integer nisl urna, suscipit sed luctus ut,
         suscipit id leo. In mollis enim ante, nec vestibulum neque rutrum id. Sed eu imperdiet ligula. Ut sed egestas
-        ante. Mauris aliquet sem in est pulvinar, at bibendum magna tristique. Curabitur commodo velit sed lacus aliquam,
+        ante. Mauris aliquet sem in est pulvinar, ast bibendum magna tristique. Curabitur commodo velit sed lacus aliquam,
         sed consectetur nisi porttitor. Integer urna eros, rutrum et lectus in, vehicula bibendum metus. Nulla cursus
         ipsum vitae diam congue rutrum. Mauris viverra vestibulum varius. Maecenas posuere quis dui in tincidunt.
         Praesent a erat in ante sodales tempor.</p>
     </div>
     <p>New customers register here <button onclick="changeText();">register</button></p>
-    <form id="login" method="post" action="login.php">
+    <form id="login"  method="get" action="login">
         <p><label>Username<input type="text" name="username" id="username"> <span id="usernameMsg"></span></label></p>
         <div id="new"></div>
         <p><label>Password: <input type="password" name="userPassword" id="userPassword"> <span id="passwordMsg"></span></label></p>
+        <p><label>Number: <input type="number" name="number" id="number" min="2" max="5"><span id="numMsg"></span></label></p>
+        <p><label>Email: <input type="email" id="email" name="email"> <span id="emailMsg"></span></label></p>
         <p><input type="submit"></p>
     </form>
 </section>
-<footer>Made by Nyakeh Rogers</footer>
+<!--<footer>Made by Nyakeh Rogers</footer>-->
 </body>
 </html>
