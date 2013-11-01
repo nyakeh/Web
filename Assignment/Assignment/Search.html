@@ -11,7 +11,6 @@
     <nav>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="register/">Register</a></li>
             <li><a href="search.html">Search</a></li>
             <li><a href="account/">Your Account</a></li>
         </ul>
@@ -23,13 +22,12 @@
         aliquam ullamcorper lacus. Fusce gravida tincidunt nulla eu varius. Integer nisl urna, suscipit sed luctus ut,
         suscipit id leo. In mollis enim ante, nec vestibulum neque rutrum id.</p>
     <p>Enter your search query</p>
-    <form id="login" method="post" action="login">
 
-        <fieldset id="search">
-            <p><label>Registration: <input type="text" name="registration"></label></p>
-            <p><input type="submit"></p>
-        </fieldset>
+    <form id="search" method="post" action="search.php">
+        <p><label>Registration<input type="text" name="searchText" id="searchText"/></label></p>
+        <p><input type="submit"></p>
     </form>
+    <p>results go here!</p>
 </section>
 </body>
 </html>

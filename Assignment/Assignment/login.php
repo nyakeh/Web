@@ -19,10 +19,9 @@ $output = "<p>Welcome $username.</p>";
         <h1>Car Catalogue</h1>
     <nav>
             <ul>
-                <a href="home.html"><li>Home</li></a>
-                <a href="register/"><li>Register</li></a>
+                <a href="#"><li>Home</li></a>
                 <a href="search.html"><li>Search</li></a>
-                <a href="account/"><li>Your Account</li></a>
+                <a href="account.html"><li>Your Account</li></a>
             </ul>
             <p><?php echo $output; ?> <button id="logout" name="logout" onclick="logout();">logout</button></p>
         </nav>
