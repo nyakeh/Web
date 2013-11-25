@@ -1,6 +1,25 @@
 <?php
-$username = $_POST['username'];
-$output = "<p>Welcome $username.</p>";
+    session_start();
+    include('database.php');
+
+    $output = '';
+    if(!isset($_SESSION['username'])) {
+        header('Location: Home.php');
+    }
+    if($_POST) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $sql = "SELECT * FROM tblUser WHERE username LIKE '$username' ORDER BY userId";
+        $result = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_array($result)) {
+            if($username == $row['username'] & $password == $row['password']) {
+                $_SESSION['username'] = $username;
+                $output = "Welcome back " . $username;
+            } else {
+                header('Location: Home.php');
+            }
+        }
+    }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -20,10 +39,10 @@ $output = "<p>Welcome $username.</p>";
     <nav>
             <ul>
                 <a href="#"><li>Home</li></a>
-                <a href="search.html"><li>Search</li></a>
+                <a href="search.php"><li>Search</li></a>
                 <a href="account.html"><li>Your Account</li></a>
             </ul>
-            <p><?php echo $output; ?> <button id="logout" name="logout" onclick="logout();">logout</button></p>
+            <p><?php if($output == '') { echo "Hi " . $_SESSION['username']; } ?> <a href="Home.php?logOut=true">log off</a></p>
         </nav>
     </header>
 

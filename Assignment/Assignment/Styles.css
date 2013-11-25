@@ -45,11 +45,9 @@ a {
 }
 form {
     background: rgba(72,61,139, 0.5);
-
 }
 
 #login {
-    border: 2px solid #ffffff;
     padding: 5px 15px;
 }
 .show {
@@ -61,7 +59,7 @@ p {
 section {
     width: 600px;
     margin: 0 auto;
-}
+}/*
 footer {
     width: 50%;
     background: rgba(72,61,139, 0.5);
@@ -70,8 +68,7 @@ footer {
     bottom:0;
     left: 20%;
     right: 20%;
-
-}
+}*/
 button {
     background: lightblue;
     border: none;
