@@ -2,33 +2,14 @@
     session_start();
     include('database.php');
     include('utils.php');
-    $output = '';
 
-    function validateFields($expected) {
-        $validationMessage = array();
-
-        foreach ($expected as $field) {
-            $value = trim($_POST[$field]);
-            if(isNotEmpty($value)) {
-                ${$field} = htmlentities($value, ENT_COMPAT, 'UTF-8');
-                if($message = validate($field, $value)) {
-                    $validationMessage[$field] = errorMessage($message);
-                }
-            } else {
-                if(isRequiredForLogin($field)) {
-                    $validationMessage[$field] = errorMessage('Required');
-                }
-            }
-        }
-        return $validationMessage;
-    }
     if($_POST) {
         $username = $_POST['username'];
         $password = $_POST['password'];
 
         if($_POST['intent'] == "register"){
             $expected = array('username', 'forename', 'surname', 'phone', 'address', 'email', 'password'); // Add DOB
-            $validationMessage = validateFields($expected);
+            $validationMessage = validateFields($expected, 'register');
 
             if($validationMessage) {
                 $validationMessage['form'] = errorMessage('Please amend your details');
@@ -38,12 +19,14 @@
             }
         } else {
             $expected = array('username', 'password');
-            $validationMessage = validateFields($expected);
+            $validationMessage = validateFields($expected, 'login');
 
             if($validationMessage) {
                 $validationMessage['form'] = errorMessage('Please amend your details');
             } else {
-                $validationMessage['form'] = LogIn($conn, $username, $password);
+                $_SESSION['username'] = $username;
+                $validationMessage['form'] = '[MOCK] LOG in function';
+                //$validationMessage['form'] = LogIn($conn, $username, $password);
             }
         }
     }
@@ -59,10 +42,9 @@
     <head>
         <meta charset="utf-8">
         <title>Car Catalogue</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
         <link rel="stylesheet" type="text/css" href="Styles.css">
         <script src="script.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
@@ -70,13 +52,18 @@
         <h1>Car Catalogue</h1>
         <nav>
             <ul>
-                <a href="home.php"><li>Home</li></a>
+                <li><a href="home.php">Home</li></a>
+                <?php if(isset($_SESSION['username'])) { ?>
+                <li><a href="search.php">Search</a></li>
+                <li><a href="account.php">Account</a></li>
+                <?php } ?>
+                <li><a href="Register.php">Register temp link</li></a>
             </ul>
         </nav>
     </header>
-
+    <?php if(!isset($_SESSION['username'])) { ?>
     <section>
-        <p>New customers register here <button onclick="changeText();">Hello</button></p>
+        <p>New customers register <button onclick="RedirectToRegister();">Here</button></p>
         <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
             <p><label>Username<input type="text" name="username" id="username" <?php nullCheckOutput(addValueTag(@$username)); ?>></label>
                 <?php nullCheckOutput(@$validationMessage['username']); ?>
@@ -89,6 +76,12 @@
             <p><input type="submit"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
         </form>
     </section>
+    <?php } else { ?>
+        <section>
+            <p><?php echo "Hi " . $_SESSION['username'] . " "; ?> <a href="Home.php?logOut=true">log off</a></p>
+            <div><p>Favorite Searches:</p></div>
+        </section>
+    <?php } ?>
     <!--<footer>Made by Nyakeh Rogers</footer>-->
 </body>
 </html>

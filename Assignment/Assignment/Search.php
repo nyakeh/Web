@@ -16,27 +16,25 @@
 <html lang="en">
 <head> <meta charset="utf-8">
     <title>Car Catalogue</title>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
     <link rel="stylesheet" type="text/css" href="Styles.css">
     <script src="script.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <header>
     <h1>Car Catalogue</h1>
     <nav>
         <ul>
-            <li><a href="login.php">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="search.php">Search</a></li>
-            <li><a href="account/">Your Account</a></li>
+            <li><a href="account.php">Account</a></li>
+            <li><a href="Register.php">Register temp link</li></a>
         </ul>
         <p><?php echo "Hi " . $_SESSION['username'] ?> <a href="Home.php?logOut=true">log off</a></p>
     </nav>
 </header>
 
 <section>
-    <p>Search blurb. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tellus enim, mollis in ante non,
-        aliquam ullamcorper lacus. Fusce gravida tincidunt nulla eu varius. Integer nisl urna, suscipit sed luctus ut,
-        suscipit id leo. In mollis enim ante, nec vestibulum neque rutrum id.</p>
     <p>Enter your search query</p>
 
     <form id="search" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
