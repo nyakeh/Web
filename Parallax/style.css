@@ -1,0 +1,227 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* Page style */
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Extended base styles (site specific)
+*****************************************************************/
+
+html {
+    overflow-y: scroll; /* always force a scrollbar in non-IE */
+}
+body {
+    background: #e3e5e5;
+    overflow-x: hidden;
+    height: 4550px;
+    line-height: 1.5;
+    color: #000;
+    font-size: 14px;
+    font-family: Arial,sans-serif;
+}
+h1 {
+    color: #33b5e5;
+}
+a, a:link,
+a:active,
+a:visited {
+    -webkit-transition: color 0.25s ease-out;
+    -moz-transition: color 0.25s ease-out;
+    -o-transition: color 0.25s ease-out;
+    transition: color 0.25s ease-out;
+    color: #33b5e5;
+    outline: none;
+    text-decoration:none;
+}
+img {
+    display:block;
+}
+p {
+    margin:1em 0;
+}
+hr { /* break line style */
+    margin: 0;
+    border: none;
+    border-top: 1px solid #3b3b3b;
+    border-bottom: 1px solid #3b3b3b;
+    height: 3px;
+}
+#wrapper { /* wrapper for entire body */
+    position: relative;
+}
+/* Header */
+#branding {
+    width: 100%;
+    background: #fff;
+}
+#branding h1 {
+    width: 940px;
+    padding: 10px 15px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Navigation */
+nav#primary {
+    z-index: 5;
+    position: fixed;
+    top: 50%;
+    right: 16px;
+    margin-top: -40px;
+}
+nav#primary li {
+    position: relative;
+    height: 20px;
+}
+nav#primary a {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #33b5e5;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 10px;
+    text-indent: -60px;
+}
+nav#primary a:hover, nav#primary a.active {
+    background: #fff;
+}
+/******************************************************************/
+
+/* content */
+#content {
+    z-index: 4;
+    position: relative;
+    max-width: 940px;
+    padding: 0 10px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+#content h1 {
+     margin: 0 0 25px 0;
+     font-size: 60px;
+     font-family: Georgia, serif;
+     font-weight: normal;
+     line-height: 65px;
+ }
+#content article {
+    width: 300px;
+}
+#welcome ,
+#skills,
+#work,
+#about {
+    padding-top: 105px;
+}
+#welcome {
+    position: absolute;
+    top: 0px;
+}
+#skills {
+    position: absolute;
+    top: 1090px;
+}
+#work {
+    position: absolute;
+    top: 2180px;
+}
+#about {
+     position: absolute;
+     top: 3270px;
+ }
+
+/* foreground (ballons/landscape) */
+#parallax-bg3 {
+    z-index: 3;
+    position: fixed;
+    left: 50%; /* align left edge with center of viewport */
+    top: 0;
+    width: 940px;
+    margin-left: -470px; /* move left by half element's width */
+}
+/* balloon */
+#bg3-1 {
+    position: absolute;
+    top: -111px;
+    left: 355px;
+}
+#bg3-2 {
+    position: absolute;
+    top: 812px;
+    left: 321px;
+}
+#bg3-3 {
+    position: absolute;
+    top: 1628px;
+    left: 403px;
+}
+#bg3-4 {
+    position: absolute;
+    top: 2700px;
+    left: -85px;
+}
+/* background (clouds) */
+#parallax-bg1 {
+    z-index: 1;
+    position: fixed;
+    left: 50%; /* align left edge with center of viewport */
+    top: 0;
+    width: 1200px;
+    margin-left: -600px; /* move left by half element's width */
+}
+#bg1-1 {
+    position: absolute;
+    top: 85px;
+    left: -270px;
+}
+#bg1-2 {
+    position: absolute;
+    top: 440px;
+    left: 795px;
+}
+#bg1-3 {
+    position: absolute;
+    top: 900px;
+    left: -220px;
+}
+#bg1-4 {
+    position: absolute;
+    top: 1020px;
+    left: 450px;
+}
+
