@@ -192,12 +192,12 @@ nav#primary a:hover, nav#primary a.active {
     position: absolute;
     top: 1628px;
     left: 403px;
-}
+}/*
 #bg3-4 {
     position: absolute;
     top: 2700px;
     left: -85px;
-}
+}*/
 /* background (clouds) */
 #parallax-bg1 {
     z-index: 1;
@@ -214,17 +214,31 @@ nav#primary a:hover, nav#primary a.active {
 }
 #bg1-2 {
     position: absolute;
+    top: 225px;
+    left: 1170px;
+}
+#bg1-3 {
+    position: absolute;
     top: 440px;
     left: 795px;
 }
-#bg1-3 {
+#bg1-4 {
+    position: absolute;
+    top: 525px;
+    left: -70px;
+}
+#bg1-5 {
     position: absolute;
     top: 900px;
     left: -220px;
 }
-#bg1-4 {
+#bg1-6 {
     position: absolute;
     top: 1020px;
     left: 450px;
 }
-
+#bg1-7 {
+    position: absolute;
+    top: 1225px;
+    left: 870px;
+}
