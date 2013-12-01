@@ -82,9 +82,12 @@ hr { /* break line style */
 }
 #wrapper { /* wrapper for entire body */
     position: relative;
+    margin-top: 27px;
 }
 /* Header */
 #branding {
+    z-index: 4;
+    position: fixed; top: 0; left: 0;
     width: 100%;
     background: #fff;
 }
@@ -125,7 +128,7 @@ nav#primary a:hover, nav#primary a.active {
 
 /* content */
 #content {
-    z-index: 4;
+    z-index: 3;
     position: relative;
     max-width: 940px;
     padding: 0 10px;
@@ -167,7 +170,7 @@ nav#primary a:hover, nav#primary a.active {
 
 /* foreground (ballons/landscape) */
 #parallax-bg3 {
-    z-index: 3;
+    z-index: 4;
     position: fixed;
     left: 50%; /* align left edge with center of viewport */
     top: 0;
