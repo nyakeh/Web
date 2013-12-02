@@ -19,9 +19,6 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 /* Page style */
-body {
-    line-height: 1;
-}
 ol, ul {
     list-style: none;
 }
@@ -37,21 +34,18 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
-
-/* Extended base styles (site specific)
-*****************************************************************/
-
 html {
     overflow-y: scroll; /* always force a scrollbar in non-IE */
 }
 body {
     background: #e3e5e5;
     overflow-x: hidden;
-    height: 4550px;
+    height: 4150px;
     line-height: 1.5;
     color: #000;
     font-size: 14px;
     font-family: Arial,sans-serif;
+    position: relative;
 }
 h1 {
     color: #33b5e5;
@@ -59,12 +53,7 @@ h1 {
 a, a:link,
 a:active,
 a:visited {
-    -webkit-transition: color 0.25s ease-out;
-    -moz-transition: color 0.25s ease-out;
-    -o-transition: color 0.25s ease-out;
-    transition: color 0.25s ease-out;
     color: #33b5e5;
-    outline: none;
     text-decoration:none;
 }
 img {
@@ -82,7 +71,6 @@ hr { /* break line style */
 }
 #wrapper { /* wrapper for entire body */
     position: relative;
-    margin-top: 27px;
 }
 /* Header */
 #branding {
@@ -143,7 +131,7 @@ nav#primary a:hover, nav#primary a.active {
      line-height: 65px;
  }
 #content article {
-    width: 300px;
+    width: 400px;
 }
 #welcome ,
 #skills,
@@ -181,22 +169,22 @@ nav#primary a:hover, nav#primary a.active {
 #bg3-1 {
     position: absolute;
     top: -111px;
-    left: 355px;
+    left: 395px;
 }
 #bg3-2 {
     position: absolute;
     top: 812px;
-    left: 321px;
+    left: 361px;
 }
 #bg3-3 {
     position: absolute;
     top: 1628px;
-    left: 403px;
+    left: 443px;
 }
 #bg3-4 {
     position: absolute;
     top: 2550px;
-    left: 321px;
+    left: 361px;
 }
 /* background (clouds) */
 #parallax-bg1 {
@@ -243,12 +231,21 @@ nav#primary a:hover, nav#primary a.active {
     left: 970px;
 }
 /* footer */
-footer > ul{
-    width:960px;
-    position:fixed;
-    left:50%;
-    bottom:0;
-    margin-left:-480px;
-    padding-bottom: 60px;
-    z-index:-1;
+footer {
+    position:absolute;
+    width:100%;
+    bottom: 0;
+    font-size:14px;
+    background-color: #fff;
+}
+footer > ul > li{
+    width:25%;
+    float:left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+footer ul{
+    list-style: none;
 }

@@ -26,7 +26,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="26" selection-start="3998" selection-end="3998" vertical-scroll-proportion="-11.846154" vertical-offset="1137" max-vertical-offset="2125">
+            <state line="58" column="33" selection-start="2960" selection-end="2960" vertical-scroll-proportion="-19.615385" vertical-offset="476" max-vertical-offset="1989">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="1" selection-start="4500" selection-end="4500" vertical-scroll-proportion="0.68591225" vertical-offset="3537" max-vertical-offset="4403">
+            <state line="250" column="1" selection-start="4463" selection-end="4463" vertical-scroll-proportion="0.9018476" vertical-offset="3469" max-vertical-offset="4352">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="parallax.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parallax.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="64" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1496">
+            <state line="80" column="0" selection-start="2811" selection-end="2811" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1496">
               <folding />
             </state>
           </provider>
@@ -124,6 +124,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RunManager">
@@ -153,7 +154,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="0" width="960" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -208,28 +209,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parallax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="64" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/desk.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/parallax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="0" selection-start="2811" selection-end="2811" vertical-scroll-proportion="0.0" vertical-offset="605" max-vertical-offset="1496">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="26" selection-start="3998" selection-end="3998" vertical-scroll-proportion="-11.846154" vertical-offset="1137" max-vertical-offset="2125">
+        <state line="58" column="33" selection-start="2960" selection-end="2960" vertical-scroll-proportion="-19.615385" vertical-offset="476" max-vertical-offset="1989">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="1" selection-start="4500" selection-end="4500" vertical-scroll-proportion="0.68591225" vertical-offset="3537" max-vertical-offset="4403">
+        <state line="250" column="1" selection-start="4463" selection-end="4463" vertical-scroll-proportion="0.9018476" vertical-offset="3469" max-vertical-offset="4352">
           <folding />
         </state>
       </provider>
