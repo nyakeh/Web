@@ -7,27 +7,13 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        if($_POST['intent'] == "register"){
-            $expected = array('username', 'forename', 'surname', 'phone', 'address', 'email', 'password'); // Add DOB
-            $validationMessage = validateFields($expected, 'register');
+        $expected = array('username', 'password');
+        $validationMessage = validateFields($expected, 'login');
 
-            if($validationMessage) {
-                $validationMessage['form'] = errorMessage('Please amend your details');
-            } else {
-                $validationMessage['form'] = '[MOCK] saved to db';
-                //CreateNewUser($conn, $username, $_POST['forename'], $_POST['surname'], $_POST['phone'], $_POST['address'], $_POST['email'], $password);
-            }
+        if($validationMessage) {
+            $validationMessage['form'] = errorMessage('Please amend your details');
         } else {
-            $expected = array('username', 'password');
-            $validationMessage = validateFields($expected, 'login');
-
-            if($validationMessage) {
-                $validationMessage['form'] = errorMessage('Please amend your details');
-            } else {
-                $_SESSION['username'] = $username;
-                $validationMessage['form'] = '[MOCK] LOG in function';
-                //$validationMessage['form'] = LogIn($conn, $username, $password);
-            }
+            $validationMessage['form'] = LogIn($conn, $username, $password);
         }
     }
 
@@ -72,7 +58,6 @@
             <p><label>Password: <input type="password" name="password" id="password"></label>
                 <?php nullCheckOutput(@$validationMessage['password']); ?>
             </p>
-            <input type="hidden" name="intent" id="intent" value="login">
             <p><input type="submit"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
         </form>
     </section>

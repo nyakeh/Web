@@ -7,9 +7,7 @@
     }
     $results = '';
     if($_POST) {
-        if($_POST['criteria'] == "make"){
-            $results = SearchMake($conn, $_POST['searchText']);
-        } // else if...
+        $results = Search($conn, $_POST['searchText'], $_POST['criteria']);
     }
 ?>
 <!DOCTYPE html>
@@ -36,7 +34,6 @@
 
 <section>
     <p>Enter your search query</p>
-
     <form id="search" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
         <p><label>Make: <input type="text" name="searchText" id="searchText"/></label></p>
         <input type="hidden" name="criteria" id="criteria" value="make"/>

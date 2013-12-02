@@ -2,12 +2,12 @@
 //include('database.php'); fix $conn
 
     function LogIn($connection, $username, $password) {
-        $sql = "SELECT username, password FROM tblUser";
+        $sql = "SELECT userId, username, password FROM tblUser";
         $result = mysqli_query($connection, $sql);
         while($row = mysqli_fetch_array($result)) {
             if($username == $row['username'] & $password == $row['password']) {
-                $_SESSION['username'] = $username;
-                $_SESSION['userId'] = $row['userId'];     // Check this actually returns the correct value
+                $_SESSION['username'] = $row['username'];
+                $_SESSION['userId'] = $row['userId'];
                 $output = "Welcome back " . $username;
                 header('Location: home.php');
             } else {
@@ -18,14 +18,15 @@
     }
 
     function CreateNewUser($connection, $username, $forename, $surname, $dob, $phone, $address, $email, $password) {
-        $sql = "INSERT INTO tblUser (username, forename, surname, dateOfBirth, phone, address, email, password) VALUES ('$username', '$forename', '$surname', '$dob', '$phone', '$address', '$email', '$password')";
+        $sql = "INSERT INTO tblUser (username, forename, surname, dob, phone, address, email, password) VALUES ('$username', '$forename', '$surname', '$dob', '$phone', '$address', '$email', '$password')";
         mysqli_query($connection, $sql);
+        LogIn($connection, $username, $password);
         //echo mysqli_error ($connection);
     }
 
     function UpdateUser($connection, $username, $forename, $surname, $dob, $phone, $address, $email, $password) {
         $userId = $_SESSION['userId'];
-        $sql = "UPDATE tblUser SET username='$username', forename='$forename', surname='$surname', dateOfBirth='$dob', phone='$phone', address='$address', email='$email', password='$password' WHERE userId='$userId'";
+        $sql = "UPDATE tblUser SET username='$username', forename='$forename', surname='$surname', dob='$dob', phone='$phone', address='$address', email='$email', password='$password' WHERE userId='$userId'";
         mysqli_query($connection, $sql);
     }
 
@@ -37,7 +38,7 @@
             $username = $row['username'];
             $forename = $row['forename'];
             $surname = $row['surname'];
-            $dob = $row['dateOfBirth'];
+            $dob = $row['dob'];
             $phone = $row['phone'];
             $address = $row['address'];
             $email = $row['email'];
@@ -76,19 +77,21 @@
         session_destroy();
         header('Location: Home.php');
     }
-
-    function SearchMake($connection, $make) {
+    // -- Car Catalogue search --
+    function Search($connection, $searchText, $criteria) {
         $output = '';
-        $sql = "SELECT make, model FROM tblVehicle";
+
+        $sql = "SELECT * FROM tblvehicle";
         $result = mysqli_query($connection, $sql);
         while($row = mysqli_fetch_array($result)) {
-            if($make == $row['make']) {
-                $output .= $row['make'] . $row['model'];
-            } else {
-                $output = "No results found";
+            if($searchText == $row[$criteria]) {
+                $output .= '<p><b>'.$row['make'].' '.$row['model'].'</b> '.$row['year'].' '.$row['colour']. '</p>';
             }
-        return $output;
         }
+        if($output === '') {
+            $output = "No results found";
+        }
+        return $output;
     }
     // -- Input Validation --
     function isRequiredForLogin($field)
@@ -136,8 +139,8 @@
         $message = '';
         switch($field) {
             case 'phone':
-                if(filter_var($value, FILTER_VALIDATE_INT) === FALSE) {
-                    $message = 'Not a valid phone number';
+                if(!ctype_digit($value)) {
+                    $message = $value .'Not a valid phone number';
                 }
                 break;
             case 'email':
@@ -146,13 +149,13 @@
                 }
                 break;
             case 'dob':
-                $message = checkAgeRange($value);
+                /*$message = checkAgeRange($value);*/
                 break;
         }
         return $message;
     }
 
-    function checkAgeRange($value) // Change to accept DOB instead of age
+    function checkAgeRange($value) // Change to regex check - accept DOB instead of age
     {
         $options = array(
             'options' => array(

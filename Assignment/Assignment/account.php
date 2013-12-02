@@ -5,7 +5,8 @@
     if(!isset($_SESSION['username'])) {
         header('Location: Home.php');
     }
-    //RetrieveDetails($conn, $username, $forename, $surname, $dob, $phone, $address, $email);           //  Check this works
+    $Updated = false;
+    RetrieveDetails($conn, $username, $forename, $surname, $dob, $phone, $address, $email);
 
     if($_POST) {
         $expected = array('username', 'forename', 'surname', 'dob', 'phone', 'address', 'email', 'password');
@@ -14,8 +15,13 @@
         if($validationMessage) {
             $validationMessage['form'] = errorMessage('Please amend your details');
         } else {
-            $validationMessage['form'] = '[MOCK] Updated record';
-            //UpdateUser($conn, $_POST['username'], $_POST['forename'], $_POST['surname'], $_POST['dob'], $_POST['phone'], $_POST['address'], $_POST['email'], $_POST['password']);    // Turn back on in uni
+            UpdateUser($conn, $_POST['username'], $_POST['forename'], $_POST['surname'], $_POST['dob'], $_POST['phone'], $_POST['address'], $_POST['email'], $_POST['password']);
+            header('Location: account.php?updated=true');
+        }
+    }
+    if($_GET) {
+        if(isset($_GET['updated']) & $_GET['updated'] == 'true'){
+            $Updated = true;
         }
     }
 ?>
@@ -43,6 +49,11 @@
             <p><?php echo "Hi " . $_SESSION['username'] ?> <a href="Home.php?logOut=true">log off</a></p>
         </nav>
     </header>
+    <?php if($Updated) { ?>
+        <section>
+            <p>Details Updated</p>
+        </section>
+    <?php } else { ?>
         <section>
             <p>Update any details</p>
             <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
@@ -65,6 +76,7 @@
                 <p><input type="submit"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
             </form>
         </section>
+    <?php } ?>
     <!--<footer>Made by Nyakeh Rogers</footer>-->
     </body>
 </html>

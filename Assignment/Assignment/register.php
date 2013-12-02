@@ -3,19 +3,21 @@
     include('database.php');
     include('utils.php');
 
-        $username = 'Hello George'; // Remove
-        //RetrieveDetails($conn, $username, $forename, $surname, $dob, $phone, $address, $email);           //  Check this works       //  add DOB
-
     if($_POST) {
-        $username = 'Nice Try George';  // Remove
         $expected = array('username', 'forename', 'surname', 'phone', 'dob', 'address', 'email', 'password');
         $validationMessage = ValidateFields($expected, 'register');
+        $username = $_POST['username'];
+        $forename = $_POST['forename'];
+        $surname = $_POST['surname'];
+        $phone = $_POST['phone'];
+        $dob = $_POST['dob'];
+        $address = $_POST['address'];
+        $email =$_POST['email'];
 
         if($validationMessage) {
             $validationMessage['form'] = errorMessage('Please amend your details');
         } else {
-            $validationMessage['form'] = '[MOCK] Record created';
-            //CreateNewUser($conn, $_POST['username'], $_POST['forename'], $_POST['surname'], $_POST['dob'], $_POST['phone'], $_POST['address'], $_POST['email'], $_POST['password']);    // Turn back on in uni
+            CreateNewUser($conn, $username, $forename, $surname, $dob, $phone, $address, $email, $_POST['password']);
         }
     }
 ?>
@@ -38,7 +40,6 @@
             <li><a href="home.php">Home</li></a>
             <li><a href="Register.php">Register temp link</li></a>
         </ul>
-        <p><?php echo "Hi " . $_SESSION['username'] ?> <a href="Home.php?logOut=true">log off</a></p>
     </nav>
 </header>
 <section>
@@ -50,9 +51,9 @@
             <?php nullCheckOutput(@$validationMessage['forename']); ?></p>
         <p><label>Surname: <input type="text" id="surname" name="surname" <?php nullCheckOutput(addValueTag(@$surname)); ?>></label>
             <?php nullCheckOutput(@$validationMessage['surname']); ?></p>
-        <p><label>Date Of Birth: <input type="text" id="dob" name="dob" <?php nullCheckOutput(addValueTag(@$dob)); ?>></label>
+        <p><label>Date Of Birth: <input type="date" id="dob" name="dob" <?php nullCheckOutput(addValueTag(@$dob)); ?>></label>
             <?php nullCheckOutput(@$validationMessage['dob']); ?></p>
-        <p><label>Phone: <input type="text" id="phone" name="phone" <?php nullCheckOutput(addValueTag(@$phone)); ?>></label>
+        <p><label>Phone: <input type="number" id="phone" name="phone" <?php nullCheckOutput(addValueTag(@$phone)); ?>></label>
             <?php nullCheckOutput(@$validationMessage['phone']); ?></p>
         <p><label>Address: <input type="text" id="address" name="address" <?php nullCheckOutput(addValueTag(@$address)); ?>></label>
             <?php nullCheckOutput(@$validationMessage['address']); ?></p>
