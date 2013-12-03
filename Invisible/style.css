@@ -1,0 +1,26 @@
+#title {
+    position: fixed; top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#title_banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body {
+    background: #E6E6E6;
+    z-index: 0;
+}
+#content {
+    padding-top: 300px;
+}
+article {
+    position: relative;
+    min-width: 500px;
+    padding: 100px 210px;
+}
+article#skills {
+    background: #fff;
+}
