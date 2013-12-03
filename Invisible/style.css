@@ -14,7 +14,7 @@ body {
     z-index: 0;
 }
 #content {
-    padding-top: 300px;
+    padding-top: 200px;
 }
 article {
     position: relative;
@@ -23,4 +23,37 @@ article {
 }
 article#skills {
     background: #fff;
+}
+
+#contactform {
+    width: 600px;
+    padding: 20px 50px;
+    background: #f0f0f0;
+    border: 1px solid #cccccc;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+label {
+    display: block;
+    float: left;
+    font-weight: bold;
+    text-align: right;
+    width: 220px;
+    margin-right: 9px;
+}
+.input {
+    padding: 5px;
+    border: 1px solid #b9bdc1;
+    width: 300px;
+    /*color: #797979;*/
+}
+.textarea {
+    height: 130px;
+}
+#submitButton {
+    padding: 5px 9px;
+    margin-left: 600px;
 }
