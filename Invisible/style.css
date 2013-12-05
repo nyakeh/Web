@@ -1,11 +1,17 @@
+header {
+
+}
+
 #title {
     position: fixed; top: 0;
     width: 100%;
     z-index: 1;
+    background: -webkit-linear-gradient(#000 36%, rgba(130,130,130,0.9), rgba(0,0,0,0));
 }
 
 #title_banner {
     display: block;
+    /*padding-left: 100px;  /*remove*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -19,7 +25,7 @@ body {
 article {
     position: relative;
     min-width: 500px;
-    padding: 100px 210px;
+    padding: 100px 510px;
 }
 article#skills, #contact {
     background: #fff;
