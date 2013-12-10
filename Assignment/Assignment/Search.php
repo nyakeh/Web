@@ -33,10 +33,16 @@
 </header>
 
 <section>
-    <p>Enter your search query</p>
     <form id="search" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-        <p><label>Make: <input type="text" name="searchText" id="searchText"/></label></p>
-        <input type="hidden" name="criteria" id="criteria" value="make"/>
+
+        <p>How would you like to search our car database?</p>
+        <select id = "criteria">
+            <option value = "make">Make</option>
+            <option value = "model">Model</option>
+            <option value = "year">Year</option>
+            <option value = "colour">Colour</option>
+        </select>
+        <p><label>Search string: <input type="text" name="searchText" id="searchText"/></label></p>
         <p><input type="submit"></p>
     </form>
     <p><?php echo $results ?></p>

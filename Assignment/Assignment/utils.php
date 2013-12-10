@@ -81,12 +81,10 @@
     function Search($connection, $searchText, $criteria) {
         $output = '';
 
-        $sql = "SELECT * FROM tblvehicle";
+        $sql = "SELECT * FROM tblvehicle WHERE $criteria LIKE '$searchText%'";    // Check '%' wildcard & using $criteria work here
         $result = mysqli_query($connection, $sql);
         while($row = mysqli_fetch_array($result)) {
-            if($searchText == $row[$criteria]) {
-                $output .= '<p><b>'.$row['make'].' '.$row['model'].'</b> '.$row['year'].' '.$row['colour']. '</p>';
-            }
+            $output .= '<p><b>'.$row['make'].' '.$row['model'].'</b> '.$row['year'].' '.$row['colour']. '</p>';
         }
         if($output === '') {
             $output = "No results found";
@@ -149,7 +147,7 @@
                 }
                 break;
             case 'dob':
-                /*$message = checkAgeRange($value);*/
+                $message = checkAgeRange($value);  // Check this works
                 break;
         }
         return $message;
@@ -157,13 +155,31 @@
 
     function checkAgeRange($value) // Change to regex check - accept DOB instead of age
     {
-        $options = array(
+        list($day,$month,$year) = explode('/', $value);   // Check this works
+
+        $dayOptions = array(
             'options' => array(
-                'min_range' => 18,
-                'max_range' => 123) // Oldest officially confirmed age is 122
+                'min_range' => 1,
+                'max_range' => 31)
         );
-        if(filter_var($value, FILTER_VALIDATE_INT, $options) === FALSE) {
-            return 'Age must be between 18 and 123 (inclusive)';
-        }
+        $monthOptions = array(
+            'options' => array(
+                'min_range' => 1,
+                'max_range' => 12)
+        );
+        $yearOptions = array(
+            'options' => array(
+                'min_range' => 1891,
+                'max_range' => 2013)
+        );
+
+        if(filter_var($day, FILTER_VALIDATE_INT, $dayOptions) === FALSE) {
+            return 'Day must be between 1 and 31st';
+        } else if(filter_var($month, FILTER_VALIDATE_INT, $monthOptions) === FALSE) {
+            return 'Month must be between 1 and 12';
+        } else if(filter_var($year, FILTER_VALIDATE_INT, $yearOptions) === FALSE) {
+            return 'Year must be between 1891 and 2013'; // Oldest officially confirmed age is 122
+        } else {
         return '';
+        }
     }
