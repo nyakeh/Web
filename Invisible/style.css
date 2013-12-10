@@ -24,10 +24,13 @@ body {
 }
 article {
     position: relative;
+    padding: 100px 210px;
     min-width: 500px;
-    padding: 100px 510px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
-article#skills, #contact {
+.whiteBackground {
     background: #fff;
 }
 
