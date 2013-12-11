@@ -1,6 +1,6 @@
 <?php /* http://web.fcet.staffs.ac.uk/r004869a/ */
     session_start();
-    include('database.php');
+   /* include('database.php');*/
     include('utils.php');
 
     if($_POST) {
@@ -27,7 +27,7 @@
     <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Car Catalogue</title>
+        <title>Car Zar</title>
         <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
         <link rel="stylesheet" type="text/css" href="Styles.css">
         <script src="script.js"></script>
@@ -35,41 +35,42 @@
 
     <body>
     <header>
-        <h1>Car Catalogue</h1>
+        <h1>Car Zar</h1>
         <nav>
             <ul>
                 <li><a href="home.php">Home</li></a>
                 <?php if(isset($_SESSION['username'])) { ?>
                 <li><a href="search.php">Search</a></li>
                 <li><a href="account.php">Account</a></li>
-                <?php } ?>
-                <li><a href="Register.php">Register temp link</li></a>
+                <?php } else {?>
+                <li><a href="Register.php">Register</li></a>
+                <?php }?>
             </ul>
         </nav>
     </header>
-    <?php if(!isset($_SESSION['username'])) { ?>
-    <section>
-        <p>New customers register <button onclick="RedirectToRegister();">Here</button></p>
-        <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-            <p><label>Username<input type="text" name="username" id="username" <?php nullCheckOutput(addValueTag(@$username)); ?>></label>
-                <?php nullCheckOutput(@$validationMessage['username']); ?>
-            </p>
-            <div id="new"></div>
-            <p><label>Password: <input type="password" name="password" id="password"></label>
-                <?php nullCheckOutput(@$validationMessage['password']); ?>
-            </p>
-            <p><input type="submit"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
-        </form>
-    </section>
-    <?php } else { ?>
+        <?php if(!isset($_SESSION['username'])) { ?>
         <section>
-            <p><?php echo "Hi " . $_SESSION['username'] . " "; ?> <a href="Home.php?logOut=true">log off</a></p>
-            <div>
-                <p>Favorite Searches:</p>
-                <?php RetrieveSearches() ?>
-            </div>
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                <p><b>Welcome,</b> Please Login Below</p>
+                <p><label>Username<input type="text" name="username" id="username" <?php nullCheckOutput(addValueTag(@$username)); ?>></label>
+                    <?php nullCheckOutput(@$validationMessage['username']); ?>
+                </p>
+                <div id="new"></div>
+                <p><label>Password: <input type="password" name="password" id="password"></label>
+                    <?php nullCheckOutput(@$validationMessage['password']); ?>
+                </p>
+                <p><input type="submit"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
+            </form>
         </section>
-    <?php } ?>
-    <!--<footer>Made by Nyakeh Rogers</footer>-->
+        <?php } else { ?>
+            <section>
+                <p><?php echo "Hi " . $_SESSION['username'] . " "; ?> <a href="Home.php?logOut=true">log off</a></p>
+                <div>
+                    <p>Favorite Searches:</p>
+                    <?php RetrieveSearches() ?>
+                </div>
+            </section>
+        <?php } ?>
+    <footer><p>Made by Nyakeh Rogers</p></footer>
 </body>
 </html>

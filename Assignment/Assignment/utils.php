@@ -1,5 +1,5 @@
 <?php
-    include('database.php');
+    /*include('database.php');*/
 
     function LogIn($username, $password) {
         global $conn;

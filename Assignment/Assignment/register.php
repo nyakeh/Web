@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include('database.php');
+    /*include('database.php');*/
     include('utils.php');
 
     if($_POST) {
@@ -43,8 +43,8 @@
     </nav>
 </header>
 <section>
-    <p>New customers register here</p>
-    <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <p><b>Welcome,</b> Please Register Below</p>
         <p><label>Username<input type="text" name="username" id="username" <?php nullCheckOutput(addValueTag(@$username)); ?>></label>
             <?php nullCheckOutput(@$validationMessage['username']); ?></p>
         <p><label>Forename: <input type="text" id="forename" name="forename" <?php nullCheckOutput(addValueTag(@$forename)); ?>></label>
@@ -64,6 +64,6 @@
         <p><input type="submit"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
     </form>
 </section>
-<!--<footer>Made by Nyakeh Rogers</footer>-->
+<footer><p>Made by Nyakeh Rogers</p></footer>
 </body>
 </html>
