@@ -6,7 +6,7 @@
         header('Location: Home.php');
     }
     $Updated = false;
-    RetrieveDetails($conn, $username, $forename, $surname, $dob, $phone, $address, $email);
+    RetrieveDetails($username, $forename, $surname, $dob, $phone, $address, $email);
 
     if($_POST) {
         $expected = array('username', 'forename', 'surname', 'dob', 'phone', 'address', 'email', 'password');
@@ -15,7 +15,7 @@
         if($validationMessage) {
             $validationMessage['form'] = errorMessage('Please amend your details');
         } else {
-            UpdateUser($conn, $_POST['username'], $_POST['forename'], $_POST['surname'], $_POST['dob'], $_POST['phone'], $_POST['address'], $_POST['email'], $_POST['password']);
+            UpdateUser($_POST['username'], $_POST['forename'], $_POST['surname'], $_POST['dob'], $_POST['phone'], $_POST['address'], $_POST['email'], $_POST['password']);
             header('Location: account.php?updated=true');
         }
     }

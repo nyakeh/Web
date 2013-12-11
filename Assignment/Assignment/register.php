@@ -17,7 +17,7 @@
         if($validationMessage) {
             $validationMessage['form'] = errorMessage('Please amend your details');
         } else {
-            CreateNewUser($conn, $username, $forename, $surname, $dob, $phone, $address, $email, $_POST['password']);
+            CreateNewUser($username, $forename, $surname, $dob, $phone, $address, $email, $_POST['password']);
         }
     }
 ?>
@@ -51,7 +51,7 @@
             <?php nullCheckOutput(@$validationMessage['forename']); ?></p>
         <p><label>Surname: <input type="text" id="surname" name="surname" <?php nullCheckOutput(addValueTag(@$surname)); ?>></label>
             <?php nullCheckOutput(@$validationMessage['surname']); ?></p>
-        <p><label>Date Of Birth: <input type="date" id="dob" name="dob" <?php nullCheckOutput(addValueTag(@$dob)); ?>></label>
+        <p><label>Date Of Birth: <input type="date" id="dob" name="dob" placeholder="DD/MM/YYYY" <?php nullCheckOutput(addValueTag(@$dob)); ?>></label>
             <?php nullCheckOutput(@$validationMessage['dob']); ?></p>
         <p><label>Phone: <input type="number" id="phone" name="phone" <?php nullCheckOutput(addValueTag(@$phone)); ?>></label>
             <?php nullCheckOutput(@$validationMessage['phone']); ?></p>

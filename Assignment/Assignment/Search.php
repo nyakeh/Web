@@ -7,7 +7,12 @@
     }
     $results = '';
     if($_POST) {
-        $results = Search($conn, $_POST['searchText'], $_POST['criteria']);
+        if( isset( $_REQUEST['save'] ))
+        {
+            SaveSearch();
+        } else {
+            $results = Search($_POST['searchText'], $_POST['criteria']);
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -36,7 +41,7 @@
     <form id="search" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 
         <p>How would you like to search our car database?</p>
-        <select id = "criteria">
+        <select name="criteria" id = "criteria">
             <option value = "make">Make</option>
             <option value = "model">Model</option>
             <option value = "year">Year</option>
@@ -45,7 +50,13 @@
         <p><label>Search string: <input type="text" name="searchText" id="searchText"/></label></p>
         <p><input type="submit"></p>
     </form>
+    <?php if($results !== '' && $results !== 'No results found') { ?>
     <p><?php echo $results ?></p>
+    <p><button onclick="SaveSearch();">save</button></p>
+    <form id="saveSearch" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        <input type="submit" name="save" value="save" />
+    </form>
+    <?php }; ?>
 </section>
 </body>
 </html>

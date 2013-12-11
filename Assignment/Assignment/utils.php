@@ -1,9 +1,10 @@
 <?php
-//include('database.php'); fix $conn
+    include('database.php');
 
-    function LogIn($connection, $username, $password) {
+    function LogIn($username, $password) {
+        global $conn;
         $sql = "SELECT userId, username, password FROM tblUser";
-        $result = mysqli_query($connection, $sql);
+        $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)) {
             if($username == $row['username'] & $password == $row['password']) {
                 $_SESSION['username'] = $row['username'];
@@ -17,23 +18,26 @@
         return $output;
     }
 
-    function CreateNewUser($connection, $username, $forename, $surname, $dob, $phone, $address, $email, $password) {
+    function CreateNewUser($username, $forename, $surname, $dob, $phone, $address, $email, $password) {
+        global $conn;
         $sql = "INSERT INTO tblUser (username, forename, surname, dob, phone, address, email, password) VALUES ('$username', '$forename', '$surname', '$dob', '$phone', '$address', '$email', '$password')";
-        mysqli_query($connection, $sql);
-        LogIn($connection, $username, $password);
+        mysqli_query($conn, $sql);
+        LogIn($username, $password);
         //echo mysqli_error ($connection);
     }
 
-    function UpdateUser($connection, $username, $forename, $surname, $dob, $phone, $address, $email, $password) {
+    function UpdateUser($username, $forename, $surname, $dob, $phone, $address, $email, $password) {
+        global $conn;
         $userId = $_SESSION['userId'];
         $sql = "UPDATE tblUser SET username='$username', forename='$forename', surname='$surname', dob='$dob', phone='$phone', address='$address', email='$email', password='$password' WHERE userId='$userId'";
-        mysqli_query($connection, $sql);
+        mysqli_query($conn, $sql);
     }
 
-    function RetrieveDetails($connection, &$username, &$forename, &$surname, &$dob, &$phone, &$address, &$email) {
+    function RetrieveDetails(&$username, &$forename, &$surname, &$dob, &$phone, &$address, &$email) {
+        global $conn;
         $userId = $_SESSION['userId'];
         $sql = "SELECT * FROM tblUser WHERE userId='$userId'";
-        $result = mysqli_query($connection, $sql);
+        $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)) {
             $username = $row['username'];
             $forename = $row['forename'];
@@ -78,16 +82,46 @@
         header('Location: Home.php');
     }
     // -- Car Catalogue search --
-    function Search($connection, $searchText, $criteria) {
+    function Search($searchText, $criteria) {
+        global $conn;
         $output = '';
-
-        $sql = "SELECT * FROM tblvehicle WHERE $criteria LIKE '$searchText%'";    // Check '%' wildcard & using $criteria work here
-        $result = mysqli_query($connection, $sql);
+        $_SESSION['searchText'] = $searchText;
+        $_SESSION['criteria'] = $criteria;
+        $sql = "SELECT * FROM tblvehicle WHERE $criteria LIKE '$searchText%'";
+        $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)) {
             $output .= '<p><b>'.$row['make'].' '.$row['model'].'</b> '.$row['year'].' '.$row['colour']. '</p>';
         }
+
         if($output === '') {
             $output = "No results found";
+        }
+        return $output;
+    }
+
+    function SaveSearch() {
+        global $conn;
+        $userId = $_SESSION['userId'];
+        $criteria = $_SESSION['criteria'];
+        $searchText = $_SESSION['searchText'];
+        $sql = "INSERT INTO tblSearch (userId, criteria, searchText) VALUES ('$userId','$criteria','$searchText')";
+        mysqli_query($conn, $sql);
+    }
+
+    function RetrieveSearches() {
+        global $conn;
+        $output = '';
+        $userId = $_SESSION['userId'];
+        $sql = "SELECT * FROM tblsearch WHERE userId = '$userId'";
+        $result = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_array($result)) {
+            $output .= '<h4>'. $row['criteria'] . ': ' . $row['searchText'] .'</h>';
+            $vehicles = Search($row['searchText'], $row['criteria']);
+            $output .= '<p>'. $vehicles . '</p>';
+        }
+
+        if($output === '') {
+            $output = "No saved searches";
         }
         return $output;
     }
@@ -120,7 +154,7 @@
         if($value) {
             $output = $value;
         }
-        echo $output;
+        return $output;
     }
 
     function addValueTag($value)
@@ -155,8 +189,8 @@
 
     function checkAgeRange($value) // Change to regex check - accept DOB instead of age
     {
-        list($day,$month,$year) = explode('/', $value);   // Check this works
-
+        list($day,$month,$year) = explode('/', $value);
+        $month;
         $dayOptions = array(
             'options' => array(
                 'min_range' => 1,
@@ -164,7 +198,7 @@
         );
         $monthOptions = array(
             'options' => array(
-                'min_range' => 1,
+                'min_range' => 01,
                 'max_range' => 12)
         );
         $yearOptions = array(

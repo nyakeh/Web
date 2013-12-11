@@ -13,7 +13,7 @@
         if($validationMessage) {
             $validationMessage['form'] = errorMessage('Please amend your details');
         } else {
-            $validationMessage['form'] = LogIn($conn, $username, $password);
+            $validationMessage['form'] = LogIn($username, $password);
         }
     }
 
@@ -64,7 +64,10 @@
     <?php } else { ?>
         <section>
             <p><?php echo "Hi " . $_SESSION['username'] . " "; ?> <a href="Home.php?logOut=true">log off</a></p>
-            <div><p>Favorite Searches:</p></div>
+            <div>
+                <p>Favorite Searches:</p>
+                <?php RetrieveSearches() ?>
+            </div>
         </section>
     <?php } ?>
     <!--<footer>Made by Nyakeh Rogers</footer>-->
