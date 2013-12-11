@@ -6,7 +6,7 @@ header {
     position: fixed; top: 0;
     width: 100%;
     z-index: 1;
-    background: -webkit-linear-gradient(#000 36%, rgba(130,130,130,0.9), rgba(0,0,0,0));
+    /*background: -webkit-linear-gradient(#000 36%, rgba(130,130,130,0.9), rgba(0,0,0,0));*/
 }
 
 #title_banner {

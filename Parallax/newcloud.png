@@ -89,13 +89,13 @@
 
         <!-- Parallax  background clouds -->
         <div id="parallax-bg1">
-            <img id="bg1-1" src="img/newCloud.png" alt="cloud"/>
-            <img id="bg1-2" src="img/newCloud.png" alt="cloud"/>
-            <img id="bg1-3" src="img/newCloud.png" alt="cloud"/>
-            <img id="bg1-4" src="img/newCloud.png" alt="cloud"/>
-            <img id="bg1-5" src="img/newCloud.png" alt="cloud"/>
-            <img id="bg1-6" src="img/newCloud.png" alt="cloud"/>
-            <img id="bg1-7" src="img/newCloud.png" alt="cloud"/>
+            <img id="bg1-1" src="img/newcloud.png" alt="cloud"/>
+            <img id="bg1-2" src="img/newcloud.png" alt="cloud"/>
+            <img id="bg1-3" src="img/newcloud.png" alt="cloud"/>
+            <img id="bg1-4" src="img/newcloud.png" alt="cloud"/>
+            <img id="bg1-5" src="img/cloud2.png" alt="cloud"/>
+            <img id="bg1-6" src="img/cloud1.png" alt="cloud"/>
+            <img id="bg1-7" src="img/cloud.png" alt="cloud"/>
         </div>
 
     </div>
