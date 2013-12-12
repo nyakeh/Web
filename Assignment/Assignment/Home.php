@@ -35,7 +35,7 @@
 
     <body>
     <header>
-        <h1>Car Zar</h1>
+        <img src="Logo.png" id="logo">
         <nav>
             <ul>
                 <li><a href="home.php">Home</li></a>
@@ -52,14 +52,14 @@
         <section>
             <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
                 <p><b>Welcome,</b> Please Login Below</p>
-                <p><label>Username<input type="text" name="username" id="username" <?php nullCheckOutput(addValueTag(@$username)); ?>></label>
+                <p><label>Username: </label><input type="text" name="username" id="username" <?php nullCheckOutput(addValueTag(@$username)); ?>>
                     <?php nullCheckOutput(@$validationMessage['username']); ?>
                 </p>
                 <div id="new"></div>
-                <p><label>Password: <input type="password" name="password" id="password"></label>
+                <p><label>Password: </label><input type="password" name="password" id="password">
                     <?php nullCheckOutput(@$validationMessage['password']); ?>
                 </p>
-                <p><input type="submit"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
+                <p><input type="submit" value="Login Now" class="form button"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
             </form>
         </section>
         <?php } else { ?>

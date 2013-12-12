@@ -34,7 +34,7 @@
 
 <body>
 <header>
-    <h1>Car Catalogue</h1>
+    <img src="Logo.png" id="logo">
     <nav>
         <ul>
             <li><a href="home.php">Home</li></a>
@@ -45,23 +45,23 @@
 <section>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
         <p><b>Welcome,</b> Please Register Below</p>
-        <p><label>Username<input type="text" name="username" id="username" <?php nullCheckOutput(addValueTag(@$username)); ?>></label>
+        <p><label>Username: </label><input type="text" name="username" id="username" <?php nullCheckOutput(addValueTag(@$username)); ?>>
             <?php nullCheckOutput(@$validationMessage['username']); ?></p>
-        <p><label>Forename: <input type="text" id="forename" name="forename" <?php nullCheckOutput(addValueTag(@$forename)); ?>></label>
+        <p><label>Forename: </label><input type="text" id="forename" name="forename" <?php nullCheckOutput(addValueTag(@$forename)); ?>>
             <?php nullCheckOutput(@$validationMessage['forename']); ?></p>
-        <p><label>Surname: <input type="text" id="surname" name="surname" <?php nullCheckOutput(addValueTag(@$surname)); ?>></label>
+        <p><label>Surname: </label><input type="text" id="surname" name="surname" <?php nullCheckOutput(addValueTag(@$surname)); ?>>
             <?php nullCheckOutput(@$validationMessage['surname']); ?></p>
-        <p><label>Date Of Birth: <input type="date" id="dob" name="dob" placeholder="DD/MM/YYYY" <?php nullCheckOutput(addValueTag(@$dob)); ?>></label>
+        <p><label>Date Of Birth: </label><input type="date" id="dob" name="dob" placeholder="DD/MM/YYYY" <?php nullCheckOutput(addValueTag(@$dob)); ?>>
             <?php nullCheckOutput(@$validationMessage['dob']); ?></p>
-        <p><label>Phone: <input type="number" id="phone" name="phone" <?php nullCheckOutput(addValueTag(@$phone)); ?>></label>
+        <p><label>Phone: </label><input type="number" id="phone" name="phone" <?php nullCheckOutput(addValueTag(@$phone)); ?>>
             <?php nullCheckOutput(@$validationMessage['phone']); ?></p>
-        <p><label>Address: <input type="text" id="address" name="address" <?php nullCheckOutput(addValueTag(@$address)); ?>></label>
+        <p><label>Address: </label><input type="text" id="address" name="address" <?php nullCheckOutput(addValueTag(@$address)); ?>>
             <?php nullCheckOutput(@$validationMessage['address']); ?></p>
-        <p><label>Email Address: <input type="email" id="email" name="email" <?php nullCheckOutput(addValueTag(@$email)); ?>></label>
+        <p><label>Email Address: </label><input type="email" id="email" name="email" <?php nullCheckOutput(addValueTag(@$email)); ?>>
             <?php nullCheckOutput(@$validationMessage['email']); ?></p>
-        <p><label>Password: <input type="password" name="password" id="password"></label>
+        <p><label>Password: </label><input type="password" name="password" id="password">
             <?php nullCheckOutput(@$validationMessage['password']); ?></p>
-        <p><input type="submit"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
+        <p><input type="submit" value="Register" class="form button"> <?php nullCheckOutput(@$validationMessage['form']); ?> </p>
     </form>
 </section>
 <footer><p>Made by Nyakeh Rogers</p></footer>

@@ -4,39 +4,38 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background: #FFFFFF;
+    background: url('worn_dots.png') repeat;
     margin: 0 0 50px 0;
 }
 header {
-    padding: 20px 0 0 0;
     width: 100%;
     margin: 0 auto;
-    background: rgba(230,230,230,0.1);
-    background: -webkit-radial-gradient(50% 100%, circle, rgba(230,230,230,0.1), transparent);
+    background: rgba(230,230,230, 1);
 }
+#logo {
+    margin: 0 0 0 175px;
+}
+/*
 h1 {
     font-size: 70px;
     text-align: center;
     margin: 0;
     color: rgba(230,230,230, 1);
-}
+}*/
 nav {
     text-align: left;
-    background: rgba(230,230,230, 0.5);
     border-top: 5px solid #990000;
 }
 nav ul {
     padding: 9px 0 9px 200px;
     margin: 0;
 }
-nav li
-{
+nav li {
     display:inline;
     padding: 12px;
 }
-nav li:hover
-{
-    background-color: rgba(230,230,230, 1) ;
+nav li:hover {
+    background-color: rgba(210,210,210, 1) ;
 }
 nav p {
     width: 200px;
@@ -51,13 +50,29 @@ a {
     text-decoration:none;
 }
 form {
-    background: rgba(230,230,230, 0.5);
-    padding: 5px 15px;
+    background: rgba(230,230,230, 0.7);
+    padding: 20px 50px;
+}
+label {
+    display: block;
+    float: left;
+    width: 160px;
+    text-align: right;
+    margin-right: 9px;
+}
+input[type=text],input[type=email],input[type=password],input[type=date], input[type=number] {
+    width: 250px;
 }
 input:focus, textarea:focus {
     border: 2px solid #990000;
 }
-
+.form {
+    padding: 5px 9px;
+    margin-left: 330px;
+}
+.button {
+    padding: 5px 10px 5px 10px;
+}
 section {
     width: 600px;
     margin: 24px auto;
