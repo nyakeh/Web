@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("img/debut_dark.png");
+    font-family: Helvetica, sans-serif;
+    color: #bbb;
+}
+
+a img {
+    border: 0;
+}
+
+#main {
+    width: 970px;
+    padding: 15px;
+    margin: auto;
+    position: relative;
+    top: 150px;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 25px 0;
+    z-index: 999;
+    background: #1c1c1c;
+    transition: padding .25s;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    -ms-transition: padding .25s;
+}
+
+header .inner {
+    display: block;
+    width: 1000px;
+    height: 46px;
+    margin: auto;
+}
+
+h1.logo {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    display: block;
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 0 5px 0 0;
+    list-style: none;
+}
+
+#nav>li {
+    display: block;
+    float: left;
+}
+
+#nav>li>a {
+    display: block;
+    padding: 16px 10px 11px 10px;
+    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #888;
+    transition: color .2s ease-in;
+    -moz-transition: color .2s ease-in;
+    -webkit-transition: color .2s ease-in;
+    -o-transition: color .2s ease-in;
+    -ms-transition: color .2s ease-in;
+}
+
+#nav>li:hover>a {
+    color: #f7bd1e;
+}
