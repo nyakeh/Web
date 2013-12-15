@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="123" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.35368663" vertical-offset="118" max-vertical-offset="986">
+            <state line="25" column="123" selection-start="1345" selection-end="1345" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="986">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,25 @@
       <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="7" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+            <state line="10" column="3" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navBar.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navBar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="40" selection-start="1180" selection-end="1180" vertical-scroll-proportion="-23.538462" vertical-offset="0" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navigation.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/navigation.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="26" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.32524806" vertical-offset="1099" max-vertical-offset="2091">
               <folding />
             </state>
           </provider>
@@ -61,8 +79,10 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/script.js" />
+        <option value="$PROJECT_DIR$/navBar.html" />
+        <option value="$PROJECT_DIR$/navigation.css" />
       </list>
     </option>
   </component>
@@ -197,14 +217,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+        <state line="10" column="3" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="123" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.35368663" vertical-offset="118" max-vertical-offset="986">
+        <state line="25" column="123" selection-start="1345" selection-end="1345" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="986">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navBar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="40" selection-start="1180" selection-end="1180" vertical-scroll-proportion="-23.538462" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="26" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.32524806" vertical-offset="1099" max-vertical-offset="2091">
           <folding />
         </state>
       </provider>
