@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("img/pw_pattern.png");
+    font-family: Helvetica, sans-serif;
+}
+
+a img {
+    border: 0;
+}
+
+#main {
+    min-width: 500px;
+    padding: 15px;
+    margin: auto;
+    position: relative;
+    top: 450px;
+}
+
+header {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-width: 1000px; /* don't support screens smaller then 1000px wide */
+    padding: 25px 0;
+    z-index: 999;
+    background: url("img/escheresque_ste.png");
+    transition: padding .25s;
+    -moz-transition: padding .25s;
+    -webkit-transition: padding .25s;
+    -o-transition: padding .25s;
+    -ms-transition: padding .25s;
+}
+
+h1.logo {
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    display: block;
+    position: relative;
+    float: right;
+    margin: 0;
+    padding: 0 5px 0 0;
+    list-style: none;
+}
+
+#nav, #nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1;
+}
+
+#nav {
+    margin: auto;
+    display: block;
+    position: relative;
+    height: 47px;
+}
+
+#nav>li {
+    display: block;
+    float: left;
+    position: relative;
+    background: rgba(0,0,0, 0.3);
+}
+
+#nav>li>a {
+    display: block;
+    padding: 17px 8px 18px 8px;
+    width: 130px;
+    text-align: center;
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+}
+
+#nav>li:hover>a {
+    font-weight: 500;
+    background: rgba(0,0,0, 1);
+    transition: color .25s ease-in;
+    -moz-transition: background .25s ease-in;
+    -webkit-transition: background .25s ease-in;
+    -o-transition: background .25s ease-in;
+    -ms-transition: background .25s ease-in;
+}
