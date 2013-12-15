@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(window).scroll(function() {
-        if($(window).scrollTop() >= 100) {
+        if($(window).scrollTop() >= 80) {
             $('header').css('padding','0');
             $('h1 img').attr('src', "img/logoalt.png")
         } else {
