@@ -5,7 +5,7 @@ html {
 }
 body {
     background: url('worn_dots.png') repeat;
-    margin: 0 0 50px 0;
+    margin: 0 0 70px 0; /* maintains gap between content & footer */
 }
 header {
     width: 100%;
@@ -14,14 +14,8 @@ header {
 }
 #logo {
     margin: 0 0 0 175px;
+    padding: 0;
 }
-/*
-h1 {
-    font-size: 70px;
-    text-align: center;
-    margin: 0;
-    color: rgba(230,230,230, 1);
-}*/
 nav {
     text-align: left;
     border-top: 5px solid #990000;
@@ -29,6 +23,7 @@ nav {
 nav ul {
     padding: 9px 0 9px 200px;
     margin: 0;
+    min-width: 700px;
 }
 nav li {
     display:inline;
@@ -42,16 +37,28 @@ nav p {
     margin: 30px;
     display: inline;
 }
-
+.welcome {
+    display: block;
+    float: right;
+}
 a {
     color: #000;
     font-size: 20px;
     font-weight: bold;
     text-decoration:none;
 }
-form {
+form, #SavedSearches, #NewSearch {
+    width: 600px;
     background: rgba(230,230,230, 0.7);
     padding: 20px 50px;
+    margin: 24px auto 0 auto;
+}
+form select{
+    padding: 2px 4px;
+}
+input[type=submit] {
+
+    padding: 4px 8px;
 }
 label {
     display: block;
@@ -71,11 +78,50 @@ input:focus, textarea:focus {
     margin-left: 330px;
 }
 .button {
+    display: block;
     padding: 5px 10px 5px 10px;
+    margin: 0;
 }
-section {
-    width: 600px;
-    margin: 24px auto;
+span.bold{
+    font-weight: bold;
+}
+.retrievedSearch {
+    padding: 20px 0 0 20px;
+}/*
+.result {
+    display: block;
+    width: 170px;
+    border: 2px solid #999;
+    margin: 0 15px 15px 0;
+    padding: 5px;
+    background: #FFF;
+    text-align: center;
+}*/
+#searchResult {
+    border: 3px solid #990000;
+    padding: 10px 10px;
+    margin: 5px 0;
+    overflow: auto;
+}
+#NewSearch {
+    overflow: auto;
+}
+.result {
+    list-style: none;
+}
+.result li {
+    border:1px solid #BBBBBB;
+    float:left;
+    margin: 10px 10px 0 0;
+    padding: 3px 3px;
+    text-align: center;
+    background: #d5d5d5;
+}
+hr {
+    margin: 2px 0;
+    border: none;
+    border-top: 1px solid #3b3b3b;
+    height: 3px;
 }
 footer {
     width: 100%;

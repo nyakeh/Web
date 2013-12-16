@@ -1,5 +1,5 @@
 <?php
-    /*include('database.php');*/
+    include('database.php');
 
     function LogIn($username, $password) {
         global $conn;
@@ -90,7 +90,9 @@
         $sql = "SELECT * FROM tblvehicle WHERE $criteria LIKE '$searchText%'";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)) {
-            $output .= '<p><b>'.$row['make'].' '.$row['model'].'</b> '.$row['year'].' '.$row['colour']. '</p>';
+            $output .='<ul class="result">';
+            $output .= '<li><img class="vehicleImage" src="'.$row['picture'].'" alt="Vehicle Image" height="100px"></img><p><b>'.$row['make'].' '.$row['model'].'</b> '.$row['year'].' '.$row['colour'].'</p></li>';
+            $output .='</ul>';
         }
 
         if($output === '') {
@@ -104,7 +106,8 @@
         $userId = $_SESSION['userId'];
         $criteria = $_SESSION['criteria'];
         $searchText = $_SESSION['searchText'];
-        $sql = "INSERT INTO tblSearch (userId, criteria, searchText) VALUES ('$userId','$criteria','$searchText')";
+        $date = date("Y-m-d H:i:s");
+        $sql = "INSERT INTO tblSearch (userId, criteria, searchText, searchDate) VALUES ('$userId','$criteria','$searchText', '$date')";
         mysqli_query($conn, $sql);
     }
 
@@ -112,12 +115,13 @@
         global $conn;
         $output = '';
         $userId = $_SESSION['userId'];
-        $sql = "SELECT * FROM tblsearch WHERE userId = '$userId'";
+        $sql = "SELECT * FROM tblSearch WHERE userId = '$userId'";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)) {
-            $output .= '<h4>'. $row['criteria'] . ': ' . $row['searchText'] .'</h>';
+            $output .= '<div id="searchResult">';
+            $output .= 'Search for '. $row['criteria'] . 's <span class="bold">\'' . $row['searchText'] .'\'</span><hr>';
             $vehicles = Search($row['searchText'], $row['criteria']);
-            $output .= '<p>'. $vehicles . '</p>';
+            $output .= $vehicles . '</div>';
         }
 
         if($output === '') {
@@ -159,10 +163,7 @@
 
     function addValueTag($value)
     {
-        $output = '';
-        if($value) {
-            $output = ' value="' . $value . '"';
-        }
+        $output = ' value="' . nullCheckOutput($value) . '"';
         return $output;
     }
 
