@@ -71,7 +71,7 @@
       <file leaf-file-name="Home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="6" selection-start="322" selection-end="322" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1190">
+            <state line="49" column="17" selection-start="5783" selection-end="5783" vertical-scroll-proportion="-14.423077" vertical-offset="458" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -80,7 +80,7 @@
       <file leaf-file-name="freshStyle.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/freshStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="37" selection-start="510" selection-end="510" vertical-scroll-proportion="0.3936053" vertical-offset="0" max-vertical-offset="2193">
+            <state line="105" column="21" selection-start="2576" selection-end="2576" vertical-scroll-proportion="0.3439912" vertical-offset="1473" max-vertical-offset="2380">
               <folding />
             </state>
           </provider>
@@ -89,7 +89,7 @@
       <file leaf-file-name="freshScript.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freshScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="42" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+            <state line="12" column="3" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
               <folding />
             </state>
           </provider>
@@ -108,9 +108,9 @@
         <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/freshScript.js" />
         <option value="$PROJECT_DIR$/navigation.css" />
         <option value="$PROJECT_DIR$/navBar.html" />
+        <option value="$PROJECT_DIR$/freshScript.js" />
         <option value="$PROJECT_DIR$/Home.html" />
         <option value="$PROJECT_DIR$/freshStyle.css" />
       </list>
@@ -311,21 +311,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/freshScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="42" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+        <state line="12" column="3" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="322" selection-end="322" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1190">
+        <state line="49" column="17" selection-start="5783" selection-end="5783" vertical-scroll-proportion="-14.423077" vertical-offset="458" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/freshStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="37" selection-start="510" selection-end="510" vertical-scroll-proportion="0.3936053" vertical-offset="0" max-vertical-offset="2193">
+        <state line="105" column="21" selection-start="2576" selection-end="2576" vertical-scroll-proportion="0.3439912" vertical-offset="1473" max-vertical-offset="2380">
           <folding />
         </state>
       </provider>

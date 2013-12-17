@@ -16,12 +16,12 @@ header {
     min-width: 1000px; /* don't support screens smaller then 1000px wide */
     padding: 25px 0;
     z-index: 999;
-    background: url("img/escheresque_ste.png");
-    transition: padding .25s;
-    -moz-transition: padding .25s;
-    -webkit-transition: padding .25s;
-    -o-transition: padding .25s;
-    -ms-transition: padding .25s;
+    background: rgba(0,0,0, 0.3);
+    transition: padding .35s, background .35s ease-in;
+    -moz-transition: padding .35s, background .35s ease-in;
+    -webkit-transition: padding .35s, background .35s ease-in;
+    -o-transition: padding .35s, background .35s ease-in;
+    -ms-transition: padding .35s, background .35s ease-in;
 }
 h1.logo {
     display: block;
@@ -106,19 +106,30 @@ h1.logo {
     background: #000;
 }
 
-#main {
+article {
     min-width: 500px;
-    padding: 150px;
+    padding: 50px 150px;
     position: relative;
 }
 .blur {
     width: 100%;
-    height: 600px;
+    height: 600px;  /**/
     margin: 0;
     background: url("img/Blurred%20Backgrounds%20(10).jpg");
     background-size: cover;
 }
 .blur h1 {
     margin: 0;
+    font-size: 4em;
     padding: 350px 0 0 180px;
+}
+footer {
+    text-align: right;
+    padding: 20px 20px 0 0;
+    height: 40px;
+    background: url("img/Blurred%20Backgrounds%20(10).jpg");
+    background-size: cover;
+ }
+footer p {
+    margin: 0;
 }
