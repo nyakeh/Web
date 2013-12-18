@@ -6,17 +6,17 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="freshScript.js"></script>
     <script type="text/javascript" src="freshStyle.css"></script>
+    <meta name = "viewport" content = "initial-scale = 1.0">
 </head>
-<body>
+<body onresize="myFunction()">
 <header class="inner">
     <h1 class="logo">
-        <a href="#">
-            <img src="img/logo.png">
-        </a>
+        <a href="#"><!--<img src="img/logo.png">-->Nyakeh</a>
     </h1>
     <ul id="nav">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <button id="navButton" onclick="showNav()">+</button>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Blog</a></li>
         <li><a href="#">Portfolio</a>
             <ul>
                 <li><a href="#">Development</a></li>
@@ -25,12 +25,12 @@
                 <li><a href="#">Apps</a></li>
             </ul>
         </li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Home</a></li>
     </ul>
 </header>
 <div class="blur">
-        <h1>Hello World</h1>
+        <h1>Hello Ladies</h1>
 </div>
 <div id="main">
     <article>
