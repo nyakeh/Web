@@ -1,0 +1,11 @@
+.tekst {
+    fill:none;
+    stroke:#000;
+    stroke-width:4px
+}
+.one {
+    stroke-dasharray:3000,3000;
+}
+.two {
+    stroke-dasharray:3309,3309;
+}
