@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="motion.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="motion.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/motion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="102" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.43087557" vertical-offset="0" max-vertical-offset="868">
+            <state line="25" column="7" selection-start="1430" selection-end="1430" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="527">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="49" selection-start="893" selection-end="893" vertical-scroll-proportion="0.45046082" vertical-offset="0" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -35,7 +44,7 @@
       <file leaf-file-name="motionStyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/motionStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="6" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+            <state line="25" column="5" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
               <folding />
             </state>
           </provider>
@@ -60,14 +69,14 @@
         <option value="$PROJECT_DIR$/Home.html" />
         <option value="$PROJECT_DIR$/freshScript.js" />
         <option value="$PROJECT_DIR$/freshStyle.css" />
-        <option value="$PROJECT_DIR$/motionStyle.css" />
         <option value="$PROJECT_DIR$/motion.html" />
+        <option value="$PROJECT_DIR$/motionStyle.css" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="-1586" />
     <option name="y" value="-8" />
     <option name="width" value="1594" />
     <option name="height" value="1066" />
@@ -131,7 +140,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1594" height="1066" extended-state="6" />
+    <frame x="-1586" y="-8" width="1594" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -232,21 +241,23 @@
         <state line="16" column="52" selection-start="551" selection-end="551" vertical-scroll-proportion="0.30527496" vertical-offset="0" max-vertical-offset="891" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="49" selection-start="893" selection-end="893" vertical-scroll-proportion="0.45892018" vertical-offset="0" max-vertical-offset="1343" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/motionStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="6" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+        <state line="25" column="5" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/motion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="102" selection-start="1283" selection-end="1283" vertical-scroll-proportion="0.43087557" vertical-offset="0" max-vertical-offset="868">
+        <state line="25" column="7" selection-start="1430" selection-end="1430" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="49" selection-start="893" selection-end="893" vertical-scroll-proportion="0.45046082" vertical-offset="0" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>

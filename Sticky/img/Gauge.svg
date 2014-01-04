@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <g id="logog">
+        <path id="g" class='tekst one' d="m103,134l-71,74l-1,82l131,-1l-1,-72l-58,0"><animate id="first" attributeName="stroke-dashoffset" from="3000" to="0" dur="3s" begin="0s"/>
+        </path>
+        <path id="a" class='tekst one' d="m273,186l-95,-3l1,95l104,2l-3,-94l9,101"><animate id="first" attributeName="stroke-dashoffset" from="3000" to="0" dur="3s" begin=".5s"/>
+        </path>
+        <path id="u" class='tekst one' d="m306,188l-4,93l80,1l0,-99"><animate id="first" attributeName="stroke-dashoffset" from="3000" to="0" dur="3s" begin="1s"/>
+        </path>
+        <path id="g2" class='tekst one' d="m470,186l-72,-2l-3,90l69,2l7,-83l2,206l-79,-2"><animate id="first" attributeName="stroke-dashoffset" from="3000" to="0" dur="3s" begin="1.5s"/>
+        </path>
+        <path id="e" class='tekst one' d="m495,227l72,1c0,0 2,-55 -1,-55c-3,0 -78,3 -78,3c0,0 2,98 2,98c0,0 76,-2 76,-2"><animate id="first" attributeName="stroke-dashoffset" from="3000" to="0" dur="3s" begin="2s"/>
+        </path>
+    </g>
+</svg>
