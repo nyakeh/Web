@@ -26,7 +26,7 @@
       <file leaf-file-name="Home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="9" selection-start="529" selection-end="1058" vertical-scroll-proportion="-14.384615" vertical-offset="119" max-vertical-offset="1343">
+            <state line="31" column="0" selection-start="1069" selection-end="1124" vertical-scroll-proportion="-11.115385" vertical-offset="238" max-vertical-offset="1343">
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
       <file leaf-file-name="freshStyle.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/freshStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="16" selection-start="1200" selection-end="1228" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="3638">
+            <state line="11" column="19" selection-start="194" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3638">
               <folding />
             </state>
           </provider>
@@ -50,19 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="motion.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="motion.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/motion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="94" selection-start="7424" selection-end="7424" vertical-scroll-proportion="0.8421659" vertical-offset="595" max-vertical-offset="1513">
-              <folding />
+            <state line="82" column="17" selection-start="7487" selection-end="7487" vertical-scroll-proportion="-28.653847" vertical-offset="394" max-vertical-offset="1275">
+              <folding>
+                <element signature="tag#svg#0;tag#header#0;tag#body#0;tag#html#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="motionStyle.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="motionStyle.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/motionStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="1" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="1003">
+            <state line="61" column="13" selection-start="995" selection-end="995" vertical-scroll-proportion="0.8125689" vertical-offset="300" max-vertical-offset="1207">
               <folding />
             </state>
           </provider>
@@ -87,8 +89,8 @@
         <option value="$PROJECT_DIR$/freshScript.js" />
         <option value="$PROJECT_DIR$/freshStyle.css" />
         <option value="$PROJECT_DIR$/Home.html" />
-        <option value="$PROJECT_DIR$/motionStyle.css" />
         <option value="$PROJECT_DIR$/motion.html" />
+        <option value="$PROJECT_DIR$/motionStyle.css" />
       </list>
     </option>
   </component>
@@ -258,28 +260,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="9" selection-start="529" selection-end="1058" vertical-scroll-proportion="-14.384615" vertical-offset="119" max-vertical-offset="1343">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/freshStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="16" selection-start="1200" selection-end="1228" vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="3638">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motionStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="1" selection-start="865" selection-end="865" vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="1003">
+        <state line="31" column="0" selection-start="1069" selection-end="1124" vertical-scroll-proportion="-11.115385" vertical-offset="238" max-vertical-offset="1343">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/motion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="94" selection-start="7424" selection-end="7424" vertical-scroll-proportion="0.8421659" vertical-offset="595" max-vertical-offset="1513">
+        <state line="82" column="17" selection-start="7487" selection-end="7487" vertical-scroll-proportion="-28.653847" vertical-offset="394" max-vertical-offset="1275">
+          <folding>
+            <element signature="tag#svg#0;tag#header#0;tag#body#0;tag#html#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/freshStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="19" selection-start="194" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motionStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="13" selection-start="995" selection-end="995" vertical-scroll-proportion="0.8125689" vertical-offset="300" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
