@@ -5,6 +5,7 @@ html
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background: rgba(0,0,0, 0.05);
+    min-width: 1058px;
 }
 body {
     margin: 0;
@@ -69,14 +70,17 @@ nav > li > a {
     background-size: cover;
 }
 section {
-    height: 500px;
+    height: 400px;
 }
 .boxes {
+    position: absolute;
     display: inline-block;
-    width: 1020px;
-    margin: 0 25%;
+    width: 1040px;
+    left: 50%;
+    margin-left: -520px;
 }
 .light > p {
+    width: 700px;
     padding: 40px 7%;
 }
 .dark {
@@ -86,22 +90,60 @@ section {
     display: block;
     float: left;
     width: 300px;
-    height: 300px;
-    margin: 100px 20px;
+    height: 294px;
+    margin: 50px 20px;
     background: rgba(0,0,0, 0.2);
+    border-radius: 25px;
+    border: 3px solid #000000;
 }
 .box > H3 {
     text-align: center;
     padding: 15px 0;
     margin: 0;
+    border-radius: 20px 22px 0 0;
     background: rgba(0,0,0, 0.2);
 }
+/*    FOOTER    */
 footer {
-    text-align: right;
-    padding: 20px 20px 0 0;
-    height: 40px;
+    padding: 15px 20px 0 0;
+    height: 60px;
+    text-align: center;
     background: rgba(0,0,0, 0.2);
 }
-footer p {
+footer > p {
+    display: block;
     margin: 0;
+    width: 10%;
+    min-width: 130px;
+}
+#footer_left {
+    float: left;
+}
+#footer_right {
+    float: right;
+}
+#nav {
+    display: block;
+    float: left;
+    padding: 0;
+    list-style: none;
+    margin: 0 auto;
+}
+#nav > li {
+    display: block;
+    float: left;
+    margin: 0 5px;
+}
+#nav > li > a {
+    color: #000;
+    width: 50px;
+    height: 20px;
+    font-size: 21px;
+    text-align: center;
+    text-decoration: none;
+    padding: 0;
+}
+#nav > li > a > span {
+    color: #003565;
+    font-size: 17px;
 }
