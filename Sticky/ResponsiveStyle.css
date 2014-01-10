@@ -7,8 +7,11 @@ body {
     padding: 10px;
     margin: 0 0 5px 0;
 }
+#menu_btn {
+    display: none;
+}
 .nav-primary {
-    clear: left;
+    float: right;
     margin: 0 0 30px 0;
 }
 .nav-primary h3 {
@@ -16,13 +19,16 @@ body {
     left: -999px;
 }
 .nav-primary ul {
+    float: left;
     list-style: none;
     padding: 0;
+    margin: 0;
     border: 1px solid #e6e6e6;
 }
 .nav-primary li {
-    font-size: 20px;
-    border-bottom: 1px solid #eee;
+    float: left;
+    font-size: 22px;
+    border-bottom: 0;
 }
 .nav-primary li:last-child {
     border-bottom: 0;
@@ -39,13 +45,17 @@ body {
 .nav-primary .nav-current {
     font-weight: bold;
 }
-@media screen and (min-width: 592px) {
+@media screen and (min-width: 592px) and (max-width: 711px) {
+    .nav-primary {
+        float: right;
+    }
     .nav-primary,
     .nav-primary ul {
         float: left;
     }
     .nav-primary ul {
         float: left;
+        margin: 0;
     }
     .nav-primary li {
         float: left;
@@ -53,12 +63,29 @@ body {
         border-bottom: 0;
     }
 }
-@media screen and (min-width: 711px) {
+@media screen and (max-width: 592px) {
+    #logo {
+        width: 100%;
+    }
+    #menu_btn {
+        display: block;
+    }
     .nav-primary {
-        float: right;
-        clear: none;
+        clear: both;
+        width: 100%;
     }
     .nav-primary ul {
-        margin: 0;
+        clear: both;
+        width: 100%;
+        display: none;
     }
+    .nav-primary li {
+        clear: both;
+        width: 100%;
+        font-size: 20px;
+        border-bottom: 1px solid #eee;border-bottom: 0;
+    }
+}
+.open_menu {
+    background: #774488;
 }
