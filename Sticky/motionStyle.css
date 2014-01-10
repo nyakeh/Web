@@ -14,7 +14,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    min-width: 865px;
+    min-width: 910px;
     height: 200px;
     background: rgba(0,0,0, 0.2);
     z-index: 999;
@@ -68,6 +68,13 @@ nav > li > a {
     margin: 0;
     background: rgba(0,0,0, 0.2);
     background-size: cover;
+}
+.cover > H1 {
+    margin: 0;
+    color: rgba(0,0,0, 0.5);
+    font-size: 60px;
+    text-align: end;
+    padding: 400px 40px 0 0;
 }
 section {
     height: 400px;
@@ -146,4 +153,27 @@ footer > p {
 #nav > li > a > span {
     color: #003565;
     font-size: 17px;
+}
+/*    Mortgage Calculator    */
+.calculator {
+    width: 600px;
+    height: 340px;
+    padding: 20px 50px;
+    margin: 30px auto;
+    border: 3px solid rgba(0,0,0, 0.5);
+    border-radius: 15px;
+    background: rgba(0,0,0, 0.2);
+}
+label {
+    display: block;
+    float: left;
+    text-align: right;
+    padding: 5px;
+    width: 180px;
+}
+.input {
+    padding: 5px;
+    border: 1px solid #b9bdc1;
+    width: 200px;
+    color: #505050;
 }
