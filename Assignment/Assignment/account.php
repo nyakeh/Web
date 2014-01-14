@@ -51,12 +51,12 @@
         </nav>
     </header>
     <?php if($Updated) { ?>
-        <section>
+        <section class="greyBox">
             <p>Details Updated</p>
         </section>
     <?php } else { ?>
         <section>
-            <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+            <form id="update" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
                 <p><span class="bold">Update</span> your account details</p>
                 <p><label>Username: </label><input type="text" name="username" id="username" <?php echo addValueTag(@$username); ?>>
                     <?php echo nullCheckOutput(@$validationMessage['username']); ?></p>

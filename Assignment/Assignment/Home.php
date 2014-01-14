@@ -64,7 +64,7 @@ if($_GET){
             <p><label>Password: </label><input type="password" name="password" id="password">
                 <?php echo nullCheckOutput(@$validationMessage['password']); ?>
             </p>
-            <p><input type="submit" value="Login Now" class="form button"> <?php echo nullCheckOutput(@$validationMessage['form']); ?> </p>
+            <p><input type="submit" value="Login" class="form button"> <?php echo nullCheckOutput(@$validationMessage['form']); ?> </p>
         </form>
     </section>
 <?php } else { ?>
