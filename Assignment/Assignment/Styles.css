@@ -117,6 +117,9 @@ span.bold{
     text-align: center;
     background: #d5d5d5;
 }
+#price {
+    font-size: 20px;
+}
 hr {
     margin: 2px 0;
     border: none;

@@ -91,7 +91,7 @@
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)) {
             $output .='<ul class="result">';
-            $output .= '<li><img class="vehicleImage" src="'.$row['picture'].'" alt="Vehicle Image" height="100px"></img><p><b>'.$row['make'].' '.$row['model'].'</b> '.$row['year'].' '.$row['colour'].'</p></li>';
+            $output .= '<li><img class="vehicleImage" src="'.$row['picture'].'" alt="Vehicle Image" height="100px"></img>'.'<p id="price">£'.$row['price'].'</p>'.'<p><b>'.$row['make'].' '.$row['model'].'</b> '.$row['year'].' '.$row['colour'].'</p></li>';
             $output .='</ul>';
         }
 
