@@ -17,7 +17,7 @@ header {
     overflow: auto;
     background: #bdc3c7;
     height: 130px;
-    min-width: 999px;
+    min-width: 1020px;
     transition: height .25s;
     -moz-transition: height .25s;
     -webkit-transition: height .25s;
@@ -74,6 +74,7 @@ nav a {
     height: 1000px;
     background: #ecf0f1;
     margin: 30px;
+    min-width: 949px;
 }
 /*   Form   */
 span.bold{
