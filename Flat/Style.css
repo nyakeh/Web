@@ -1,0 +1,122 @@
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    /*background: url('worn_dots.png') repeat;*/
+    margin: 0 0 70px 0; /* maintains gap between content & footer */
+}
+/*   Header   */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    margin: 0;
+    overflow: auto;
+    background: #bdc3c7;
+    height: 130px;
+    min-width: 999px;
+    transition: height .25s;
+    -moz-transition: height .25s;
+    -webkit-transition: height .25s;
+    -o-transition: height .25s;
+    -ms-transition: height .25s;
+}
+#logo {
+    display: block;
+    float: left;
+    padding: 0;
+}
+#logo > img {
+    margin: 4px 0 0 4px;
+    height: 122px;
+    transition: height .25s;
+    -moz-transition: height .25s;
+    -webkit-transition: height .25s;
+    -o-transition: height .25s;
+    -ms-transition: height .25s;
+}
+nav {
+    display: block;
+    float: right;
+    text-align: left;
+}
+nav ul {
+    padding: 9px 0 9px 0;
+    margin: 40px 20px 0 0;
+    transition: margin .25s;
+    -moz-transition: margin .25s;
+    -webkit-transition: margin .25s;
+    -o-transition: margin .25s;
+    -ms-transition: margin .25s;
+}
+nav li {
+    display:inline;
+    padding: 12px;
+}
+nav li:hover {
+    background-color: #33b5e5 ;
+}
+.cover {
+    height: 450px;
+    background: #33b5e5;
+}
+/*   Content   */
+#dabigga {
+    height: 1000px;
+    background: #ecf0f1;
+    margin: 30px;
+}
+a {
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*   Form   */
+span.bold{
+     font-weight: bold;
+ }
+form {
+    width: 600px;
+    background: rgba(230,230,230, 0.7);
+    padding: 20px 50px;
+    margin: 24px auto 0 auto;
+    overflow: auto;
+}
+form select{
+    padding: 2px 4px;
+    margin-left: 70px;
+}
+input[type=submit] {
+    padding: 4px 8px;
+    float: left;
+}
+label {
+    display: block;
+    float: left;
+    width: 160px;
+    text-align: right;
+    margin-right: 9px;
+}
+input[type=text],input[type=email],input[type=password],input[type=date], input[type=number] {
+    width: 250px;
+}
+input:focus, textarea:focus {
+    border: 2px solid #33b5e5;
+}
+/*   Footer   */
+footer {
+    width: 100%;
+    height: 50px;
+    background: #bdc3c7;
+    position:absolute;
+    bottom:0;
+    /*border-top: 5px solid #33b5e5;*/
+}
+footer p {
+    text-align: right;
+    padding-right: 20px;
+}

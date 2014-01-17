@@ -11,9 +11,9 @@ $(document).ready(function() {
             /*$('h1 img').attr('src', "img/logo.png")*/
         }
     });
-
-
 });
+
+
 $(window).addEventListener('resize', myFunction()) ;
 navBool = true;
 function showNav() {
