@@ -15,7 +15,7 @@ header {
     width: 100%;
     margin: 0;
     overflow: auto;
-    background: #bdc3c7;
+    background: rgba(189,195,199, 0.7);
     height: 130px;
     min-width: 1020px;
     transition: height .25s;
@@ -55,9 +55,14 @@ nav ul {
 nav li {
     display:inline;
     padding: 12px;
+    transition: background-color .20s;
+    -moz-transition: background-color .20s;
+    -webkit-transition: background-color .20s;
+    -o-transition: background-color .20s;
+    -ms-transition: background-color .20s;
 }
 nav li:hover {
-    background-color: #33b5e5 ;
+    background-color: rgba(189,195,199, 1) ;
 }
 nav a {
     color: #000;
@@ -65,9 +70,16 @@ nav a {
     font-weight: bold;
     text-decoration: none;
 }
+/*   Banner   */
 .cover {
     height: 450px;
-    background: #33b5e5;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-image: url("img/house2.jpg");
 }
 /*   Content   */
 #content {
