@@ -11,7 +11,7 @@ body {
 header {
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 1;
     width: 100%;
     margin: 0;
     overflow: auto;
@@ -74,12 +74,12 @@ nav a {
 .cover {
     height: 450px;
     width: 100%;
-    display: inline-block;
     vertical-align: middle;
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-image: url("img/house2.jpg");
+    position: relative;
 }
 /*   Content   */
 #content {
@@ -87,6 +87,11 @@ nav a {
     background: #ecf0f1;
     margin: 30px;
     min-width: 949px;
+}
+.link {
+    position: absolute;
+    bottom: 0;
+    padding-top: 68px; /* Link down to main content on page */
 }
 /*   Form   */
 span.bold{
