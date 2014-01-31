@@ -93,13 +93,15 @@ nav a {
     bottom: 0;
     padding-top: 68px; /* Link down to main content on page */
 }
+section {
+    padding: 30px;
+}
 /*   Form   */
 span.bold{
      font-weight: bold;
  }
 form {
     width: 600px;
-    background: rgba(230,230,230, 0.7);
     padding: 20px 50px;
     margin: 24px auto 0 auto;
     overflow: auto;
@@ -118,9 +120,13 @@ label {
     width: 160px;
     text-align: right;
     margin-right: 9px;
+    padding: 10px;
 }
 input[type=text],input[type=email],input[type=password],input[type=date], input[type=number] {
-    width: 250px;
+    width: 200px;
+    padding: 8px;
+    border: 2px solid #bdc3c7;
+    background: #f7f9f9;
 }
 input:focus, textarea:focus {
     border: 2px solid #33b5e5;

@@ -13,9 +13,9 @@
     <div id="logo"><a href="Home.html"><img src="img/Logo_Design1.png"></a></div>
     <nav>
         <ul>
-            <li><a href="#">Mortgage</a></li>
-            <li><a href="Home.html">Budget</a></li>
-            <li><a href="Login.html">Account</a></li>
+            <li><a href="#link">Mortgage</a></li>
+            <li><a href="Home.html#link">Budget</a></li>
+            <li><a href="Login.html#link">Account</a></li>
         </ul>
     </nav>
 </header>
@@ -23,6 +23,16 @@
 <div id="content">
     <section>
         <p>Let us help you to <span class="bold">Calculate</span> your mortgage.</p>
+    </section>
+    <section>
+        <form id="mortgage_calculator" method="post" action="">
+            <p><label>Property Value</label><input type="text" class="input" name="property" id="form_property" value="200000"></p>
+            <p><label>Deposit Amount</label><input type="text" class="input" name="deposit" id="form_deposit" placeholder="10000"></p>
+            <p><label>Term</label><input type="text" class="input" name="term" id="form_term" placeholder="25"></p>
+            <p><label>Interest Rate</label><input type="text" class="input" name="subject" id="form_subject" placeholder="5"></p>
+            <p><label>Fees</label><input type="text" class="input" name="fees" id="form_fees" placeholder=""></p>
+            <p><input type="submit" id="submitButton"> </p>
+        </form>
     </section>
 </div>
 <footer><p>Made by Nyakeh Rogers</p></footer>
