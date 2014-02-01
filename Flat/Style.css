@@ -18,11 +18,11 @@ header {
     background: rgba(189,195,199, 0.7);
     height: 130px;
     min-width: 1020px;
-    transition: height .25s;
+    /*transition: height .25s;
     -moz-transition: height .25s;
     -webkit-transition: height .25s;
     -o-transition: height .25s;
-    -ms-transition: height .25s;
+    -ms-transition: height .25s;*/
 }
 #logo {
     display: block;
@@ -32,11 +32,11 @@ header {
 #logo a > img {
     margin: 4px 0 0 4px;
     height: 122px;
-    transition: height .25s;
+    /*transition: height .25s;
     -moz-transition: height .25s;
     -webkit-transition: height .25s;
     -o-transition: height .25s;
-    -ms-transition: height .25s;
+    -ms-transition: height .25s;*/
 }
 nav {
     display: block;
@@ -46,20 +46,20 @@ nav {
 nav ul {
     padding: 9px 0 9px 0;
     margin: 40px 20px 0 0;
-    transition: margin .25s;
+    /*transition: margin .25s;
     -moz-transition: margin .25s;
     -webkit-transition: margin .25s;
     -o-transition: margin .25s;
-    -ms-transition: margin .25s;
+    -ms-transition: margin .25s;*/
 }
 nav li {
     display:inline;
     padding: 12px;
-    transition: background-color .20s;
+    /*transition: background-color .20s;
     -moz-transition: background-color .20s;
     -webkit-transition: background-color .20s;
     -o-transition: background-color .20s;
-    -ms-transition: background-color .20s;
+    -ms-transition: background-color .20s;*/
 }
 nav li:hover {
     background-color: rgba(189,195,199, 1) ;
@@ -84,7 +84,6 @@ nav a {
 /*   Content   */
 #content {
     height: 1000px;
-    background: #ecf0f1;
     margin: 30px;
     min-width: 949px;
 }
@@ -95,6 +94,8 @@ nav a {
 }
 section {
     padding: 30px;
+    background: #ecf0f1;
+    margin: 10px 0;
 }
 /*   Form   */
 span.bold{
@@ -102,7 +103,7 @@ span.bold{
  }
 form {
     width: 600px;
-    padding: 20px 50px;
+    padding: 0;
     margin: 24px auto 0 auto;
     overflow: auto;
 }
@@ -110,23 +111,27 @@ form select{
     padding: 2px 4px;
     margin-left: 70px;
 }
-input[type=submit] {
-    padding: 4px 8px;
-    float: left;
-}
 label {
-    display: block;
-    float: left;
-    width: 160px;
-    text-align: right;
-    margin-right: 9px;
-    padding: 10px;
+display: block;
+float: left;
+width: 160px;
+text-align: right;
+margin-right: 9px;
+padding: 10px;
 }
 input[type=text],input[type=email],input[type=password],input[type=date], input[type=number] {
-    width: 200px;
-    padding: 8px;
-    border: 2px solid #bdc3c7;
-    background: #f7f9f9;
+width: 200px;
+padding: 8px;
+border: 2px solid #bdc3c7;
+background: #f7f9f9;
+}
+input[type=submit] {
+    display: block;
+    padding: 4px 8px;
+    width: 130px;
+    margin: 0 auto;
+    border: 2px solid #f7f9f9;
+    background: #bdc3c7;
 }
 input:focus, textarea:focus {
     border: 2px solid #33b5e5;
