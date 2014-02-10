@@ -125,7 +125,7 @@ padding: 8px;
 border: 2px solid #bdc3c7;
 background: #f7f9f9;
 }
-input[type=submit] {
+input[type=submit],input[type=button] {
     display: block;
     padding: 4px 8px;
     width: 130px;

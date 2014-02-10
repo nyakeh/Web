@@ -1,14 +1,20 @@
 <?php
-class LoginDetails {
+class Account {
+    public $AccountId = "";
+    public $Forename = "";
+    public $Surname  = "";
     public $Email  = "";
     public $Password  = "";
 }
 
-$account = new LoginDetails();
+$account = new Account();
+$account->AccountId = $_POST['accountId']; // retrieve from php cookie
+$account->Forename  = $_POST['forename'];
+$account->Surname  = $_POST['surname'];
 $account->Email = $_POST['email'];
 $account->Password  = $_POST['password'];
 /*
-$service_url = 'http://http://gauge.azurewebsites.net/api/login';
+$service_url = 'http://gauge.azurewebsites.net/api/account'. '/'. $_POST['accountId'];
 $curl_post_data = json_encode($account);
 $ch = curl_init($service_url);
 
@@ -23,4 +29,4 @@ curl_close($ch);
 */
 
 $pass = $_POST['password'];
-echo "Email: " . $_POST['email'] . "Pass: " . $pass;
+echo "Fname: " . $_POST['forename'] ." Sname: " . $_POST['surname'] ." Email: " . $_POST['email'] . " Pass: " . $pass;

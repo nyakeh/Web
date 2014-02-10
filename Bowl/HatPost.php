@@ -12,7 +12,7 @@ $user->Colour  = $_POST['colour'];
 
 //$service_url = 'http://localhost:50565/api/hat';
 $service_url = 'http://nyakehbowl.azurewebsites.net/api/hat';
-$arr = array('Name' => 'Shoe', 'Colour' => 'Green');
+//$arr = array('Name' => 'Shoe', 'Colour' => 'Green');
 $curl_post_data = json_encode($user);
 $ch = curl_init($service_url);
 

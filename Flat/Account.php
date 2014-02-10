@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('Utils.php');
+
+RetrieveDetails($forename, $surname, $email, $password);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,10 +30,10 @@
     <section>
         <p>Hey good looking, here's where you can <span class="bold">Update</span> you're details.</p>
         <form id="account" method="post" action="">
-            <p><label>Forename</label><input type="text" class="input" name="property" id="account_forename" value="Nyakeh"></p>
-            <p><label>Surname</label><input type="text" class="input" name="deposit" id="account_surname" value="Rogers"></p>
-            <p><label>Email</label><input type="text" class="input" name="term" id="account_email" value="Is@A"></p>
-            <p><label>Password</label><input type="text" class="input" name="subject" id="account_password" value="Chief"></p>
+            <p><label>Forename</label><input type="text" class="input" name="property" id="account_forename" <?php echo addValueTag(@$forename); ?>></p>
+            <p><label>Surname</label><input type="text" class="input" name="deposit" id="account_surname" <?php echo addValueTag(@$surname); ?>></p>
+            <p><label>Email</label><input type="text" class="input" name="term" id="account_email" <?php echo addValueTag(@$email); ?>></p>
+            <p><label>Password</label><input type="text" class="input" name="subject" id="account_password"></p>
             <input type="button" id="account_submit_Button" value="Update">
             <p id="account_message"></p>
         </form>

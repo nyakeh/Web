@@ -26,16 +26,16 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="7" selection-start="883" selection-end="883" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="595">
+            <state line="24" column="9" selection-start="829" selection-end="829" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="595">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="7" selection-start="453" selection-end="453" vertical-scroll-proportion="0.2368703" vertical-offset="0" max-vertical-offset="933">
+            <state line="17" column="35" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
               <folding />
             </state>
           </provider>
@@ -44,16 +44,16 @@
       <file leaf-file-name="HatGet.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HatGet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="32" selection-start="430" selection-end="430" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="476">
+            <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="408">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HatPost.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HatPost.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HatPost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="110" selection-end="110" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="544">
+            <state line="26" column="14" selection-start="734" selection-end="734" vertical-scroll-proportion="0.5092166" vertical-offset="0" max-vertical-offset="868">
               <folding />
             </state>
           </provider>
@@ -72,19 +72,18 @@
         <option value="$PROJECT_DIR$/script.js" />
         <option value="$PROJECT_DIR$/GameGet.php" />
         <option value="$PROJECT_DIR$/GamePost.php" />
-        <option value="$PROJECT_DIR$/HatGet.php" />
-        <option value="$PROJECT_DIR$/HatPost.php" />
         <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/scripts.js" />
+        <option value="$PROJECT_DIR$/HatPost.php" />
+        <option value="$PROJECT_DIR$/HatGet.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="x" value="-960" />
+    <option name="width" value="960" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -112,6 +111,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -132,7 +132,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -140,7 +139,7 @@
     <property name="SearchEverywhereHistory" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment" />
+    <property name="last_opened_file_path" value="C:/wamp/www/Flat" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -173,15 +172,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="-960" y="0" width="960" height="1050" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.114583336" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29711753" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -217,6 +216,62 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="34" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="29" selection-start="581" selection-end="581" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HatGet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="11" selection-start="182" selection-end="198" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HatPost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="7" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="7" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HatGet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="32" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HatPost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="544">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="26" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
           <folding />
         </state>
@@ -224,16 +279,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="40" selection-start="1830" selection-end="1830" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="1207">
-          <folding />
-        </state>
+        <state line="57" column="40" selection-start="1830" selection-end="1830" vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="1207" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
@@ -243,56 +294,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameGet.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="459">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="-9.153846" vertical-offset="0" max-vertical-offset="459" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GamePost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="391">
-          <folding />
-        </state>
+        <state line="13" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="391" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="21" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.32583067" vertical-offset="291" max-vertical-offset="1224">
-          <folding />
-        </state>
+        <state line="35" column="21" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.32583067" vertical-offset="291" max-vertical-offset="1224" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="933">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HatPost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="110" selection-end="110" vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="544">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HatGet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="32" selection-start="430" selection-end="430" vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="476">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="933" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="7" selection-start="883" selection-end="883" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="595">
+        <state line="24" column="9" selection-start="829" selection-end="829" vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="595">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="7" selection-start="453" selection-end="453" vertical-scroll-proportion="0.2368703" vertical-offset="0" max-vertical-offset="933">
+        <state line="17" column="35" selection-start="587" selection-end="587" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HatGet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="7" selection-end="7" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HatPost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="14" selection-start="734" selection-end="734" vertical-scroll-proportion="0.5092166" vertical-offset="0" max-vertical-offset="868">
           <folding />
         </state>
       </provider>

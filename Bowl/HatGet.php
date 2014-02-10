@@ -1,9 +1,5 @@
 <?php
 
-
-//$json = json_decode($response);
-//echo $json;
-
 //$service_url = 'http://localhost:50565/api/hat';
 $service_url = 'http://nyakehbowl.azurewebsites.net/api/hat';
 
