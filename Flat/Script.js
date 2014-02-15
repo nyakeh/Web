@@ -24,5 +24,21 @@ $(document).ready(function() {
             }
         });
     });
-
 });
+
+function validate_textbox(text_box,message,span) {
+    if(isEmptyTextBox(text_box,message,span)) {
+        return false
+    }
+    return true
+}
+function isEmptyTextBox(text_box, message, span) {
+    var lbl = document.getElementById(span);
+    if(text_box.value.replace(/\s+$/, "") == "") {
+        lbl.innerHTML = message;
+        return true;
+    } else {
+        lbl.innerHTML = "";
+        return false;
+    }
+}

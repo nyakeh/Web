@@ -102,7 +102,7 @@ span.bold{
      font-weight: bold;
  }
 form {
-    width: 600px;
+    width: 750px;
     padding: 0;
     margin: 24px auto 0 auto;
     overflow: auto;
@@ -112,18 +112,19 @@ form select{
     margin-left: 70px;
 }
 label {
-display: block;
-float: left;
-width: 160px;
-text-align: right;
-margin-right: 9px;
-padding: 10px;
+    display: block;
+    float: left;
+    width: 160px;
+    text-align: right;
+    margin-right: 9px;
+    margin-left: 77px;
+    padding: 10px;
 }
 input[type=text],input[type=email],input[type=password],input[type=date], input[type=number] {
-width: 200px;
-padding: 8px;
-border: 2px solid #bdc3c7;
-background: #f7f9f9;
+    width: 200px;
+    padding: 8px;
+    border: 2px solid #bdc3c7;
+    background: #f7f9f9;
 }
 input[type=submit],input[type=button] {
     display: block;
@@ -138,7 +139,7 @@ input:focus, textarea:focus {
 }
 .error {
     padding: 0 5px;
-    font-size: 12px;
+    font-size: 13px;
     color: #33b5e5;
 }
 .detailed_error {

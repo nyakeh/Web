@@ -115,7 +115,7 @@ function isRequiredForLogin($field)
 }
 function isRequiredForUser($field)
 {
-    $required = array('email', 'password', 'surname','forename', 'phone');
+    $required = array('forename', 'surname','email', 'password');
     return in_array($field, $required);
 }
 function isNotEmpty($value)

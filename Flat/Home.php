@@ -37,7 +37,7 @@ if($_GET){
     <div id="logo"><a href="#"><img src="img/Logo_Design1.png"></a></div>
     <nav>
         <ul>
-            <li><a href="Mortgage.html#link">Mortgage</a></li>
+            <li><a href="Mortgage.php">Mortgage</a></li>
             <li><a href="Budget.html#link">Budget</a></li>
             <li><a href="Account.php">Account</a></li>
         </ul>
