@@ -1,25 +1,76 @@
 <?php
-
+session_start();
+class AccountDetails {
+    public $AccountId = "";
+    public $Forename = "";
+    public $Surname  = "";
+    public $Email  = "";
+    public $Password  = "";
+}
 $account = new AccountDetails();
-$account->AccountId = $_POST['accountId']; // retrieve from php cookie
+$account->AccountId = $_SESSION['userId'];
 $account->Forename  = $_POST['forename'];
 $account->Surname  = $_POST['surname'];
 $account->Email = $_POST['email'];
 $account->Password  = $_POST['password'];
-/*
-$service_url = 'http://gauge.azurewebsites.net/api/account'. '/'. $_POST['accountId'];
-$curl_post_data = json_encode($account);
-$ch = curl_init($service_url);
 
+$service_url = 'http://127.0.0.1:81/api/account'. '/'. $_SESSION['userId'];
+$curl_post_data = json_encode($account);
+
+$ch = curl_init($service_url);
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
+curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+
+$content = trim(curl_exec($ch));
+$responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+if($responseCode == 200) {
+    echo '200: Success';
+} else if($responseCode == 404) {
+    echo '404: Failure';
+} else {
+    echo 'wat'.$responseCode.$content;
+}
+
+/*
+ session_start();
+class AccountDetails {
+    public $AccountId = "";
+    public $Forename = "";
+    public $Surname  = "";
+    public $Email  = "";
+    public $Password  = "";
+}
+$account = new AccountDetails();
+$account->AccountId = $_SESSION['userId'];
+$account->Forename  = $_POST['forename'];
+$account->Surname  = $_POST['surname'];
+$account->Email = $_POST['email'];
+$account->Password  = $_POST['password'];
+
+$service_url = 'http://127.0.0.1:81/api/account'. '/'. $_SESSION['userId'];
+$curl_post_data = json_encode($account);
+
+$ch = curl_init($service_url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
-
 curl_setopt($ch, CURLOPT_TIMEOUT, '3');
-$content = trim(curl_exec($ch));
-curl_close($ch);
-*/
 
-$pass = $_POST['password'];
-echo "Fname: " . $_POST['forename'] ." Sname: " . $_POST['surname'] ." Email: " . $_POST['email'] . " Pass: " . $pass;
+$content = trim(curl_exec($ch));
+$responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
+curl_close($ch);
+
+if($responseCode == 200) {
+    echo '200: Success';
+} else if($responseCode == 404) {
+    echo '404: Failure';
+} else {
+    echo 'wat'.$responseCode.con;
+}
+ */

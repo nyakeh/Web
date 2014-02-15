@@ -1,11 +1,4 @@
 <?php
-class AccountDetails {
-    public $AccountId = "";
-    public $Forename = "";
-    public $Surname  = "";
-    public $Email  = "";
-    public $Password  = "";
-}
 class LoginDetails {
     public $Email  = "";
     public $Password  = "";
@@ -28,6 +21,7 @@ function LogIn($email, $password) {
     curl_setopt($ch, CURLOPT_TIMEOUT, '3');
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
     if($responseCode == 200) {
         $result = json_decode($content);
         $_SESSION['username'] = $result->Forename;
@@ -39,25 +33,31 @@ function LogIn($email, $password) {
     } else if($responseCode == 404) {
         $output = detailErrorMessage('404: Stacked it. Email not found in Db');
     }
-    curl_close($ch);
     return $output;
 }
 
 function RetrieveDetails(&$forename, &$surname, &$email, &$password) {
-    $service_url = 'http://gauge.azurewebsites.net/api/account';
-    $qry_str = '/3'; //use $_SESSION['accountId']
+    $service_url = 'http://127.0.0.1:81/api/account';
+    $qry_str = '/' . $_SESSION['userId'];
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $service_url . $qry_str);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_TIMEOUT, '3');
     $content = trim(curl_exec($ch));
+    $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
-    echo $content;
-    $result = json_decode($content);
-    $forename = $result->Forename;
-    $surname = $result->Surname;
-    $email = $result->Email;
-    $password = $result->Password;
+    if($responseCode == 200) {
+        $result = json_decode($content);
+        $forename = $result->Forename;
+        $surname = $result->Surname;
+        $email = $result->Email;
+        $password = $result->Password;
+    } else if($responseCode == 404) {
+        $forename ='';
+        $surname ='';
+        $email = '';
+        $password ='';
+    }
 }
 
 function LogOut() {

@@ -16,8 +16,8 @@ $(document).ready(function() {
         $surname = $('#account_surname').val();
         $email = $('#account_email').val();
         $password = $('#account_password').val();
-        $.ajax({ url: 'Account_Update_Function.php',
-            data: { accountId: 3, forename: $forename, surname: $surname, email: $email, password: $password },
+        $.ajax({ url: 'Account_Details_Update_Function.php',
+            data: { forename: $forename, surname: $surname, email: $email, password: $password },
             type: 'post',
             success: function(output) {
                 $("#account_message").text(output);

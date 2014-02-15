@@ -1,7 +1,9 @@
 <?php
 session_start();
 include('Utils.php');
-
+if(!isset($_SESSION['userId'])) {
+    header('Location: Home.php');
+}
 RetrieveDetails($forename, $surname, $email, $password);
 ?>
 <!DOCTYPE html>
@@ -16,12 +18,12 @@ RetrieveDetails($forename, $surname, $email, $password);
 
 <body>
 <header>
-    <div id="logo"><a href="Home.html#link"><img src="img/Logo_Design1.png"></a></div>
+    <div id="logo"><a href="Home.php"><img src="img/Logo_Design1.png"></a></div>
     <nav>
         <ul>
             <li><a href="Mortgage.html#link">Mortgage</a></li>
             <li><a href="Budget.html#link">Budget</a></li>
-            <li><a href="#link">Account</a></li>
+            <li><a href="#">Account</a></li>
         </ul>
     </nav>
 </header>

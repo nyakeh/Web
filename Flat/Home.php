@@ -34,19 +34,25 @@ if($_GET){
 
 <body>
 <header>
-    <div id="logo"><a href="Home.html#link"><img src="img/Logo_Design1.png"></a></div>
+    <div id="logo"><a href="#"><img src="img/Logo_Design1.png"></a></div>
     <nav>
         <ul>
             <li><a href="Mortgage.html#link">Mortgage</a></li>
             <li><a href="Budget.html#link">Budget</a></li>
-            <li><a href="Account.html#link">Account</a></li>
+            <li><a href="Account.php">Account</a></li>
         </ul>
     </nav>
 </header>
 <div class="cover"><a id="link" class="link"></a></div>
 <div id="content">
     <section>
+        <!--
+            add proof of session
+            $_SESSION['username'] = $result->Forename;
+            $_SESSION['userId'] = $result->AccountId;
+        -->
         <p>Welcome to <span class="bold">Gauge</span>, the online mortgage calculator</p>
+        <p>Whats hatning <?php echo $_SESSION['username'] ?> you're are <?php echo $_SESSION['userId'] ?>nd favourite customer.</p>
     </section>
     <section>
         <p>Hello stranger, why don't you <span class="bold">Login</span> below.</p>
