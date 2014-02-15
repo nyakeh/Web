@@ -1,12 +1,4 @@
 <?php
-class LoginDetails {
-    public $Email  = "";
-    public $Password  = "";
-}
-
-$account = new LoginDetails();
-$account->Email = $_POST['email'];
-$account->Password  = $_POST['password'];
 /*
 $service_url = 'http://http://gauge.azurewebsites.net/api/login';
 $curl_post_data = json_encode($account);

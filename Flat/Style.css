@@ -18,11 +18,11 @@ header {
     background: rgba(189,195,199, 0.7);
     height: 130px;
     min-width: 1020px;
-    /*transition: height .25s;
+    transition: height .25s;
     -moz-transition: height .25s;
     -webkit-transition: height .25s;
     -o-transition: height .25s;
-    -ms-transition: height .25s;*/
+    -ms-transition: height .25s;
 }
 #logo {
     display: block;
@@ -32,11 +32,11 @@ header {
 #logo a > img {
     margin: 4px 0 0 4px;
     height: 122px;
-    /*transition: height .25s;
+    transition: height .25s;
     -moz-transition: height .25s;
     -webkit-transition: height .25s;
     -o-transition: height .25s;
-    -ms-transition: height .25s;*/
+    -ms-transition: height .25s;
 }
 nav {
     display: block;
@@ -46,20 +46,20 @@ nav {
 nav ul {
     padding: 9px 0 9px 0;
     margin: 40px 20px 0 0;
-    /*transition: margin .25s;
+    transition: margin .25s;
     -moz-transition: margin .25s;
     -webkit-transition: margin .25s;
     -o-transition: margin .25s;
-    -ms-transition: margin .25s;*/
+    -ms-transition: margin .25s;
 }
 nav li {
     display:inline;
     padding: 12px;
-    /*transition: background-color .20s;
+    transition: background-color .20s;
     -moz-transition: background-color .20s;
     -webkit-transition: background-color .20s;
     -o-transition: background-color .20s;
-    -ms-transition: background-color .20s;*/
+    -ms-transition: background-color .20s;
 }
 nav li:hover {
     background-color: rgba(189,195,199, 1) ;
@@ -135,6 +135,18 @@ input[type=submit],input[type=button] {
 }
 input:focus, textarea:focus {
     border: 2px solid #33b5e5;
+}
+.error {
+    padding: 0 5px;
+    font-size: 12px;
+    color: #33b5e5;
+}
+.detailed_error {
+    display: block;
+    padding: 0;
+    width: 330px;
+    margin: 0 auto;
+    text-align: center;
 }
 /*   Footer   */
 footer {

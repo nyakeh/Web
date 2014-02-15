@@ -11,18 +11,6 @@ $(document).ready(function() {
         }
     });
 
-    $('#login_submit_Button').click( function() {
-        $email = $('#login_email').val();
-        $password = $('#login_password').val();
-        $.ajax({ url: 'Login_Function.php',
-            data: { email: $email, password: $password },
-            type: 'post',
-            success: function(output) {
-                $("#login_message").text(output);
-            }
-        });
-    });
-
     $('#account_submit_Button').click( function() {
         $forename = $('#account_forename').val();
         $surname = $('#account_surname').val();
