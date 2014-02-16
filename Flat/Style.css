@@ -137,6 +137,20 @@ input[type=submit],input[type=button] {
 input:focus, textarea:focus {
     border: 2px solid #33b5e5;
 }
+.tick {
+    background-image: url("img/tick.png");
+    background-size: cover;
+    line-height: 30px;
+    margin-left: 8px;
+    font-size: 20px;
+}
+.cross {
+    background-image: url("img/cross.png");
+    background-size: cover;
+    margin-left: 8px;
+    line-height: 30px;
+    font-size: 20px;
+}
 .error {
     padding: 0 5px;
     font-size: 13px;

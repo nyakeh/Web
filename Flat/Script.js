@@ -62,3 +62,15 @@ function isEmptyTextBox(text_box, message, span) {
         return false;
     }
 }
+
+function isEmptyNumberBox(text_box, span) {
+    var lbl = document.getElementById(span);
+    lbl.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;";
+    if(text_box.value.replace(/\s+$/, "") == "") {
+        lbl.className = "cross";
+        return true;
+    } else {
+        lbl.className = "tick";
+        return false;
+    }
+}

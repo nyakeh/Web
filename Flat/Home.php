@@ -38,7 +38,7 @@ if($_GET){
     <nav>
         <ul>
             <li><a href="Mortgage.php">Mortgage</a></li>
-            <li><a href="Budget.html#link">Budget</a></li>
+            <li><a href="Budget.php">Budget</a></li>
             <li><a href="Account.php">Account</a></li>
         </ul>
     </nav>

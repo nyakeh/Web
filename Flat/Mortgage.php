@@ -18,7 +18,7 @@ include('Utils.php');
     <nav>
         <ul>
             <li><a href="#">Mortgage</a></li>
-            <li><a href="Budget.html#link">Budget</a></li>
+            <li><a href="Budget.php">Budget</a></li>
             <li><a href="Account.php">Account</a></li>
         </ul>
     </nav>
@@ -28,11 +28,11 @@ include('Utils.php');
     <section>
         <p>Let us help you to <span class="bold">Calculate</span> your mortgage.</p>
         <form id="mortgage_calculator" method="post" action="">
-            <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" value="200000"></p>
-            <p><label>Deposit Amount</label><input type="text" class="input" name="input_deposit" id="input_deposit" placeholder="10000"></p>
-            <p><label>Term</label><input type="text" class="input" name="input_term" id="input_term" placeholder="25"></p>
-            <p><label>Interest Rate</label><input type="text" class="input" name="input_interest" id="input_interest" placeholder="5"></p>
-            <p><label>Fees</label><input type="text" class="input" name="input_fees" id="input_fees" placeholder=""></p>
+            <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" value="200000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_propertyMsg');"><span id="input_propertyMsg"></span></p>
+            <p><label>Deposit Amount</label><input type="text" class="input" name="input_deposit" id="input_deposit" placeholder="10000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_depositMsg');"><span id="input_depositMsg"></span></p>
+            <p><label>Term</label><input type="text" class="input" name="input_term" id="input_term" placeholder="25" maxlength="3" onBlur="javascript:isEmptyNumberBox(this,'input_termMsg');"><span id="input_termMsg"></span></p>
+            <p><label>Interest Rate</label><input type="text" class="input" name="input_interest" id="input_interest" placeholder="5" maxlength="5" onBlur="javascript:isEmptyNumberBox(this,'input_interestMsg');"><span id="input_interestMsg"></span></p>
+            <p><label>Fees</label><input type="text" class="input" name="input_fees" id="input_fees" placeholder="" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_feesMsg');"><span id="input_feesMsg"></span></p>
             <input type="button" id="mortgage_submit_Button" value="Calculate">
             <p><span id="mortgage_message" class="detailed_error"></span></p>
         </form>

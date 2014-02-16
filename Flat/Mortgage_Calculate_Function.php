@@ -9,8 +9,14 @@ class CalculationDetails {
     public $MortgageType  = "";
     public $Source  = "";
 }
+
+$accountId = '';
+if(isset($_SESSION['userId'])) {
+    $accountId = $_SESSION['userId'];
+}
+
 $calculation = new CalculationDetails();
-$calculation->AccountId = $_SESSION['userId']; // null check if not logged in?
+$calculation->AccountId = $accountId;
 $calculation->HouseValue  = $_POST['houseValue'];
 $calculation->InterestRate  = $_POST['interest'];
 $calculation->Term = $_POST['term'];
