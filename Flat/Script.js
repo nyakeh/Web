@@ -13,14 +13,34 @@ $(document).ready(function() {
 
     $('#account_submit_Button').click( function() {
         $forename = $('#account_forename').val();
-        $surname = $('#account_surname').val();
-        $email = $('#account_email').val();
-        $password = $('#account_password').val();
+        $deposit = $('#account_surname').val();
+        $term = $('#account_email').val();
+        $interest = $('#account_password').val();
         $.ajax({ url: 'Account_Details_Update_Function.php',
-            data: { forename: $forename, surname: $surname, email: $email, password: $password },
+            data: { forename: $forename, surname: $deposit, email: $term, password: $interest },
             type: 'post',
             success: function(output) {
                 $("#account_message").text(output);
+            }
+        });
+    });
+
+    $('#mortgage_submit_Button').click( function() {
+        $houseValue = $('#input_property').val();
+        $deposit = $('#input_deposit').val();
+        $term = $('#input_term').val();
+        $interest = $('#input_interest').val();
+        $fees = $('#input_fees').val();
+        $.ajax({ url: 'Mortgage_Calculate_Function.php',
+            data: { houseValue: $houseValue, deposit: $deposit, term: $term, interest: $interest, fees: $fees },
+            type: 'post',
+            success: function(output) {
+                try {
+                    var calculation = JSON.parse(output);
+                    $("#mortgage_message").text(calculation.Fees);
+                } catch(exception) {
+                    $("#mortgage_message").text(output);
+                }
             }
         });
     });

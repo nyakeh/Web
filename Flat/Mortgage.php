@@ -28,12 +28,13 @@ include('Utils.php');
     <section>
         <p>Let us help you to <span class="bold">Calculate</span> your mortgage.</p>
         <form id="mortgage_calculator" method="post" action="">
-            <p><label>Property Value</label><input type="text" class="input" name="property" id="form_property" value="200000"></p>
-            <p><label>Deposit Amount</label><input type="text" class="input" name="deposit" id="form_deposit" placeholder="10000"></p>
-            <p><label>Term</label><input type="text" class="input" name="term" id="form_term" placeholder="25"></p>
-            <p><label>Interest Rate</label><input type="text" class="input" name="subject" id="form_subject" placeholder="5"></p>
-            <p><label>Fees</label><input type="text" class="input" name="fees" id="form_fees" placeholder=""></p>
-            <input type="submit" id="mortgage_submit_Button" value="Calculate">
+            <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" value="200000"></p>
+            <p><label>Deposit Amount</label><input type="text" class="input" name="input_deposit" id="input_deposit" placeholder="10000"></p>
+            <p><label>Term</label><input type="text" class="input" name="input_term" id="input_term" placeholder="25"></p>
+            <p><label>Interest Rate</label><input type="text" class="input" name="input_interest" id="input_interest" placeholder="5"></p>
+            <p><label>Fees</label><input type="text" class="input" name="input_fees" id="input_fees" placeholder=""></p>
+            <input type="button" id="mortgage_submit_Button" value="Calculate">
+            <p><span id="mortgage_message" class="detailed_error"></span></p>
         </form>
     </section>
 </div>
