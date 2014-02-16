@@ -69,6 +69,9 @@ function isEmptyNumberBox(text_box, span) {
     if(text_box.value.replace(/\s+$/, "") == "") {
         lbl.className = "cross";
         return true;
+    } else if(isNaN(text_box.value)) {
+        lbl.className = "cross";
+        return true;
     } else {
         lbl.className = "tick";
         return false;

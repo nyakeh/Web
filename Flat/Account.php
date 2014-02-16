@@ -32,15 +32,15 @@ RetrieveDetails($forename, $surname, $email, $password);
     <section>
         <p>Hey good looking, here's where you can <span class="bold">Update</span> you're details.</p>
         <form id="account" method="post" action="">
-            <p><label>Forename</label><input type="text" class="input" name="account_forename" id="account_forename" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your First Name','account_forenameMsg');"
+            <p><label>Forename</label><input type="text" class="input" name="account_forename" id="account_forename" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your First Name','account_forenameMsg');" tabindex="1"
                     <?php echo addValueTag(@$forename); ?>><span class="error" id="account_forenameMsg"></span></p>
-            <p><label>Surname</label><input type="text" class="input" name="account_surname" id="account_surname" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your Last Name','account_surnameMsg');"
+            <p><label>Surname</label><input type="text" class="input" name="account_surname" id="account_surname" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your Last Name','account_surnameMsg');" tabindex="2"
                     <?php echo addValueTag(@$surname); ?>><span class="error" id="account_surnameMsg"></span></p>
-            <p><label>Email</label><input type="text" class="input" name="account_email" id="account_email" maxlength="100" onBlur="javascript:validate_textbox(this,'Please enter your Email Address','account_emailMsg');"
+            <p><label>Email</label><input type="text" class="input" name="account_email" id="account_email" maxlength="100" onBlur="javascript:validate_textbox(this,'Please enter your Email Address','account_emailMsg');" tabindex="3"
                     <?php echo addValueTag(@$email); ?>><span class="error" id="account_emailMsg"></span></p>
-            <p><label>Password</label><input type="text" class="input" name="account_password" id="account_password" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your Last Name','account_passwordMsg');">
+            <p><label>Password</label><input type="text" class="input" name="account_password" id="account_password" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your Last Name','account_passwordMsg');" tabindex="4">
                 <span class="error" id="account_passwordMsg"></span></p>
-            <input type="button" id="account_submit_Button" value="Update">
+            <input type="button" id="account_submit_Button" value="Update" tabindex="5">
             <p><span id="account_message" class="detailed_error"></span></p>
         </form>
     </section>

@@ -57,9 +57,9 @@ if($_GET){
     <section>
         <p>Hello stranger, why don't you <span class="bold">Login</span> below.</p>
         <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-            <p><label>Email</label><input type="text" class="input" name="email" id="login_email"><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
-            <p><label>Password</label><input type="text" class="input" name="password" id="login_password"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
-            <p><input type="submit" value="Login"></p>
+            <p><label>Email</label><input type="text" class="input" name="email" id="login_email" tabindex="1"><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
+            <p><label>Password</label><input type="text" class="input" name="password" id="login_password" tabindex="2"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
+            <p><input type="submit" value="Login" tabindex="3"></p>
             <p><?php echo nullCheckOutput(@$validationMessage['form']); ?></p>
         </form>
     </section>
