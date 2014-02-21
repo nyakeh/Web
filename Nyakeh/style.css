@@ -48,14 +48,12 @@ nav a {
 nav a:hover {
     color: #0e5670;
 }
-
-#body {
-    min-height: 100%;
-}
 #content {
+    display: block;
     width: 800px;
-    margin: 0 auto;
+    margin: 0 50px;
     margin-top: -20px;
+    padding: 0;
 }
 section {
     background: #FFF;
@@ -71,14 +69,56 @@ section h3 {
     color: #0e5670;
 }
 #continue {
+    display: block;
     text-decoration: none;
     color: #0e5670;
     background: #b0e1f3;
     padding: 6px;
 }
-
+#post {
+    background: #FFF;
+    height: 800px;
+    box-shadow: 0px 0px 5px 1px #0e5670;
+}
+#heading {
+    background-image: url("img/twoTowers.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+#post p {
+    padding: 0 15px;
+}
+#heading h1 {
+    position: absolute;
+    padding: 0 15px;
+    bottom: 0;
+}
+#heading h2 {
+    position: absolute;
+    color: #FFF;
+    padding: 0 15px;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+}
+#sidebar {
+    float: right;
+    width: 150px;
+}
+#s_face {
+    background: url("img/faceHex.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 114px;
+}
+.s_social {
+    width: 57px;
+}
 footer {
     width: 100%;
+    margin-top: 20px;
     height: 50px;
     background: #b0e1f3;
     bottom:0;
