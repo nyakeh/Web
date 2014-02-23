@@ -6,7 +6,8 @@ body {
     background: #f2fafd;
     margin: 0;
     height: 100%;
-    min-width: 830px;
+    width: 100%;
+    min-width: 630px;
 }
 header {
     background: #b0e1f3;
@@ -103,18 +104,34 @@ section h3 {
     right: 0;
     margin: 0;
 }
+#page {
+    overflow: auto;
+}
+#landing {
+    display: block;
+    float: left;
+    max-width: 800px;
+    min-width: 400px;
+    margin: 0 50px;
+    padding: 20px;
+}
 #sidebar {
+    display: block;
     float: right;
-    width: 150px;
+    width: 200px;
+    margin: 40px 20px 0 0;
 }
 #s_face {
-    background: url("img/faceHex.png");
+    background: url("img/face.png");
     background-size: contain;
     background-repeat: no-repeat;
-    height: 114px;
+    height: 194px;
+}
+#s_links p {
+    text-align: center;
 }
 .s_social {
-    width: 57px;
+    width: 64px;
 }
 footer {
     width: 100%;
