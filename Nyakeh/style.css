@@ -1,3 +1,5 @@
+
+
 html {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
@@ -140,7 +142,7 @@ section h3 {
     text-align: center;
 }
 .s_social {
-    width: 64px;
+    width: 63px;
 }
 footer {
     position: absolute;
