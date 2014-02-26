@@ -23,7 +23,8 @@ if($validationMessage) {
     $account->Email = $_POST['email'];
     $account->Password  = $_POST['password'];
 
-    $service_url = 'http://127.0.0.1:81/api/account'. '/'. $_SESSION['userId'];
+    //$service_url = 'http://127.0.0.1:81/api/account'. '/'. $_SESSION['userId']; //local
+    $service_url = 'http://mortgagecalculator.cloudapp.net/api/account'. '/'. $_SESSION['userId']; //live
     $curl_post_data = json_encode($account);
 
     $ch = curl_init($service_url);

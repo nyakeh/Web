@@ -37,14 +37,24 @@ $(document).ready(function() {
             success: function(output) {
                 try {
                     var calculation = JSON.parse(output);
-                    $("#mortgage_message").text(calculation.Fees);
+                    var resultsTable = buildResultsTable(calculation);
+                    $("#mortgage_message").text('');
+                    $("#mortgage_results").html(resultsTable);
                 } catch(exception) {
                     $("#mortgage_message").text(output);
+                    $("#mortgage_results").html('');
                 }
             }
         });
     });
 });
+
+function buildResultsTable(calculation) {
+    var result = '<table><tr><th>Bank</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owing</th></tr>';
+    result += '<tr><td>Natwest</td><td>'+calculation.InterestRate+'</td><td>'+calculation.LoanToValue+'</td><td>'+calculation.Fees+'</td><td>'+calculation.MonthlyRepayment+'</td><td>'+calculation.TotalInterest+'</td><td>'+calculation.TotalPaid+'</td></tr>';
+    result += '</table>';
+    return result;
+}
 
 function validate_textbox(text_box,message,span) {
     if(isEmptyTextBox(text_box,message,span)) {

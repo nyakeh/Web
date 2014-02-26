@@ -9,7 +9,8 @@ function LogIn($email, $password) {
     $account->Email = $email;
     $account->Password  = $password;
 
-    $service_url = 'http://127.0.0.1:81/api/login';
+    //$service_url = 'http://127.0.0.1:81/api/login'; //local
+    $service_url = 'http://mortgagecalculator.cloudapp.net/api/login'; //live
     $curl_post_data = json_encode($account);
     $ch = curl_init($service_url);
 
@@ -37,7 +38,8 @@ function LogIn($email, $password) {
 }
 
 function RetrieveDetails(&$forename, &$surname, &$email, &$password) {
-    $service_url = 'http://127.0.0.1:81/api/account';
+    //$service_url = 'http://127.0.0.1:81/api/account'; //local
+    $service_url = 'http://mortgagecalculator.cloudapp.net/api/account'; //live
     $qry_str = '/' . $_SESSION['userId'];
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $service_url . $qry_str);
@@ -80,6 +82,33 @@ function addValueTag($value)
     return $output;
 }
 // -- Input Validation --
+function validateCalculationInput($expected, $state) {
+    $validationMessage = array();
+
+    foreach ($expected as $field) {
+        $value = trim($_POST[$field]);
+        if(isNotEmpty($value)) {
+            ${$field} = htmlentities($value, ENT_COMPAT, 'UTF-8');
+            if($message = validate($field, $value)) {
+                $validationMessage[$field] = errorMessage($message);
+            }
+        } else {
+            switch($state) {
+                case "mortgage":
+                    if(isRequiredForMortgage($field)) {
+                        $validationMessage[$field] = errorMessage('Required');
+                    };
+                    break;
+                case "budget":
+                    /*if(isRequiredForBudget($field)) {
+                        $validationMessage[$field] = errorMessage('Required');
+                    };*/
+                    break;
+            }
+        }
+    }
+    return $validationMessage;
+}
 function ValidateFields($expected, $state) {
     $validationMessage = array();
 
@@ -116,6 +145,11 @@ function isRequiredForLogin($field)
 function isRequiredForUser($field)
 {
     $required = array('forename', 'surname','email', 'password');
+    return in_array($field, $required);
+}
+function isRequiredForMortgage($field)
+{
+    $required = array('houseValue','interest', 'term');
     return in_array($field, $required);
 }
 function isNotEmpty($value)

@@ -163,6 +163,20 @@ input:focus, textarea:focus {
     margin: 0 auto;
     text-align: center;
 }
+/*   Results  */
+table {
+    margin: 0 auto;
+    border: 2px solid #bdc3c7;
+    border-spacing: 0;
+}
+th {
+    padding: 5px;
+    background: #bdc3c7;
+}
+td {
+    text-align: center;
+    padding: 18px 5px;
+}
 /*   Footer   */
 footer {
     width: 100%;

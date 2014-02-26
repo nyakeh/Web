@@ -42,6 +42,9 @@ include('Utils.php');
             <p><span id="mortgage_message" class="detailed_error"></span></p>
         </form>
     </section>
+    <section class="results" id="mortgage_results">
+
+    </section>
 </div>
 <footer><p>Made by Nyakeh Rogers</p></footer>
 </body>
