@@ -6,6 +6,9 @@ html, body, div, span, p, a, code, em, img, small, strong, b, u, i, center, ol, 
     font: inherit;
     vertical-align: baseline;
 }
+p {
+    padding: 15px;
+}
 html {
     font-family: Arial, Helvetica, sans-serif;
     height: 100%;
@@ -55,6 +58,7 @@ header h1 {
     transition: color 350ms;
     -moz-transition: color 350ms;
     -webkit-transition: color 350ms;
+    -ms-transition: color 350ms;
 }
 header h1:hover {
     color: #0e5670;
@@ -83,6 +87,7 @@ nav ul li a {
     transition: color 350ms;
     -moz-transition: color 350ms;
     -webkit-transition: color 350ms;
+    -ms-transition: color 350ms;
 }
 nav a:hover {
     color: #0e5670;
@@ -93,6 +98,10 @@ nav a:hover {
     max-width: 800px;
     margin: 0 50px;
     padding: 0;
+    transition: margin 350ms;
+    -moz-transition: margin 350ms;
+    -webkit-transition: margin 350ms;
+    -ms-transition: margin 350ms;
 }
 section {
     background: #FFF;
@@ -117,7 +126,7 @@ section h3 {
 }
 #post {
     background: #FFF;
-    height: 800px;
+    min-height: 800px;
     box-shadow: 0px 0px 5px 1px #0e5670;
     margin-bottom: 30px;
 }
@@ -127,9 +136,6 @@ section h3 {
     width: 100%;
     height: 300px;
     position: relative;
-}
-#post p {
-    padding: 0 15px;
 }
 #heading h1 {
     position: absolute;
@@ -152,6 +158,13 @@ section h3 {
     float: left;
     max-width: 800px;
     margin: 0 50px;
+    transition: margin 350ms;
+    -moz-transition: margin 350ms;
+    -webkit-transition: margin 350ms;
+    -ms-transition: margin 350ms;
+}
+#landing h2{
+    margin: 20px;
 }
 #sidebar {
     display: block;
@@ -230,5 +243,8 @@ footer {
         -moz-transform: translateY(0px);
         -ms-transform: translateY(0px);
         -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0);
+    }
+    #content, #landing {
+        margin: 0;
     }
 }
