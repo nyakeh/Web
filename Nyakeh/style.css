@@ -34,13 +34,6 @@ body {
     font-family: helvetica, sans-serif;
 }
 header {
-    background: #b0e1f3;
-    color: #f2fafd;
-    height: 120px;
-    overflow: auto;
-    padding: 0;
-}
-#header {
     z-index: 2;
     position: fixed;
     width: 100%;
@@ -49,8 +42,9 @@ header {
     background: #b0e1f3;
     color: #f2fafd;
 }
-#header h1 {
+header h1 {
     position: absolute;
+    font-size: 1.8em;
     top: 0;
     left: 0;
     color: #178ab4;
@@ -58,11 +52,11 @@ header {
     margin: 0;
     padding: 0;
     border: 0;
-    transition: 350ms;
-    -moz-transition: 350ms;
-    -webkit-transition: 350ms;
+    transition: color 350ms;
+    -moz-transition: color 350ms;
+    -webkit-transition: color 350ms;
 }
-#header h1:hover {
+header h1:hover {
     color: #0e5670;
 }
 a {
@@ -80,14 +74,15 @@ nav ul li {
     float: left;
 }
 nav ul li a {
+    display: block;
     color: #178ab4;
     font-size: 17px;
     font-weight: bold;
     text-decoration: none;
-    padding: 0 10px;
-    transition: 350ms;
-    -moz-transition: 350ms;
-    -webkit-transition: 350ms;
+    padding: 0 6px;
+    transition: color 350ms;
+    -moz-transition: color 350ms;
+    -webkit-transition: color 350ms;
 }
 nav a:hover {
     color: #0e5670;
@@ -184,8 +179,49 @@ footer {
     bottom:0;
 }
 
-@media (max-width: 914px) {
+@media (max-width: 599px) {
+    header .container {
+        width: 100%;
+    }
+    header h1 {
+        left: 17px;
+    }
+    nav {
+        width: 100%;
+        top: 60px;
+    }
+    nav:before {
+        content: '\2630';
+        display: block;
+        position: absolute;
+        right: 3%;
+        top: -50px;
+        line-height: 40px;
+        cursor: pointer;
+    }
+    nav ul {
+        background: #dcf2fa;
+        width: 100%;
+    }
+    nav ul li {
+        float: none;
+    }
     nav ul li a {
-        padding: 0 6px;
+        padding: 10px 10px;
+        line-height: 20px;
+        border-top: 1px solid #FFF;
+    }
+    nav ul {
+        transform: perspective(600) rotate3d(0, 0, 0, 0);
+        -moz-transform: perspective(600) rotate3d(0, 0, 0, 0);
+        -webkit-transform: perspective(600) rotate3d(1, 0, 0, -90deg);
+        transform-origin: 50% 0;
+        -moz-transform-origin: 50% 0;
+        -webkit-transform-origin: 50% 0;
+    }
+    nav.open ul {
+        transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0);
     }
 }
