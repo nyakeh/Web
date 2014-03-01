@@ -91,7 +91,7 @@ html {
     }
     #nav ul {
         transition: 350ms;
-        -moz-transition: 350ms; 
+        -moz-transition: 350ms;
         -webkit-transition: 350ms;
         transform: perspective(600) rotate3d(0, 0, 0, 0);
         -moz-transform: perspective(600) rotate3d(0, 0, 0, 0);
