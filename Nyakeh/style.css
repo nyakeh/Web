@@ -25,10 +25,6 @@ body {
     overflow: auto;
     padding-bottom: 50px;
 }
-#body {
-    position: relative;
-    padding-top: 80px;
-}
 .container {
     position: relative;
     margin: 0 auto;
@@ -92,12 +88,18 @@ nav ul li a {
 nav a:hover {
     color: #0e5670;
 }
+#body {
+    position: relative;
+    padding-top: 80px;
+    margin: 0 auto;
+    width: 94%;
+    max-width: 1200px;
+}
 #content {
     display: block;
     float: left;
+    width: 65%;
     max-width: 800px;
-    margin: 0 50px;
-    padding: 0;
     transition: margin 350ms;
     -moz-transition: margin 350ms;
     -webkit-transition: margin 350ms;
@@ -150,10 +152,6 @@ section h3 {
     margin: 0;
 }
 #page {
-    position: relative;
-    margin: 0 auto;
-    width: 94%;
-    max-width: 1200px;
 }
 #landing {
     display: block;
@@ -172,7 +170,7 @@ section h3 {
     display: block;
     float: right;
     width: 200px;
-    margin: 50px 3% 0 40px;
+    margin: 50px 30px 0 40px;
 }
 #s_face img {
     width: 194px;
@@ -190,12 +188,16 @@ footer {
     height: 50px;
     bottom:0;
 }
+footer img {
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
 
 
 @media (max-width: 850px) {
-    #landing {
+    #landing, #content {
         width: 100%;
-        max-width: 800px;
         margin: 0;
     }
     #sidebar {
