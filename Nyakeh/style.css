@@ -175,7 +175,7 @@ section h3 {
     margin: 50px 3% 0 40px;
 }
 #s_face img {
-    height: 194px;
+    width: 194px;
 }
 #s_links p {
     text-align: center;
@@ -220,10 +220,9 @@ footer {
         content: '\2630';
         display: block;
         position: absolute;
-        right: 3%;
+        right: 15px;
         top: -50px;
         line-height: 40px;
-        cursor: pointer;
     }
     nav ul {
         background: #dcf2fa;
