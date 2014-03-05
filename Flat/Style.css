@@ -1,91 +1,99 @@
+html, body, div, span, p, a, code, em, img, small, strong, b, u, i, center, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, details, figcaption, footer, header, menu, nav, section, summary, time {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 html {
-    position: relative;
-    min-height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+p {
+     padding: 15px;
 }
 body {
-    /*background: url('worn_dots.png') repeat;*/
-    margin: 0 0 70px 0; /* maintains gap between content & footer */
+    background-image: url('img/brick.png');
+    height: 100%;
+}
+a {
+     text-decoration: none;
+}
+#all {
+    position: relative;
+    min-height: 100%;
+    overflow: auto;
+    padding-bottom: 50px;
 }
 /*   Header   */
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 94%;
+    max-width: 1100px;
+    min-width: 850px;
+    font-family: arial, helvetica, sans-serif;
+}
 header {
-    position: fixed;
-    top: 0;
-    z-index: 1;
+    position: relative;
     width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background: #bdc3c7;
+}
+header h1 {
+    position: absolute;
+    font-size: 2.2em;
+    top: 0;
+    left: 0;
+    color: #000;
+    text-transform: uppercase;
     margin: 0;
-    overflow: auto;
-    background: rgba(189,195,199, 0.7);
-    height: 130px;
-    min-width: 1020px;
-    transition: height .25s;
-    -moz-transition: height .25s;
-    -webkit-transition: height .25s;
-    -o-transition: height .25s;
-    -ms-transition: height .25s;
-}
-#logo {
-    display: block;
-    float: left;
     padding: 0;
+    border: 0;
 }
-#logo a > img {
-    margin: 4px 0 0 4px;
-    height: 122px;
-    transition: height .25s;
-    -moz-transition: height .25s;
-    -webkit-transition: height .25s;
-    -o-transition: height .25s;
-    -ms-transition: height .25s;
+header h1:hover {
+    color: #545d64 ;
 }
 nav {
-    display: block;
-    float: right;
-    text-align: left;
+    position: absolute;
+    right: 0;
 }
 nav ul {
-    padding: 9px 0 9px 0;
-    margin: 40px 20px 0 0;
-    transition: margin .25s;
-    -moz-transition: margin .25s;
-    -webkit-transition: margin .25s;
-    -o-transition: margin .25s;
-    -ms-transition: margin .25s;
+    list-style: none;
 }
-nav li {
-    display:inline;
-    padding: 12px;
-    transition: background-color .20s;
-    -moz-transition: background-color .20s;
-    -webkit-transition: background-color .20s;
-    -o-transition: background-color .20s;
-    -ms-transition: background-color .20s;
+nav ul li {
+    float: left;
 }
-nav li:hover {
-    background-color: rgba(189,195,199, 1) ;
-}
-nav a {
+nav ul li a {
+    display: block;
     color: #000;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     text-decoration: none;
+    padding: 0 6px;
+    transition: color 350ms;
+    -moz-transition: color 350ms;
+    -webkit-transition: color 350ms;
+    -ms-transition: color 350ms;
 }
-/*   Banner   */
-.cover {
-    height: 450px;
-    width: 100%;
-    vertical-align: middle;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-image: url("img/house2.jpg");
-    position: relative;
+nav li:hover {
+    background-color: #a1aab0 ;
 }
 /*   Content   */
 #content {
-    height: 1000px;
-    margin: 30px;
-    min-width: 949px;
+    position: relative;
+    margin: 0 auto;
+    width: 94%;
+    min-width: 850px;
+    max-width: 1200px;
+}
+.heading {
+    text-align: center;
+    font-family: arial, helvetica, sans-serif;
+}
+.heading h1 {
+    margin: 40px 0;
 }
 .link {
     position: absolute;
@@ -94,8 +102,7 @@ nav a {
 }
 section {
     padding: 30px;
-    background: #ecf0f1;
-    margin: 10px 0;
+    background: #e6e9ea;
 }
 /*   Form   */
 span.bold{
@@ -194,14 +201,14 @@ td {
 }
 /*   Footer   */
 footer {
-    width: 100%;
-    height: 50px;
-    background: #bdc3c7;
-    position:absolute;
-    bottom:0;
-    /*border-top: 5px solid #33b5e5;*/
-}
-footer p {
-    text-align: right;
-    padding-right: 20px;
+     position: absolute;
+     background: #bdc3c7;
+     width: 100%;
+     height: 50px;
+     bottom:0;
+ }
+footer img {
+    height: 100%;
+    position: absolute;
+    right: 0;
 }

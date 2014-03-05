@@ -13,19 +13,23 @@ include('Utils.php');
 </head>
 
 <body>
+<div id="all">
 <header>
-    <div id="logo"><a href="Home.php"><img src="img/Logo_Design1.png"></a></div>
-    <nav>
-        <ul>
-            <li><a href="Mortgage.php">Mortgage</a></li>
-            <li><a href="Borrow.php">Borrow</a></li>
-            <li><a href="#">Budget</a></li>
-            <li><a href="Account.php">Account</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <a href="Home.php"><h1>Gauge</h1></a>
+        <nav>
+            <ul>
+                <li><a href="Mortgage.php">Mortgage</a></li>
+                <li><a href="Borrow.php">Borrow</a></li>
+                <li><a href="#">Budget</a></li>
+                <li><a href="Account.php">Account</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<div class="cover"><a id="link" class="link"></a></div>
+
 <div id="content">
+    <div class="heading"><h1>Budget Calculator</h1></div>
     <section>
         <p>Let us help you to <span class="bold">Calculate</span> your budget.</p>
         <!--<form id="budget_calculator" method="post" action="">
@@ -38,6 +42,7 @@ include('Utils.php');
         </form>-->
     </section>
 </div>
-<footer><p>Made by Nyakeh Rogers</p></footer>
+<footer><img src="img/Emblem.png"></footer>
+</div>
 </body>
 </html>

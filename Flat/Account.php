@@ -17,19 +17,23 @@ RetrieveDetails($forename, $surname, $email, $password);
 </head>
 
 <body>
+<div id="all">
 <header>
-    <div id="logo"><a href="Home.php"><img src="img/logo.png"></a></div>
-    <nav>
-        <ul>
-            <li><a href="Mortgage.php">Mortgage</a></li>
-            <li><a href="Borrow.php">Borrow</a></li>
-            <li><a href="Budget.php">Budget</a></li>
-            <li><a href="#">Account</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <a href="Home.php"><h1>Gauge</h1></a>
+        <nav>
+            <ul>
+                <li><a href="Mortgage.php">Mortgage</a></li>
+                <li><a href="Borrow.php">Borrow</a></li>
+                <li><a href="Budget.php">Budget</a></li>
+                <li><a href="#">Account</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<div class="cover"><a id="link" class="link"></a></div>
+
 <div id="content">
+    <div class="heading"><h1>Update Your Account Details</h1></div>
     <section>
         <p>Hey good looking, here's where you can <span class="bold">Update</span> you're details.</p>
         <form id="account" method="post" action="">
@@ -46,6 +50,7 @@ RetrieveDetails($forename, $surname, $email, $password);
         </form>
     </section>
 </div>
-<footer><p>Made by Nyakeh Rogers</p></footer>
+<footer><img src="img/Emblem.png"></footer>
+</div>
 </body>
 </html>

@@ -33,19 +33,23 @@ if($_GET){
 </head>
 
 <body>
+<div id="all">
 <header>
-    <div id="logo"><a href="Home.php"><img src="img/logo.png"></a></div>
-    <nav>
-        <ul>
-            <li><a href="Mortgage.php">Mortgage</a></li>
-            <li><a href="Borrow.php">Borrow</a></li>
-            <li><a href="Budget.php">Budget</a></li>
-            <li><a href="Account.php">Account</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <a href="Home.php"><h1>Gauge</h1></a>
+        <nav>
+            <ul>
+                <li><a href="Mortgage.php">Mortgage</a></li>
+                <li><a href="Borrow.php">Borrow</a></li>
+                <li><a href="Budget.php">Budget</a></li>
+                <li><a href="Account.php">Account</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<div class="cover"><a id="link" class="link"></a></div>
+
 <div id="content">
+    <div class="heading"><h1>Welcome to Gauge</h1></div>
     <section>
         <p>Welcome to <span class="bold">Gauge</span>, the online mortgage calculator</p>
         <?php if(isset($_SESSION['userId'])) { ?>
@@ -62,6 +66,7 @@ if($_GET){
         </form>
     </section>
 </div>
-<footer><p>Made by Nyakeh Rogers</p></footer>
+<footer><img src="img/Emblem.png"></footer>
+</div>
 </body>
 </html>

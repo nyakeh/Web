@@ -13,19 +13,23 @@ include('Utils.php');
 </head>
 
 <body>
+<div id="all">
 <header>
-    <div id="logo"><a href="Home.php"><img src="img/logo.png"></a></div>
-    <nav>
-        <ul>
-            <li><a href="#">Mortgage</a></li>
-            <li><a href="Borrow.php">Borrow</a></li>
-            <li><a href="Budget.php">Budget</a></li>
-            <li><a href="Account.php">Account</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <a href="Home.php"><h1>Gauge</h1></a>
+        <nav>
+            <ul>
+                <li><a href="#">Mortgage</a></li>
+                <li><a href="Borrow.php">Borrow</a></li>
+                <li><a href="Budget.php">Budget</a></li>
+                <li><a href="Account.php">Account</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<div class="cover"><a id="link" class="link"></a></div>
+
 <div id="content">
+    <div class="heading"><h1>Mortgage Calculator</h1></div>
     <section>
         <p>Let us help you to <span class="bold">Calculate</span> your mortgage.</p>
         <form id="mortgage_calculator" method="post" action="">
@@ -46,6 +50,7 @@ include('Utils.php');
         <section class="results" id="mortgage_detailed_results"></section>
     </section>
 </div>
-<footer><p>Made by Nyakeh Rogers</p></footer>
+<footer><a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a></footer>
+</div>
 </body>
 </html>

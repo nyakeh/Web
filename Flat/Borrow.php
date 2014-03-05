@@ -13,19 +13,23 @@ include('Utils.php');
 </head>
 
 <body>
+<div id="all">
 <header>
-    <div id="logo"><a href="Home.php"><img src="img/logo.png"></a></div>
-    <nav>
-        <ul>
-            <li><a href="Mortgage.php">Mortgage</a></li>
-            <li><a href="#">Borrow</a></li>
-            <li><a href="Budget.php">Budget</a></li>
-            <li><a href="Account.php">Account</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <a href="Home.php"><h1>Gauge</h1></a>
+        <nav>
+            <ul>
+                <li><a href="Mortgage.php">Mortgage</a></li>
+                <li><a href="#">Borrow</a></li>
+                <li><a href="Budget.php">Budget</a></li>
+                <li><a href="Account.php">Account</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
-<div class="cover"><a id="link" class="link"></a></div>
+
 <div id="content">
+    <div class="heading"><h1>How Much Can I Borrow?</h1></div>
     <section>
         <p>How much would a bank <span class="bold">lend</span> towards buying a property.</p>
         <form id="borrow_calculator" method="post" action="">
@@ -35,6 +39,7 @@ include('Utils.php');
         </form>
     </section>
 </div>
-<footer><p>Made by Nyakeh Rogers</p></footer>
+<footer><img src="img/Emblem.png"></footer>
+</div>
 </body>
 </html>
