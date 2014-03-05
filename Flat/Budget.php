@@ -18,6 +18,7 @@ include('Utils.php');
     <nav>
         <ul>
             <li><a href="Mortgage.php">Mortgage</a></li>
+            <li><a href="Borrow.php">Borrow</a></li>
             <li><a href="#">Budget</a></li>
             <li><a href="Account.php">Account</a></li>
         </ul>

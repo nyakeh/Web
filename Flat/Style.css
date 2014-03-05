@@ -137,6 +137,21 @@ input[type=submit],input[type=button] {
 input:focus, textarea:focus {
     border: 2px solid #33b5e5;
 }
+#input_property, #input_deposit, #input_fees {
+    background: #f7f9f9 url("img/pound.png") left no-repeat;
+    padding-left: 32px;
+    width: 176px;
+}
+#input_term {
+    background: #f7f9f9 url("img/years.png") right no-repeat;
+    padding-right: 64px;
+    width: 144px;
+}
+#input_interest {
+     background: #f7f9f9 url("img/percent.png") left no-repeat;
+     padding-left: 32px;
+     width: 176px;
+ }
 .tick {
     background-image: url("img/tick.png");
     background-size: cover;

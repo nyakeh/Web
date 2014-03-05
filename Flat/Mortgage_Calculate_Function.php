@@ -4,6 +4,7 @@ include('Utils.php');
 
 class CalculationDetails {
     public $AccountId = "";
+    public $CustomerReference = "";
     public $HouseValue = "";
     public $Deposit = "";
     public $InterestRate  = "";
@@ -20,12 +21,15 @@ if($validationMessage) {
     echo 'Please amend the calculation figures';
 } else {
     $accountId = '';
+    $customerReference = '00000000-0000-0000-0000-000000000000';
     if(isset($_SESSION['userId'])) {
         $accountId = $_SESSION['userId'];
+    } else {
+        $customerReference = com_create_guid();
     }
-
     $calculation = new CalculationDetails();
     $calculation->AccountId = $accountId;
+    $calculation->CustomerReference = $customerReference;
     $calculation->HouseValue  = $_POST['houseValue'];
     $calculation->Deposit  = $_POST['deposit'];
     $calculation->InterestRate  = $_POST['interest'];

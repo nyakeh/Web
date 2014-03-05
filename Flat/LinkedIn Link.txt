@@ -1,0 +1,3 @@
+http://lnkd.in/bGufZiJ
+
+img { max-width: 100%; }

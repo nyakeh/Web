@@ -26,7 +26,43 @@
       <file leaf-file-name="Mortgage.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mortgage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="1.8846154" vertical-offset="66" max-vertical-offset="952">
+            <state line="40" column="52" selection-start="2250" selection-end="2343" vertical-scroll-proportion="-24.26923" vertical-offset="49" max-vertical-offset="952">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Borrow.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Borrow.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="94" selection-start="851" selection-end="851" vertical-scroll-proportion="0.5576923" vertical-offset="0" max-vertical-offset="884">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Budget.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Budget.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="56" selection-start="488" selection-end="541" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="816">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Account.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="52" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="952">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="67" selection-start="2171" selection-end="2171" vertical-scroll-proportion="-26.153847" vertical-offset="323" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
@@ -35,16 +71,16 @@
       <file leaf-file-name="Account_Details_Update_Function.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Account_Details_Update_Function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="16" selection-start="22" selection-end="44" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1598">
+            <state line="1" column="16" selection-start="22" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1598">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mortgage_Calculate_Function.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Mortgage_Calculate_Function.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Mortgage_Calculate_Function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="628" selection-end="628" vertical-scroll-proportion="0.47968397" vertical-offset="0" max-vertical-offset="1224">
+            <state line="47" column="64" selection-start="1486" selection-end="1486" vertical-scroll-proportion="-17.653847" vertical-offset="340" max-vertical-offset="1292">
               <folding />
             </state>
           </provider>
@@ -53,7 +89,7 @@
       <file leaf-file-name="Utils.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Utils.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="28" selection-start="2668" selection-end="2668" vertical-scroll-proportion="-13.076923" vertical-offset="1088" max-vertical-offset="3196">
+            <state line="24" column="20" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="3196">
               <folding />
             </state>
           </provider>
@@ -62,7 +98,7 @@
       <file leaf-file-name="Style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="168" column="30" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.0" vertical-offset="2420" max-vertical-offset="3349">
+            <state line="150" column="45" selection-start="3278" selection-end="3278" vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="3604">
               <folding />
             </state>
           </provider>
@@ -71,7 +107,7 @@
       <file leaf-file-name="Script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="112" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1598">
+            <state line="47" column="17" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="1785">
               <folding />
             </state>
           </provider>
@@ -97,15 +133,16 @@
         <option value="$PROJECT_DIR$/.idea/Utils.php" />
         <option value="$PROJECT_DIR$/Account_Update_Function.php" />
         <option value="$PROJECT_DIR$/Login_Function.php" />
-        <option value="$PROJECT_DIR$/Budget.php" />
-        <option value="$PROJECT_DIR$/Home.php" />
-        <option value="$PROJECT_DIR$/Account.php" />
-        <option value="$PROJECT_DIR$/Mortgage.php" />
         <option value="$PROJECT_DIR$/Account_Details_Update_Function.php" />
-        <option value="$PROJECT_DIR$/Style.css" />
         <option value="$PROJECT_DIR$/Utils.php" />
+        <option value="$PROJECT_DIR$/Style.css" />
         <option value="$PROJECT_DIR$/Script.js" />
+        <option value="$PROJECT_DIR$/Mortgage.php" />
+        <option value="$PROJECT_DIR$/Budget.php" />
+        <option value="$PROJECT_DIR$/Account.php" />
         <option value="$PROJECT_DIR$/Mortgage_Calculate_Function.php" />
+        <option value="$PROJECT_DIR$/Home.php" />
+        <option value="$PROJECT_DIR$/Borrow.php" />
       </list>
     </option>
   </component>
@@ -181,21 +218,21 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.112887114" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -215,13 +252,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Utils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="1" selection-start="3688" selection-end="3688" vertical-scroll-proportion="0.0" vertical-offset="2023" max-vertical-offset="2618">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="122" column="40" selection-start="2552" selection-end="2552" vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="3366">
@@ -238,9 +268,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="12" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <folding />
-        </state>
+        <state line="48" column="12" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Account.php">
@@ -259,9 +287,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Budget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="7" column="26" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils.php">
@@ -287,9 +313,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="12" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <folding />
-        </state>
+        <state line="48" column="12" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Account.php">
@@ -308,9 +332,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Budget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="7" column="26" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils.php">
@@ -336,9 +358,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="12" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <folding />
-        </state>
+        <state line="48" column="12" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Account.php">
@@ -357,9 +377,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Budget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="7" column="26" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utils.php">
@@ -495,77 +513,80 @@
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="20" selection-start="402" selection-end="402" vertical-scroll-proportion="0.22417583" vertical-offset="0" max-vertical-offset="3859">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Budget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="26" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="799">
-          <folding />
-        </state>
+        <state line="12" column="20" selection-start="402" selection-end="402" vertical-scroll-proportion="0.22417583" vertical-offset="0" max-vertical-offset="3859" />
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="16" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.33333334" vertical-offset="1617" max-vertical-offset="10132">
-          <folding />
-        </state>
+        <state line="113" column="16" selection-start="2544" selection-end="2544" vertical-scroll-proportion="0.33333334" vertical-offset="1617" max-vertical-offset="10132" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Home.php">
+    <entry file="file://$PROJECT_DIR$/Account_Details_Update_Function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="9" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.47968397" vertical-offset="323" max-vertical-offset="1258">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Account.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="38" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.59706545" vertical-offset="49" max-vertical-offset="935">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Mortgage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="22" selection-end="22" vertical-scroll-proportion="1.8846154" vertical-offset="66" max-vertical-offset="952">
+        <state line="1" column="16" selection-start="22" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1598">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="168" column="30" selection-start="3503" selection-end="3503" vertical-scroll-proportion="0.0" vertical-offset="2420" max-vertical-offset="3349">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Utils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="28" selection-start="2668" selection-end="2668" vertical-scroll-proportion="-13.076923" vertical-offset="1088" max-vertical-offset="3196">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Account_Details_Update_Function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="16" selection-start="22" selection-end="44" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1598">
+        <state line="150" column="45" selection-start="3278" selection-end="3278" vertical-scroll-proportion="0.0" vertical-offset="2031" max-vertical-offset="3604">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="112" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1598">
+        <state line="47" column="17" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="52" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="20" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="3196">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Mortgage_Calculate_Function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="628" selection-end="628" vertical-scroll-proportion="0.47968397" vertical-offset="0" max-vertical-offset="1224">
+        <state line="47" column="64" selection-start="1486" selection-end="1486" vertical-scroll-proportion="-17.653847" vertical-offset="340" max-vertical-offset="1292">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Budget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="56" selection-start="488" selection-end="541" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="67" selection-start="2171" selection-end="2171" vertical-scroll-proportion="-26.153847" vertical-offset="323" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Mortgage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="52" selection-start="2250" selection-end="2343" vertical-scroll-proportion="-24.26923" vertical-offset="49" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Borrow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="94" selection-start="851" selection-end="851" vertical-scroll-proportion="0.5576923" vertical-offset="0" max-vertical-offset="884">
           <folding />
         </state>
       </provider>

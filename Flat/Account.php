@@ -18,10 +18,11 @@ RetrieveDetails($forename, $surname, $email, $password);
 
 <body>
 <header>
-    <div id="logo"><a href="Home.php"><img src="img/Logo_Design1.png"></a></div>
+    <div id="logo"><a href="Home.php"><img src="img/logo.png"></a></div>
     <nav>
         <ul>
             <li><a href="Mortgage.php">Mortgage</a></li>
+            <li><a href="Borrow.php">Borrow</a></li>
             <li><a href="Budget.php">Budget</a></li>
             <li><a href="#">Account</a></li>
         </ul>
