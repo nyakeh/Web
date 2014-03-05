@@ -49,6 +49,17 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('#borrow_submit_button').click( function() {
+        $deposit = $('#input_borrow_deposit').val();
+        $.ajax({ url: 'How_Much_Can_I_Borrow_Function.php',
+            data: { deposit: $deposit },
+            type: 'post',
+            success: function(output) {
+                $("#borrow_message").text(output);
+            }
+        });
+    });
 });
 
 function buildResultsTable(calculation) {

@@ -20,7 +20,7 @@ $validationMessage = validateCalculationInput($expected, 'mortgage');
 if($validationMessage) {
     echo 'Please amend the calculation figures';
 } else {
-    $accountId = '';
+    $accountId = '0';
     $customerReference = '00000000-0000-0000-0000-000000000000';
     if(isset($_SESSION['userId'])) {
         $accountId = $_SESSION['userId'];
@@ -45,8 +45,8 @@ if($validationMessage) {
     if($calculation->Fees === '') {
         $calculation->Fees = 0;
     }
-    //$service_url = 'http://127.0.0.1:81/api/mortgage'; //local
-    $service_url = 'http://mortgagecalculator.cloudapp.net/api/mortgage'; //live
+    $service_url = 'http://127.0.0.1:81/api/mortgage'; //local
+    //$service_url = 'http://mortgagecalculator.cloudapp.net/api/mortgage'; //live
 
     $curl_post_data = json_encode($calculation);
 

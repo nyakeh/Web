@@ -42,9 +42,9 @@ include('Utils.php');
             <input type="button" id="mortgage_submit_Button" value="Calculate" tabindex="6">
             <p><span id="mortgage_message" class="detailed_error"></span></p>
         </form>
+        <section class="results" id="mortgage_results"></section>
+        <section class="results" id="mortgage_detailed_results"></section>
     </section>
-    <section class="results" id="mortgage_results"></section>
-    <section class="results" id="mortgage_detailed_results"></section>
 </div>
 <footer><p>Made by Nyakeh Rogers</p></footer>
 </body>

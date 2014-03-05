@@ -29,12 +29,11 @@ include('Utils.php');
     <section>
         <p>How much would a bank <span class="bold">lend</span> towards buying a property.</p>
         <form id="borrow_calculator" method="post" action="">
-            <p><label>Deposit available</label><input type="text" class="input" name="input_property" id="input_property" value="20000" maxlength="10" tabindex="1">
-            <p><input type="button" id="mortgage_submit_Button" value="Calculate" tabindex="6"></p>
+            <p><label>Deposit available</label><input type="text" class="input" name="input_borrow_deposit" id="input_borrow_deposit" value="20000" maxlength="10" tabindex="1">
+            <p><input type="button" id="borrow_submit_button" value="Calculate" tabindex="2"></p>
             <p><span id="borrow_message" class="detailed_error"></span></p>
         </form>
     </section>
-    <section class="results" id="borrow_results"></section>
 </div>
 <footer><p>Made by Nyakeh Rogers</p></footer>
 </body>
