@@ -34,39 +34,54 @@ if($_GET){
 
 <body>
 <div id="all">
-<header>
-    <div class="container">
-        <a href="Home.php"><h1>Gauge</h1></a>
+    <header>
+        <div class="container">
+            <a href="Home.php"><h1>Gauge</h1></a>
+            <nav>
+                <ul>
+                    <li><a href="Mortgage.php">Mortgage</a></li>
+                    <li><a href="Borrow.php">Borrow</a></li>
+                    <li><a href="Budget.php">Budget</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <?php if(isset($_SESSION['userId'])) { ?>
+    <div class="customer">
+        <div class="container">
+            <div id="customerAccount"><a href="Account.php"><?php echo $_SESSION['username'] ?></a> <a href="Home.php?logOut=true">log off</a></div>
+        </div>
+    </div>
+    <?php } ?>
+    <div id="content">
+        <div class="heading"><h1>The Online Mortgage Calculator</h1></div>
+        <div class="section">
+            <p>Welcome to <span class="bold">Gauge</span>, the online mortgage calculator</p>
+            <?php if(isset($_SESSION['userId'])) { ?>
+                <p>Hello <?php echo $_SESSION['username'] ?> you're are <?php echo $_SESSION['userId'] ?>nd favourite customer.</p>
+            <?php } ?>
+        </div>
+        <div class="section">
+            <p>Hello stranger, why don't you <span class="bold">Login</span> below.</p>
+            <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                <p><label>Email</label><input type="text" class="input" name="email" id="login_email" tabindex="1"><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
+                <p><label>Password</label><input type="text" class="input" name="password" id="login_password" tabindex="2"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
+                <p><input type="submit" value="Login" tabindex="3"></p>
+                <p><?php echo nullCheckOutput(@$validationMessage['form']); ?></p>
+            </form>
+        </div>
+    </div>
+    <footer>
         <nav>
             <ul>
-                <li><a href="Mortgage.php">Mortgage</a></li>
-                <li><a href="Borrow.php">Borrow</a></li>
-                <li><a href="Budget.php">Budget</a></li>
-                <li><a href="Account.php">Account</a></li>
+                <li><a href="#">Gauge</a></li>
+                <li><a href="Mortgage.php" class="greyText">Mortgage</a></li>
+                <li><a href="Borrow.php" class="greyText">Borrow</a></li>
+                <li><a href="Budget.php" class="greyText">Budget</a></li>
             </ul>
         </nav>
-    </div>
-</header>
-
-<div id="content">
-    <div class="heading"><h1>The Online Mortgage Calculator</h1></div>
-    <section>
-        <p>Welcome to <span class="bold">Gauge</span>, the online mortgage calculator</p>
-        <?php if(isset($_SESSION['userId'])) { ?>
-            <p>Hello <?php echo $_SESSION['username'] ?> you're are <?php echo $_SESSION['userId'] ?>nd favourite customer.</p>
-        <?php } ?>
-    </section>
-    <section>
-        <p>Hello stranger, why don't you <span class="bold">Login</span> below.</p>
-        <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-            <p><label>Email</label><input type="text" class="input" name="email" id="login_email" tabindex="1"><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
-            <p><label>Password</label><input type="text" class="input" name="password" id="login_password" tabindex="2"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
-            <p><input type="submit" value="Login" tabindex="3"></p>
-            <p><?php echo nullCheckOutput(@$validationMessage['form']); ?></p>
-        </form>
-    </section>
-</div>
-<footer><a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a></footer>
+        <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>
+    </footer>
 </div>
 </body>
 </html>
