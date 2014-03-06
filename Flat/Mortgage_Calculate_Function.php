@@ -24,9 +24,13 @@ if($validationMessage) {
     $customerReference = '00000000-0000-0000-0000-000000000000';
     if(isset($_SESSION['userId'])) {
         $accountId = $_SESSION['userId'];
+    } else if(isset($_SESSION['customerReference'])) {
+        $customerReference = $_SESSION['customerReference'];
     } else {
         $customerReference = com_create_guid();
+        $_SESSION['customerReference'] = $customerReference;
     }
+
     $calculation = new CalculationDetails();
     $calculation->AccountId = $accountId;
     $calculation->CustomerReference = $customerReference;
@@ -45,8 +49,8 @@ if($validationMessage) {
     if($calculation->Fees === '') {
         $calculation->Fees = 0;
     }
-    $service_url = 'http://127.0.0.1:81/api/mortgage'; //local
-    //$service_url = 'http://mortgagecalculator.cloudapp.net/api/mortgage'; //live
+    //$service_url = 'http://127.0.0.1:81/api/mortgage'; //local
+    $service_url = 'http://mortgagecalculator.cloudapp.net/api/mortgage'; //live
 
     $curl_post_data = json_encode($calculation);
 

@@ -49,7 +49,7 @@ if($_GET){
 </header>
 
 <div id="content">
-    <div class="heading"><h1>Welcome to Gauge</h1></div>
+    <div class="heading"><h1>The Online Mortgage Calculator</h1></div>
     <section>
         <p>Welcome to <span class="bold">Gauge</span>, the online mortgage calculator</p>
         <?php if(isset($_SESSION['userId'])) { ?>
@@ -66,7 +66,7 @@ if($_GET){
         </form>
     </section>
 </div>
-<footer><img src="img/Emblem.png"></footer>
+<footer><a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a></footer>
 </div>
 </body>
 </html>

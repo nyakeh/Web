@@ -42,7 +42,7 @@ include('Utils.php');
         </form>-->
     </section>
 </div>
-<footer><img src="img/Emblem.png"></footer>
+<footer><a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a></footer>
 </div>
 </body>
 </html>
