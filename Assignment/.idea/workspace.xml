@@ -26,7 +26,16 @@
       <file leaf-file-name="Home.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="24" selection-start="92" selection-end="92" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1411">
+            <state line="2" column="24" selection-start="92" selection-end="92" vertical-scroll-proportion="-0.0" vertical-offset="34" max-vertical-offset="1411">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Search.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="9" selection-start="1451" selection-end="1451" vertical-scroll-proportion="-14.384615" vertical-offset="425" max-vertical-offset="1309">
               <folding />
             </state>
           </provider>
@@ -35,7 +44,7 @@
       <file leaf-file-name="Styles.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="1" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.39871383" vertical-offset="1736" max-vertical-offset="2669">
+            <state line="12" column="16" selection-start="287" selection-end="287" vertical-scroll-proportion="-1.7087913" vertical-offset="1759" max-vertical-offset="2669">
               <folding />
             </state>
           </provider>
@@ -234,7 +243,7 @@
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
     </option>
   </component>
@@ -258,6 +267,20 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="24" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="1" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.0" vertical-offset="1736" max-vertical-offset="2669">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2032" column="3" selection-start="65087" selection-end="65087" vertical-scroll-proportion="0.025718609" vertical-offset="0" max-vertical-offset="0" />
@@ -265,14 +288,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="24" selection-start="92" selection-end="92" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="1411">
+        <state line="2" column="24" selection-start="92" selection-end="92" vertical-scroll-proportion="-0.0" vertical-offset="34" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="9" selection-start="1451" selection-end="1451" vertical-scroll-proportion="-14.384615" vertical-offset="425" max-vertical-offset="1309">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Styles.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="1" selection-start="2233" selection-end="2233" vertical-scroll-proportion="0.39871383" vertical-offset="1736" max-vertical-offset="2669">
+        <state line="12" column="16" selection-start="287" selection-end="287" vertical-scroll-proportion="-1.7087913" vertical-offset="1759" max-vertical-offset="2669">
           <folding />
         </state>
       </provider>

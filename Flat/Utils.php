@@ -3,6 +3,14 @@ class LoginDetails {
     public $Email  = "";
     public $Password  = "";
 }
+class RegisterDetails {
+    public $Forename  = "";
+    public $Surname  = "";
+    public $Email  = "";
+    public $Password  = "";
+    public $AccountTypeId  = "1";
+    public $Active  = true;
+}
 
 function LogIn($email, $password) {
     $account = new LoginDetails();
@@ -33,6 +41,41 @@ function LogIn($email, $password) {
         $output = detailErrorMessage('401: Flapped it. Correct email wrong password');
     } else if($responseCode == 404) {
         $output = detailErrorMessage('404: Stacked it. Email not found in Db');
+    } else {
+        $output = detailErrorMessage('Apologies, an error occurred trying to login');
+    }
+    return $output;
+}
+
+function Register($forename, $surname, $email, $password) {
+    $account = new RegisterDetails();
+    $account->Forename = $forename;
+    $account->Surname  = $surname;
+    $account->Email = $email;
+    $account->Password  = $password;
+
+    //$service_url = 'http://127.0.0.1:81/api/account'; //local
+    $service_url = 'http://mortgagecalculator.cloudapp.net/api/account'; //live
+    $curl_post_data = json_encode($account);
+    $ch = curl_init($service_url);
+
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
+
+    curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+    $content = trim(curl_exec($ch));
+    $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    if($responseCode == 201) {
+        $result = json_decode($content);
+        $_SESSION['username'] = $result->Forename;
+        $_SESSION['userId'] = $result->AccountId;
+        $output = detailErrorMessage("Welcome to Gauge " . $result->Forename);
+        //header('Location: home.php');
+    } else {
+        $output = detailErrorMessage('Apologies, an error occurred creating your account');
     }
     return $output;
 }
@@ -127,8 +170,12 @@ function ValidateFields($expected, $state) {
                     };
                     break;
                 case "register":
+                    if(isRequiredForRegister($field)) {
+                        $validationMessage[$field] = errorMessage('Required');
+                    };
+                    break;
                 case "update":
-                    if(isRequiredForUser($field)) {
+                    if(isRequiredForUpdate($field)) {
                         $validationMessage[$field] = errorMessage('Required');
                     };
                     break;
@@ -142,9 +189,14 @@ function isRequiredForLogin($field)
     $required = array('email', 'password');
     return in_array($field, $required);
 }
-function isRequiredForUser($field)
+function isRequiredForUpdate($field)
 {
     $required = array('forename', 'surname','email', 'password');
+    return in_array($field, $required);
+}
+function isRequiredForRegister($field)
+{
+    $required = array('register_forename', 'register_surname','register_email', 'register_password');
     return in_array($field, $required);
 }
 function isRequiredForMortgage($field)

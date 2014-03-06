@@ -49,7 +49,7 @@ RetrieveDetails($forename, $surname, $email, $password);
                         <?php echo addValueTag(@$surname); ?>><span class="error" id="account_surnameMsg"></span></p>
                 <p><label>Email</label><input type="text" class="input" name="account_email" id="account_email" maxlength="100" onBlur="javascript:validate_textbox(this,'Please enter your Email Address','account_emailMsg');" tabindex="3"
                         <?php echo addValueTag(@$email); ?>><span class="error" id="account_emailMsg"></span></p>
-                <p><label>Password</label><input type="text" class="input" name="account_password" id="account_password" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your Password','account_passwordMsg');" tabindex="4">
+                <p><label>Password</label><input type="password" class="input" name="account_password" id="account_password" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your Password','account_passwordMsg');" tabindex="4">
                     <span class="error" id="account_passwordMsg"></span></p>
                 <input type="button" id="account_submit_Button" value="Update" tabindex="5">
                 <p><span id="account_message" class="detailed_error"></span></p>
