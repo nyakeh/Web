@@ -62,13 +62,26 @@ if($_GET){
             <?php } ?>
         </div>
         <div class="section">
-            <p>Hello stranger, why don't you <span class="bold">Login</span> below.</p>
-            <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                <p><label>Email</label><input type="text" class="input" name="email" id="login_email" tabindex="1"><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
-                <p><label>Password</label><input type="text" class="input" name="password" id="login_password" tabindex="2"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
-                <p><input type="submit" value="Login" tabindex="3"></p>
-                <p><?php echo nullCheckOutput(@$validationMessage['form']); ?></p>
-            </form>
+            <div class="ftfy">
+                <p class="intro">Hello stranger, why don't you <span class="bold">Login</span> below.</p>
+                <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                    <p><label>Email</label><input type="text" class="input" name="email" id="login_email" tabindex="1"><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
+                    <p><label>Password</label><input type="text" class="input" name="password" id="login_password" tabindex="2"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
+                    <p><input type="submit" value="Login" tabindex="3"></p>
+                    <p><?php echo nullCheckOutput(@$validationMessage['form']); ?></p>
+                </form>
+            </div>
+            <div class="ftfy ftfyRight">
+                <p class="intro">New to the site, you can <span class="bold">Register</span> here.</p>
+                <form id="register" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                    <p><label>Email</label><input type="text" class="input" name="register_email" id="register_email" tabindex="4"><?php echo nullCheckOutput(@$validationMessage['register_email']); ?></p>
+                    <p><label>Forename</label><input type="text" class="input" name="register_forename" id="register_forename" tabindex="5"><?php echo nullCheckOutput(@$validationMessage['register_forename']); ?></p>
+                    <p><label>Surname</label><input type="text" class="input" name="register_surname" id="register_surname" tabindex="6"><?php echo nullCheckOutput(@$validationMessage['register_surname']); ?></p>
+                    <p><label>Password</label><input type="text" class="input" name="register_password" id="register_password" tabindex="7"><?php echo nullCheckOutput(@$validationMessage['register_password']); ?></p>
+                    <p><input type="submit" value="Register" tabindex="8"></p>
+                    <p><?php echo nullCheckOutput(@$validationMessage['form']); ?></p>
+                </form>
+            </div>
         </div>
     </div>
     <footer>

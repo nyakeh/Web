@@ -101,7 +101,7 @@ nav li:hover {
     margin: 0 auto;
     width: 94%;
     min-width: 850px;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 .heading {
     text-align: center;
@@ -117,13 +117,36 @@ nav li:hover {
 .section {
     padding: 30px;
     background: #e6e9ea;
+    overflow: auto;
+}
+.ftfy {
+    display: block;
+    float: left;
+    width: 390px;
+}
+.ftfyRight{
+    float: right;
+}
+.ftfy .intro {
+    text-align: center;
+}
+.ftfy p {
+    padding: 0;
+    margin: 15px 0;
+}
+.ftfy label {
+    width: 80px;
+    margin-left: 0;
+}
+.ftfy input[type=submit] {
+    margin-right: 105px;
 }
 /*   Form   */
 span.bold{
      font-weight: bold;
  }
 form {
-    width: 750px;
+    width: 100%;
     padding: 0;
     margin: 24px auto 0 auto;
     overflow: auto;
