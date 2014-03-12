@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbaadea6-3784-47e5-a392-33ca65938628" name="Default" comment="" />
+    <list default="true" id="bceb77a4-5451-43f8-a16c-c420a830d77c" name="Default" comment="" />
     <ignored path="Nyakeh.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,46 +23,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="Account_Details_Update_Function.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gauge/Account_Details_Update_Function.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="20" selection-start="1012" selection-end="1012" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1071">
+            <state line="28" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="867">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog.html">
+      <file leaf-file-name="Utils.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gauge/Utils.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="20" selection-start="1027" selection-end="1027" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1224">
+            <state line="227" column="21" selection-start="7533" selection-end="7533" vertical-scroll-proportion="-24.846153" vertical-offset="3213" max-vertical-offset="4097">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post.html">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gauge/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="47" selection-start="4512" selection-end="4512" vertical-scroll-proportion="-27.692308" vertical-offset="249" max-vertical-offset="1122">
+            <state line="113" column="69" selection-start="5626" selection-end="5626" vertical-scroll-proportion="-56.384617" vertical-offset="455" max-vertical-offset="2142">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/style.css">
+      <file leaf-file-name="Style.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gauge/Style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="119" column="26" selection-start="2337" selection-end="2337" vertical-scroll-proportion="1.1913236" vertical-offset="952" max-vertical-offset="4505">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/script.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="36" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+            <state line="239" column="15" selection-start="4422" selection-end="4422" vertical-scroll-proportion="0.54960984" vertical-offset="3570" max-vertical-offset="4862">
               <folding />
             </state>
           </provider>
@@ -78,20 +69,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/home.html" />
-        <option value="$PROJECT_DIR$/script.js" />
+        <option value="$PROJECT_DIR$/gauge/budget.php" />
+        <option value="$PROJECT_DIR$/gauge/borrow.php" />
+        <option value="$PROJECT_DIR$/gauge/mortgage.php" />
+        <option value="$PROJECT_DIR$/gauge/Mortgage_Calculate_Function.php" />
+        <option value="$PROJECT_DIR$/gauge/How_Much_Can_I_Borrow_Function.php" />
+        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/gauge/Script.js" />
+        <option value="$PROJECT_DIR$/gauge/Account_Details_Update_Function.php" />
         <option value="$PROJECT_DIR$/blog.html" />
         <option value="$PROJECT_DIR$/post.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/style.css" />
+        <option value="$PROJECT_DIR$/gauge/account.php" />
+        <option value="$PROJECT_DIR$/gauge/Utils.php" />
+        <option value="$PROJECT_DIR$/gauge/index.php" />
+        <option value="$PROJECT_DIR$/gauge/Style.css" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1586" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1594" />
+    <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -108,7 +108,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -119,14 +119,48 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nyakeh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nyakeh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nyakeh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nyakeh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Nyakeh" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gauge" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -147,30 +181,30 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cbaadea6-3784-47e5-a392-33ca65938628" name="Default" comment="" />
-      <created>1391795000697</created>
-      <updated>1391795000697</updated>
+      <changelist id="bceb77a4-5451-43f8-a16c-c420a830d77c" name="Default" comment="" />
+      <created>1394191929269</created>
+      <updated>1394191929269</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1586" y="-8" width="1594" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25452608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12886049" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -196,308 +230,264 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="103" selection-start="3082" selection-end="3082" vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1071">
+        <state line="35" column="26" selection-start="1311" selection-end="1311" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
+    <entry file="file://$PROJECT_DIR$/gauge/Account_Details_Update_Function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="47" selection-start="4599" selection-end="4599" vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="1224">
+        <state line="34" column="40" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1598">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="47" selection-start="4533" selection-end="4533" vertical-scroll-proportion="0.0" vertical-offset="249" max-vertical-offset="1122">
+        <state line="37" column="37" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0" vertical-offset="208" max-vertical-offset="1207">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="18" selection-start="3945" selection-end="3945" vertical-scroll-proportion="0.0" vertical-offset="3117" max-vertical-offset="4556">
+        <state line="135" column="19" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.0" vertical-offset="2108" max-vertical-offset="4505">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
+    <entry file="file://$PROJECT_DIR$/gauge/Script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
+        <state line="68" column="0" selection-start="3312" selection-end="3312" vertical-scroll-proportion="0.0" vertical-offset="684" max-vertical-offset="1785">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/How_Much_Can_I_Borrow_Function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="36" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/Mortgage_Calculate_Function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="40" selection-start="2109" selection-end="2109" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/Utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4080">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="29" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1105">
+        <state line="50" column="77" selection-start="4410" selection-end="4430" vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="29" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1241">
+        <state line="61" column="18" selection-start="4688" selection-end="4688" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1241">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="14" selection-start="883" selection-end="883" vertical-scroll-proportion="0.0" vertical-offset="282" max-vertical-offset="1139">
+        <state line="36" column="26" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="16" selection-start="2250" selection-end="2250" vertical-scroll-proportion="0.0" vertical-offset="1564" max-vertical-offset="4318">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
+        <state line="76" column="26" selection-start="1489" selection-end="1489" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="4522">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="969">
+        <state line="50" column="44" selection-start="4384" selection-end="4384" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1088">
+        <state line="61" column="18" selection-start="4688" selection-end="4688" vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="1241">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="26" selection-start="988" selection-end="988" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="986">
+        <state line="59" column="6" selection-start="4703" selection-end="4703" vertical-scroll-proportion="0.0" vertical-offset="267" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="56" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2686">
+        <state line="183" column="24" selection-start="3416" selection-end="3416" vertical-scroll-proportion="0.0" vertical-offset="2448" max-vertical-offset="4522">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+        <state line="8" column="60" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1071">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1088">
+        <state line="8" column="60" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="986">
+        <state line="8" column="60" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="1122">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="56" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2686">
+        <state line="49" column="14" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="4505">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/gauge/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+        <state line="36" column="59" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.0" vertical-offset="183" max-vertical-offset="2142" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/budget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="22" selection-start="2045" selection-end="2045" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/borrow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="50" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.0" vertical-offset="850" max-vertical-offset="1122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="50" selection-start="3202" selection-end="3202" vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="1309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/mortgage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="46" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/budget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="22" selection-start="2045" selection-end="2045" vertical-scroll-proportion="0.5769231" vertical-offset="289" max-vertical-offset="1173" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/borrow.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="50" selection-start="1810" selection-end="1810" vertical-scroll-proportion="0.6923077" vertical-offset="238" max-vertical-offset="1122" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/mortgage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="46" selection-start="425" selection-end="425" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1309" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gauge/Mortgage_Calculate_Function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="40" selection-start="2109" selection-end="2109" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="1360">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
+    <entry file="file://$PROJECT_DIR$/gauge/How_Much_Can_I_Borrow_Function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="92" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="56" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2686">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="986">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="56" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2686">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="31" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1088">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="675" selection-end="675" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="986">
+        <state line="8" column="36" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="408">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="56" selection-end="74" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="2686">
+        <state line="135" column="19" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.0" vertical-offset="2108" max-vertical-offset="4505">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="33" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.30769232" vertical-offset="208" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="33" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.17106774" vertical-offset="327" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="748">
+        <state line="31" column="14" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.5120551" vertical-offset="81" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
+    <entry file="file://$PROJECT_DIR$/gauge/Account_Details_Update_Function.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="22" selection-start="368" selection-end="391" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="731">
+        <state line="28" column="0" selection-start="901" selection-end="901" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post.html">
+    <entry file="file://$PROJECT_DIR$/gauge/Script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="30" selection-start="453" selection-end="490" vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="697">
+        <state line="79" column="20" selection-start="3657" selection-end="3657" vertical-scroll-proportion="1.4972129" vertical-offset="0" max-vertical-offset="1785">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
+    <entry file="file://$PROJECT_DIR$/gauge/account.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="15" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
+        <state line="27" column="56" selection-start="767" selection-end="767" vertical-scroll-proportion="-1.9615384" vertical-offset="408" max-vertical-offset="1292">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/post.html">
+    <entry file="file://$PROJECT_DIR$/gauge/Utils.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="29" selection-start="2992" selection-end="2998" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+        <state line="227" column="21" selection-start="7533" selection-end="7533" vertical-scroll-proportion="-24.846153" vertical-offset="3213" max-vertical-offset="4097">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
+    <entry file="file://$PROJECT_DIR$/gauge/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="731">
+        <state line="113" column="69" selection-start="5626" selection-end="5626" vertical-scroll-proportion="-56.384617" vertical-offset="455" max-vertical-offset="2142">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
+    <entry file="file://$PROJECT_DIR$/gauge/Style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="40" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="731">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="18" selection-start="1047" selection-end="1047" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="697">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="20" selection-start="1027" selection-end="1027" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1224">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="47" selection-start="4512" selection-end="4512" vertical-scroll-proportion="-27.692308" vertical-offset="249" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="20" selection-start="1012" selection-end="1012" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="26" selection-start="2337" selection-end="2337" vertical-scroll-proportion="1.1913236" vertical-offset="952" max-vertical-offset="4505">
+        <state line="239" column="15" selection-start="4422" selection-end="4422" vertical-scroll-proportion="0.54960984" vertical-offset="3570" max-vertical-offset="4862">
           <folding />
         </state>
       </provider>
