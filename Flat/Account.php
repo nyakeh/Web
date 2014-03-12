@@ -2,7 +2,7 @@
 session_start();
 include('Utils.php');
 if(!isset($_SESSION['userId'])) {
-    header('Location: Home.php');
+    header('Location: index.php');
 }
 RetrieveDetails($forename, $surname, $email, $password);
 ?>
@@ -20,13 +20,12 @@ RetrieveDetails($forename, $surname, $email, $password);
 <div id="all">
     <header>
         <div class="container">
-            <a href="Home.php"><h1>Gauge</h1></a>
+            <a href="index"><h1>Gauge</h1></a>
             <nav>
                 <ul>
-                    <li><a href="Mortgage.php">Mortgage</a></li>
-                    <li><a href="Borrow.php">Borrow</a></li>
-                    <li><a href="Budget.php">Budget</a></li>
-                    <li><a href="#">Account</a></li>
+                    <li><a href="mortgage">Mortgage</a></li>
+                    <li><a href="borrow">Borrow</a></li>
+                    <li><a href="budget">Budget</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,7 +33,7 @@ RetrieveDetails($forename, $surname, $email, $password);
     <?php if(isset($_SESSION['userId'])) { ?>
         <div class="customer">
             <div class="container">
-                <div id="customerAccount"><a href="#"><?php echo $_SESSION['username'] ?></a> <a href="Home.php?logOut=true">log off</a></div>
+                <div id="customerAccount"><a href="#"><?php echo $_SESSION['username'] ?></a> <a href="index.php?logOut=true">log off</a></div>
             </div>
         </div>
     <?php } ?>
@@ -59,10 +58,10 @@ RetrieveDetails($forename, $surname, $email, $password);
     <footer>
         <nav>
             <ul>
-                <li><a href="Home.php">Gauge</a></li>
-                <li><a href="Mortgage.php" class="greyText">Mortgage</a></li>
-                <li><a href="Borrow.php" class="greyText">Borrow</a></li>
-                <li><a href="Budget.php" class="greyText">Budget</a></li>
+                <li><a href="index">Gauge</a></li>
+                <li><a href="mortgage" class="greyText">Mortgage</a></li>
+                <li><a href="borrow" class="greyText">Borrow</a></li>
+                <li><a href="budget" class="greyText">Budget</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

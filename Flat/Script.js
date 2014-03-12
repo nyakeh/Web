@@ -58,13 +58,13 @@ function buildResultsTable(calculation) {
     return result;
 }
 function buildPaymentSceduleTable(calculation) {
-    var result = '<table><tr><th>Year</th><th>Total</th><th>Capital</th><th>Interest</th><th>Repayments</th></tr>'
+    //var result = '<table><tr><th>Year</th><th>Total</th><th>Capital</th><th>Interest</th><th>Repayments</th></tr>'
      //for(var year in calculation.RepaymentSchedule) {
       //  result += '<tr><td>Natwest</td><td>'+calculation.InterestRate+'</td><td>'+calculation.LoanToValue+'</td><td>'+calculation.Fees+'</td><td>'+calculation.MonthlyRepayment+'</td></tr>';
     //}
     //result += '<tr><td>'+calculation.RepaymentSchedule["1"]+'</td><td>'+calculation.InterestRate+'</td><td>'+calculation.LoanToValue+'</td><td>'+calculation.Fees+'</td><td>'+calculation.MonthlyRepayment+'</td></tr>';
-    result += '</table>';
-    return result;
+    //result += '</table>';
+    //return result;
 }
 
 function validate_textbox(text_box,message,span) {

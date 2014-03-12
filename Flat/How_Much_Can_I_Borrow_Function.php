@@ -6,7 +6,7 @@ $qry_str = '?deposit=' . $_POST['deposit'];
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $service_url . $qry_str);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+curl_setopt($ch, CURLOPT_TIMEOUT, '5');
 
 $content = trim(curl_exec($ch));
 $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);

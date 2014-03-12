@@ -16,11 +16,11 @@ include('Utils.php');
 <div id="all">
     <header>
         <div class="container">
-            <a href="Home.php"><h1>Gauge</h1></a>
+            <a href="index"><h1>Gauge</h1></a>
             <nav>
                 <ul>
-                    <li><a href="Mortgage.php">Mortgage</a></li>
-                    <li><a href="Borrow.php">Borrow</a></li>
+                    <li><a href="mortgage">Mortgage</a></li>
+                    <li><a href="borrow">Borrow</a></li>
                     <li><a href="#">Budget</a></li>
                 </ul>
             </nav>
@@ -29,7 +29,7 @@ include('Utils.php');
     <?php if(isset($_SESSION['userId'])) { ?>
         <div class="customer">
             <div class="container">
-                <div id="customerAccount"><a href="Account.php"><?php echo $_SESSION['username'] ?></a> <a href="Home.php?logOut=true">log off</a></div>
+                <div id="customerAccount"><a href="account.php"><?php echo $_SESSION['username'] ?></a> <a href="index.php?logOut=true">log off</a></div>
             </div>
         </div>
     <?php } ?>
@@ -51,9 +51,9 @@ include('Utils.php');
     <footer>
         <nav>
             <ul>
-                <li><a href="Home.php">Gauge</a></li>
-                <li><a href="Mortgage.php" class="greyText">Mortgage</a></li>
-                <li><a href="Borrow.php" class="greyText">Borrow</a></li>
+                <li><a href="index">Gauge</a></li>
+                <li><a href="mortgage" class="greyText">Mortgage</a></li>
+                <li><a href="borrow" class="greyText">Borrow</a></li>
                 <li><a href="#" class="greyText">Budget</a></li>
             </ul>
         </nav>

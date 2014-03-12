@@ -59,7 +59,7 @@ if($validationMessage) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
-    curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+    curl_setopt($ch, CURLOPT_TIMEOUT, '5');
 
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);

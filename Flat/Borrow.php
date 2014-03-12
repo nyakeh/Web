@@ -16,12 +16,12 @@ include('Utils.php');
 <div id="all">
     <header>
         <div class="container">
-            <a href="Home.php"><h1>Gauge</h1></a>
+            <a href="index"><h1>Gauge</h1></a>
             <nav>
                 <ul>
-                    <li><a href="Mortgage.php">Mortgage</a></li>
+                    <li><a href="mortgage">Mortgage</a></li>
                     <li><a href="#">Borrow</a></li>
-                    <li><a href="Budget.php">Budget</a></li>
+                    <li><a href="budget">Budget</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,7 +29,7 @@ include('Utils.php');
     <?php if(isset($_SESSION['userId'])) { ?>
         <div class="customer">
             <div class="container">
-                <div id="customerAccount"><a href="Account.php"><?php echo $_SESSION['username'] ?></a> <a href="Home.php?logOut=true">log off</a></div>
+                <div id="customerAccount"><a href="account.php"><?php echo $_SESSION['username'] ?></a> <a href="index.php?logOut=true">log off</a></div>
             </div>
         </div>
     <?php } ?>
@@ -48,10 +48,10 @@ include('Utils.php');
     <footer>
         <nav>
             <ul>
-                <li><a href="Home.php">Gauge</a></li>
-                <li><a href="Mortgage.php" class="greyText">Mortgage</a></li>
+                <li><a href="index">Gauge</a></li>
+                <li><a href="mortgage" class="greyText">Mortgage</a></li>
                 <li><a href="#" class="greyText">Borrow</a></li>
-                <li><a href="Budget.php" class="greyText">Budget</a></li>
+                <li><a href="budget" class="greyText">Budget</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

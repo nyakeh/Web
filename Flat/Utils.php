@@ -27,7 +27,7 @@ function LogIn($email, $password) {
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
 
-    curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+    curl_setopt($ch, CURLOPT_TIMEOUT, '5');
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
@@ -36,7 +36,7 @@ function LogIn($email, $password) {
         $_SESSION['username'] = $result->Forename;
         $_SESSION['userId'] = $result->AccountId;
         $output = detailErrorMessage("Welcome back " . $result->Forename);
-        //header('Location: home.php');
+        //header('Location: index.php');
     } else if($responseCode == 401) {
         $output = detailErrorMessage('401: Flapped it. Correct email wrong password');
     } else if($responseCode == 404) {
@@ -64,7 +64,7 @@ function Register($forename, $surname, $email, $password) {
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
 
-    curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+    curl_setopt($ch, CURLOPT_TIMEOUT, '5');
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
@@ -73,7 +73,7 @@ function Register($forename, $surname, $email, $password) {
         $_SESSION['username'] = $result->Forename;
         $_SESSION['userId'] = $result->AccountId;
         $output = detailErrorMessage("Welcome to Gauge " . $result->Forename);
-        //header('Location: home.php');
+        //header('Location: index.php');
     } else {
         $output = detailErrorMessage('Apologies, an error occurred creating your account');
     }
@@ -107,7 +107,7 @@ function RetrieveDetails(&$forename, &$surname, &$email, &$password) {
 
 function LogOut() {
     session_destroy();
-    header('Location: Home.php');
+    header('Location: index.php');
 }
 
 function nullCheckOutput($value)
@@ -133,7 +133,7 @@ function validateCalculationInput($expected, $state) {
         if(isNotEmpty($value)) {
             ${$field} = htmlentities($value, ENT_COMPAT, 'UTF-8');
             if($message = validate($field, $value)) {
-                $validationMessage[$field] = errorMessage($message);
+                $validationMessage[$field] = errorTooltip($message);
             }
         } else {
             switch($state) {
@@ -160,7 +160,7 @@ function ValidateFields($expected, $state) {
         if(isNotEmpty($value)) {
             ${$field} = htmlentities($value, ENT_COMPAT, 'UTF-8');
             if($message = validate($field, $value)) {
-                $validationMessage[$field] = errorMessage($message);
+                $validationMessage[$field] = errorTooltip($message);
             }
         } else {
             switch($state) {
@@ -216,20 +216,21 @@ function detailErrorMessage($message)
 {
     return '<span class="detailed_error">' . $message . '</span>';
 }
+function errorTooltip($message)
+{
+    //<span id="tooltip"><a href="">Introduction<span>Introduction to HTML and CSS: tooltip with extra text</span></a></span>
+    return '<span id="tooltip"><a href="">Invalid<span>' . $message . '</span></a></span>';
+}
 function validate($field, $value)
 {
     $message = '';
     switch($field) {
-        case 'phone':
-            if(!ctype_digit($value)) {
-                $message = $value .'Phone number not valid';
-            }
-            break;
-        /*case 'email':
+        case 'email':
+        case 'register_email':
             if(filter_var($value, FILTER_VALIDATE_EMAIL) === FALSE) {
                 $message = 'Email address not valid';
             }
-            break;*/
+            break;
     }
     return $message;
 }
