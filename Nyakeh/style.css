@@ -216,12 +216,13 @@ footer img {
         height: 0;
     }
     nav:before {
-        content: '\2630';
+        content: 'MENU';
         display: block;
         position: absolute;
-        right: 15px;
+        right: 20px;
         top: -50px;
         line-height: 40px;
+        cursor: pointer;
     }
     nav ul {
         background: #dcf2fa;
@@ -237,7 +238,7 @@ footer img {
     }
     nav ul {
         transform: perspective(600) rotate3d(0, 0, 0, 0);
-        -moz-transform: perspective(600) rotate3d(0, 0, 0, 0);
+        -moz-transform: perspective(600px) rotate3d(1, 0, 0, -90deg);
         -ms-transform: perspective(600px) rotate3d( 1, 0, 0, -90deg);
         -webkit-transform: perspective(600) rotate3d(1, 0, 0, -90deg);
         transform-origin: 50% 0;
@@ -245,11 +246,11 @@ footer img {
         -webkit-transform-origin: 50% 0;
     }
     nav.open ul {
-        transition: 250ms;
-        -moz-transition: 250ms;
-        -webkit-transition: 250ms;
-        -ms-transition: 250ms;
-        transform: translateY(0px);
+        transition: 300ms;
+        -moz-transition: 300ms;
+        -ms-transition: 300ms;
+        -webkit-transition: 300ms;
+        transform: translateY(0);
         -moz-transform: translateY(0px);
         -ms-transform: translateY(0px);
         -webkit-transform: perspective(600) rotate3d(0, 0, 0, 0);
