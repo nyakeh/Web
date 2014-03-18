@@ -20,6 +20,7 @@ include('Utils.php');
             <nav>
                 <ul>
                     <li><a href="mortgage">Mortgage</a></li>
+                    <li><a href="compare">Compare</a></li>
                     <li><a href="#">Borrow</a></li>
                     <li><a href="budget">Budget</a></li>
                 </ul>
@@ -43,6 +44,7 @@ include('Utils.php');
                 <p><input type="button" id="borrow_submit_button" value="Calculate" tabindex="2"></p>
                 <p><span id="borrow_message" class="detailed_error"></span></p>
             </form>
+            <section class="results" id="borrow_results"></section>
         </div>
     </div>
     <footer>
@@ -50,6 +52,7 @@ include('Utils.php');
             <ul>
                 <li><a href="index">Gauge</a></li>
                 <li><a href="mortgage" class="greyText">Mortgage</a></li>
+                <li><a href="compare" class="greyText">Compare</a></li>
                 <li><a href="#" class="greyText">Borrow</a></li>
                 <li><a href="budget" class="greyText">Budget</a></li>
             </ul>

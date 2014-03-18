@@ -57,6 +57,7 @@ if($_GET){
             <nav>
                 <ul>
                     <li><a href="mortgage">Mortgage</a></li>
+                    <li><a href="compare">Compare</a></li>
                     <li><a href="borrow">Borrow</a></li>
                     <li><a href="budget">Budget</a></li>
                 </ul>
@@ -110,6 +111,7 @@ if($_GET){
             <ul>
                 <li><a href="#">Gauge</a></li>
                 <li><a href="mortgage" class="greyText">Mortgage</a></li>
+                <li><a href="compare" class="greyText">Compare</a></li>
                 <li><a href="borrow" class="greyText">Borrow</a></li>
                 <li><a href="budget" class="greyText">Budget</a></li>
             </ul>
