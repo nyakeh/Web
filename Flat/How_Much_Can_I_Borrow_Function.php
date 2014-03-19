@@ -12,7 +12,7 @@ $content = trim(curl_exec($ch));
 $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
-if($responseCode == 201) {
+if($responseCode == 200) {
     echo $content;
 } else  {
     echo 'Apologies, a problem occurred';

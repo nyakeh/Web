@@ -125,32 +125,32 @@ function addValueTag($value)
     return $output;
 }
 // -- Input Validation --
-function isCalculationInputValid($expected, $state) {
-    $valid = true;
+function validateCalculationInput($expected, $state) {
+    $validationMessage = array();
 
     foreach ($expected as $field) {
         $value = trim($_POST[$field]);
-        if(!isNotEmpty($value)) {
+        if(isNotEmpty($value)) {
+            ${$field} = htmlentities($value, ENT_COMPAT, 'UTF-8');
+            if($message = validate($field, $value)) {
+                $validationMessage[$field] = errorTooltip($message);
+            }
+        } else {
             switch($state) {
                 case "mortgage":
                     if(isRequiredForMortgage($field)) {
-                        $valid = false;
-                    };
-                    break;
-                case "mortgage_compare":
-                    if(isRequiredForMortgageCompare($field)) {
-                        $valid = false;
+                        $validationMessage[$field] = errorMessage('Required');
                     };
                     break;
                 case "budget":
                     /*if(isRequiredForBudget($field)) {
-                        $valid = false;
+                        $validationMessage[$field] = errorMessage('Required');
                     };*/
                     break;
             }
         }
     }
-    return $valid;
+    return $validationMessage;
 }
 function ValidateFields($expected, $state) {
     $validationMessage = array();
@@ -201,17 +201,12 @@ function isRequiredForRegister($field)
 }
 function isRequiredForMortgage($field)
 {
-    $required = array('houseValue','deposit','interest', 'term','fees');
-    return in_array($field, $required);
-}
-function isRequiredForMortgageCompare($field)
-{
-    $required = array('houseValue','deposit', 'term');
+    $required = array('houseValue','interest', 'term');
     return in_array($field, $required);
 }
 function isNotEmpty($value)
 {
-    return !empty($value);
+    return !empty($value) || $value === 0;
 }
 function errorMessage($message)
 {

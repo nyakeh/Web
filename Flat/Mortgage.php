@@ -20,7 +20,6 @@ include('Utils.php');
             <nav>
                 <ul>
                     <li><a href="#">Mortgage</a></li>
-                    <li><a href="compare">Compare</a></li>
                     <li><a href="borrow">Borrow</a></li>
                     <li><a href="budget">Budget</a></li>
                 </ul>
