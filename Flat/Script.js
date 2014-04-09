@@ -79,6 +79,11 @@ $(document).ready(function() {
             }
         });
     });
+	
+	$('#calculation_lookup_submit_Button').click( function() {
+        $calcId = $('#input_calcId').val();
+		loadCalc($calcId);
+    });
 });
 
 function buildMortgageResultsTable(calculation) {

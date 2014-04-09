@@ -2,15 +2,9 @@
     session_start(); 
     include( 'Utils.php');
 	$substance = "<p>We're just <span class=\"bold\">retreiving</span> your calculation.</p><p><img src=\"img/loader.gif\"></p>";
-	if(ISSET($_GET['id'])) {
-		//$calculationHtml = retreiveCalculation($_GET['id']);
-		//if(is_null($calculationHtml)) {
-		//	$substance = '<p>Null tings</p>';
-		//} else {
-		//	$substance = $calculationHtml;
-		//}
-	} else {
-		$substance = 'No no, no we got no id';
+	if(!ISSET($_GET['id'])) {
+		$substance = "<p>Look-up an old Calculation</p><form id=\"mortgage_retriever\" method=\"post\" action=\"\"><p><label>Calculation Id</label><input type=\"text\" class=\"input\" name=\"input_calcId\" id=\"input_calcId\" maxlength=\"10\" tabindex=\"1\"></p><input type=\"button\" id=\"calculation_lookup_submit_Button\" value=\"Find\" tabindex=\"2\"></form>";
+		
 	}
 
 ?>
@@ -57,18 +51,10 @@
 <footer>
     <nav>
         <ul>
-            <li>
-                <a href="index">Gauge</a>
-            </li>
-            <li>
-                <a href="mortgage" class="greyText">Mortgage</a>
-            </li>
-            <li>
-                <a href="compare" class="greyText">Compare</a>
-            </li>
-            <li>
-                <a href="borrow" class="greyText">Borrow</a>
-            </li>
+            <li><a href="index">Gauge</a></li>
+            <li><a href="mortgage" class="greyText">Mortgage</a></li>
+            <li><a href="compare" class="greyText">Compare</a></li>
+            <li><a href="borrow" class="greyText">Borrow</a></li>
         </ul>
     </nav>
     <a href="http://www.nyakeh.co.uk">
