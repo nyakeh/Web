@@ -1,12 +1,13 @@
 <?php 
     session_start(); 
     include( 'Utils.php');
-	$substance = "<p>We're just <span class=\"bold\">retreiving</span> your calculation.</p><p><img src=\"img/loader.gif\"></p>";
-	if(!ISSET($_GET['id'])) {
-		$substance = "<p>Look-up an old Calculation</p><form id=\"mortgage_retriever\" method=\"post\" action=\"\"><p><label>Calculation Id</label><input type=\"text\" class=\"input\" name=\"input_calcId\" id=\"input_calcId\" maxlength=\"10\" tabindex=\"1\"></p><input type=\"button\" id=\"calculation_lookup_submit_Button\" value=\"Find\" tabindex=\"2\"></form>";
-		
+	$calculationId = "";
+	$substance = "";
+	
+	if(ISSET($_GET['id'])) {
+		$substance = "<p>We're just <span class=\"bold\">retreiving</span> your calculation.</p><p><img src=\"img/loader.gif\"></p>";
+		$calculationId = $_GET['id'];
 	}
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,8 +45,12 @@
     <div class="heading">
         <h1>Mortagage Calculation Viewer</h1>
     </div>
+    <div class="section" id="calculationFinder">
+        <p>Look-up an old Calculation</p>
+		<form id="mortgage_retriever" method="post" action=""><p><label>Calculation Id</label><input type="text" class="input" name="input_calcId" id="input_calcId" value="<?php echo $calculationId ?>" maxlength="10" tabindex="1"></p><input type="button" id="calculation_lookup_submit_Button" value="Find" tabindex="2"></form>
+    </div>
     <div class="section" id="calculationTable">
-        <?php echo $substance ?>
+		<?php echo $substance ?>
     </div>
 </div>
 <footer>

@@ -13,11 +13,15 @@ class CalculationDetails {
     public $MortgageType  = "";
     public $Source  = "";
 }
+if($_POST['interest']=='0' && $_POST['fees']=='0') {
+    $expected = array('houseValue', 'deposit','term');
+    $inputValid = isCalculationInputValid($expected, 'mortgage_compare');
+} else {
+    $expected = array('houseValue', 'deposit','interest', 'term', 'fees');
+    $inputValid = isCalculationInputValid($expected, 'mortgage');
+}
 
-$expected = array('houseValue', 'deposit','interest', 'term', 'fees');
-$validationMessage = validateCalculationInput($expected, 'mortgage');
-
-if($validationMessage) {
+if(!$inputValid) {
     echo 'Please amend the calculation figures';
 } else {
     $accountId = '0';
@@ -42,10 +46,10 @@ if($validationMessage) {
     $calculation->Source  = 'Gauge Website';
     $calculation->MortgageType  = 'Repayment';
 
+    // Extract out to method - ZeroNullValues()
     if($calculation->Deposit === '') {
         $calculation->Deposit = 0;
     }
-
     if($calculation->Fees === '') {
         $calculation->Fees = 0;
     }
@@ -59,7 +63,7 @@ if($validationMessage) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
-    curl_setopt($ch, CURLOPT_TIMEOUT, '5');
+    curl_setopt($ch, CURLOPT_TIMEOUT, '20');
 
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);

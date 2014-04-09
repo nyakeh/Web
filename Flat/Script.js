@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('#account_submit_Button').click( function() {
+    $('#account_submit_Button').click(function () {
         $forename = $('#account_forename').val();
         $deposit = $('#account_surname').val();
         $term = $('#account_email').val();
@@ -8,13 +8,13 @@ $(document).ready(function() {
         $.ajax({ url: 'Account_Details_Update_Function.php',
             data: { forename: $forename, surname: $deposit, email: $term, password: $interest },
             type: 'post',
-            success: function(output) {
+            success: function (output) {
                 $("#account_message").text(output);
-            }
-        });
+			}
+			});
     });
 
-    $('#mortgage_submit_Button').click( function() {
+    $('#mortgage_submit_Button').click(function () {
         $houseValue = $('#input_property').val();
         $deposit = $('#input_deposit').val();
         $term = $('#input_term').val();
@@ -23,7 +23,7 @@ $(document).ready(function() {
         $.ajax({ url: 'Mortgage_Calculate_Function.php',
             data: { houseValue: $houseValue, deposit: $deposit, term: $term, interest: $interest, fees: $fees },
             type: 'post',
-            success: function(output) {
+            success: function (output) {
                 try {
                     sessionStorage.setItem('calculation', output);
                     var calculation = JSON.parse(output);
@@ -32,20 +32,19 @@ $(document).ready(function() {
                     $("#mortgage_message").text('');
                     $("#mortgage_results").html(resultsTable);
                     $("#mortgage_detailed_results").html(paymentSceduleTable);
-                } catch(exception) {
+                } catch (exception) {
                     $("#mortgage_message").text(output);
                     $("#mortgage_results").html('');
                 }
-            }
-        });
+            }});
     });
 
-    $('#borrow_submit_button').click( function() {
+    $('#borrow_submit_button').click(function () {
         $deposit = $('#input_borrow_deposit').val();
         $.ajax({ url: 'How_Much_Can_I_Borrow_Function.php',
             data: { deposit: $deposit },
             type: 'post',
-            success: function(output) {
+            success: function (output) {
                 try {
                     var results = JSON.parse(output);
                     var resultsTable = buildBorrowResultsTable(results);
@@ -56,39 +55,39 @@ $(document).ready(function() {
                     $("#borrow_results").html('');
                 }
             }
-        });
+        	});
     });
 
-    $('#compare_submit_Button').click( function() {
+    $('#compare_submit_Button').click(function () {
         $houseValue = $('#input_property').val();
         $deposit = $('#input_deposit').val();
         $term = $('#input_term').val();
         $.ajax({ url: 'Mortgage_Calculate_Function.php',
             data: { houseValue: $houseValue, deposit: $deposit, term: $term, interest: '0', fees: '0' },
             type: 'post',
-            success: function(output) {
+            success: function (output) {
                 try {
                     var calculation = JSON.parse(output);
                     var resultsTable = buildCompareResultsTable(calculation);
                     $("#compare_message").text('');
                     $("#compare_results").html(resultsTable);
-                } catch(exception) {
+                } catch (exception) {
                     $("#compare_message").text(output);
                     $("#compare_results").html('');
                 }
             }
-        });
+        	});
     });
 	
-	$('#calculation_lookup_submit_Button').click( function() {
+	$('#calculation_lookup_submit_Button').click(function () {
         $calcId = $('#input_calcId').val();
-		loadCalc($calcId);
+		preLoadCalc($calcId);
     });
 });
 
 function buildMortgageResultsTable(calculation) {
     var result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
-    result += '<tr><td>'+calculation.InterestRate+'</td><td>'+calculation.LoanToValue+'</td><td>'+calculation.Fees+'</td><td>'+calculation.MonthlyRepayment+'</td><td>'+calculation.TotalInterest+'</td><td>'+calculation.TotalPaid+'</td></tr>';
+    result += '<tr><td>' + calculation.InterestRate + '</td><td>' + calculation.LoanToValue + '</td><td>' + calculation.Fees + '</td><td>' + calculation.MonthlyRepayment + '</td><td>' + calculation.TotalInterest + '</td><td>' + calculation.TotalPaid + '</td></tr>';
     result += '</table>';
     return result;
 }
@@ -150,8 +149,13 @@ function isEmptyNumberBox(text_box, span) {
     }
 }
 
+function preLoadCalc(id) {
+	$("#calculationTable").html("<p>We're just <span class=\"bold\">retreiving</span> your calculation.</p><p><img src=\"img/loader.gif\"></p>");
+	loadCalc(id);
+}
+
 function loadCalc(id) {
-	$.ajax({ url: 'LoadCalculation.php',
+	$.ajax({ url: 'Load_Calculation_Function.php',
 		data: { calculationId: id },
 		type: 'post',
 		success: function(output) {

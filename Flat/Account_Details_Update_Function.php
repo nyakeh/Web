@@ -32,7 +32,7 @@ if($validationMessage) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
     curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
-    curl_setopt($ch, CURLOPT_TIMEOUT, '5');
+    curl_setopt($ch, CURLOPT_TIMEOUT, '20');
 
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);

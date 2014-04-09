@@ -27,7 +27,7 @@ function LogIn($email, $password) {
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
 
-    curl_setopt($ch, CURLOPT_TIMEOUT, '5');
+    curl_setopt($ch, CURLOPT_TIMEOUT, '20');
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
@@ -64,7 +64,7 @@ function Register($forename, $surname, $email, $password) {
     curl_setopt($ch, CURLOPT_POST, 1);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $curl_post_data);
 
-    curl_setopt($ch, CURLOPT_TIMEOUT, '5');
+    curl_setopt($ch, CURLOPT_TIMEOUT, '20');
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
@@ -87,7 +87,7 @@ function RetrieveDetails(&$forename, &$surname, &$email, &$password) {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $service_url . $qry_str);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+    curl_setopt($ch, CURLOPT_TIMEOUT, '20');
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
@@ -238,34 +238,4 @@ function validate($field, $value)
             break;
     }
     return $message;
-}/*
-function retreiveCalculation($id) {
-    //$service_url = 'http://127.0.0.1:81/api/mortgage'; //local
-    $service_url = 'http://mortgagecalculator.cloudapp.net/api/mortgage'; //live
-    $qry_str = '/' . $id;
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, $service_url . $qry_str);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_TIMEOUT, '3');
-    $content = trim(curl_exec($ch));
-    $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    curl_close($ch);
-	$result = "asd";
-    if($responseCode == 200) {
-        $calculation = json_decode($content);
-		
-		$interestRate = $calculation->InterestRate;
-		$loanToValue = $calculation->LoanToValue;
-		$fees = $calculation->Fees;
-		$monthlyRepayment = $calculation->MonthlyRepayment;
-		$totalInterest = $calculation->TotalInterest;
-		$totalPaid = $calculation->TotalPaid;
-		
-        $result = "<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>";
-    	$result2 = "<tr><td>".$interestRate."</td><td>".$loanToValue."</td><td>".$fees."</td><td>".$monthlyRepayment."</td><td>".$totalInterest."</td><td>".$totalPaid."</td></tr>";
-    	$result3 = "</table>";
-    } else {
-        $result = null;
-    }
-	return $result . $result2 . $result3;
-}*/
+}

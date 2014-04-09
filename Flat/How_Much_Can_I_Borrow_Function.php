@@ -6,13 +6,13 @@ $qry_str = '?deposit=' . $_POST['deposit'];
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $service_url . $qry_str);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt($ch, CURLOPT_TIMEOUT, '5');
+curl_setopt($ch, CURLOPT_TIMEOUT, '20');
 
 $content = trim(curl_exec($ch));
 $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
-if($responseCode == 200) {
+if($responseCode == 201) {
     echo $content;
 } else  {
     echo 'Apologies, a problem occurred';
