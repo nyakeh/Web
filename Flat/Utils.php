@@ -125,32 +125,32 @@ function addValueTag($value)
     return $output;
 }
 // -- Input Validation --
-function validateCalculationInput($expected, $state) {
-    $validationMessage = array();
+function isCalculationInputValid($expected, $state) {
+    $valid = true;
 
     foreach ($expected as $field) {
         $value = trim($_POST[$field]);
-        if(isNotEmpty($value)) {
-            ${$field} = htmlentities($value, ENT_COMPAT, 'UTF-8');
-            if($message = validate($field, $value)) {
-                $validationMessage[$field] = errorTooltip($message);
-            }
-        } else {
+        if(!isNotEmpty($value)) {
             switch($state) {
                 case "mortgage":
                     if(isRequiredForMortgage($field)) {
-                        $validationMessage[$field] = errorMessage('Required');
+                        $valid = false;
+                    };
+                    break;
+                case "mortgage_compare":
+                    if(isRequiredForMortgageCompare($field)) {
+                        $valid = false;
                     };
                     break;
                 case "budget":
                     /*if(isRequiredForBudget($field)) {
-                        $validationMessage[$field] = errorMessage('Required');
+                        $valid = false;
                     };*/
                     break;
             }
         }
     }
-    return $validationMessage;
+    return $valid;
 }
 function ValidateFields($expected, $state) {
     $validationMessage = array();
@@ -201,12 +201,17 @@ function isRequiredForRegister($field)
 }
 function isRequiredForMortgage($field)
 {
-    $required = array('houseValue','interest', 'term');
+    $required = array('houseValue','deposit','interest', 'term','fees');
+    return in_array($field, $required);
+}
+function isRequiredForMortgageCompare($field)
+{
+    $required = array('houseValue','deposit', 'term');
     return in_array($field, $required);
 }
 function isNotEmpty($value)
 {
-    return !empty($value) || $value === 0;
+    return !empty($value);
 }
 function errorMessage($message)
 {
@@ -233,4 +238,25 @@ function validate($field, $value)
             break;
     }
     return $message;
+}
+function retreiveCalculation($id) {
+    //$service_url = 'http://127.0.0.1:81/api/mortgage'; //local
+    $service_url = 'http://mortgagecalculator.cloudapp.net/api/mortgage'; //live
+    $qry_str = '/' . $id;
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $service_url . $qry_str);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+    $content = trim(curl_exec($ch));
+    $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+    if($responseCode == 200) {
+        $calculation = json_decode($content);      
+        $result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
+    	$result += '<tr><td>'+$calculation->InterestRate+'</td><td>'+$calculation->LoanToValue+'</td><td>'+$calculation->Fees+'</td><td>'+$calculation->MonthlyRepayment+'</td><td>'+$calculation->TotalInterest+'</td>		<td>'+$calculation->TotalPaid+'</td></tr>';
+    	$result += '</table>';    
+    } else if($responseCode == 404) {
+        $result = null;
+    }
+	return $result;
 }

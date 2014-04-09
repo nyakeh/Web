@@ -20,8 +20,8 @@ include('Utils.php');
             <nav>
                 <ul>
                     <li><a href="mortgage">Mortgage</a></li>
+                    <li><a href="compare">Compare</a></li>
                     <li><a href="borrow">Borrow</a></li>
-                    <li><a href="#">Budget</a></li>
                 </ul>
             </nav>
         </div>
@@ -53,8 +53,8 @@ include('Utils.php');
             <ul>
                 <li><a href="index">Gauge</a></li>
                 <li><a href="mortgage" class="greyText">Mortgage</a></li>
+                <li><a href="compare" class="greyText">Compare</a></li>
                 <li><a href="borrow" class="greyText">Borrow</a></li>
-                <li><a href="#" class="greyText">Budget</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>
