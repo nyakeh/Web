@@ -238,7 +238,7 @@ function validate($field, $value)
             break;
     }
     return $message;
-}
+}/*
 function retreiveCalculation($id) {
     //$service_url = 'http://127.0.0.1:81/api/mortgage'; //local
     $service_url = 'http://mortgagecalculator.cloudapp.net/api/mortgage'; //live
@@ -250,13 +250,22 @@ function retreiveCalculation($id) {
     $content = trim(curl_exec($ch));
     $responseCode =curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
+	$result = "asd";
     if($responseCode == 200) {
-        $calculation = json_decode($content);      
-        $result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
-    	$result += '<tr><td>'+$calculation->InterestRate+'</td><td>'+$calculation->LoanToValue+'</td><td>'+$calculation->Fees+'</td><td>'+$calculation->MonthlyRepayment+'</td><td>'+$calculation->TotalInterest+'</td>		<td>'+$calculation->TotalPaid+'</td></tr>';
-    	$result += '</table>';    
-    } else if($responseCode == 404) {
+        $calculation = json_decode($content);
+		
+		$interestRate = $calculation->InterestRate;
+		$loanToValue = $calculation->LoanToValue;
+		$fees = $calculation->Fees;
+		$monthlyRepayment = $calculation->MonthlyRepayment;
+		$totalInterest = $calculation->TotalInterest;
+		$totalPaid = $calculation->TotalPaid;
+		
+        $result = "<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>";
+    	$result2 = "<tr><td>".$interestRate."</td><td>".$loanToValue."</td><td>".$fees."</td><td>".$monthlyRepayment."</td><td>".$totalInterest."</td><td>".$totalPaid."</td></tr>";
+    	$result3 = "</table>";
+    } else {
         $result = null;
     }
-	return $result;
-}
+	return $result . $result2 . $result3;
+}*/

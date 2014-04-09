@@ -1,15 +1,16 @@
 <?php 
     session_start(); 
     include( 'Utils.php');
+	$substance = "<p>We're just <span class=\"bold\">retreiving</span> your calculation.</p><p><img src=\"img/loader.gif\"></p>";
 	if(ISSET($_GET['id'])) {
-		$calculationHtml = retreiveCalculation($_GET['id']);
-		if(is_null($calculationHtml)) {
-			echo 'Null tings';
-		} else {
-			echo 'Big tings';
-		}
+		//$calculationHtml = retreiveCalculation($_GET['id']);
+		//if(is_null($calculationHtml)) {
+		//	$substance = '<p>Null tings</p>';
+		//} else {
+		//	$substance = $calculationHtml;
+		//}
 	} else {
-		echo 'No no, no we got no id';
+		$substance = 'No no, no we got no id';
 	}
 
 ?>
@@ -21,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
+	<script type='text/javascript'> window.onload=loadCalc(<?php echo $_GET['id'] ?>); </script>
 </head>
 
 <body>
@@ -48,9 +50,8 @@
     <div class="heading">
         <h1>Mortagage Calculation Viewer</h1>
     </div>
-    <div class="section">
-        <p>We're just <span class="bold">retreiving</span> your calculation.</p>
-        <p><img src="img/loader.gif"></p>
+    <div class="section" id="calculationTable">
+        <?php echo $substance ?>
     </div>
 </div>
 <footer>

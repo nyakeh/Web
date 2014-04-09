@@ -25,8 +25,9 @@ $(document).ready(function() {
             type: 'post',
             success: function(output) {
                 try {
+                    sessionStorage.setItem('calculation', output);
                     var calculation = JSON.parse(output);
-                    var resultsTable = buildResultsTable(calculation);
+                    var resultsTable = buildMortgageResultsTable(calculation);
                     var paymentSceduleTable = buildPaymentSceduleTable(calculation);
                     $("#mortgage_message").text('');
                     $("#mortgage_results").html(resultsTable);
@@ -45,15 +46,60 @@ $(document).ready(function() {
             data: { deposit: $deposit },
             type: 'post',
             success: function(output) {
-                $("#borrow_message").text(output);
+                try {
+                    var results = JSON.parse(output);
+                    var resultsTable = buildBorrowResultsTable(results);
+                    $("#borrow_message").text('');
+                    $("#borrow_results").html(resultsTable);
+                } catch(exception) {
+                    $("#borrow_message").text(output);
+                    $("#borrow_results").html('');
+                }
+            }
+        });
+    });
+
+    $('#compare_submit_Button').click( function() {
+        $houseValue = $('#input_property').val();
+        $deposit = $('#input_deposit').val();
+        $term = $('#input_term').val();
+        $.ajax({ url: 'Mortgage_Calculate_Function.php',
+            data: { houseValue: $houseValue, deposit: $deposit, term: $term, interest: '0', fees: '0' },
+            type: 'post',
+            success: function(output) {
+                try {
+                    var calculation = JSON.parse(output);
+                    var resultsTable = buildCompareResultsTable(calculation);
+                    $("#compare_message").text('');
+                    $("#compare_results").html(resultsTable);
+                } catch(exception) {
+                    $("#compare_message").text(output);
+                    $("#compare_results").html('');
+                }
             }
         });
     });
 });
 
-function buildResultsTable(calculation) {
-    var result = '<table><tr><th>Bank</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owing</th></tr>';
-    result += '<tr><td>Natwest</td><td>'+calculation.InterestRate+'</td><td>'+calculation.LoanToValue+'</td><td>'+calculation.Fees+'</td><td>'+calculation.MonthlyRepayment+'</td><td>'+calculation.TotalInterest+'</td><td>'+calculation.TotalPaid+'</td></tr>';
+function buildMortgageResultsTable(calculation) {
+    var result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
+    result += '<tr><td>'+calculation.InterestRate+'</td><td>'+calculation.LoanToValue+'</td><td>'+calculation.Fees+'</td><td>'+calculation.MonthlyRepayment+'</td><td>'+calculation.TotalInterest+'</td><td>'+calculation.TotalPaid+'</td></tr>';
+    result += '</table>';
+    return result;
+}
+function buildCompareResultsTable(calculation) {
+    var result = '<table><tr><th>Bank</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
+    for (var i in calculation) {
+    result += '<tr><td>'+calculation[i].Bank+'</td><td>'+calculation[i].InterestRate+'</td><td>'+calculation[i].LoanToValue+'</td><td>'+calculation[i].Fees+'</td><td>'+calculation[i].MonthlyRepayment+'</td><td>'+calculation[i].TotalInterest+'</td><td>'+calculation[i].TotalPaid+'</td></tr>';
+    }
+    result += '</table>';
+    return result;
+}
+function buildBorrowResultsTable(calculation) {
+    var result = '<table><tr><th>Loan-To-Value</th><th>Max Loan</th></tr>';
+    for (var i in calculation) {
+        result += '<tr><td>'+calculation[i].LoanToValue+'</td><td>'+calculation[i].Amount+'</td></tr>';
+    }
     result += '</table>';
     return result;
 }
@@ -97,4 +143,14 @@ function isEmptyNumberBox(text_box, span) {
         lbl.className = "tick";
         return false;
     }
+}
+
+function loadCalc(id) {
+	$.ajax({ url: 'LoadCalculation.php',
+		data: { calculationId: id },
+		type: 'post',
+		success: function(output) {
+			$("#calculationTable").html(output);
+		}
+	});
 }
