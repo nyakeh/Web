@@ -15,6 +15,7 @@ $(document).ready(function () {
     });
 
     $('#mortgage_submit_Button').click(function () {
+		$("#mortgage_results").html("<p>We're just <span class=\"bold\">calculating</span> your mortgage.</p><p><img src=\"img/loader.gif\"></p>");
         $houseValue = $('#input_property').val();
         $deposit = $('#input_deposit').val();
         $term = $('#input_term').val();
@@ -40,6 +41,7 @@ $(document).ready(function () {
     });
 
     $('#borrow_submit_button').click(function () {
+		$("#borrow_results").html("<p>We're just <span class=\"bold\">working out</span> how much a mortgae provider might offer you.</p><p><img src=\"img/loader.gif\"></p>");
         $deposit = $('#input_borrow_deposit').val();
         $.ajax({ url: 'How_Much_Can_I_Borrow_Function.php',
             data: { deposit: $deposit },
@@ -59,6 +61,7 @@ $(document).ready(function () {
     });
 
     $('#compare_submit_Button').click(function () {
+		$("#compare_results").html("<p>We're just <span class=\"bold\">comparing</span> multiple mortgage providers.</p><p><img src=\"img/loader.gif\"></p>");
         $houseValue = $('#input_property').val();
         $deposit = $('#input_deposit').val();
         $term = $('#input_term').val();
@@ -81,7 +84,7 @@ $(document).ready(function () {
 	
 	$('#calculation_lookup_submit_Button').click(function () {
         $calcId = $('#input_calcId').val();
-		preLoadCalc($calcId);
+		preLoadCalculation($calcId);
     });
 });
 
@@ -149,17 +152,27 @@ function isEmptyNumberBox(text_box, span) {
     }
 }
 
-function preLoadCalc(id) {
+function preLoadCalculation(id) {
 	$("#calculationTable").html("<p>We're just <span class=\"bold\">retreiving</span> your calculation.</p><p><img src=\"img/loader.gif\"></p>");
-	loadCalc(id);
+	loadCalculation(id);
 }
 
-function loadCalc(id) {
+function loadCalculation(id) {
 	$.ajax({ url: 'Load_Calculation_Function.php',
 		data: { calculationId: id },
 		type: 'post',
 		success: function(output) {
 			$("#calculationTable").html(output);
+		}
+	});
+}
+
+function loadCalculationHistory(userId) {
+	$.ajax({ url: 'Load_Calculation_History_Function.php',
+		data: { userId: userId },
+		type: 'post',
+		success: function(output) {
+			$("#calculationHistoryResults").html(output);
 		}
 	});
 }

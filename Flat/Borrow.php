@@ -39,7 +39,7 @@ include('Utils.php');
         <div class="section">
             <p>How much would a bank <span class="bold">lend</span> towards buying a property.</p>
             <form id="borrow_calculator" method="post" action="">
-                <p><label>Deposit available</label><input type="text" class="input" name="input_borrow_deposit" id="input_borrow_deposit" value="20000" maxlength="10" tabindex="1">
+                <p><label>Deposit available</label><input type="text" class="input" name="input_borrow_deposit" id="input_borrow_deposit" placeholder="20000" maxlength="10" tabindex="1">
                 <p><input type="button" id="borrow_submit_button" value="Calculate" tabindex="2"></p>
                 <p><span id="borrow_message" class="detailed_error"></span></p>
             </form>

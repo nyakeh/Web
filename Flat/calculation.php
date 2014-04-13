@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
-	<script type='text/javascript'> window.onload=loadCalc(<?php echo $_GET['id'] ?>); </script>
+	<script type='text/javascript'> window.onload=loadCalculation(<?php echo $_GET['id'] ?>); </script>
 </head>
 
 <body>

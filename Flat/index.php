@@ -47,6 +47,9 @@ if($_GET){
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
+	<?php if(isset($_SESSION['userId'])) { ?>
+	<script type='text/javascript'> window.onload=loadCalculationHistory(<?php echo $_SESSION['userId'] ?>); </script>
+	<?php } ?>	
 </head>
 
 <body>
@@ -75,7 +78,7 @@ if($_GET){
         <div class="section">
             <p>Welcome to <span class="bold">Gauge</span>, the online mortgage calculator</p>
             <?php if(isset($_SESSION['userId'])) { ?>
-                <p>Hello <?php echo $_SESSION['username'] ?>, you rank number <?php echo $_SESSION['userId'] ?> in our favourite customer poll.</p>
+                <p>Now close your eye and imagine your calcualtion histoory appearing here.</p>
             <?php } ?>
         </div>
         <?php if(!isset($_SESSION['userId'])) { ?>
@@ -104,6 +107,12 @@ if($_GET){
             </div>
         </div>
         <?php } ?>
+		<?php if(isset($_SESSION['userId'])) { ?>
+        <div class="section" id="calculationHistory">
+			<p>Here's your most recent calculations:</p>
+			<div id="calculationHistoryResults"></div>
+		</div>		
+        <?php } ?>			
     </div>
     <footer>
         <nav>

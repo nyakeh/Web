@@ -39,11 +39,11 @@ include('Utils.php');
         <div class="section">
             <p>Here you can <span class="bold">Compare</span> various mortgage products.</p>
             <form id="compare_calculator" method="post" action="">
-                <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" value="270000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_propertyMsg');" tabindex="1">
+                <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" placeholder="270000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_propertyMsg');" tabindex="1">
                     <span id="input_propertyMsg"></span></p>
-                <p><label>Deposit Amount</label><input type="text" class="input" name="input_deposit" id="input_deposit" value="39000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_depositMsg');" tabindex="2">
+                <p><label>Deposit Amount</label><input type="text" class="input" name="input_deposit" id="input_deposit" placeholder="39000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_depositMsg');" tabindex="2">
                     <span id="input_depositMsg"></span></p>
-                <p><label>Term</label><input type="text" class="input" name="input_term" id="input_term" value="25" maxlength="3" onBlur="javascript:isEmptyNumberBox(this,'input_termMsg');" tabindex="3">
+                <p><label>Term</label><input type="text" class="input" name="input_term" id="input_term" placeholder="25" maxlength="3" onBlur="javascript:isEmptyNumberBox(this,'input_termMsg');" tabindex="3">
                     <span id="input_termMsg"></span></p>
                 <input type="button" id="compare_submit_Button" value="Calculate" tabindex="4">
                 <p><span id="compare_message" class="detailed_error"></span></p>
