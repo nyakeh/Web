@@ -20,8 +20,9 @@
 		$monthlyRepayment = $calculation->MonthlyRepayment;
 		$totalInterest = $calculation->TotalInterest;
 		$totalPaid = $calculation->TotalPaid;
-        $result = "<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>";
-    	$result .= "<tr><td>".$interestRate."</td><td>".$loanToValue."</td><td>".$fees."</td><td>".$monthlyRepayment."</td><td>".$totalInterest."</td><td>".$totalPaid."</td></tr>";
+        $result = "<table><tr><th>Date</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>";
+		$date = date_format(date_create($calculation->Date), 'd/m/y  H:i');
+    	$result .= "<tr><td>".$date."</td><td>".$interestRate."</td><td>".$loanToValue."</td><td>".$fees."</td><td>".$monthlyRepayment."</td><td>".$totalInterest."</td><td>".$totalPaid."</td></tr>";
     	$result .= "</table>";
     } else {
         $result = "<p>Calculation could not be found in our records.</p>";
