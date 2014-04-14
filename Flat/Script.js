@@ -176,3 +176,13 @@ function loadCalculationHistory(userId) {
 		}
 	});
 }
+
+function loadFavourites(userId) {
+	$.ajax({ url: 'Load_Calculation_Favourites_Function.php',
+		data: { userId: userId },
+		type: 'post',
+		success: function(output) {
+			$("#favouritesTable").html(output);
+		}
+	});
+}

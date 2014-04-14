@@ -33,7 +33,7 @@ RetrieveDetails($forename, $surname, $email, $password);
     <?php if(isset($_SESSION['userId'])) { ?>
         <div class="customer">
             <div class="container">
-                <div id="customerAccount"><a href="#"><?php echo $_SESSION['username'] ?></a> <a href="index.php?logOut=true">log off</a></div>
+                <div id="customerAccount"><a href="#"><?php echo $_SESSION['username'] ?></a> <a href="favourite.php">Favourites</a> <a href="index.php?logOut=true">Log off</a></div>
             </div>
         </div>
     <?php } ?>
