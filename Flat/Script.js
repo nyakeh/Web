@@ -89,11 +89,40 @@ $(document).ready(function () {
 });
 
 function buildMortgageResultsTable(calculation) {
-    var result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
-    result += '<tr><td>' + calculation.InterestRate + '</td><td>' + calculation.LoanToValue + '</td><td>' + calculation.Fees + '</td><td>' + calculation.MonthlyRepayment + '</td><td>' + calculation.TotalInterest + '</td><td>' + calculation.TotalPaid + '</td></tr>';
+    var result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th><th>Favourite</th><th>Email</th></tr>';
+    result += '<tr><td>' + calculation.InterestRate + '%</td><td>' + calculation.LoanToValue + '</td><td>' + calculation.Fees + '</td><td>' + calculation.MonthlyRepayment + '</td><td>' + calculation.TotalInterest + '</td><td>' + calculation.TotalPaid + '</td><td><button class="favouriteBtn" data-calculationid="'+calculation.CalculationId+'">Favourite</button></td><td><button class="emailBtn" data-calculationid="'+calculation.CalculationId+'">Email</button></td></tr>';
     result += '</table>';
     return result;
 }
+
+$(".favouriteBtn").live("click", function() {
+	$calculationId = $(this).data("calculationid");
+	
+	$.ajax({ url: 'Favourite_Calculation_Function.php',
+		data: { calculationId: $calculationId },
+		type: 'post',
+		success: function(output) {
+			if($(".favouriteBtn").text() == "Favourite") {
+				$(".favouriteBtn").text('Remove');
+			} else {
+				$(".favouriteBtn").text('Favourite');
+			}
+		}
+	});
+});
+$(".emailBtn").live("click", function() {
+	$calculationId = $(this).data("calculationid");
+	
+	$.ajax({ url: 'Email_Calculation_Function.php',
+		data: { calculationId: $calculationId, email: 'hello' },
+		type: 'post',
+		success: function(output) {
+			//user feedback
+			alert("email done " + output);
+		}
+	});
+});
+
 function buildCompareResultsTable(calculation) {
     var result = '<table><tr><th>Bank</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
     for (var i in calculation) {

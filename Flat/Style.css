@@ -258,6 +258,9 @@ td {
     text-align: center;
     padding: 18px 5px;
 }
+favourite button {
+	background: #bdc3c7;
+}
 /*   Footer   */
 footer {
      position: absolute;

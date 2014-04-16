@@ -61,7 +61,7 @@ include('Utils.php');
             <ul>
                 <li><a href="index">Gauge</a></li>
                 <li><a href="#" class="greyText">Mortgage</a></li>
-                <li><a href="compare">Compare</a></li>
+                <li><a href="compare" class="greyText">Compare</a></li>
                 <li><a href="borrow" class="greyText">Borrow</a></li>
             </ul>
         </nav>

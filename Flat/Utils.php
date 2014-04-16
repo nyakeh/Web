@@ -38,9 +38,9 @@ function LogIn($email, $password) {
         $output = detailErrorMessage("Welcome back " . $result->Forename);
         //header('Location: index.php');
     } else if($responseCode == 401) {
-        $output = detailErrorMessage('401: Flapped it. Correct email wrong password');
+        $output = detailErrorMessage('Incorrect credentials entered');
     } else if($responseCode == 404) {
-        $output = detailErrorMessage('404: Stacked it. Email not found in Db');
+        $output = detailErrorMessage('Incorrect credentials entered');
     } else {
         $output = detailErrorMessage('Apologies, an error occurred trying to login');
     }
