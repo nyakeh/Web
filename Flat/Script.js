@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+	$currentSelected = null;
+	$currentCalculationId = null;
     $('#account_submit_Button').click(function () {
         $forename = $('#account_forename').val();
         $deposit = $('#account_surname').val();
@@ -86,6 +87,15 @@ $(document).ready(function () {
         $calcId = $('#input_calcId').val();
 		preLoadCalculation($calcId);
     });
+	
+	
+	$('#email_favourite').click(function () {
+		if($currentCalculationId) {
+			emailCalulation($currentCalculationId)
+		} else {
+        	$(".detailed_error").text("Please select a calculation to email");
+		}
+    });
 });
 
 function buildMortgageResultsTable(calculation) {
@@ -118,24 +128,27 @@ $(".favouriteBtn").live("click", function() {
 	});
 });
 $(".emailBtn").live("click", function() {
-	$("#mortgage_message").text("");
-	
+	$("#mortgage_message").text("");	
 	$calculationId = $(this).data("calculationid");
+	emailCalulation($calculationId)
+	
+});
+
+function emailCalulation(calculationId) {
 	$email = prompt("Input Email Address to share to: ");
-	$("#mortgage_message").html('<img src=\"img/loader.gif\">');
+	$(".detailed_error").html('<img src=\"img/loader.gif\">');
 	if($email != null && $email != "") {
 		$.ajax({ url: 'Email_Calculation_Function.php',
-			data: { calculationId: $calculationId, email: $email },
+			data: { calculationId: calculationId, email: $email },
 			type: 'post',
 			success: function(output) {
-				$("#mortgage_message").text("Email sent");
+				$(".detailed_error").text(output);
 			}
 		});
 	} else {
-		$("#mortgage_message").text("Blank email address entered");
+		$(".detailed_error").text("Blank email address entered");
 	}
-	
-});
+}
 
 function buildCompareResultsTable(calculation) {
     var result = '<table><tr><th>Bank</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
@@ -228,4 +241,26 @@ function loadFavourites(userId) {
 			$("#favouritesTable").html(output);
 		}
 	});
+}
+
+function highlight(tableRow, calculationId) {
+	
+	if($currentSelected == tableRow) {
+		if(tableRow.style.backgroundColor == "rgb(230, 233, 234)") {
+			tableRow.style.backgroundColor = '#33b5e5';
+		} else {
+			tableRow.style.backgroundColor = '#e6e9ea';
+			$currentSelected = null;	
+			$currentCalculationId = null;
+		}
+	} else {
+		//deselect old table row
+		if($currentSelected != null) {
+			$currentSelected.style.backgroundColor = '#e6e9ea'
+		}
+		$currentSelected = tableRow;
+		$currentCalculationId = calculationId;
+		tableRow.style.backgroundColor = '#33b5e5';
+		// highlight new
+	}
 }

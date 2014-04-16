@@ -1,6 +1,9 @@
 <?php 
     session_start(); 
     include( 'Utils.php');
+	if(!isset($_SESSION['userId'])) {
+		header('Location: index.php');
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,6 +47,8 @@
         <p>Here are the calculations you favourited earlier</p>
 		<div id="favouritesTable"><p>We're just <span class="bold">retreiving</span> your favourite calculations.</p><p><img src="img/loader.gif"></p></div>
     </div>
+		<div><button id="email_favourite">Email</button></div>
+		<p><span id="email_favourite_message" class="detailed_error"></span></p>
 	</div>
 	<footer>
 		<nav>
