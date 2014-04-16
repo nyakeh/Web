@@ -29,6 +29,9 @@ curl_close($ch);
 
 if($responseCode == 200) {
 	echo 'Email sent successfully';
+} else if ($responseCode == 400) {
+	$response = json_decode($content);
+	echo $response->Message;
 } else {
 	echo 'A problem occurred emailing the mortgage calculation.';
 }

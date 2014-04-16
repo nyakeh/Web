@@ -77,9 +77,6 @@ if($_GET){
         <div class="heading"><h1>The Online Mortgage Calculator</h1></div>
         <div class="section">
             <p>Welcome to <span class="bold">Gauge</span>, the online mortgage calculator</p>
-            <?php if(isset($_SESSION['userId'])) { ?>
-                <p>Now close your eye and imagine your calcualtion histoory appearing here.</p>
-            <?php } ?>
         </div>
         <?php if(!isset($_SESSION['userId'])) { ?>
         <div class="section">

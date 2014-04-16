@@ -89,10 +89,17 @@ $(document).ready(function () {
 });
 
 function buildMortgageResultsTable(calculation) {
-    var result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th><th>Favourite</th><th>Email</th></tr>';
-    result += '<tr><td>' + calculation.InterestRate + '%</td><td>' + calculation.LoanToValue + '</td><td>' + calculation.Fees + '</td><td>' + calculation.MonthlyRepayment + '</td><td>' + calculation.TotalInterest + '</td><td>' + calculation.TotalPaid + '</td><td><button class="favouriteBtn" data-calculationid="'+calculation.CalculationId+'">Favourite</button></td><td><button class="emailBtn" data-calculationid="'+calculation.CalculationId+'">Email</button></td></tr>';
-    result += '</table>';
-    return result;
+    var result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th>';
+    var result1 = '<tr><td>' + calculation.InterestRate + '%</td><td>' + calculation.LoanToValue + '</td><td>' + calculation.Fees + '</td><td>' + calculation.MonthlyRepayment + '</td><td>' + calculation.TotalInterest + '</td><td>' + calculation.TotalPaid + '</td>';
+	
+	if(calculation.AccountId != 0) {
+		result += '<th>Favourite</th><th>Email</th></tr>';
+		result1 += '<td><button class="favouriteBtn" data-calculationid="'+calculation.CalculationId+'">Favourite</button></td><td><button class="emailBtn" data-calculationid="'+calculation.CalculationId+'">Email</button></td></tr></table>';
+	} else {
+		result +='</tr>';
+		result1 += '</table>';
+	}
+    return result + result1;
 }
 
 $(".favouriteBtn").live("click", function() {
@@ -111,16 +118,23 @@ $(".favouriteBtn").live("click", function() {
 	});
 });
 $(".emailBtn").live("click", function() {
-	$calculationId = $(this).data("calculationid");
+	$("#mortgage_message").text("");
 	
-	$.ajax({ url: 'Email_Calculation_Function.php',
-		data: { calculationId: $calculationId, email: 'hello' },
-		type: 'post',
-		success: function(output) {
-			//user feedback
-			alert("email done " + output);
-		}
-	});
+	$calculationId = $(this).data("calculationid");
+	$email = prompt("Input Email Address to share to: ");
+	$("#mortgage_message").html('<img src=\"img/loader.gif\">');
+	if($email != null && $email != "") {
+		$.ajax({ url: 'Email_Calculation_Function.php',
+			data: { calculationId: $calculationId, email: $email },
+			type: 'post',
+			success: function(output) {
+				$("#mortgage_message").text("Email sent");
+			}
+		});
+	} else {
+		$("#mortgage_message").text("Blank email address entered");
+	}
+	
 });
 
 function buildCompareResultsTable(calculation) {
