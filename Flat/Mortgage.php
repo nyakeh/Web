@@ -35,10 +35,10 @@ include('Utils.php');
             </div>
         </div>
     <?php } ?>
-	<div class="heading"><h1>MORTGAGE CALCULATOR</h1></div>
+	<div class="heading"><h1>MORTGAGE CALCULATOR</h1><hr></div>
     <div class="content">
-        <div class="section">
-            <p>Let us help you to <span class="bold">Calculate</span> your mortgage.</p>
+        <div class="section overlap whiteBox">
+            <h4 class="intro">LET US HELP YOU TO CALCULATE YOUR MORTGAGE REPAYMENTS</h4>
             <form id="mortgage_calculator" method="post" action="">
                 <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" placeholder="200000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_propertyMsg');" tabindex="1">
                     <span id="input_propertyMsg"></span></p>

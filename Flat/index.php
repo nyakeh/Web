@@ -82,7 +82,7 @@ if($_GET){
 	</div>
 	<div class="content">
 		<?php if(isset($_SESSION['userId'])) { ?>
-		<div class="section">
+		<div class="section overlap whiteBox">
 			<div id="calculationHistory">
 				<p>Here's your most recent calculations:</p>
 				<div id="calculationHistoryResults"></div>
@@ -90,7 +90,7 @@ if($_GET){
 		</div>
 		<?php } ?>	
 		<?php if(!isset($_SESSION['userId'])) { ?>
-		<div class="section">
+		<div class="section overlap">
 			<div class="half">
 				<h4 class="intro">LOGIN TO YOUR ACCOUNT</h4>
 				<form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">

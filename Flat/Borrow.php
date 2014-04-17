@@ -35,10 +35,10 @@ include('Utils.php');
             </div>
         </div>
     <?php } ?>
-	<div class="heading"><h1>HOW MUCH CAN I BORROW?</h1></div>
+	<div class="heading"><h1>HOW MUCH CAN I BORROW?</h1><hr></div>
     <div class="content">
-        <div class="section">
-            <p>How much would a bank <span class="bold">lend</span> towards buying a property.</p>
+        <div class="section overlap whiteBox">
+            <h4 class="intro">HOW MUCH COULD A BANK LEND TOWARDS BUYING A PROPERTY?</h4>
             <form id="borrow_calculator" method="post" action="">
                 <p><label>Deposit available</label><input type="text" class="input" name="input_borrow_deposit" id="input_borrow_deposit" placeholder="20000" maxlength="10" tabindex="1">
                 <p><input type="button" id="borrow_submit_button" value="Calculate" tabindex="2"></p>

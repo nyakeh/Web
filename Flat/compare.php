@@ -35,10 +35,10 @@ include('Utils.php');
             </div>
         </div>
     <?php } ?>
-	<div class="heading"><h1>COMPARE MORTGAGES</h1></div>
+	<div class="heading"><h1>COMPARE MORTGAGES</h1><hr></div>
     <div class="content">
-        <div class="section">
-            <p>Here you can <span class="bold">Compare</span> various mortgage products.</p>
+        <div class="section overlap whiteBox">
+            <h4 class="intro">HERE YOU CAN COMPARE THE VARIOUS MORTGAGE PRODUCTS AVALIABLE</h4>
             <form id="compare_calculator" method="post" action="">
                 <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" placeholder="270000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_propertyMsg');" tabindex="1">
                     <span id="input_propertyMsg"></span></p>

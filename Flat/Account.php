@@ -39,10 +39,10 @@ RetrieveDetails($forename, $surname, $email, $password);
             </div>
         </div>
     <?php } ?>
-	<div class="heading"><h1>Update Your Account Details</h1></div>
+	<div class="heading"><h1>ACCOUNT</h1><hr></div>
     <div class="content">
-        <div class="section">
-            <p>Hey good looking, here's where you can <span class="bold">Update</span> you're details.</p>
+        <div class="section overlap whiteBox">
+            <h4 class="intro">UPDATE YOUR ACCOUNT DETAILS</h4>
             <form id="account" method="post" action="">
                 <p><label>Forename</label><input type="text" class="input" name="account_forename" id="account_forename" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your First Name','account_forenameMsg');" tabindex="1"
                         <?php echo addValueTag(@$forename); ?>><span class="error" id="account_forenameMsg"></span></p>

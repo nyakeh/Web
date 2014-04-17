@@ -41,14 +41,14 @@
         </div>
     </div>
     <?php } ?>
-    <div class="heading"><h1>FAVOURITE CALCULATIONS</h1></div>
+    <div class="heading"><h1>FAVOURITES</h1><hr></div>
     <div class="content">
-    <div class="section" id="favouriteCalculations">
-        <p>Here are the calculations you favourited earlier</p>
+    <div class="section overlap whiteBox" id="favouriteCalculations">
+        <h4 class="intro">HERE ARE YOUR CALCULATION FAVOURITES</h4>
 		<div id="favouritesTable"><p>We're just <span class="bold">retreiving</span> your favourite calculations.</p><p><img src="img/loader.gif"></p></div>
-    </div>
 		<div><button id="email_favourite">Email</button></div>
 		<p><span id="email_favourite_message" class="detailed_error"></span></p>
+    </div>
 	</div>
 	<footer>
 		<nav>

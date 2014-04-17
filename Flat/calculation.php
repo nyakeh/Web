@@ -43,15 +43,14 @@
         </div>
     </div>
     <?php } ?>
-    <div class="heading"><h1>PREVIOUS MORTGAGE CALCULATION LOOK-UP</h1></div>
+    <div class="heading"><h1>PREVIOUS MORTGAGE CALCULATION LOOK-UP</h1><hr></div>
     <div class="content">
-		<div class="section" id="calculationFinder">
-			<p>Look-up an old Calculation</p>
+		<div class="section overlap whiteBox" id="calculationFinder">
+			<h4 class="intro">LOOK-UP AN OLD CALCULATION</h4>
 			<form id="mortgage_retriever" method="post" action=""><p><label>Calculation Id</label><input type="text" class="input" name="input_calcId" id="input_calcId" value="<?php echo $calculationId ?>" maxlength="10" tabindex="1"></p><input type="button" id="calculation_lookup_submit_Button" value="Find" tabindex="2"></form>
+			<section id="calculationTable"><?php echo $substance ?></section>
 		</div>
-		<div class="section" id="calculationTable">
-			<?php echo $substance ?>
-		</div>
+		
 </div>
 <footer>
     <nav>

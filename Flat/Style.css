@@ -113,7 +113,7 @@ hr {
 	border: 0;
 	height: 3px;
 	width: 60%;
-	margin: 0 auto;
+	margin: 0 auto 80px auto;
 }
 .content {
     position: relative;
@@ -122,8 +122,15 @@ hr {
     max-width: 1000px;
 }
 .section {
-    padding: 30px 2%;
+    padding: 0 0 30px 0;
     overflow: auto;
+}
+.overlap {		
+	margin-top: -76px;
+	border-top: 7px solid #33b5e5;
+}
+.whiteBox {
+	background: #ffffff;	
 }
 .half {
     display: block;
@@ -160,7 +167,7 @@ span.bold{
 form {
     width: 100%;
     padding: 0;
-    margin: 24px auto 0 auto;
+    margin: 24px auto;
     overflow: auto;
 }
 form select{
@@ -257,6 +264,9 @@ input:focus, textarea:focus {
     color: #000;
     padding: 5px;
     z-index: 99;
+}
+email_favourite {
+	margin: 0 auto;
 }
 /*   Results   */
 table {
