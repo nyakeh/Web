@@ -10,18 +10,20 @@ include('Utils.php');
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <div id="all">
     <header>
         <div class="container">
-            <a href="index"><h1>Gauge</h1></a>
+            <a href="index"><h1>GAUGE</h1></a>
             <nav>
                 <ul>
-                    <li><a href="mortgage">Mortgage</a></li>
-                    <li><a href="compare">Compare</a></li>
-                    <li><a href="#">Borrow</a></li>
+                    <li><a href="mortgage">MORTGAGE</a></li>
+                    <li><a href="compare">COMPARE</a></li>
+                    <li><a href="#">BORROW</a></li>
+                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,9 +35,8 @@ include('Utils.php');
             </div>
         </div>
     <?php } ?>
-
-    <div id="content">
-        <div class="heading"><h1>How Much Can I Borrow?</h1></div>
+	<div class="heading"><h1>HOW MUCH CAN I BORROW?</h1></div>
+    <div class="content">
         <div class="section">
             <p>How much would a bank <span class="bold">lend</span> towards buying a property.</p>
             <form id="borrow_calculator" method="post" action="">
@@ -49,10 +50,11 @@ include('Utils.php');
     <footer>
         <nav>
             <ul>
-                <li><a href="index">Gauge</a></li>
-                <li><a href="mortgage" class="greyText">Mortgage</a></li>
-                <li><a href="compare" class="greyText">Compare</a></li>
-                <li><a href="#" class="greyText">Borrow</a></li>
+                <li><a href="index" class="shadowText">GAUGE</a></li>
+                <li><a href="mortgage">MORTGAGE</a></li>
+                <li><a href="compare">COMPARE</a></li>
+                <li><a href="#">BORROW</a></li>
+				<li><a href="calculation">LOOK-UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

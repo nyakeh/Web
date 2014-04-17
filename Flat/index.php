@@ -49,7 +49,8 @@ if($_GET){
     <script type="text/javascript" src="Script.js"></script>
 	<?php if(isset($_SESSION['userId'])) { ?>
 	<script type='text/javascript'> window.onload=loadCalculationHistory(<?php echo $_SESSION['userId'] ?>); </script>
-	<?php } ?>	
+	<?php } ?>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -59,9 +60,10 @@ if($_GET){
             <a href="index"><h1>Gauge</h1></a>
             <nav>
                 <ul>
-                    <li><a href="mortgage">Mortgage</a></li>
-                    <li><a href="compare">Compare</a></li>
-                    <li><a href="borrow">Borrow</a></li>
+                    <li><a href="mortgage">MORTGAGE</a></li>
+                    <li><a href="compare">COMPARE</a></li>
+                    <li><a href="borrow">BORROW</a></li>
+                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -73,51 +75,55 @@ if($_GET){
         </div>
     </div>
     <?php } ?>
-    <div id="content">
-        <div class="heading"><h1>The Online Mortgage Calculator</h1></div>
-        <div class="section">
-            <p>Welcome to <span class="bold">Gauge</span>, the online mortgage calculator</p>
-        </div>
-        <?php if(!isset($_SESSION['userId'])) { ?>
-        <div class="section">
-            <div class="ftfy">
-                <p class="intro">Hello stranger, why don't you <span class="bold">Login</span> below.</p>
-                <form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                    <p><label>Email</label><input type="text" class="input" name="email" id="login_email" tabindex="1" <?php echo addValueTag(@$email); ?>><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
-                    <p><label>Password</label><input type="password" class="input" name="password" id="login_password" tabindex="2"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
-                    <input type="hidden" name="method" value="login">
-                    <p><input type="submit" value="Login" tabindex="3"></p>
-                    <p><?php echo nullCheckOutput(@$validationMessage['form']); ?></p>
-                </form>
-            </div>
-            <div class="ftfy ftfyRight">
-                <p class="intro">New to the site, you can <span class="bold">Register</span> here.</p>
-                <form id="register" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                    <p><label>Email</label><input type="text" class="input" name="register_email" id="register_email" tabindex="4" <?php echo addValueTag(@$register_email); ?>><?php echo nullCheckOutput(@$validationMessage['register_email']); ?></p>
-                    <p><label>Forename</label><input type="text" class="input" name="register_forename" id="register_forename" tabindex="5" <?php echo addValueTag(@$register_forename); ?>><?php echo nullCheckOutput(@$validationMessage['register_forename']); ?></p>
-                    <p><label>Surname</label><input type="text" class="input" name="register_surname" id="register_surname" tabindex="6" <?php echo addValueTag(@$register_surname); ?>><?php echo nullCheckOutput(@$validationMessage['register_surname']); ?></p>
-                    <p><label>Password</label><input type="password" class="input" name="register_password" id="register_password" tabindex="7"><?php echo nullCheckOutput(@$validationMessage['register_password']); ?></p>
-                    <input type="hidden" name="method" value="register">
-                    <p><input type="submit" value="Register" tabindex="8"></p>
-                    <p><?php echo nullCheckOutput(@$validationMessage['register_form']); ?></p>
-                </form>
-            </div>
-        </div>
-        <?php } ?>
+	<div class="heading">
+		<h2>WELCOME TO <span class="blueText">GAUGE</span></h2>
+		<h1>THE ONLINE MORTGAGE CALCULATOR</h1>
+		<hr>
+	</div>
+	<div class="content">
 		<?php if(isset($_SESSION['userId'])) { ?>
-        <div class="section" id="calculationHistory">
-			<p>Here's your most recent calculations:</p>
-			<div id="calculationHistoryResults"></div>
-		</div>		
-        <?php } ?>			
-    </div>
+		<div class="section">
+			<div id="calculationHistory">
+				<p>Here's your most recent calculations:</p>
+				<div id="calculationHistoryResults"></div>
+			</div>		
+		</div>
+		<?php } ?>	
+		<?php if(!isset($_SESSION['userId'])) { ?>
+		<div class="section">
+			<div class="half">
+				<h4 class="intro">LOGIN TO YOUR ACCOUNT</h4>
+				<form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+					<p><label>Email</label><input type="text" class="input" name="email" id="login_email" tabindex="1" <?php echo addValueTag(@$email); ?>><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
+					<p><label>Password</label><input type="password" class="input" name="password" id="login_password" tabindex="2"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
+					<input type="hidden" name="method" value="login">
+					<p><input type="submit" value="LOGIN NOW" tabindex="3"></p>
+					<p><?php echo nullCheckOutput(@$validationMessage['form']); ?></p>
+				</form>
+			</div>
+			<div class="half halfRight">
+				<h4 class="intro">ACCOUNT REGISTRATION</h4>
+				<form id="register" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+					<p><label>Email</label><input type="text" class="input" name="register_email" id="register_email" tabindex="4" <?php echo addValueTag(@$register_email); ?>><?php echo nullCheckOutput(@$validationMessage['register_email']); ?></p>
+					<p><label>Forename</label><input type="text" class="input" name="register_forename" id="register_forename" tabindex="5" <?php echo addValueTag(@$register_forename); ?>><?php echo nullCheckOutput(@$validationMessage['register_forename']); ?></p>
+					<p><label>Surname</label><input type="text" class="input" name="register_surname" id="register_surname" tabindex="6" <?php echo addValueTag(@$register_surname); ?>><?php echo nullCheckOutput(@$validationMessage['register_surname']); ?></p>
+					<p><label>Password</label><input type="password" class="input" name="register_password" id="register_password" tabindex="7"><?php echo nullCheckOutput(@$validationMessage['register_password']); ?></p>
+					<input type="hidden" name="method" value="register">
+					<p><input type="submit" value="REGISTER NOW" tabindex="8"></p>
+					<p><?php echo nullCheckOutput(@$validationMessage['register_form']); ?></p>
+				</form>
+			</div>
+		</div>
+		<?php } ?>
+	</div>
     <footer>
         <nav>
             <ul>
-                <li><a href="#">Gauge</a></li>
-                <li><a href="mortgage" class="greyText">Mortgage</a></li>
-                <li><a href="compare" class="greyText">Compare</a></li>
-                <li><a href="borrow" class="greyText">Borrow</a></li>
+                <li><a href="#" class="shadowText">GAUGE</a></li>
+                <li><a href="mortgage">MORTGAGE</a></li>
+                <li><a href="compare">COMPARE</a></li>
+                <li><a href="borrow">BORROW</a></li>
+				<li><a href="calculation">LOOK-UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

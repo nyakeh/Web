@@ -10,6 +10,7 @@ include('Utils.php');
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -19,9 +20,9 @@ include('Utils.php');
             <a href="index"><h1>Gauge</h1></a>
             <nav>
                 <ul>
-                    <li><a href="mortgage">Mortgage</a></li>
-                    <li><a href="compare">Compare</a></li>
-                    <li><a href="borrow">Borrow</a></li>
+                    <li><a href="mortgage">MORTGAGE</a></li>
+                    <li><a href="compare">COMPARE</a></li>
+                    <li><a href="borrow">BORROW</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +36,7 @@ include('Utils.php');
     <?php } ?>
 
     <div id="content">
-        <div class="heading"><h1>Budget Calculator</h1></div>
+        <div class="heading"><h1>BUDGET CALCULATOR</h1></div>
         <div class="section">
             <p>Let us help you to <span class="bold">Calculate</span> your budget.</p>
             <!--<form id="budget_calculator" method="post" action="">
@@ -52,9 +53,9 @@ include('Utils.php');
         <nav>
             <ul>
                 <li><a href="index">Gauge</a></li>
-                <li><a href="mortgage" class="greyText">Mortgage</a></li>
-                <li><a href="compare" class="greyText">Compare</a></li>
-                <li><a href="borrow" class="greyText">Borrow</a></li>
+                <li><a href="mortgage" class="greyText">MORTGAGE</a></li>
+                <li><a href="compare" class="greyText">COMPARE</a></li>
+                <li><a href="borrow" class="greyText">BORROW</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

@@ -153,7 +153,7 @@ function emailCalulation(calculationId) {
 function buildCompareResultsTable(calculation) {
     var result = '<table><tr><th>Bank</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
     for (var i in calculation) {
-    result += '<tr><td>'+calculation[i].Bank+'</td><td>'+calculation[i].InterestRate+'</td><td>'+calculation[i].LoanToValue+'</td><td>'+calculation[i].Fees+'</td><td>'+calculation[i].MonthlyRepayment+'</td><td>'+calculation[i].TotalInterest+'</td><td>'+calculation[i].TotalPaid+'</td></tr>';
+    result += '<tr><td>'+calculation[i].Bank+'</td><td>'+calculation[i].InterestRate+'%</td><td>'+calculation[i].LoanToValue+'</td><td>'+calculation[i].Fees+'</td><td>'+calculation[i].MonthlyRepayment+'</td><td>'+calculation[i].TotalInterest+'</td><td>'+calculation[i].TotalPaid+'</td></tr>';
     }
     result += '</table>';
     return result;

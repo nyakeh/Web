@@ -18,6 +18,7 @@
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
 	<script type='text/javascript'> window.onload=loadCalculation(<?php echo $_GET['id'] ?>); </script>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -27,9 +28,10 @@
             <a href="index"><h1>Gauge</h1></a>
             <nav>
                 <ul>
-                    <li><a href="mortgage">Mortgage</a></li>
-                    <li><a href="compare">Compare</a></li>
-                    <li><a href="borrow">Borrow</a></li>
+                    <li><a href="mortgage">MORTGAGE</a></li>
+                    <li><a href="compare">COMPARE</a></li>
+                    <li><a href="borrow">BORROW</a></li>
+                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,25 +43,24 @@
         </div>
     </div>
     <?php } ?>
-    <div id="content">
-    <div class="heading">
-        <h1>Mortagage Calculation Viewer</h1>
-    </div>
-    <div class="section" id="calculationFinder">
-        <p>Look-up an old Calculation</p>
-		<form id="mortgage_retriever" method="post" action=""><p><label>Calculation Id</label><input type="text" class="input" name="input_calcId" id="input_calcId" value="<?php echo $calculationId ?>" maxlength="10" tabindex="1"></p><input type="button" id="calculation_lookup_submit_Button" value="Find" tabindex="2"></form>
-    </div>
-    <div class="section" id="calculationTable">
-		<?php echo $substance ?>
-    </div>
+    <div class="heading"><h1>PREVIOUS MORTGAGE CALCULATION LOOK-UP</h1></div>
+    <div class="content">
+		<div class="section" id="calculationFinder">
+			<p>Look-up an old Calculation</p>
+			<form id="mortgage_retriever" method="post" action=""><p><label>Calculation Id</label><input type="text" class="input" name="input_calcId" id="input_calcId" value="<?php echo $calculationId ?>" maxlength="10" tabindex="1"></p><input type="button" id="calculation_lookup_submit_Button" value="Find" tabindex="2"></form>
+		</div>
+		<div class="section" id="calculationTable">
+			<?php echo $substance ?>
+		</div>
 </div>
 <footer>
     <nav>
         <ul>
-            <li><a href="index">Gauge</a></li>
-            <li><a href="mortgage" class="greyText">Mortgage</a></li>
-            <li><a href="compare" class="greyText">Compare</a></li>
-            <li><a href="borrow" class="greyText">Borrow</a></li>
+            <li><a href="index" class="shadowText">GAUGE</a></li>
+            <li><a href="mortgage">MORTGAGE</a></li>
+            <li><a href="compare">COMPARE</a></li>
+            <li><a href="borrow">BORROW</a></li>
+			<li><a href="#">LOOK-UP</a></li>
         </ul>
     </nav>
     <a href="http://www.nyakeh.co.uk">

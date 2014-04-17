@@ -10,6 +10,7 @@ include('Utils.php');
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -19,9 +20,10 @@ include('Utils.php');
             <a href="index"><h1>Gauge</h1></a>
             <nav>
                 <ul>
-                    <li><a href="#">Mortgage</a></li>
-                    <li><a href="compare">Compare</a></li>
-                    <li><a href="borrow">Borrow</a></li>
+                    <li><a href="#">MORTGAGE</a></li>
+                    <li><a href="compare">COMPARE</a></li>
+                    <li><a href="borrow">BORROW</a></li>
+                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,9 +35,8 @@ include('Utils.php');
             </div>
         </div>
     <?php } ?>
-
-    <div id="content">
-        <div class="heading"><h1>Mortgage Calculator</h1></div>
+	<div class="heading"><h1>MORTGAGE CALCULATOR</h1></div>
+    <div class="content">
         <div class="section">
             <p>Let us help you to <span class="bold">Calculate</span> your mortgage.</p>
             <form id="mortgage_calculator" method="post" action="">
@@ -59,10 +60,11 @@ include('Utils.php');
     <footer>
         <nav>
             <ul>
-                <li><a href="index">Gauge</a></li>
-                <li><a href="#" class="greyText">Mortgage</a></li>
-                <li><a href="compare" class="greyText">Compare</a></li>
-                <li><a href="borrow" class="greyText">Borrow</a></li>
+                <li><a href="index" class="shadowText">GAUGE</a></li>
+                <li><a href="#">MORTGAGE</a></li>
+                <li><a href="compare">COMPARE</a></li>
+                <li><a href="borrow">BORROW</a></li>
+				<li><a href="calculation">LOOK-UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

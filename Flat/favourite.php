@@ -16,18 +16,20 @@
 	<?php if(isset($_SESSION['userId'])) { ?>
 	<script type='text/javascript'> window.onload=loadFavourites(<?php echo $_SESSION['userId'] ?>); </script>
 	<?php } ?>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <div id="all">
     <header>
         <div class="container">
-            <a href="index"><h1>Gauge</h1></a>
+            <a href="index"><h1>GAUGE</h1></a>
             <nav>
                 <ul>
-                    <li><a href="mortgage">Mortgage</a></li>
-                    <li><a href="compare">Compare</a></li>
-                    <li><a href="borrow">Borrow</a></li>
+                    <li><a href="mortgage">MORTGAGE</a></li>
+                    <li><a href="compare">COMPARE</a></li>
+                    <li><a href="borrow">BORROW</a></li>
+                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,10 +41,8 @@
         </div>
     </div>
     <?php } ?>
-    <div id="content">
-    <div class="heading">
-        <h1>Favourite Calculations</h1>
-    </div>
+    <div class="heading"><h1>FAVOURITE CALCULATIONS</h1></div>
+    <div class="content">
     <div class="section" id="favouriteCalculations">
         <p>Here are the calculations you favourited earlier</p>
 		<div id="favouritesTable"><p>We're just <span class="bold">retreiving</span> your favourite calculations.</p><p><img src="img/loader.gif"></p></div>
@@ -53,10 +53,11 @@
 	<footer>
 		<nav>
 			<ul>
-				<li><a href="index">Gauge</a></li>
-				<li><a href="mortgage" class="greyText">Mortgage</a></li>
-				<li><a href="compare" class="greyText">Compare</a></li>
-				<li><a href="borrow" class="greyText">Borrow</a></li>
+				<li><a href="index" class="shadowText">GAUGE</a></li>
+				<li><a href="mortgage">MORTGAGE</a></li>
+				<li><a href="compare">COMPARE</a></li>
+				<li><a href="borrow">BORROW</a></li>
+				<li><a href="calculation">LOOK-UP</a></li>
 			</ul>
 		</nav>
 		<a href="http://www.nyakeh.co.uk">

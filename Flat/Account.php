@@ -14,18 +14,20 @@ RetrieveDetails($forename, $surname, $email, $password);
     <link rel="stylesheet" type="text/css" href="Style.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 <div id="all">
     <header>
         <div class="container">
-            <a href="index"><h1>Gauge</h1></a>
+            <a href="index"><h1>GAUGE</h1></a>
             <nav>
                 <ul>
-                    <li><a href="mortgage">Mortgage</a></li>
-                    <li><a href="compare">Compare</a></li>
-                    <li><a href="borrow">Borrow</a></li>
+                    <li><a href="mortgage">MORTGAGE</a></li>
+                    <li><a href="compare">COMPARE</a></li>
+                    <li><a href="borrow">BORROW</a></li>
+                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,8 +39,8 @@ RetrieveDetails($forename, $surname, $email, $password);
             </div>
         </div>
     <?php } ?>
-    <div id="content">
-        <div class="heading"><h1>Update Your Account Details</h1></div>
+	<div class="heading"><h1>Update Your Account Details</h1></div>
+    <div class="content">
         <div class="section">
             <p>Hey good looking, here's where you can <span class="bold">Update</span> you're details.</p>
             <form id="account" method="post" action="">
@@ -58,10 +60,11 @@ RetrieveDetails($forename, $surname, $email, $password);
     <footer>
         <nav>
             <ul>
-                <li><a href="index">Gauge</a></li>
-                <li><a href="mortgage" class="greyText">Mortgage</a></li>
-                <li><a href="compare" class="greyText">Compare</a></li>
-                <li><a href="borrow" class="greyText">Borrow</a></li>
+                <li><a href="index" class="shadowText">GAUGE</a></li>
+                <li><a href="mortgage">MORTGAGE</a></li>
+                <li><a href="compare">COMPARE</a></li>
+                <li><a href="borrow">BORROW</a></li>
+				<li><a href="calculation">LOOK-UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>
