@@ -5,7 +5,7 @@
 	$substance = "";
 	
 	if(ISSET($_GET['id'])) {
-		$substance = "<p>We're just <span class=\"bold\">retreiving</span> your calculation.</p><p><img src=\"img/loader.gif\"></p>";
+		$substance = "<p class=\"center_message\">We're just <span class=\"bold\">retreiving</span> your calculation.</p><p class=\"center_message\"><img src=\"img/loader.gif\"></p>";
 		$calculationId = $_GET['id'];
 	}
 ?>
@@ -31,7 +31,6 @@
                     <li><a href="mortgage">MORTGAGE</a></li>
                     <li><a href="compare">COMPARE</a></li>
                     <li><a href="borrow">BORROW</a></li>
-                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,11 +42,11 @@
         </div>
     </div>
     <?php } ?>
-    <div class="heading"><h1>PREVIOUS MORTGAGE CALCULATION LOOK-UP</h1><hr></div>
+    <div class="heading"><h1>PREVIOUS MORTGAGE CALCULATION LOOK UP</h1><hr></div>
     <div class="content">
 		<div class="section overlap whiteBox" id="calculationFinder">
-			<h4 class="intro">LOOK-UP AN OLD CALCULATION</h4>
-			<form id="mortgage_retriever" method="post" action=""><p><label>Calculation Id</label><input type="text" class="input" name="input_calcId" id="input_calcId" value="<?php echo $calculationId ?>" maxlength="10" tabindex="1"></p><input type="button" id="calculation_lookup_submit_Button" value="Find" tabindex="2"></form>
+			<h4 class="intro">LOOK UP AN OLD CALCULATION</h4>
+			<form id="mortgage_retriever" method="post" action=""><p><label>Input Calculation Id</label><input type="text" class="input" name="input_calcId" id="input_calcId" value="<?php echo $calculationId ?>" maxlength="10" tabindex="1"></p><input type="button" id="calculation_lookup_submit_Button" value="FIND" tabindex="2"></form>
 			<section id="calculationTable"><?php echo $substance ?></section>
 		</div>
 		
@@ -59,7 +58,7 @@
             <li><a href="mortgage">MORTGAGE</a></li>
             <li><a href="compare">COMPARE</a></li>
             <li><a href="borrow">BORROW</a></li>
-			<li><a href="#">LOOK-UP</a></li>
+			<li><a href="#">LOOK UP</a></li>
         </ul>
     </nav>
     <a href="http://www.nyakeh.co.uk">

@@ -1,10 +1,10 @@
 <?php
-session_start();
-include('Utils.php');
-if(!isset($_SESSION['userId'])) {
-    header('Location: index.php');
-}
-RetrieveDetails($forename, $surname, $email, $password);
+	session_start();
+	include('Utils.php');
+	if(!isset($_SESSION['userId'])) {
+		header('Location: index.php');
+	}
+	RetrieveDetails($forename, $surname, $email, $password);
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +27,6 @@ RetrieveDetails($forename, $surname, $email, $password);
                     <li><a href="mortgage">MORTGAGE</a></li>
                     <li><a href="compare">COMPARE</a></li>
                     <li><a href="borrow">BORROW</a></li>
-                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,7 +43,7 @@ RetrieveDetails($forename, $surname, $email, $password);
         <div class="section overlap whiteBox">
             <h4 class="intro">UPDATE YOUR ACCOUNT DETAILS</h4>
             <form id="account" method="post" action="">
-                <p><label>Forename</label><input type="text" class="input" name="account_forename" id="account_forename" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your First Name','account_forenameMsg');" tabindex="1"
+                <p><label>Forename(s)</label><input type="text" class="input" name="account_forename" id="account_forename" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your First Name','account_forenameMsg');" tabindex="1"
                         <?php echo addValueTag(@$forename); ?>><span class="error" id="account_forenameMsg"></span></p>
                 <p><label>Surname</label><input type="text" class="input" name="account_surname" id="account_surname" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your Last Name','account_surnameMsg');" tabindex="2"
                         <?php echo addValueTag(@$surname); ?>><span class="error" id="account_surnameMsg"></span></p>
@@ -52,7 +51,7 @@ RetrieveDetails($forename, $surname, $email, $password);
                         <?php echo addValueTag(@$email); ?>><span class="error" id="account_emailMsg"></span></p>
                 <p><label>Password</label><input type="password" class="input" name="account_password" id="account_password" maxlength="50" onBlur="javascript:validate_textbox(this,'Please enter your Password','account_passwordMsg');" tabindex="4">
                     <span class="error" id="account_passwordMsg"></span></p>
-                <input type="button" id="account_submit_Button" value="Update" tabindex="5">
+                <input type="button" id="account_submit_Button" value="SAVE CHANGES" tabindex="5">
                 <p><span id="account_message" class="detailed_error"></span></p>
             </form>
         </div>
@@ -64,7 +63,7 @@ RetrieveDetails($forename, $surname, $email, $password);
                 <li><a href="mortgage">MORTGAGE</a></li>
                 <li><a href="compare">COMPARE</a></li>
                 <li><a href="borrow">BORROW</a></li>
-				<li><a href="calculation">LOOK-UP</a></li>
+				<li><a href="calculation">LOOK UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

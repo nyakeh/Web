@@ -56,6 +56,7 @@ include('Utils.php');
                 <li><a href="mortgage" class="greyText">MORTGAGE</a></li>
                 <li><a href="compare" class="greyText">COMPARE</a></li>
                 <li><a href="borrow" class="greyText">BORROW</a></li>
+				<li><a href="calculation">LOOK UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

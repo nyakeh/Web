@@ -39,6 +39,7 @@ if($validationMessage) {
     curl_close($ch);
 
     if($responseCode == 200) {
+		$_SESSION['username'] = $account->Forename;
         echo 'Your account has been updated.';
     } else {
         echo 'Sorry, we were unable to update your account.';

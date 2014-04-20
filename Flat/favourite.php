@@ -29,7 +29,6 @@
                     <li><a href="mortgage">MORTGAGE</a></li>
                     <li><a href="compare">COMPARE</a></li>
                     <li><a href="borrow">BORROW</a></li>
-                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,12 +42,12 @@
     <?php } ?>
     <div class="heading"><h1>FAVOURITES</h1><hr></div>
     <div class="content">
-    <div class="section overlap whiteBox" id="favouriteCalculations">
-        <h4 class="intro">HERE ARE YOUR CALCULATION FAVOURITES</h4>
-		<div id="favouritesTable"><p>We're just <span class="bold">retreiving</span> your favourite calculations.</p><p><img src="img/loader.gif"></p></div>
-		<div><button id="email_favourite">Email</button></div>
-		<p><span id="email_favourite_message" class="detailed_error"></span></p>
-    </div>
+		<div class="section overlap whiteBox" id="favouriteCalculations">
+			<h4 class="intro">HERE ARE YOUR CALCULATION FAVOURITES</h4>
+			<div id="favouritesTable" class="topMargin"><p class="center_message">We're just <span class="bold">retreiving</span> your favourite calculations.</p><p class="center_message"><img src="img/loader.gif"></p></div>
+			<div id="email_favourite_div"><button id="email_favourite">EMAIL</button></div>
+			<p><span id="email_favourite_message" class="detailed_error"></span></p>
+		</div>
 	</div>
 	<footer>
 		<nav>
@@ -57,7 +56,7 @@
 				<li><a href="mortgage">MORTGAGE</a></li>
 				<li><a href="compare">COMPARE</a></li>
 				<li><a href="borrow">BORROW</a></li>
-				<li><a href="calculation">LOOK-UP</a></li>
+				<li><a href="calculation">LOOK UP</a></li>
 			</ul>
 		</nav>
 		<a href="http://www.nyakeh.co.uk">

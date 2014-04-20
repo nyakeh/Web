@@ -23,7 +23,6 @@ include('Utils.php');
                     <li><a href="#">MORTGAGE</a></li>
                     <li><a href="compare">COMPARE</a></li>
                     <li><a href="borrow">BORROW</a></li>
-                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -50,7 +49,7 @@ include('Utils.php');
                     <span id="input_interestMsg"></span></p>
                 <p><label>Fees</label><input type="text" class="input" name="input_fees" id="input_fees" placeholder="100" maxlength="7" onBlur="javascript:isEmptyNumberBox(this,'input_feesMsg');" tabindex="5">
                     <span id="input_feesMsg"></span></p>
-                <input type="button" id="mortgage_submit_Button" value="Calculate" tabindex="6">
+                <input type="button" id="mortgage_submit_Button" value="CALCULATE" tabindex="6">
                 <p><span id="mortgage_message" class="detailed_error"></span></p>
             </form>
             <section class="results" id="mortgage_results"></section>
@@ -64,7 +63,7 @@ include('Utils.php');
                 <li><a href="#">MORTGAGE</a></li>
                 <li><a href="compare">COMPARE</a></li>
                 <li><a href="borrow">BORROW</a></li>
-				<li><a href="calculation">LOOK-UP</a></li>
+				<li><a href="calculation">LOOK UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

@@ -23,7 +23,6 @@ include('Utils.php');
                     <li><a href="mortgage">MORTGAGE</a></li>
                     <li><a href="compare">COMPARE</a></li>
                     <li><a href="#">BORROW</a></li>
-                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,10 +37,10 @@ include('Utils.php');
 	<div class="heading"><h1>HOW MUCH CAN I BORROW?</h1><hr></div>
     <div class="content">
         <div class="section overlap whiteBox">
-            <h4 class="intro">HOW MUCH COULD A BANK LEND TOWARDS BUYING A PROPERTY?</h4>
+            <h4 class="intro">LET US CALCULATE HOW MUCH A BANK COULD LEND YOU TOWARDS BUYING A PROPERTY</h4>
             <form id="borrow_calculator" method="post" action="">
-                <p><label>Deposit available</label><input type="text" class="input" name="input_borrow_deposit" id="input_borrow_deposit" placeholder="20000" maxlength="10" tabindex="1">
-                <p><input type="button" id="borrow_submit_button" value="Calculate" tabindex="2"></p>
+                <p><label>Input deposit available</label><input type="text" class="input" name="input_borrow_deposit" id="input_borrow_deposit" placeholder="20000" maxlength="10" tabindex="1">
+                <p><input type="button" id="borrow_submit_button" value="CALCULATE" tabindex="2"></p>
                 <p><span id="borrow_message" class="detailed_error"></span></p>
             </form>
             <section class="results" id="borrow_results"></section>
@@ -54,7 +53,7 @@ include('Utils.php');
                 <li><a href="mortgage">MORTGAGE</a></li>
                 <li><a href="compare">COMPARE</a></li>
                 <li><a href="#">BORROW</a></li>
-				<li><a href="calculation">LOOK-UP</a></li>
+				<li><a href="calculation">LOOK UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

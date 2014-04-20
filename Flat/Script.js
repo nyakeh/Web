@@ -2,6 +2,7 @@ $(document).ready(function () {
 	$currentSelected = null;
 	$currentCalculationId = null;
     $('#account_submit_Button').click(function () {
+		$("#account_message").html("<img src=\"img/loader.gif\">");
         $forename = $('#account_forename').val();
         $deposit = $('#account_surname').val();
         $term = $('#account_email').val();
@@ -16,7 +17,7 @@ $(document).ready(function () {
     });
 
     $('#mortgage_submit_Button').click(function () {
-		$("#mortgage_results").html("<p>We're just <span class=\"bold\">calculating</span> your mortgage.</p><p><img src=\"img/loader.gif\"></p>");
+		$("#mortgage_results").html("<p class=\"center_message\">We're just <span class=\"bold\">calculating</span> your mortgage.</p><p class=\"center_message\"><img src=\"img/loader.gif\"></p>");
         $houseValue = $('#input_property').val();
         $deposit = $('#input_deposit').val();
         $term = $('#input_term').val();
@@ -42,7 +43,8 @@ $(document).ready(function () {
     });
 
     $('#borrow_submit_button').click(function () {
-		$("#borrow_results").html("<p>We're just <span class=\"bold\">working out</span> how much a mortgae provider might offer you.</p><p><img src=\"img/loader.gif\"></p>");
+		$("#borrow_results").html("<p class=\"center_message\">We're just <span class=\"bold\">working out</span> how much a mortgae provider might offer you.</p><p class=\"center_message\"><img src=\"img/loader.gif\"></p>");
+		$("#borrow_message").text('');
         $deposit = $('#input_borrow_deposit').val();
         $.ajax({ url: 'How_Much_Can_I_Borrow_Function.php',
             data: { deposit: $deposit },
@@ -62,7 +64,7 @@ $(document).ready(function () {
     });
 
     $('#compare_submit_Button').click(function () {
-		$("#compare_results").html("<p>We're just <span class=\"bold\">comparing</span> multiple mortgage providers.</p><p><img src=\"img/loader.gif\"></p>");
+		$("#compare_results").html("<p class=\"center_message\">We're just <span class=\"bold\">comparing</span> multiple mortgage providers.</p><p class=\"center_message\"><img src=\"img/loader.gif\"></p>");
         $houseValue = $('#input_property').val();
         $deposit = $('#input_deposit').val();
         $term = $('#input_term').val();
@@ -80,7 +82,7 @@ $(document).ready(function () {
                     $("#compare_results").html('');
                 }
             }
-        	});
+		});
     });
 	
 	$('#calculation_lookup_submit_Button').click(function () {
@@ -161,7 +163,7 @@ function buildCompareResultsTable(calculation) {
 function buildBorrowResultsTable(calculation) {
     var result = '<table><tr><th>Loan-To-Value</th><th>Max Loan</th></tr>';
     for (var i in calculation) {
-        result += '<tr><td>'+calculation[i].LoanToValue+'</td><td>'+calculation[i].Amount+'</td></tr>';
+        result += '<tr><td>'+calculation[i].LoanToValue+'%</td><td>'+calculation[i].Amount+'</td></tr>';
     }
     result += '</table>';
     return result;
@@ -209,18 +211,20 @@ function isEmptyNumberBox(text_box, span) {
 }
 
 function preLoadCalculation(id) {
-	$("#calculationTable").html("<p>We're just <span class=\"bold\">retreiving</span> your calculation.</p><p><img src=\"img/loader.gif\"></p>");
+	$("#calculationTable").html("<p class=\"center_message\">We're just <span class=\"bold\">retreiving</span> your calculation.</p><p class=\"center_message\"><img src=\"img/loader.gif\"></p>");
 	loadCalculation(id);
 }
 
 function loadCalculation(id) {
-	$.ajax({ url: 'Load_Calculation_Function.php',
-		data: { calculationId: id },
-		type: 'post',
-		success: function(output) {
-			$("#calculationTable").html(output);
-		}
-	});
+	if(id) {
+		$.ajax({ url: 'Load_Calculation_Function.php',
+			data: { calculationId: id },
+			type: 'post',
+			success: function(output) {
+				$("#calculationTable").html(output);
+			}
+		});		
+	}
 }
 
 function loadCalculationHistory(userId) {

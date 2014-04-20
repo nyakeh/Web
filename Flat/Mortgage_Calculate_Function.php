@@ -71,9 +71,13 @@ if(!$inputValid) {
 
     if($responseCode == 201) {
         echo $content;
+	} else if($responseCode == 400) {
+		$response = json_decode($content);
+		echo $response->Message;
+    }/*
     } else if($responseCode == 400) {
         echo 'Error with the calculation figures input.';
-    } else {
+    } */else {
         echo 'A problem occurred calculating the mortgage.';
     }
 }

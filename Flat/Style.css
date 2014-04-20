@@ -104,8 +104,10 @@ nav li:hover {
     min-width: 850px;
 	border-bottom: 5px solid #ffffff;
 }
-.blueText {
-	color: #79ceee;
+.greyText {
+	color: #ffffff;
+	font-size: 30px;
+	text-shadow: 2px 2px #757575;
 }
 hr {
 	margin: 0;
@@ -127,10 +129,10 @@ hr {
 }
 .overlap {		
 	margin-top: -76px;
-	border-top: 7px solid #33b5e5;
 }
 .whiteBox {
 	background: #ffffff;	
+	border-top: 7px solid #33b5e5;
 }
 .half {
     display: block;
@@ -243,6 +245,9 @@ input:focus, textarea:focus {
     margin: 0 auto;
     text-align: center;
 }
+.center_message {
+    text-align: center;
+}
 #tooltip {
     position: relative;
 }
@@ -265,6 +270,9 @@ input:focus, textarea:focus {
     padding: 5px;
     z-index: 99;
 }
+#longLabel {
+	margin-top: -14px;
+}
 email_favourite {
 	margin: 0 auto;
 }
@@ -284,6 +292,17 @@ td {
 }
 favourite button {
 	background: #bdc3c7;
+}
+.topMargin {
+	margin-top: 30px;
+}
+#email_favourite_div {
+	width: 150px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+#email_favourite {
+	width: 100%;
 }
 /*   Footer   */
 footer {

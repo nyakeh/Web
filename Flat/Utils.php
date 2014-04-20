@@ -47,7 +47,11 @@ function LogIn($email, $password) {
     return $output;
 }
 
-function Register($forename, $surname, $email, $password) {
+function Register($forename, $surname, $email, $password, $confirm_password) {
+	if($password != $confirm_password) {
+		return detailErrorMessage('Passwords entered did not match');
+	}
+	
     $account = new RegisterDetails();
     $account->Forename = $forename;
     $account->Surname  = $surname;
@@ -196,7 +200,7 @@ function isRequiredForUpdate($field)
 }
 function isRequiredForRegister($field)
 {
-    $required = array('register_forename', 'register_surname','register_email', 'register_password');
+    $required = array('register_forename', 'register_surname','register_email', 'register_password', 'register_confirm_password');
     return in_array($field, $required);
 }
 function isRequiredForMortgage($field)

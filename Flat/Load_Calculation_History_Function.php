@@ -19,9 +19,10 @@
 			$date = date_format(date_create($calculation->Date), 'd/m/y  H:i');
 			$result .= "<tr><td>".$date."</td><td>".$calculation->InterestRate."</td><td>".$calculation->LoanToValue."</td><td>".$calculation->Fees."</td><td>".$calculation->MonthlyRepayment."</td><td>".$calculation->TotalInterest."</td><td>".$calculation->TotalPaid."</td></tr>";
 		}
-		$result .= "</table>";
-        
+		$result .= "</table>";        
+    } else if($responseCode == 204) {
+		$result = "<p class=\"center_message\">No calculations performed yet.</p>";
     } else {
-        $result = "<p>An error occured retrieving your calculation history.</p>";
+        $result = "<p class=\"center_message\">An error occured retrieving your calculation history.</p>";
     }
 	echo $result;

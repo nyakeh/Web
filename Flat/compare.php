@@ -23,7 +23,6 @@ include('Utils.php');
                     <li><a href="mortgage">MORTGAGE</a></li>
                     <li><a href="#">COMPARE</a></li>
                     <li><a href="borrow">BORROW</a></li>
-                    <li><a href="calculation">LOOK-UP</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,7 +37,7 @@ include('Utils.php');
 	<div class="heading"><h1>COMPARE MORTGAGES</h1><hr></div>
     <div class="content">
         <div class="section overlap whiteBox">
-            <h4 class="intro">HERE YOU CAN COMPARE THE VARIOUS MORTGAGE PRODUCTS AVALIABLE</h4>
+            <h4 class="intro">LET US COMPARE THE VARIOUS MORTGAGE PRODUCTS AVALIABLE</h4>
             <form id="compare_calculator" method="post" action="">
                 <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" placeholder="270000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_propertyMsg');" tabindex="1">
                     <span id="input_propertyMsg"></span></p>
@@ -46,7 +45,7 @@ include('Utils.php');
                     <span id="input_depositMsg"></span></p>
                 <p><label>Term</label><input type="text" class="input" name="input_term" id="input_term" placeholder="25" maxlength="3" onBlur="javascript:isEmptyNumberBox(this,'input_termMsg');" tabindex="3">
                     <span id="input_termMsg"></span></p>
-                <input type="button" id="compare_submit_Button" value="Calculate" tabindex="4">
+                <input type="button" id="compare_submit_Button" value="CALCULATE" tabindex="4">
                 <p><span id="compare_message" class="detailed_error"></span></p>
             </form>
             <section class="results" id="compare_results"></section>
@@ -59,7 +58,7 @@ include('Utils.php');
                 <li><a href="mortgage">MORTGAGE</a></li>
                 <li><a href="#">COMPARE</a></li>
                 <li><a href="borrow">BORROW</a></li>
-				<li><a href="calculation">LOOK-UP</a></li>
+				<li><a href="calculation">LOOK UP</a></li>
             </ul>
         </nav>
         <a href="http://www.nyakeh.co.uk"><img src="img/Emblem.png"></a>

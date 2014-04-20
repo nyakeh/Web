@@ -25,6 +25,6 @@
     	$result .= "<tr><td>".$date."</td><td>".$interestRate."</td><td>".$loanToValue."</td><td>".$fees."</td><td>".$monthlyRepayment."</td><td>".$totalInterest."</td><td>".$totalPaid."</td></tr>";
     	$result .= "</table>";
     } else {
-        $result = "<p>Calculation could not be found in our records.</p>";
+        $result = "<p class=\"center_message\">Calculation could not be found in our records.</p>";
     }
 	echo $result;
