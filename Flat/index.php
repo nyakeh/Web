@@ -56,7 +56,7 @@ if($_GET){
 <div id="all">
     <header>
         <div class="container">
-            <a href="index"><h1>Gauge</h1></a>
+            <a href="#"><img src="img/logo.png" id="logo"><h1>Gauge</h1></a>
             <nav>
                 <ul>
                     <li><a href="mortgage">MORTGAGE</a></li>
