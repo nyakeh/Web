@@ -21,8 +21,8 @@
 		}
 		$result .= "</table>";        
     } else if($responseCode == 204) {
-		$result = "<p class=\"center_message\">No calculations saved to favourites yet.</p>";
+		$result = "<p class=\"center_message\">No calculations saved to favourites yet</p>";
     } else {
-        $result = "<p class=\"center_message\">An error occured retrieving your favourite calculations.</p>";
+        $result = "<p class=\"center_message\">An error occured retrieving your favourite calculations</p>";
     }
 	echo $result;

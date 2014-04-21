@@ -91,7 +91,7 @@ if($_GET){
 		<div class="section overlap">
 			<div class="half">
 				<h4 class="intro">LOGIN TO YOUR ACCOUNT</h4>
-				<form id="login" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+				<form id="login" class="account_form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 					<p><label>Email</label><input type="text" class="input" name="email" id="login_email" tabindex="1" <?php echo addValueTag(@$email); ?>><?php echo nullCheckOutput(@$validationMessage['email']); ?></p>
 					<p><label>Password</label><input type="password" class="input" name="password" id="login_password" tabindex="2"><?php echo nullCheckOutput(@$validationMessage['password']); ?></p>
 					<input type="hidden" name="method" value="login">
@@ -101,7 +101,7 @@ if($_GET){
 			</div>
 			<div class="half halfRight">
 				<h4 class="intro">ACCOUNT REGISTRATION</h4>
-				<form id="register" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+				<form id="register" class="account_form" method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
 					<p><label>Email</label><input type="text" class="input" name="register_email" id="register_email" tabindex="4" <?php echo addValueTag(@$register_email); ?>><?php echo nullCheckOutput(@$validationMessage['register_email']); ?></p>
 					<p><label>Forename(s)</label><input type="text" class="input" name="register_forename" id="register_forename" tabindex="5" <?php echo addValueTag(@$register_forename); ?>><?php echo nullCheckOutput(@$validationMessage['register_forename']); ?></p>
 					<p><label>Surname</label><input type="text" class="input" name="register_surname" id="register_surname" tabindex="6" <?php echo addValueTag(@$register_surname); ?>><?php echo nullCheckOutput(@$validationMessage['register_surname']); ?></p>

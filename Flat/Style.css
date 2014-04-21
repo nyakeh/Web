@@ -171,10 +171,13 @@ span.bold{
      font-weight: bold;
  }
 form {
-    width: 100%;
+    width: 780px;
     padding: 0;
     margin: 24px auto;
     overflow: auto;
+}
+.account_form {
+	width: 100%;
 }
 form select{
     padding: 2px 4px;
@@ -307,6 +310,14 @@ favourite button {
 }
 #email_favourite {
 	width: 100%;
+}
+#action_compare_div {	
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.action_button {
+	width: 150px;
 }
 /*   Footer   */
 footer {

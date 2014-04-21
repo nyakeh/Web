@@ -1,6 +1,8 @@
 $(document).ready(function () {
 	$currentSelected = null;
-	$currentCalculationId = null;
+	$currentCalculationId = null;	
+	$compareCurrentSelected = null;
+	$compareCurrentCalculationId = null;
     $('#account_submit_Button').click(function () {
 		$("#account_message").html("<img src=\"img/loader.gif\">");
         $forename = $('#account_forename').val();
@@ -80,21 +82,13 @@ $(document).ready(function () {
 			$("#compare_message").text($errorMessage);
 			$("#compare_results").html('');
 		} else {
-			$.ajax({ url: 'Mortgage_Calculate_Function.php',
-            data: { houseValue: $houseValue, deposit: $deposit, term: $term, interest: '0', fees: '0' },
+			$.ajax({ url: 'Mortgage_Compare_Function.php',
+            data: { houseValue: $houseValue, deposit: $deposit, term: $term },
             type: 'post',
             success: function (output) {
-                try {
-                    var calculation = JSON.parse(output);
-                    var resultsTable = buildCompareResultsTable(calculation);
-                    $("#compare_message").text('');
-                    $("#compare_results").html(resultsTable);
-                } catch (exception) {
-                    $("#compare_message").text(output);
-                    $("#compare_results").html('');
-                }
-            }
-			});
+				$("#compare_results").html(output);
+			}}
+			);
 		}
         
     });
@@ -104,10 +98,9 @@ $(document).ready(function () {
 		preLoadCalculation($calcId);
     });
 	
-	
 	$('#email_favourite').click(function () {
 		if($currentCalculationId) {
-			emailCalulation($currentCalculationId)
+			emailCalculation($currentCalculationId)
 		} else {
         	$(".detailed_error").text("Please select a calculation to email");
 		}
@@ -118,7 +111,7 @@ function buildMortgageResultsTable(calculation) {
     var result = '<table><tr><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th>';
     var result1 = '<tr><td>' + calculation.InterestRate + '%</td><td>' + calculation.LoanToValue + '</td><td>' + calculation.Fees + '</td><td>' + calculation.MonthlyRepayment + '</td><td>' + calculation.TotalInterest + '</td><td>' + calculation.TotalPaid + '</td>';
 	
-	if(calculation.AccountId != 0) {
+	if(calculation.AccountId > 0) {
 		result += '<th>Favourite</th><th>Email</th></tr>';
 		result1 += '<td><button class="favouriteBtn" data-calculationid="'+calculation.CalculationId+'">Favourite</button></td><td><button class="emailBtn" data-calculationid="'+calculation.CalculationId+'">Email</button></td></tr></table>';
 	} else {
@@ -146,11 +139,11 @@ $(".favouriteBtn").live("click", function() {
 $(".emailBtn").live("click", function() {
 	$("#mortgage_message").text("");	
 	$calculationId = $(this).data("calculationid");
-	emailCalulation($calculationId)
+	emailCalculation($calculationId)
 	
 });
 
-function emailCalulation(calculationId) {
+function emailCalculation(calculationId) {
 	$email = prompt("Input Email Address to share to: ");
 	$(".detailed_error").html('<img src=\"img/loader.gif\">');
 	if($email != null && $email != "") {
@@ -166,14 +159,21 @@ function emailCalulation(calculationId) {
 	}
 }
 
-function buildCompareResultsTable(calculation) {
-    var result = '<table><tr><th>Bank</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>';
-    for (var i in calculation) {
-    result += '<tr><td>'+calculation[i].Bank+'</td><td>'+calculation[i].InterestRate+'%</td><td>'+calculation[i].LoanToValue+'</td><td>'+calculation[i].Fees+'</td><td>'+calculation[i].MonthlyRepayment+'</td><td>'+calculation[i].TotalInterest+'</td><td>'+calculation[i].TotalPaid+'</td></tr>';
-    }
-    result += '</table>';
-    return result;
-}
+$("#favourite_compare").live("click", function() {
+	$calculationId = $compareCurrentCalculationId;	
+	$(".detailed_error").html('<img src=\"img/loader.gif\">');
+	$.ajax({ url: 'Favourite_Calculation_Function.php',
+		data: { calculationId: $calculationId },
+		type: 'post',
+		success: function(output) {
+			$(".detailed_error").html('Calculation added to favourites');
+		}
+	});
+});
+$("#email_compare").live("click", function() {
+	$calculationId = $compareCurrentCalculationId;
+	emailCalculation($calculationId);	
+});
 function buildBorrowResultsTable(calculation) {
     var result = '<table><tr><th>Loan-To-Value</th><th>Max Loan</th></tr>';
     for (var i in calculation) {
@@ -257,17 +257,36 @@ function highlight(tableRow, calculationId) {
 		if(tableRow.style.backgroundColor == "rgb(230, 233, 234)") {
 			tableRow.style.backgroundColor = '#33b5e5';
 		} else {
-			tableRow.style.backgroundColor = '#e6e9ea';
+			tableRow.style.backgroundColor = '#ffffff';
 			$currentSelected = null;	
 			$currentCalculationId = null;
 		}
 	} else {
 		//deselect old table row
 		if($currentSelected != null) {
-			$currentSelected.style.backgroundColor = '#e6e9ea'
+			$currentSelected.style.backgroundColor = '#ffffff'
 		}
 		$currentSelected = tableRow;
 		$currentCalculationId = calculationId;
+		tableRow.style.backgroundColor = '#33b5e5';
+	}
+}
+
+function highlightCompare(tableRow, calculationId) {
+	if($compareCurrentSelected == tableRow) {
+		if(tableRow.style.backgroundColor == "rgb(230, 233, 234)") {
+			tableRow.style.backgroundColor = '#33b5e5';
+		} else {
+			tableRow.style.backgroundColor = '#ffffff';
+			$compareCurrentSelected = null;	
+			$compareCurrentCalculationId = null;
+		}
+	} else {
+		if($compareCurrentSelected != null) {
+			$compareCurrentSelected.style.backgroundColor = '#ffffff'
+		}
+		$compareCurrentSelected = tableRow;
+		$compareCurrentCalculationId = calculationId;
 		tableRow.style.backgroundColor = '#33b5e5';
 	}
 }

@@ -14,13 +14,8 @@ class CalculationDetails {
     public $Source  = "";
 	public $Date  = "";
 }
-if($_POST['interest']=='0' && $_POST['fees']=='0') {
-    $expected = array('houseValue', 'deposit','term');
-    $inputValid = isCalculationInputValid($expected, 'mortgage_compare');
-} else {
-    $expected = array('houseValue', 'deposit','interest', 'term', 'fees');
-    $inputValid = isCalculationInputValid($expected, 'mortgage');
-}
+$expected = array('houseValue', 'deposit','term');
+$inputValid = isCalculationInputValid($expected, 'mortgage_compare');
 
 if(!$inputValid) {
     echo 'Please amend the calculation figures';
@@ -40,11 +35,11 @@ if(!$inputValid) {
     $calculation->CustomerReference = $customerReference;
     $calculation->HouseValue  = $_POST['houseValue'];
     $calculation->Deposit  = $_POST['deposit'];
-    $calculation->InterestRate  = $_POST['interest'];
     $calculation->Term = $_POST['term'];
-    $calculation->Fees  = $_POST['fees'];
     $calculation->Source  = 'Gauge Website';
     $calculation->MortgageType  = 'Repayment';
+    $calculation->InterestRate  = 0;
+    $calculation->Fees  = 0;
 	
 	$tz_object = new DateTimeZone('Europe/London');
 	$datetime = new DateTime();
@@ -68,14 +63,22 @@ if(!$inputValid) {
     curl_close($ch);
 
     if($responseCode == 201) {
-        echo $content;
+        $calculationResults = json_decode($content);
+		$result = "<table><tr><th>Date</th><th>Interest Rate</th><th>Loan-To-Value</th><th>Product Fees</th><th>Monthly Payment</th><th>Total Interest</th><th>Total Owed</th></tr>";
+		foreach($calculationResults as $calculation) {
+			$date = date_format(date_create($calculation->Date), 'd/m/y  H:i');
+			$result .= "<tr onclick=\"highlightCompare(this, ".$calculation->CalculationId.");\"><td>".$date."</td><td>".$calculation->InterestRate."</td><td>".$calculation->LoanToValue."</td><td>".$calculation->Fees."</td><td>".$calculation->MonthlyRepayment."</td><td>".$calculation->TotalInterest."</td><td>".$calculation->TotalPaid."</td></tr>";
+		}
+		$result .= "</table>";
+		if($calculation->AccountId > 0) {
+			$result .= "<div id=\"action_compare_div\"><button id=\"favourite_compare\" class=\"action_button\">FAVOURITE</button><button id=\"email_compare\" class=\"action_button\">EMAIL</button></div>";
+		}
 	} else if($responseCode == 400) {
 		$response = json_decode($content);
-		echo $response->Message;
-    }/*
-    } else if($responseCode == 400) {
-        echo 'Error with the calculation figures input.';
-    } */else {
-        echo 'A problem occurred calculating the mortgage.';
+		$errorMessage = $response->Message;
+		$result = "<p class=\"center_message\">".$errorMessage."</p>";
+    } else {
+        $result = "<p class=\"center_message\">A problem occurred calculating the mortgage</p>";
     }
+	echo $result;
 }
