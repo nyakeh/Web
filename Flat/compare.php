@@ -39,9 +39,9 @@ include('Utils.php');
         <div class="section overlap whiteBox">
             <h4 class="intro">LET US COMPARE THE VARIOUS MORTGAGE PRODUCTS AVALIABLE</h4>
             <form id="compare_calculator" method="post" action="">
-                <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" placeholder="270000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_propertyMsg');" tabindex="1">
+                <p><label>Property Value</label><input type="text" class="input" name="input_property" id="input_property" placeholder="270000" maxlength="7" onBlur="javascript:isEmptyNumberBox(this,'input_propertyMsg');" tabindex="1">
                     <span id="input_propertyMsg"></span></p>
-                <p><label>Deposit Amount</label><input type="text" class="input" name="input_deposit" id="input_deposit" placeholder="39000" maxlength="10" onBlur="javascript:isEmptyNumberBox(this,'input_depositMsg');" tabindex="2">
+                <p><label>Deposit Amount</label><input type="text" class="input" name="input_deposit" id="input_deposit" placeholder="39000" maxlength="7" onBlur="javascript:isEmptyNumberBox(this,'input_depositMsg');" tabindex="2">
                     <span id="input_depositMsg"></span></p>
                 <p><label>Term</label><input type="text" class="input" name="input_term" id="input_term" placeholder="25" maxlength="3" onBlur="javascript:isEmptyNumberBox(this,'input_termMsg');" tabindex="3">
                     <span id="input_termMsg"></span></p>

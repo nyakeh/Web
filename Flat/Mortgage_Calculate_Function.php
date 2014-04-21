@@ -12,6 +12,7 @@ class CalculationDetails {
     public $Fees  = "";
     public $MortgageType  = "";
     public $Source  = "";
+	public $Date  = "";
 }
 if($_POST['interest']=='0' && $_POST['fees']=='0') {
     $expected = array('houseValue', 'deposit','term');
@@ -45,14 +46,20 @@ if(!$inputValid) {
     $calculation->Fees  = $_POST['fees'];
     $calculation->Source  = 'Gauge Website';
     $calculation->MortgageType  = 'Repayment';
+	
+	$tz_object = new DateTimeZone('Europe/London');
+	$datetime = new DateTime();
+    $datetime->setTimezone($tz_object);
+	$calculation->Date = $datetime->format('Y-m-d H:i:s');
 
-    // Extract out to method - ZeroNullValues()
+    // Zero Null Values for Comparison
     if($calculation->Deposit === '') {
         $calculation->Deposit = 0;
     }
     if($calculation->Fees === '') {
         $calculation->Fees = 0;
     }
+	
     //$service_url = 'http://127.0.0.1:81/api/mortgage'; //local
     $service_url = 'http://mortgagecalculator.cloudapp.net/api/mortgage'; //live
 

@@ -18,12 +18,18 @@ $(document).ready(function () {
 
     $('#mortgage_submit_Button').click(function () {
 		$("#mortgage_results").html("<p class=\"center_message\">We're just <span class=\"bold\">calculating</span> your mortgage.</p><p class=\"center_message\"><img src=\"img/loader.gif\"></p>");
-        $houseValue = $('#input_property').val();
+        $("#mortgage_message").text('');
+		$houseValue = $('#input_property').val();
         $deposit = $('#input_deposit').val();
         $term = $('#input_term').val();
         $interest = $('#input_interest').val();
         $fees = $('#input_fees').val();
-        $.ajax({ url: 'Mortgage_Calculate_Function.php',
+		$errorMessage = calculateInputValidation($houseValue,$deposit,$term, $interest, $fees);
+		if($errorMessage != '') {
+			$("#mortgage_message").text($errorMessage);
+			$("#mortgage_results").html('');
+		} else {
+			$.ajax({ url: 'Mortgage_Calculate_Function.php',
             data: { houseValue: $houseValue, deposit: $deposit, term: $term, interest: $interest, fees: $fees },
             type: 'post',
             success: function (output) {
@@ -31,15 +37,14 @@ $(document).ready(function () {
                     sessionStorage.setItem('calculation', output);
                     var calculation = JSON.parse(output);
                     var resultsTable = buildMortgageResultsTable(calculation);
-                    var paymentSceduleTable = buildPaymentSceduleTable(calculation);
                     $("#mortgage_message").text('');
                     $("#mortgage_results").html(resultsTable);
-                    $("#mortgage_detailed_results").html(paymentSceduleTable);
                 } catch (exception) {
                     $("#mortgage_message").text(output);
                     $("#mortgage_results").html('');
                 }
             }});
+		}        
     });
 
     $('#borrow_submit_button').click(function () {
@@ -65,10 +70,17 @@ $(document).ready(function () {
 
     $('#compare_submit_Button').click(function () {
 		$("#compare_results").html("<p class=\"center_message\">We're just <span class=\"bold\">comparing</span> multiple mortgage providers.</p><p class=\"center_message\"><img src=\"img/loader.gif\"></p>");
-        $houseValue = $('#input_property').val();
+        $("#compare_message").text('');
+		$houseValue = $('#input_property').val();
         $deposit = $('#input_deposit').val();
         $term = $('#input_term').val();
-        $.ajax({ url: 'Mortgage_Calculate_Function.php',
+		
+		$errorMessage = compareInputValidation($houseValue,$deposit,$term);
+		if($errorMessage != '') {
+			$("#compare_message").text($errorMessage);
+			$("#compare_results").html('');
+		} else {
+			$.ajax({ url: 'Mortgage_Calculate_Function.php',
             data: { houseValue: $houseValue, deposit: $deposit, term: $term, interest: '0', fees: '0' },
             type: 'post',
             success: function (output) {
@@ -82,7 +94,9 @@ $(document).ready(function () {
                     $("#compare_results").html('');
                 }
             }
-		});
+			});
+		}
+        
     });
 	
 	$('#calculation_lookup_submit_Button').click(function () {
@@ -167,15 +181,6 @@ function buildBorrowResultsTable(calculation) {
     }
     result += '</table>';
     return result;
-}
-function buildPaymentSceduleTable(calculation) {
-    //var result = '<table><tr><th>Year</th><th>Total</th><th>Capital</th><th>Interest</th><th>Repayments</th></tr>'
-     //for(var year in calculation.RepaymentSchedule) {
-      //  result += '<tr><td>Natwest</td><td>'+calculation.InterestRate+'</td><td>'+calculation.LoanToValue+'</td><td>'+calculation.Fees+'</td><td>'+calculation.MonthlyRepayment+'</td></tr>';
-    //}
-    //result += '<tr><td>'+calculation.RepaymentSchedule["1"]+'</td><td>'+calculation.InterestRate+'</td><td>'+calculation.LoanToValue+'</td><td>'+calculation.Fees+'</td><td>'+calculation.MonthlyRepayment+'</td></tr>';
-    //result += '</table>';
-    //return result;
 }
 
 function validate_textbox(text_box,message,span) {
@@ -265,6 +270,38 @@ function highlight(tableRow, calculationId) {
 		$currentSelected = tableRow;
 		$currentCalculationId = calculationId;
 		tableRow.style.backgroundColor = '#33b5e5';
-		// highlight new
 	}
+}
+
+function calculateInputValidation(houseValue, deposit, term, interestRate, fees) {
+	var errorMessage = compareInputValidation(houseValue, deposit, term);
+	if(errorMessage == ""){
+		interestRate = parseFloat(interestRate);
+		fees = parseInt(fees);
+		if(interestRate < 0.01){
+			errorMessage = 'Interest Rate entered too low.';
+		} else if(fees < 0){
+			errorMessage = 'Fees entered too low.';
+		}
+	}
+	return errorMessage;
+}
+
+function compareInputValidation(houseValue, deposit, term) {
+	var errorMessage = '';
+	houseValue = parseInt(houseValue);
+	deposit = parseInt(deposit);
+	term = parseInt(term);
+	if(houseValue < 10000) {
+		errorMessage = 'Property Value entered too low. Must be over £10000';
+	} else if(deposit < 1000) {
+		errorMessage = 'Deposit entered too low. Must be over £1000';
+	} else if(term < 1) {
+		errorMessage = 'Term entered too low. Must be over 1';
+	} else if(term > 100) {
+		errorMessage = 'Term entered too high. Must be under 100';
+	} else if(deposit > houseValue) {
+		errorMessage = 'Deposit can\'t be greater then the property value.';
+	}
+	return errorMessage;
 }

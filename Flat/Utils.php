@@ -78,6 +78,9 @@ function Register($forename, $surname, $email, $password, $confirm_password) {
         $_SESSION['userId'] = $result->AccountId;
         $output = detailErrorMessage("Welcome to Gauge " . $result->Forename);
         //header('Location: index.php');
+	} else if($responseCode == 409) {
+		$result = json_decode($content);
+		$output = detailErrorMessage($result->Message);
     } else {
         $output = detailErrorMessage('Apologies, an error occurred creating your account');
     }
@@ -146,11 +149,6 @@ function isCalculationInputValid($expected, $state) {
                         $valid = false;
                     };
                     break;
-                case "budget":
-                    /*if(isRequiredForBudget($field)) {
-                        $valid = false;
-                    };*/
-                    break;
             }
         }
     }
@@ -215,7 +213,10 @@ function isRequiredForMortgageCompare($field)
 }
 function isNotEmpty($value)
 {
-    return !empty($value);
+	if($value == "") {
+		return false;
+	}
+    return true;
 }
 function errorMessage($message)
 {

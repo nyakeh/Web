@@ -39,7 +39,7 @@ include('Utils.php');
         <div class="section overlap whiteBox">
             <h4 class="intro">LET US CALCULATE HOW MUCH A BANK COULD LEND YOU TOWARDS BUYING A PROPERTY</h4>
             <form id="borrow_calculator" method="post" action="">
-                <p><label>Input deposit available</label><input type="text" class="input" name="input_borrow_deposit" id="input_borrow_deposit" placeholder="20000" maxlength="10" tabindex="1">
+                <p><label>Input deposit available</label><input type="text" class="input" name="input_borrow_deposit" id="input_borrow_deposit" placeholder="20000" maxlength="7" tabindex="1">
                 <p><input type="button" id="borrow_submit_button" value="CALCULATE" tabindex="2"></p>
                 <p><span id="borrow_message" class="detailed_error"></span></p>
             </form>
