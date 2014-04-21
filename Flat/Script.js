@@ -43,8 +43,8 @@ $(document).ready(function () {
                     $("#mortgage_message").text(output);
                     $("#mortgage_results").html('');
                 }
-            }});
-		}        
+			}});
+		}
     });
 
     $('#borrow_submit_button').click(function () {
@@ -253,7 +253,6 @@ function loadFavourites(userId) {
 }
 
 function highlight(tableRow, calculationId) {
-	
 	if($currentSelected == tableRow) {
 		if(tableRow.style.backgroundColor == "rgb(230, 233, 234)") {
 			tableRow.style.backgroundColor = '#33b5e5';

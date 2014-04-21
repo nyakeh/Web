@@ -27,15 +27,14 @@ if(!$inputValid) {
 } else {
     $accountId = '0';
     $customerReference = '00000000-0000-0000-0000-000000000000';
-    if(isset($_SESSION['userId'])) {
+    if(!empty($_SESSION['userId'])) {
         $accountId = $_SESSION['userId'];
-    } else if(isset($_SESSION['customerReference'])) {
+    } else if(!empty($_SESSION['customerReference'])) {
         $customerReference = $_SESSION['customerReference'];
     } else {
-        $customerReference = com_create_guid();
-        $_SESSION['customerReference'] = $customerReference;
+		$customerReference = getGUID();
+		$_SESSION['customerReference'] = $customerReference;
     }
-
     $calculation = new CalculationDetails();
     $calculation->AccountId = $accountId;
     $calculation->CustomerReference = $customerReference;
