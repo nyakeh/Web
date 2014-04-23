@@ -86,7 +86,13 @@ $(document).ready(function () {
             data: { houseValue: $houseValue, deposit: $deposit, term: $term },
             type: 'post',
             success: function (output) {
-				$("#compare_results").html(output);
+				var prefix = output.substring(0, 1);
+				if(prefix == 'P') {
+					$("#compare_message").text(output);
+					$("#compare_results").html("");
+				} else {
+					$("#compare_results").html(output);
+				}				
 			}}
 			);
 		}
