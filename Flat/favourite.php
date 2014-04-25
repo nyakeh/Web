@@ -11,6 +11,7 @@
     <meta charset="utf-8">
     <title>Gauge</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="icon" type="image/icon" href="img/favicon.ico">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
 	<?php if(isset($_SESSION['userId'])) { ?>

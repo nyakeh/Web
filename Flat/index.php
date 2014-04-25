@@ -44,8 +44,10 @@ if($_GET){
     <meta charset="utf-8">
     <title>Gauge</title>
     <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="icon" type="image/icon" href="img/favicon.ico">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script type="text/javascript" src="Script.js"></script>
+    <link rel="icon" type="image/icon" href="img/favicon.ico">
 	<?php if(isset($_SESSION['userId'])) { ?>
 	<script type='text/javascript'> window.onload=loadCalculationHistory(<?php echo $_SESSION['userId'] ?>); </script>
 	<?php } ?>

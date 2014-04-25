@@ -235,6 +235,8 @@ function loadCalculation(id) {
 				$("#calculationTable").html(output);
 			}
 		});		
+	} else {
+		$("#calculationTable").html('<p class="center_message">Please enter a Calculation Id to look up</p>');
 	}
 }
 
