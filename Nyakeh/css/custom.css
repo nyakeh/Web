@@ -179,13 +179,13 @@ header {
     background-attachment: scroll;
     background-image: url(../img/polygon.svg);
 	background-image:  none,url(../img/polygon.svg), url(../img/polygon.png);
-	//background-color: #0fd;
     background-position: center center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover;	
+    height: 90vh;
 }
 header .intro {
     padding-top: 100px;
@@ -211,7 +211,7 @@ header .intro .intro-heading {
 	
 	header .intro .intro-image img {
 		margin-bottom: 25px;
-		width: 60%;
+		width: 45%;
 	}
 
     header .intro .intro-heading {
@@ -266,6 +266,9 @@ border-width: 0 0 2px;
 	border-radius: 8px 8px 0 0;
 	display: block;
 	width: 100%;
+}
+.box .title {
+	top: -200px;
 }
 
 
