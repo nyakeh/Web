@@ -36,7 +36,12 @@ html {
 }
 body {
 	margin-bottom: 60px;
-	background: #fafbfd;
+	background: #ecf0f7;
+}
+#unbox {
+	background: white;
+	padding-bottom: 50px;
+	margin-bottom: -30px;
 }
 .footer {
 	position: absolute;
