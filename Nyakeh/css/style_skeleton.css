@@ -1,75 +1,131 @@
+/* Override */
+
+a {
+ color: #3949ab;
+}
+a:hover {
+color: #3949ab;
+}
+/* Navigation */
+.navbar + .docs-section {
+	border-top-width: 0;
+}
+.navbar, .navbar-spacer {
+	display: block;
+	width: 100%;
+	height: 6.5rem;
+	background: #fff;
+	z-index: 99;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.navbar > .container {
+	width: 100%;
+}
+.navbar-list {
+	list-style: none;
+	margin-bottom: 0;
+	padding-left: 3rem;
+}
+.navbar-item {
+	position: relative;
+	float: left;
+	margin-bottom: 0;
+}
+.navbar-link {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .2rem;
+	margin-right: 35px;
+	text-decoration: none;
+	line-height: 6.3rem;
+	color: #222;
+}
+.navbar-link.active {
+	color: #3949ab;
+}
+/* Re-overiding the width 100% declaration to match size of % based container */
+
+.has-docked-nav .navbar > .container {
+	width: 80%;
+}
 /* Section */
+
 .section {
-  padding: 8rem 0 7rem;
-  text-align: center;
+	padding: 8rem 0 7rem;
+	text-align: center;
 }
 .section-heading,
 .section-description {
-  margin-bottom: 1.2rem;
+	margin-bottom: 1.2rem;
 }
 
+/* #Selfie */
 .face {
-  position: relative;
-  max-width: 100%;
-  margin: 3rem auto;
+	position: relative;
+	max-width: 100%;
+	margin: 3rem auto;
 }
-
 
 /* Bigger than 550 */
 @media (min-width: 550px) {
-  .hero {
-    padding: 12rem 0;
-    text-align: left;
-    height: 165px;
-  }
-  .section {
-    padding: 12rem 0 11rem;
-  }
-  .face {
-    top: -3rem;
-  }
-	
-  .hero-heading {
-    font-size: 2.4rem;
-  }
+	.hero {
+		padding: 12rem 0;
+		text-align: left;
+		height: 165px;
+	}
+	.section {
+		padding: 12rem 0 11rem;
+	}
+	.face {
+		top: -3rem;
+	}
+	.hero-heading {
+		font-size: 2.4rem;
+	}
+	.navbar {
+		width: 80%;
+	}
+
 }
 
 /* Bigger than 750 */
 @media (min-width: 750px) {
-  .hero {
-    height: 190px;
-  }
-  .hero-heading {
-    font-size: 2.6rem;
-  }
-  .section {
-    padding: 14rem 0 15rem;
-  }
-  .hero {
-    padding: 16rem 0 14rem;
-  }
-  .section-description {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .face {
-    top: -10rem;
-  }
+	.hero {
+		height: 190px;
+	}
+	.hero-heading {
+		font-size: 2.6rem;
+	}
+	.section {
+		padding: 14rem 0 15rem;
+	}
+	.hero {
+		padding: 16rem 0 14rem;
+	}
+	.section-description {
+		max-width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.face {
+		top: -10rem;
+	}
 }
 
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
-  .section {
-    padding: 20rem 0 19rem;
-  }
-  .hero {
-    padding: 22rem 0;
-  }
-  .hero-heading {
-    font-size: 3.0rem;
-  }
-  .face {
-    top: -15rem;
-  }
+	.section {
+		padding: 20rem 0 19rem;
+	}
+	.hero {
+		padding: 22rem 0;
+	}
+	.hero-heading {
+		font-size: 3.0rem;
+	}
+	.face {
+		top: -15rem;
+	}
 }
