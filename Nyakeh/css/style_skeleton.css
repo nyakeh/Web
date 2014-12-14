@@ -1,16 +1,18 @@
 /* Override */
 
 a {
- color: #3949ab;
+	color: #3949ab;
 }
 a:hover {
-color: #3949ab;
+	color: #3949ab;
 }
 /* Navigation */
+
 .navbar + .docs-section {
 	border-top-width: 0;
 }
-.navbar, .navbar-spacer {
+.navbar,
+.navbar-spacer {
 	display: block;
 	width: 100%;
 	height: 6.5rem;
@@ -60,15 +62,37 @@ color: #3949ab;
 .section-description {
 	margin-bottom: 1.2rem;
 }
-
 /* #Selfie */
+
 .face {
 	position: relative;
 	max-width: 100%;
 	margin: 3rem auto;
 }
+/* Footer */
 
+.footer {
+	display: block;
+	width: 230px;
+	overflow: auto;
+	margin: 3rem auto;
+}
+.footer ul {
+	list-style: none;
+}
+.footer img {
+	position: relative;
+	float: left;
+	margin-bottom: 0;
+	list-style: none;
+	margin-bottom: 0;
+	height: 5rem;
+}
+.footer .icon-padding {
+	padding-left: 1rem;
+}
 /* Bigger than 550 */
+
 @media (min-width: 550px) {
 	.hero {
 		padding: 12rem 0;
@@ -87,10 +111,15 @@ color: #3949ab;
 	.navbar {
 		width: 80%;
 	}
-
+	.footer {
+		width: 290px;
+	}
+	.footer .icon-padding {
+		padding-left: 3rem;
+	}
 }
-
 /* Bigger than 750 */
+
 @media (min-width: 750px) {
 	.hero {
 		height: 190px;
@@ -113,8 +142,8 @@ color: #3949ab;
 		top: -10rem;
 	}
 }
-
 /* Bigger than 1000 */
+
 @media (min-width: 1000px) {
 	.section {
 		padding: 20rem 0 19rem;
