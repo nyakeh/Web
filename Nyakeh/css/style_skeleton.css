@@ -47,6 +47,9 @@ a:hover {
 .navbar-link.active {
 	color: #3949ab;
 }
+.navbar-img {
+	display: none;
+}
 /* Re-overiding the width 100% declaration to match size of % based container */
 
 .has-docked-nav .navbar > .container {
@@ -129,6 +132,12 @@ a:hover {
 	}
 	.hero-heading {
 		font-size: 2.6rem;
+	}
+	.navbar-img {
+		display: block;
+		height: 94%;
+		margin-top: 2px;
+		float: right;
 	}
 	.section {
 		padding: 14rem 0 15rem;
