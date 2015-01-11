@@ -72,6 +72,15 @@ a:hover {
 	max-width: 100%;
 	margin: 3rem auto;
 }
+/* triptic */
+.triptic {
+	text-align: center;
+}
+.triptic img {
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: auto;
+}
 /* Footer */
 
 .footer {
