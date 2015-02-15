@@ -3,6 +3,7 @@
 a {
 	color: #3949ab;
 }
+
 a:hover {
 	color: #3949ab;
 }
@@ -11,6 +12,7 @@ a:hover {
 .navbar + .docs-section {
 	border-top-width: 0;
 }
+
 .navbar,
 .navbar-spacer {
 	display: block;
@@ -21,19 +23,23 @@ a:hover {
 	border-top: 1px solid #eee;
 	border-bottom: 1px solid #eee;
 }
+
 .navbar > .container {
 	width: 100%;
 }
+
 .navbar-list {
 	list-style: none;
 	margin-bottom: 0;
 	padding-left: 3rem;
 }
+
 .navbar-item {
 	position: relative;
 	float: left;
 	margin-bottom: 0;
 }
+
 .navbar-link {
 	text-transform: uppercase;
 	font-size: 11px;
@@ -44,9 +50,11 @@ a:hover {
 	line-height: 6.3rem;
 	color: #222;
 }
+
 .navbar-link.active {
 	color: #3949ab;
 }
+
 .navbar-img {
 	display: none;
 }
@@ -56,42 +64,66 @@ a:hover {
 	width: 80%;
 }
 /* Section */
+
 .section {
 	padding: 8rem 0 7rem;
 	text-align: center;
 }
+
 .section-heading,
 .section-description {
 	margin-bottom: 1.2rem;
 }
 /* #Selfie */
+
 .face {
 	position: relative;
 	max-width: 100%;
 	margin: 3rem auto;
 }
 /* triptic */
+
 .triptic {
 	text-align: center;
 }
+
 .triptic img {
-    margin-bottom: 15px;
-    max-width: 100%;
-    height: auto;
+	margin-bottom: 15px;
+	max-width: 100%;
+	height: auto;
 }
+
 .triptic .fa-stack {
 	margin-bottom: 27px;
 }
+/* Map */
+
+.map {
+	height: 500px;
+	text-align: center;
+	background-image: url(/img/map.png);
+	background-position: center;
+	background-size: cover;
+	background-color: #464646;
+}
+
+.map img {
+	margin: 0 auto;
+	max-width: 100%;
+}
 /* Footer */
+
 .footer {
 	display: block;
 	width: 230px;
 	overflow: auto;
 	margin: 3rem auto;
 }
+
 .footer ul {
 	list-style: none;
 }
+
 .footer img {
 	position: relative;
 	float: left;
@@ -100,6 +132,7 @@ a:hover {
 	margin-bottom: 0;
 	height: 5rem;
 }
+
 .footer .icon-padding {
 	padding-left: 1rem;
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Nyakeh Rogers</title>
+	<meta name="theme-color" content="#3f51b5">
+	<meta name="description" content="CSS & Javascript progress bar">
+	<meta name="author" content="Nyakeh Rogers">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" type="image/png" href="img/favicon.ico" />
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/progress.css">
+</head>
+
+<body>
+	<div class="progress" id="bar"></div>
+	<div class="tall"></div>
+</body>
+<script>
+	window.onscroll = scroll;
+
+	function scroll() {
+		var percentageHeight = ((window.pageYOffset / document.body.scrollHeight) * 2) * 100;
+		document.getElementById("bar").style.width = percentageHeight + "%";
+	}
+</script>
+</html>
