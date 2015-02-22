@@ -149,6 +149,26 @@ a:hover {
 .bookIcon {
 	float: right;
 }
+.book {
+	height: 400px;
+	background: #d0eef9;
+	border-radius: 10px;
+	margin: 30px 0;
+}
+.book img {
+	margin: 30px;
+	width: 260px;
+}
+.bookDetails {
+	padding: 30px;
+}
+.progress {
+	height: 100%;
+	width: 30%;
+	background: #33b5e5;
+	transition: width 3s ease-in-out;
+	border-radius: 10px 0 0 10px;
+}
 /* Bigger than 550 */
 
 @media (min-width: 550px) {
