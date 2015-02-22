@@ -75,10 +75,12 @@ a:hover {
 	margin-bottom: 1.2rem;
 }
 /* Desk */
-.desk{
+
+.desk {
 	text-align: center;
 	color: #FFF;
 }
+
 .desk h3 {
 	margin-top: -10vw;
 	font-size: 5.9vw;
@@ -144,30 +146,36 @@ a:hover {
 .footer .icon-padding {
 	padding-left: 1rem;
 }
-
 /* Reading page */
+
 .bookIcon {
 	float: right;
 }
+
 .book {
-	height: 400px;
+	min-height: 420px;
 	background: #d0eef9;
 	border-radius: 10px;
 	margin: 30px 0;
+	overflow: auto;
 }
+
 .book img {
-	margin: 30px;
-	width: 260px;
+	margin: 10px 0;
+	max-height: 360px;
 }
+
 .bookDetails {
-	padding: 30px;
+	padding: 5px;
 }
+
 .progress {
-	height: 100%;
-	width: 30%;
+	height: 60px;
+	width: 60%;
 	background: #3949ab;
 	transition: width 3s ease-in-out;
-	border-radius: 10px 0 0 10px;
+	border-radius: 10px;
+	margin-top: 20px;
 }
 /* Bigger than 550 */
 
@@ -227,6 +235,12 @@ a:hover {
 	}
 	.face {
 		top: -10rem;
+	}
+	.book img {
+		margin: 30px;
+	}
+	.bookDetails {
+		padding: 30px;
 	}
 }
 /* Bigger than 1000 */

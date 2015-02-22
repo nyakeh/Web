@@ -38,6 +38,9 @@
 				<a class="navbar-link">Blog</a>
 			</li>
 			<li class="navbar-item">
+				<a class="navbar-link" href="reading">Reading</a>
+			</li>
+			<li class="navbar-item">
 				<a class="navbar-link" href="progress">Progress</a>
 			</li>
 		</ul>
@@ -56,28 +59,19 @@
 	<div class="container">
 		<div class="row">
 			<h3>Currently Reading</h3>
-			<div class="book">
-				<div class="one-half column">
-					<img class="u-max-full-width" src="img/softSkills.jpg">
-				</div>
-				<div class="one-half column bookDetails">
-					<h4 class="bookTitle">Soft Skills</h4>
-					<h5 class="bookTitle">By John Sonmez</h5>
-					<p>A unique guide, offering techniques and practices for a more satisfying life as a professional software developer. In it, developer and life coach John Sonmez addresses a wide range of important "soft" topics, from career and productivity to personal finance and investing, and even fitness and relationships, all from a developer-centric viewpoint.</p>
-				</div>
-				<div class="progress"></div>
-			</div>
-			<div class="book">
-				<div class="one-half column">
-					<img class="u-max-full-width" src="img/softSkills.jpg">
-				</div>
-				<div class="one-half column bookDetails">
-					<h4 class="bookTitle"><?php echo($books[0]->Title) ?></h4>
-					<h5 class="bookTitle"><?php echo($books[0]->Auther) ?></h5>
-					<p><?php echo($books[0]->Description) ?></p>
-				</div>
-				<div class="progress"></div>
-			</div>
+			<?php foreach($books as $book) { ?>
+				<div class="book">
+					<div class="one-half column">
+						<img class="u-max-full-width" src="<?php echo($book->ImageSource) ?>">
+					</div>
+					<div class="one-half column bookDetails">
+						<h4 class="bookTitle"><?php echo($book->Title) ?></h4>
+						<h5 class="bookTitle"><?php echo($book->Auther) ?></h5>
+						<p><?php echo($book->Description) ?></p>
+					</div>
+					<div class="progress"></div>
+				</div>					
+			<?php } ?>			
 		</div>
 
 		<div class="footer">
