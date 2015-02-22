@@ -1,3 +1,10 @@
+<?php 
+	include('Utils.php'); 
+
+	getReadingList($books);
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,20 +72,9 @@
 					<img class="u-max-full-width" src="img/softSkills.jpg">
 				</div>
 				<div class="one-half column bookDetails">
-					<h4 class="bookTitle">Soft Skills</h4>
-					<h5 class="bookTitle">By John Sonmez</h5>
-					<p>A unique guide, offering techniques and practices for a more satisfying life as a professional software developer. In it, developer and life coach John Sonmez addresses a wide range of important "soft" topics, from career and productivity to personal finance and investing, and even fitness and relationships, all from a developer-centric viewpoint.</p>
-				</div>
-				<div class="progress"></div>
-			</div>
-			<div class="book">
-				<div class="one-half column">
-					<img class="u-max-full-width" src="img/softSkills.jpg">
-				</div>
-				<div class="one-half column bookDetails">
-					<h4 class="bookTitle">Soft Skills</h4>
-					<h5 class="bookTitle">By John Sonmez</h5>
-					<p>A unique guide, offering techniques and practices for a more satisfying life as a professional software developer. In it, developer and life coach John Sonmez addresses a wide range of important "soft" topics, from career and productivity to personal finance and investing, and even fitness and relationships, all from a developer-centric viewpoint.</p>
+					<h4 class="bookTitle"><?php echo($books[0]->Title) ?></h4>
+					<h5 class="bookTitle"><?php echo($books[0]->Auther) ?></h5>
+					<p><?php echo($books[0]->Description) ?></p>
 				</div>
 				<div class="progress"></div>
 			</div>

@@ -165,7 +165,7 @@ a:hover {
 .progress {
 	height: 100%;
 	width: 30%;
-	background: #33b5e5;
+	background: #3949ab;
 	transition: width 3s ease-in-out;
 	border-radius: 10px 0 0 10px;
 }
