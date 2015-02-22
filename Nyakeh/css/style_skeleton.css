@@ -76,7 +76,12 @@ a:hover {
 }
 /* Desk */
 .desk{
-	
+	text-align: center;
+	color: #FFF;
+}
+.desk h3 {
+	margin-top: -10vw;
+	font-size: 5.9vw;
 }
 /* #Selfie */
 
@@ -138,6 +143,11 @@ a:hover {
 
 .footer .icon-padding {
 	padding-left: 1rem;
+}
+
+/* Reading page */
+.bookIcon {
+	float: right;
 }
 /* Bigger than 550 */
 
