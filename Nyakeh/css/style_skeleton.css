@@ -50,6 +50,9 @@ a:hover {
 	line-height: 6.3rem;
 	color: #222;
 }
+.navbar-prominent {
+	font-size: 13px;
+}
 
 .navbar-link.active {
 	color: #3949ab;
