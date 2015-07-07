@@ -3,146 +3,126 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" type="image/icon" href="img/favicon.ico">
-	<meta name="theme-color" content="#3f51b5">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<title>Nyakeh Rogers</title>
+	<meta name="theme-color" content="#3f51b5">
+	<meta name="description" content="My Personal Site/Playground">
+	<meta name="author" content="Nyakeh Rogers">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" href="img/favicon.ico" />
 
-	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r;
-			i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date();
-			a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0];
-			a.async = 1;
-			a.src = g;
-			m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-		ga('create', 'UA-48357881-1', 'auto');
-		ga('send', 'pageview');
-	</script>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/style_skeleton.css">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-	<div class="navbar-wrapper">
-		<div class="container">
 
-			<div class="navbar navbar-default navbar-static-top" role="navigation">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="index">Nyakeh Rogers</a>
-					</div>
-					<div class="navbar-collapse collapse">
-						<ul class="nav navbar-nav">
-							<li>
-								<a href="gauge">Gauge</a>
-							</li>
-							<li>	
-								<a href="skeleton">Skeleton</a>
-							</li>
-						</ul>
-					</div>
-				</div>
+	<nav class="navbar container">
+		<ul class="navbar-list">
+			<li class="navbar-item">
+				<a class="navbar-link" href="index">Nyakeh Rogers</a>
+			</li>
+			<li class="navbar-item">
+				<a class="navbar-link" href="gauge">Gauge</a>
+			</li>
+			<li class="navbar-item">
+				<a class="navbar-link" href="http://blog.nyakeh.co.uk/">Blog</a>
+			</li>
+			<li class="navbar-item">
+				<a class="navbar-link" href="reading">Reading</a>
+			</li>
+			<li class="navbar-item">
+				<a class="navbar-link" href="progress">Progress</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="section container hero">
+		<div class="row">
+			<div class="one-half column">
+				<h4 class="hero-heading">Computing Science Graduate & Software Developer</h4>
+				<h5>In my free time I watch lots of Netflix, play football, and write code.</h5>
 			</div>
+			<div class="one-half column">
+				<img class="face" src="img/face_small.png">
+			</div>
+		</div>
+	</div>
+	<div class="row desk">
+		<img id="deskImage" class="u-max-full-width" src="/img/desk.png">		
+	</div>
 
+	<div class="container">
+		<div class="row">
+			<div class="seven column">
+				<h4>If you continually release, does this count as a 1.0 release? Or simply commit 					
+					<span style="display:inline-block;max-width: 100%;word-wrap: break-word;"><a href="https://github.com/nyakeh123/Web/commit/cc3ca17950be6ad060add1a3b9d11a61541ad9ab" target="_blank">cc3ca17950be6ad060add1a3b9d11a61541ad9ab</a></span>.</h4>
+				<p>I am a huge fan of continuously deployment, it just make perfect sense to me that as soon as code has been committed and pushed out to the live environment for my customers/audience to reap the benefits Especially in the setting of this site for which I am the client every change committed is a requested improvement that would already be live if I could only up my <a href="http://en.wikipedia.org/wiki/Words_per_minute" target="_blank">WPM</a> and IQ.</p>
+			</div>
 		</div>
 	</div>
 
-	<header>
-		<div class="container">
-			<div class="intro">
-				<div class="intro-image">
-					<img src="img/face.png">
-				</div>
-				<div class="intro-heading">Hello</div>
+
+	<div class="container triptic">
+		<div class="row">
+			<div class="one-third column">
+				<h2>Code</h2>
+				<span class="fa-stack fa-lg fa-5x">
+				  <i class="fa fa-circle fa-stack-2x"></i>
+				  <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+				</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
 			</div>
-		</div>
-	</header>
-
-	<section id="unbox">
-		<div class="container">
-			<div class="page-header">
-				<h1>Computing Science Graduate & Software Developer</h1>
+			<div class="one-third column">
+				<h2>Design</h2>
+				<span class="fa-stack fa-lg fa-5x">
+				  <i class="fa fa-circle fa-stack-2x"></i>
+				  <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+				</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
 			</div>
-			<p class="lead">In my free time I watch lots of Netflix, play football & write code.</p>
-
-			<p>My site is currently under construction, hence all of the Lorem Ipsum. But you can track all of the updates and improvements being made on the <a href="https://github.com/nyakeh123/Web/commits/master/Nyakeh">Github repo</a>.</p>
-		</div>
-	</section>
-
-	<div class="container">
-		<div class="box">
-			<div class="wall"></div>
-			<span class="image featured"><img src="img/cover_gauge.png" alt="" /></span>
-			<h3>Software as a service demonstrated by a mortgage calculator</h3>
-			<p>My Computing Science BSc final year projects aim was to develop a fully functional and developer friendly software as a service (SAAS) system.
-			</p>
-			<p>The core application was a mortgage calculator able to calculate mortgages for customers and suggest banks and mortgage products using an algorithm to match potential customers with banks. This application is then made universally accessible through the creation of a cloud hosted REST API.</p>
-			<p>Developers would then be able to build applications, websites or plug-ins that would use the mortgage calculator API to perform the mathematics whilst they have total control over how the resulting data is presented to the end-user.</p>
-			<p>As a demonstration of how the service could be utilized I have developed a web application and an android application which both utilize the same API yet contain distinct functionality and display the data returned in visually different ways.</p>
-			<p>I used Windows Azure to host the application in the cloud, creating a cloud service which provided the access to the applications API from any client connected to the World Wide Web. Developers would be able to view the documentation for the API which describes the functionality available through the service, with detailed examples of the request/response format.
-			</p>
+			<div class="one-third column">
+				<h2>Blog</h2>
+				<span class="fa-stack fa-lg fa-5x">
+				  <i class="fa fa-circle fa-stack-2x"></i>
+				  <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+				</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+			</div>
 		</div>
 	</div>
 
-	<section id="unbox">
-		<div class="container">
-			<h2>Rebuilding my site using Bootstrap #MobileFirst</h2>
-			<p>My personal site has been stuck in a limbo like 0.3 Alpha release state for around 6 months. I'm sorry, but in my defense I have been a little busy during this time I've managed to:</p>
-			<ul>
-				<li>Graduate from a four-year sandwich Computing Science BSc at Staffordshire University.</li>
-				<li>Start as a graduate software developer with <a href="www.codeweavers.net" target="_blank">Codeweavers</a>.</li>
-				<li>Move house.</li>
-				<li>Win the title with my sunday league team.</li>
-			</ul>
-			<p>Ok that last one was more bragging then an excuse, buy if you'll forgive me that, what I'd like to say is that my site has officially reached 1.0. I've finally settled on a format/design/framework that I'm proud to have represent me on the internet. I'm planning to use this platform to log/display some of my development work/thoughts/hacks.</p>
-		</div>
-	</section>
-
-	<div class="container">
-		<div class="box">
-			<div class="wall"></div>
-			<span class="image featured"><img src="img/cover_bootstrap.png" alt="" /></span>
-
-			<h3>If you continually release, does this count as a 1.0 release? Or simply commit <small><a href="https://github.com/nyakeh123/Web/commit/cc3ca17950be6ad060add1a3b9d11a61541ad9ab" target="_blank">cc3ca17950be6ad060add1a3b9d11a61541ad9ab</a></small>.</h3>
-			<p>I am a huge fan of continuously deployment, it just make perfect sense to me that as soon as code has been committed and pushed  out to the live environment for my customers/audience to reap the benefits Especially in the setting of this site for which I am the client every change committed is a requested improvement that would already be live if I could only up my <a href="http://en.wikipedia.org/wiki/Words_per_minute" target="_blank">WPM</a> and IQ.</p>
-		</div>
+	<div class="row map">
 	</div>
 
 	<div class="footer">
-		<div class="footer-links container">
-			<div class="footer-links row">
-				<div class="footer-links col-xs-offset-1 col-xs-2">
-					<p><a href="https://github.com/nyakeh123">Github</a></p>
-				</div>
-				<div class="footer-links col-xs-2">
-					<p><a href="http://lnkd.in/bGufZiJ">LinkedIn</a></p>
-				</div>
-				<div class="footer-links col-xs-2">
-					<p><a href="https://twitter.com/nyakehrogers">Twitter</a></p>
-				</div>
-				<div class="footer-links col-xs-2">
-					<p><a href="http://instagram.com/nyakehrogers">Instagram</a></p>
-				</div>
-				<img src="img/Emblem_Indigo.png">
-			</div>
-		</div>
+		<ul>
+			<li>
+				<a href="https://github.com/nyakeh123">
+					<img src="img/github.png">
+				</a>
+			</li>
+			<li>
+				<a href="http://instagram.com/nyakehrogers">
+					<img class="icon-padding" src="img/instagram.png">
+				</a>
+			</li>
+			<li>
+				<a href="http://lnkd.in/bGufZiJ">
+					<img class="icon-padding" src="img/linkedin.png">
+				</a>
+			</li>
+			<li>
+				<a href="https://twitter.com/nyakehrogers">
+					<img class="icon-padding" src="img/twitter.png">
+				</a>
+			</li>
+		</ul>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/js/script.js"></script>
 </body>
 
 </html>
