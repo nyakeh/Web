@@ -7,6 +7,8 @@ a {
 a:hover {
 	color: #3949ab;
 }
+
+
 /* Navigation */
 
 .navbar-list {
@@ -67,11 +69,15 @@ a:hover {
 .navbar-img {
 	display: none;
 }
+
+
 /* Re-overiding the width 100% declaration to match size of % based container */
 
 .has-docked-nav .navbar > .container {
 	width: 80%;
 }
+
+
 /* Section */
 
 .section {
@@ -83,6 +89,8 @@ a:hover {
 .section-description {
 	margin-bottom: 1.2rem;
 }
+
+
 /* Desk */
 
 .desk {
@@ -94,6 +102,8 @@ a:hover {
 	margin-top: -10vw;
 	font-size: 5.9vw;
 }
+
+
 /* #Selfie */
 
 .face {
@@ -101,6 +111,8 @@ a:hover {
 	max-width: 100%;
 	margin: 3rem auto;
 }
+
+
 /* triptic */
 
 .triptic {
@@ -112,20 +124,8 @@ a:hover {
 	max-width: 100%;
 	height: auto;
 }
-/* Map */
 
-.map {
-	height: 500px;
-	text-align: center;
-	background-image: url(/img/map.png);
-	background-position: center;
-	background-size: cover;
-}
 
-.map img {
-	margin: 0 auto;
-	max-width: 100%;
-}
 /* Footer */
 
 .footer {
@@ -155,6 +155,8 @@ a:hover {
 .footer .copyright {
 	display: none;
 }
+
+
 /* Reading page */
 
 .bookIcon {
@@ -190,6 +192,8 @@ a:hover {
 .footer .copyright {
 	display: block;
 }
+
+
 /* Bigger than 550 */
 
 @media (min-width: 550px) {
@@ -224,6 +228,8 @@ a:hover {
 		padding-left: 3rem;
 	}
 }
+
+
 /* Bigger than 750 */
 
 @media (min-width: 750px) {
@@ -260,6 +266,8 @@ a:hover {
 		padding: 30px;
 	}
 }
+
+
 /* Bigger than 1000 */
 
 @media (min-width: 1000px) {
