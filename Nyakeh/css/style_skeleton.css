@@ -8,7 +8,6 @@ a:hover {
 	color: #3949ab;
 }
 
-
 /* Navigation */
 
 .navbar-list {
@@ -193,6 +192,19 @@ a:hover {
 	display: block;
 }
 
+/* Paper Trail */
+.heading {
+  display: table;
+  background: #b9babc url('../img/clouds.jpg') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+}
+
+.phone img{
+    margin-top: -200px;
+}
 
 /* Bigger than 550 */
 
