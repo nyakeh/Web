@@ -206,6 +206,10 @@ a:hover {
   color: #fff;
 }
 
+.details code {
+    color: black
+}
+
 .phone img{
     margin-top: -200px;
 }
@@ -214,11 +218,11 @@ footer {
     text-align: center;
     padding-top: 30px;
 }
-footer a {
+footer a, .details a {
     color: aliceblue;
     text-decoration: none;
 }
-footer a:hover {
+footer a:hover, .details a:hover {
     color: #796547;
 }
 
