@@ -193,17 +193,33 @@ a:hover {
 }
 
 /* Paper Trail */
-.heading {
-  display: table;
-  background: #b9babc url('../img/clouds.jpg') no-repeat center;
-  background-size: cover;
-  width: 100%;
-  margin: 0;
+::selection {
+  background: #796547;
+}
+::-moz-selection {
+  background: #796547; /* Gecko Browsers */
+}
+
+.heading, .details, footer {
+  background: #b9babc;
+  background: #475B79;
   color: #fff;
 }
 
 .phone img{
     margin-top: -200px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 30px;
+}
+footer a {
+    color: aliceblue;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #796547;
 }
 
 /* Bigger than 550 */
