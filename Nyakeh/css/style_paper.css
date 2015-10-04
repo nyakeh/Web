@@ -47,7 +47,12 @@ footer {
 }
 
 .phone img {
-    margin-top: -200px;
+    margin-top: -140px;
+}
+
+.device {
+    padding-bottom: 0;
+    margin-bottom: -100px;
 }
 
 footer {
@@ -61,6 +66,13 @@ footer {
 @media (min-width: 550px) {
     .section {
         padding: 12rem 0 11rem;
+    }
+    .phone img {
+        margin-top: -200px;
+    }
+    .device {
+        padding-bottom: 0;
+        margin-bottom: -100px;
     }
 }
 
@@ -76,6 +88,13 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+    .phone img {
+        margin-top: -250px;
+    }
+    .device {
+        padding-bottom: 0;
+        margin-bottom: -100px;
+    }
 }
 
 
@@ -84,5 +103,12 @@ footer {
 @media (min-width: 1000px) {
     .section {
         padding: 20rem 0 19rem;
+    }
+    .phone img {
+        margin-top: -337px;
+    }
+    .device {
+        padding-bottom: 0;
+        margin-bottom: -100px;
     }
 }
