@@ -192,40 +192,6 @@ a:hover {
 	display: block;
 }
 
-/* Paper Trail */
-::selection {
-  background: #796547;
-}
-::-moz-selection {
-  background: #796547; /* Gecko Browsers */
-}
-
-.heading, .details, footer {
-  background: #b9babc;
-  background: #475B79;
-  color: #fff;
-}
-
-.details code {
-    color: black
-}
-
-.phone img{
-    margin-top: -200px;
-}
-
-footer {
-    text-align: center;
-    padding-top: 30px;
-}
-footer a, .details a {
-    color: aliceblue;
-    text-decoration: none;
-}
-footer a:hover, .details a:hover {
-    color: #796547;
-}
-
 /* Bigger than 550 */
 
 @media (min-width: 550px) {
