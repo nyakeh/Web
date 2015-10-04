@@ -47,12 +47,13 @@ footer {
 }
 
 .phone img {
-    margin-top: -140px;
+    margin-top: -120px;
+    max-height: 90vh;
 }
 
 .device {
     padding-bottom: 0;
-    margin-bottom: -100px;
+    margin-bottom: -70px;
 }
 
 footer {
@@ -68,7 +69,7 @@ footer {
         padding: 12rem 0 11rem;
     }
     .phone img {
-        margin-top: -200px;
+        margin-top: -182px;
     }
     .device {
         padding-bottom: 0;
@@ -89,11 +90,11 @@ footer {
         margin-right: auto;
     }
     .phone img {
-        margin-top: -250px;
+        margin-top: -210px;
     }
     .device {
         padding-bottom: 0;
-        margin-bottom: -100px;
+        margin-bottom: -110px;
     }
 }
 
@@ -105,10 +106,10 @@ footer {
         padding: 20rem 0 19rem;
     }
     .phone img {
-        margin-top: -337px;
+        margin-top: -270px;
     }
     .device {
         padding-bottom: 0;
-        margin-bottom: -100px;
+        margin-bottom: -110px;
     }
 }
