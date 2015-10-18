@@ -1,4 +1,6 @@
-/* Override */
+body {
+    background: url(/img/geometry.png);
+}
 
 a {
     color: aliceblue;
@@ -8,11 +10,6 @@ a {
 a:hover {
     color: #796547;
 }
-
-body {
-    background: url(/img/geometry.png);
-}
-/* Section */
 
 .section {
     padding: 8rem 0 7rem;
@@ -24,28 +21,19 @@ body {
     margin-bottom: 1.2rem;
 }
 
-
-/* Paper Trail */
-
 ::selection {
     background: #796547;
 }
 
 ::-moz-selection {
     background: #796547;
-    /* Gecko Browsers */
 }
 
 .heading,
 .details,
 footer {
-    background: #b9babc;
     background: #475B79;
-    color: #fff;
-}
-
-.details code {
-    color: black
+    color: #F9FAFB;
 }
 
 .phone img {
@@ -56,6 +44,10 @@ footer {
 .device {
     padding-bottom: 0;
     margin-bottom: -70px;
+}
+
+.card {
+    background: #F9FAFB;
 }
 
 footer {
@@ -78,7 +70,6 @@ footer {
     }
 }
 
-
 /* Bigger than 750 */
 
 @media (min-width: 750px) {
@@ -99,7 +90,6 @@ footer {
     }
 }
 
-
 /* Bigger than 1000 */
 
 @media (min-width: 1000px) {
@@ -114,3 +104,4 @@ footer {
         margin-bottom: -110px;
     }
 }
+/* Colour Pallete - blue:#475B79,gold:#796547,,off-white: #F9FAFB */
