@@ -9,7 +9,9 @@ a:hover {
     color: #796547;
 }
 
-
+body {
+    background: url(/img/geometry.png);
+}
 /* Section */
 
 .section {
@@ -60,7 +62,6 @@ footer {
     text-align: center;
     padding-top: 30px;
 }
-
 
 /* Bigger than 550 */
 
