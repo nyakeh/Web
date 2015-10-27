@@ -37,10 +37,8 @@ footer {
 }
 
 .phone img {
-/*
     margin-top: -120px;
     max-height: 90vh;
-*/
 }
 
 .device {
@@ -57,6 +55,16 @@ footer {
     padding-top: 30px;
 }
 
+.left-phone,
+.right-phone {
+    display: none
+}
+
+.container .one-third.column {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 /* Bigger than 550 */
 
 @media (min-width: 550px) {
@@ -70,7 +78,12 @@ footer {
         padding-bottom: 0;
         margin-bottom: -100px;
     }
+    .container .one-third.column {
+        width: 80%;
+        margin-left: 10%;
+    }
 }
+
 
 /* Bigger than 750 */
 
@@ -90,7 +103,15 @@ footer {
         padding-bottom: 0;
         margin-bottom: -110px;
     }
+    .right-phone {
+        display: block
+    }
+    .container .one-third.column {
+        width: 48%;
+        margin-left: 0;
+    }
 }
+
 
 /* Bigger than 1000 */
 
@@ -105,5 +126,13 @@ footer {
         padding-bottom: 0;
         margin-bottom: -110px;
     }
+    .left-phone {
+        display: block
+    }
+    .container .one-third.column {
+        width: 30.6666666667%;
+    }
 }
+
+
 /* Colour Pallete - blue:#475B79,gold:#796547,,off-white: #F9FAFB */
