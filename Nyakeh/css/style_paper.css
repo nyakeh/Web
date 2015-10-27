@@ -60,7 +60,7 @@ footer {
     display: none
 }
 
-.container .one-third.column {
+.container .phone > .one-third.column {
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -78,12 +78,11 @@ footer {
         padding-bottom: 0;
         margin-bottom: -100px;
     }
-    .container .one-third.column {
+    .container .phone > .one-third.column {
         width: 80%;
         margin-left: 10%;
     }
 }
-
 
 /* Bigger than 750 */
 
@@ -106,12 +105,11 @@ footer {
     .right-phone {
         display: block
     }
-    .container .one-third.column {
+    .container .phone > .one-third.column {
         width: 48%;
         margin-left: 2%;
     }
 }
-
 
 /* Bigger than 1000 */
 
@@ -129,11 +127,9 @@ footer {
     .left-phone {
         display: block
     }
-    .container .one-third.column {
+    .container .phone > .one-third.column {
         width: 30.6666666667%;
         margin-left: 2%;
     }
 }
-
-
 /* Colour Pallete - blue:#475B79,gold:#796547,,off-white: #F9FAFB */
