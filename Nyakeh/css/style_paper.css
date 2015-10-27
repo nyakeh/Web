@@ -108,7 +108,7 @@ footer {
     }
     .container .one-third.column {
         width: 48%;
-        margin-left: 0;
+        margin-left: 2%;
     }
 }
 
@@ -131,6 +131,7 @@ footer {
     }
     .container .one-third.column {
         width: 30.6666666667%;
+        margin-left: 2%;
     }
 }
 
