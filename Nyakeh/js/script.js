@@ -15,7 +15,7 @@ var data = {
             fillColor: "rgba(71,121,101,0.2)",
             strokeColor: "rgba(71,121,101,1)",
             pointColor: "rgba(71,121,101,1)",
-            pointHighlightFill: "#000",
+            pointHighlightFill: "rgba(71,121,101,0.2)",
             data: [65, 59, 80, 81, 56, 55, 40]
         },
         {
@@ -23,7 +23,7 @@ var data = {
             fillColor: "rgba(176,0,17,0.2)",
             strokeColor: "rgba(176,0,17,1)",
             pointColor: "rgba(176,0,17,1)",
-            pointHighlightFill: "#000",
+            pointHighlightFill: "rgba(176,0,17,0.5)",
             data: [28, 48, 40, 19, 86, 27, 90]
         },
         {
@@ -31,7 +31,7 @@ var data = {
             fillColor: "rgba(121,101,71,0.2)",
             strokeColor: "rgba(121,101,71,1)",
             pointColor: "rgba(121,101,71,1)",
-            pointHighlightFill: "#000",
+            pointHighlightFill: "rgba(121,101,71,0.5)",
             data: [12, 11, 1, 21, 14, 12, 16]
         }
     ]
