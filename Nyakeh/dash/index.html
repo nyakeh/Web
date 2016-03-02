@@ -9,7 +9,7 @@
     <meta name="author" content="Nyakeh Rogers">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-	<link rel="icon" type="image/png" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
 
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/skeleton.css">
@@ -35,16 +35,16 @@
 
 <body>
     <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href="#overview">Overview</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#averages">Averages</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#">Investing</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#">Habits</a></li>
-        </ul>
-      </div>
+        <div class="container">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a class="navbar-link" href="#overview">Overview</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#summary">Summary</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Investing</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Habits</a></li>
+            </ul>
+        </div>
     </nav>
-    
+
     <div class="section">
         <div class="container">
             <div class="row">
@@ -65,39 +65,40 @@
             <canvas id="financeChart"></canvas>
         </div>
     </div>
-
-    <div class="container" id="averages">
-        <div class="row">
-            <table class="u-full-width">
-                <thead>
-                    <tr>
-                        <th>Time Period</th>
-                        <th>Made</th>
-                        <th>Spent</th>
-                        <th>Invested</th>
-                        <th>Remaining</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2015</td>
-                        <td>£18,443.33</td>
-                        <td>£17,348.31</td>
-                        <td>£0.00</td>
-                        <td>£1,095.02</td>
-                    </tr>
-                    <tr>
-                        <td>2016</td>
-                        <td>£3,405.66</td>
-                        <td>£3,562.54</td>
-                        <td>£1,024.00</td>
-                        <td>-£156.88</td>
-                    </tr>
-                </tbody>
-            </table>
+    <div class="section">
+        <div class="container" id="summary">
+            <div class="row">
+                <h3>Year Averages</h3>
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>Time Period</th>
+                            <th>Made</th>
+                            <th>Spent</th>
+                            <th>Invested</th>
+                            <th>Remaining</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2015</td>
+                            <td>£18,443.33</td>
+                            <td>£17,348.31</td>
+                            <td>£0.00</td>
+                            <td>£1,095.02</td>
+                        </tr>
+                        <tr>
+                            <td>2016</td>
+                            <td>£3,405.66</td>
+                            <td>£3,562.54</td>
+                            <td>£1,024.00</td>
+                            <td>-£156.88</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-
     <footer>
         <div class="container">
             <p>by <a href="https://twitter.com/nyakehrogers" target="_blank">@nyakehrogers</a></p>
