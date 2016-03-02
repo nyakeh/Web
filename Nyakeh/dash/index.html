@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <title>Dashboard | Turning data into information</title>
-    <meta name="theme-color" content="#475B79">
+    <meta name="theme-color" content="#477965">
     <meta name="description" content="A personal retrospective.">
     <meta name="author" content="Nyakeh Rogers">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-    <link rel="icon" type="image/png" href="../img/paper_trail.png" />
+	<link rel="icon" type="image/png" href="img/favicon.ico" />
 
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/skeleton.css">
@@ -34,6 +34,17 @@
 </head>
 
 <body>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="#overview">Overview</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#averages">Averages</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Investing</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Habits</a></li>
+        </ul>
+      </div>
+    </nav>
+    
     <div class="section">
         <div class="container">
             <div class="row">
@@ -47,9 +58,43 @@
             </div>
         </div>
     </div>
-    <div class="container">
+
+    <div class="container" id="overview">
         <div class="row">
+            <h3><span class="green">Made</span> vs <span class="red">Spent</span> vs <span class="gold">Savings</span></h3>
             <canvas id="financeChart"></canvas>
+        </div>
+    </div>
+
+    <div class="container" id="averages">
+        <div class="row">
+            <table class="u-full-width">
+                <thead>
+                    <tr>
+                        <th>Time Period</th>
+                        <th>Made</th>
+                        <th>Spent</th>
+                        <th>Invested</th>
+                        <th>Remaining</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2015</td>
+                        <td>£18,443.33</td>
+                        <td>£17,348.31</td>
+                        <td>£0.00</td>
+                        <td>£1,095.02</td>
+                    </tr>
+                    <tr>
+                        <td>2016</td>
+                        <td>£3,405.66</td>
+                        <td>£3,562.54</td>
+                        <td>£1,024.00</td>
+                        <td>-£156.88</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 
