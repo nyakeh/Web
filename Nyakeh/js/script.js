@@ -7,6 +7,7 @@ $("#deskImage").click(function () {
     }
 });
 
+
 var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     datasets: [
@@ -47,3 +48,48 @@ myLineChart.Line(data, {
     responsive: true,
     maintainAspectRatio: true
 });
+
+var expensesData = [
+    {
+        value: 300,
+        color:"#F7464A",
+        label: "Red"
+    },
+    {
+        value: 50,
+        color: "#46BFBD",
+        label: "Green"
+    },
+    {
+        value: 100,
+        color: "#FDB45C",
+        label: "Yellow"
+    }
+]
+
+var expensesChart = $("#expensesChart").get(0).getContext("2d");
+$.ajax({ url: 'Expenses_Function.php',
+            data: { month: "January", year: "2016" },
+            type: 'post',
+            success: function (output) {
+                try {
+                    var results = JSON.parse(output);
+                    for (var i in results) {
+                        expensesData.push({
+                            value: results[i].Amount,
+                            color: results[i].Colour,
+                            label: results[i].Category
+                        })                    
+                    }
+                    var myExpencesChart = new Chart(expensesChart);
+                    myExpencesChart.Pie(expensesData,{
+                        percentageInnerCutout : 0
+                    });
+                    console.log(results);
+                } catch(exception) {
+                    console.log("exception");
+                    console.log(exception);
+                }
+            }
+        });
+
