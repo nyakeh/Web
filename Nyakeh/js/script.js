@@ -7,6 +7,10 @@ $("#deskImage").click(function () {
     }
 });
 
+var changeExpensesMonth = function($month) {
+    console.log($month);
+    populateExpensesChart($month, "2015");
+} 
 
 var data = {
     labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
@@ -49,35 +53,37 @@ myLineChart.Line(data, {
     maintainAspectRatio: true
 });
 
-var expensesData = []
 var expensesChart = $("#expensesChart").get(0).getContext("2d");
-$.ajax({ url: 'Expenses_Function.php',
-            data: { month: "december", year: "2015" },
-            type: 'post',
-            success: function (output) {
-                try {
-                    var results = JSON.parse(output);
-                    for (var i in results) {
-                        r = Math.floor(Math.random() * 200);
-                        g = Math.floor(Math.random() * 200);
-                        b = Math.floor(Math.random() * 200);
-                        colour = 'rgb(' + r + ', ' + g + ', ' + b + ')';
-                        
-                        expensesData.push({
-                            value: results[i].Amount,
-                            color: colour,
-                            label: results[i].Category
-                        })                    
+var populateExpensesChart = function($month, $year) {
+    var expensesData = []
+    $.ajax({ url: 'Expenses_Function.php',
+                data: { month: "december", year: "2015" },
+                type: 'post',
+                success: function (output) {
+                    try {
+                        var results = JSON.parse(output);
+                        for (var i in results) {
+                            r = Math.floor(Math.random() * 200);
+                            g = Math.floor(Math.random() * 200);
+                            b = Math.floor(Math.random() * 200);
+                            colour = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+                            
+                            expensesData.push({
+                                value: results[i].Amount,
+                                color: colour,
+                                label: results[i].Category
+                            })                    
+                        }
+                        var myExpencesChart = new Chart(expensesChart);
+                        myExpencesChart.Pie(expensesData,{
+                            percentageInnerCutout : 0,
+                            responsive: true,
+                            maintainAspectRatio: true
+                        });
+                    } catch(exception) {
+                        console.log(exception);
                     }
-                    var myExpencesChart = new Chart(expensesChart);
-                    myExpencesChart.Pie(expensesData,{
-                        percentageInnerCutout : 0,
-                        responsive: true,
-                        maintainAspectRatio: true
-                    });
-                } catch(exception) {
-                    console.log(exception);
                 }
-            }
-        });
-
+    });
+}
+populateExpensesChart("december","2015");

@@ -64,16 +64,30 @@
             <canvas id="financeChart"></canvas>
         </div>
     </div>
-    
+
     <div class="section">
         <div class="container" id="expenses">
             <div class="row">
-                <h3>Expenses breakdown for February</h3>
+                <h3>Expenses breakdown for</h3>
+                <select id="expensesMonth" onchange="changeExpensesMonth(this.value)">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
                 <canvas id="expensesChart"></canvas>
             </div>
         </div>
     </div>
-    
+
     <div class="container" id="summary">
         <div class="row">
             <h3>Year Averages</h3>
