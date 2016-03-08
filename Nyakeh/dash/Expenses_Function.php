@@ -21,12 +21,10 @@
         public $Amount = 0;
        // public $Colour  = "";
     }
-    $month = "2";
-    $year = "2016";
-    // $month = $_POST['month'];
-    // $year = $_POST['year'];
+    $month = $_POST['month'];
+    $year = $_POST['year'];
     $expenseItems = array();
-    $sqlResult = mysqli_query($conn,"SELECT * FROM `current_account` WHERE MONTH(date) = 2 and YEAR(date) = " . $year);
+    $sqlResult = mysqli_query($conn,"SELECT * FROM `current_account` WHERE value < 0 AND MONTH(date) = ".$monthIndex[$month]." AND YEAR(date) = " . $year);
     
     while($row = mysqli_fetch_assoc($sqlResult)){
         echo $row['value'];

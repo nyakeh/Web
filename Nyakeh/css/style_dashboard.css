@@ -16,6 +16,11 @@ financeChart {
     height: 100%;
 }
 
+expensesChart {    
+    width: 600px;
+    height: 600px;
+}
+
 span.green {
     color: #477965;
 }

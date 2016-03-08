@@ -52,7 +52,7 @@ myLineChart.Line(data, {
 var expensesData = []
 var expensesChart = $("#expensesChart").get(0).getContext("2d");
 $.ajax({ url: 'Expenses_Function.php',
-            data: { month: "january", year: "2016" },
+            data: { month: "december", year: "2015" },
             type: 'post',
             success: function (output) {
                 try {
@@ -71,7 +71,9 @@ $.ajax({ url: 'Expenses_Function.php',
                     }
                     var myExpencesChart = new Chart(expensesChart);
                     myExpencesChart.Pie(expensesData,{
-                        percentageInnerCutout : 0
+                        percentageInnerCutout : 0,
+                        responsive: true,
+                        maintainAspectRatio: true
                     });
                 } catch(exception) {
                     console.log(exception);
