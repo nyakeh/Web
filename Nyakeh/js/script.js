@@ -49,35 +49,23 @@ myLineChart.Line(data, {
     maintainAspectRatio: true
 });
 
-var expensesData = [
-    {
-        value: 300,
-        color:"#F7464A",
-        label: "Red"
-    },
-    {
-        value: 50,
-        color: "#46BFBD",
-        label: "Green"
-    },
-    {
-        value: 100,
-        color: "#FDB45C",
-        label: "Yellow"
-    }
-]
-
+var expensesData = []
 var expensesChart = $("#expensesChart").get(0).getContext("2d");
 $.ajax({ url: 'Expenses_Function.php',
-            data: { month: "January", year: "2016" },
+            data: { month: "january", year: "2016" },
             type: 'post',
             success: function (output) {
                 try {
                     var results = JSON.parse(output);
                     for (var i in results) {
+                        r = Math.floor(Math.random() * 200);
+                        g = Math.floor(Math.random() * 200);
+                        b = Math.floor(Math.random() * 200);
+                        colour = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+                        
                         expensesData.push({
                             value: results[i].Amount,
-                            color: results[i].Colour,
+                            color: colour,
                             label: results[i].Category
                         })                    
                     }
@@ -85,9 +73,7 @@ $.ajax({ url: 'Expenses_Function.php',
                     myExpencesChart.Pie(expensesData,{
                         percentageInnerCutout : 0
                     });
-                    console.log(results);
                 } catch(exception) {
-                    console.log("exception");
                     console.log(exception);
                 }
             }

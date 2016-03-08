@@ -19,23 +19,39 @@
     class ExpenseDetails {
         public $Category = "";
         public $Amount = 0;
-        public $Colour  = "";
+       // public $Colour  = "";
+    }
+    $month = "2";
+    $year = "2016";
+    // $month = $_POST['month'];
+    // $year = $_POST['year'];
+    $expenseItems = array();
+    $sqlResult = mysqli_query($conn,"SELECT * FROM `current_account` WHERE MONTH(date) = 2 and YEAR(date) = " . $year);
+    
+    while($row = mysqli_fetch_assoc($sqlResult)){
+        echo $row['value'];
+        if(isset($expenseItems[$row['Category']])) {
+            $expenseItems[$row['Category']] += $row['Value'];
+        } else{
+            $expenseItems[$row['Category']] = $row['Value'];
+        }
+    }
+  //  echo json_encode($expenseItems);
+  
+  $resultArray = array();
+    foreach($expenseItems as $key=>$value){
+        $piecesOfPie = new ExpenseDetails();
+        $piecesOfPie->Category = $key;
+        $piecesOfPie->Amount = $value;
+        $resultArray[] = $piecesOfPie;
+        #$piecesOfPie->Colour = "#A7464A";
     }
     
-    $month = $_POST['month'];
-    $year = $_POST['year'];
+    // $piecesOfPie = new ExpenseDetails();
+    // $piecesOfPie->Category = "nyakeh";
+    // $piecesOfPie->Amount = 200;
+    // $piecesOfPie->Colour = "#A7464A";
     
-    $result = mysqli_query($conn,"SELECT * FROM `current_account` WHERE MONTH(date) = ".$monthIndex[$month]." and YEAR(date) = " . $year);
-    
-    while($row = mysqli_fetch_assoc($result)){
-        /*echo "ID: ".$row['id'].", Value:".$row['Value'] .", Category:".$row['Category'].", Date:".$row['Date']."<br/>";*/
-    }
-    
-    $piecesOfPie = new ExpenseDetails();
-    $piecesOfPie->Category = "nyakeh";
-    $piecesOfPie->Amount = 200;
-    $piecesOfPie->Colour = "#A7464A";
-    
-    $resultArray = [$piecesOfPie];
+    // $resultArray = [$piecesOfPie];
     
     echo json_encode($resultArray);
