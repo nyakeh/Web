@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Dashboard | Turning data into information</title>
     <meta name="theme-color" content="#477965">
-    <meta name="description" content="A personal retrospective.">
+    <meta name="description" content="A personal finance retrospective.">
     <meta name="author" content="Nyakeh Rogers">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
@@ -69,7 +69,7 @@
         <div class="container" id="expenses">
             <div class="row">
                 <h3 class="eight columns">Expenses breakdown for</h3>
-                <select id="expensesMonth" onchange="changeExpensesMonth(this.value)" class="four columns">
+                <select id="expensesMonthSelector" onchange="changeExpensesMonth(this.value)" class="four columns">
                     <option value="january">January</option>
                     <option value="february">February</option>
                     <option value="march">March</option>
@@ -83,7 +83,14 @@
                     <option value="november">November</option>
                     <option value="december">December</option>
                 </select>
-                <canvas id="expensesChart"></canvas>
+            </div>
+            <div class="row cappedRowHeight">
+                <div class="one columns">&nbsp</div>
+                <div class="seven columns">
+                    <canvas id="expensesChart" width="500" height="500"></canvas>
+                </div>
+                
+                <div id="expensesTable" class="four columns"></div>
             </div>
         </div>
     </div>
