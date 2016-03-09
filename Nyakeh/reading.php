@@ -78,7 +78,7 @@ error_reporting(E_ALL|E_STRICT);
 		<div class="footer">
 			<ul>
 				<li>
-					<a href="https://github.com/nyakeh123">
+					<a href="https://github.com/nyakeh">
 						<img src="img/github.png">
 					</a>
 				</li>
