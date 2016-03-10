@@ -82,10 +82,8 @@ var populateExpensesChart = function($month, $year) {
                             percentageInnerCutout : 0,
                             responsive: true,
                             maintainAspectRatio: true
-                        });
-                        
+                        });                        
                         table += '</tbody></table>';
-                        console.log(table);
                         $("#expensesTable").html(table);
                     } catch(exception) {
                         console.log(exception);
@@ -94,3 +92,41 @@ var populateExpensesChart = function($month, $year) {
     });
 }
 populateExpensesChart("december","2015");
+
+    var datasets = []
+    $.ajax({ url: 'Net_Worth_Function.php',
+                type: 'post',
+                success: function (output) {
+                    try {
+                        var results = JSON.parse(output);
+                        for (var i in results) {
+                            datasets.push({
+                                label: results[i].Name,
+                                fillColor: results[i].Colour,
+                                strokeColor: results[i].Colour,
+                                pointColor: results[i].Colour,
+                                pointHighlightFill: results[i].Colour,
+                                data: results[i].Data
+                            })
+                        }
+                        
+                        var netWorthData = {
+                            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                            datasets: datasets
+                        };
+
+                        var ctx = $("#netWorthChart").get(0).getContext("2d");
+                        var myLineChart = new Chart(ctx);
+                        myLineChart.Line(netWorthData, {
+                            pointDotRadius: 6,
+                            bezierCurve: true,
+                            scaleShowVerticalLines: false,
+                            scaleGridLineColor: "black",
+                            responsive: true,
+                            maintainAspectRatio: true
+                        });
+                    } catch(exception) {
+                        console.log(exception);
+                    }
+                }
+    });
