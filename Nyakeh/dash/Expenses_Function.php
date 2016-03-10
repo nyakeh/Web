@@ -19,7 +19,6 @@
     class ExpenseDetails {
         public $Category = "";
         public $Amount = 0;
-       // public $Colour  = "";
     }
     $month = $_POST['month'];
     $year = $_POST['year'];
@@ -34,7 +33,6 @@
             $expenseItems[$row['Category']] = $row['Value'];
         }
     }
-  //  echo json_encode($expenseItems);
   
   $resultArray = array();
     foreach($expenseItems as $key=>$value){
@@ -42,14 +40,6 @@
         $piecesOfPie->Category = $key;
         $piecesOfPie->Amount = $value;
         $resultArray[] = $piecesOfPie;
-        #$piecesOfPie->Colour = "#A7464A";
     }
-    
-    // $piecesOfPie = new ExpenseDetails();
-    // $piecesOfPie->Category = "nyakeh";
-    // $piecesOfPie->Amount = 200;
-    // $piecesOfPie->Colour = "#A7464A";
-    
-    // $resultArray = [$piecesOfPie];
     
     echo json_encode($resultArray);
