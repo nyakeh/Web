@@ -26,7 +26,6 @@
     $sqlResult = mysqli_query($conn,"SELECT * FROM `current_account` WHERE value < 0 AND MONTH(date) = ".$monthIndex[$month]." AND YEAR(date) = " . $year);
     
     while($row = mysqli_fetch_assoc($sqlResult)){
-        echo $row['value'];
         if(isset($expenseItems[$row['Category']])) {
             $expenseItems[$row['Category']] += $row['Value'];
         } else{
@@ -34,7 +33,7 @@
         }
     }
   
-  $resultArray = array();
+    $resultArray = array();
     foreach($expenseItems as $key=>$value){
         $piecesOfPie = new ExpenseDetails();
         $piecesOfPie->Category = $key;
