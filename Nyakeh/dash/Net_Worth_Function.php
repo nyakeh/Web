@@ -3,10 +3,10 @@
     global $conn;
         
     $accountColour = array(
-        "Current" => "rgba(71,121,101,0.2)",
-        "Graduate" => "rgba(61,91,121,0.2)",
-        "Pension" => "rgba(176,0,17,0.2)",
-        "Investment" => "rgba(121,101,71,0.2)");
+        "Current" => "rgba(71,121,101,",
+        "Graduate" => "rgba(61,91,121,",
+        "Pension" => "rgba(176,0,17,",
+        "Investment" => "rgba(121,101,71,");
         
     class NetWorthAccount {
         public $Name = "";

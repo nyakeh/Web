@@ -101,12 +101,14 @@ $.ajax({ url: 'Net_Worth_Function.php',
                 try {
                     var results = JSON.parse(output);
                     for (var i in results.Data) {
+                        var lineColour = results.Data[i].Colour + "1)";
+                        var fillColour = results.Data[i].Colour+"0.2)"
                         datasets.push({
                             label: results.Data[i].Name,
-                            fillColor: results.Data[i].Colour,
-                            strokeColor: results.Data[i].Colour,
-                            pointColor: results.Data[i].Colour,
-                            pointHighlightFill: results.Data[i].Colour,
+                            strokeColor: lineColour,
+                            pointColor: lineColour,
+                            fillColor: fillColour,
+                            pointHighlightFill: fillColour,
                             data: results.Data[i].Data
                         })
                     }
@@ -119,7 +121,8 @@ $.ajax({ url: 'Net_Worth_Function.php',
                     var ctx = $("#netWorthChart").get(0).getContext("2d");
                     var myLineChart = new Chart(ctx);
                     myLineChart.Line(netWorthData, {
-                        pointDotRadius: 6,
+                        pointDotRadius: 4,
+                        datasetStrokeWidth : 4,
                         bezierCurve: true,
                         scaleShowVerticalLines: false,
                         scaleGridLineColor: "black",
