@@ -7,9 +7,9 @@ $("#deskImage").click(function () {
     }
 });
 
-var changeExpensesMonth = function($month) {
-    console.log($month);
-    populateExpensesChart($month, "2015");
+var changeExpensesMonth = function($selectedDate) {
+    var dateInputs = $selectedDate.split(',');
+    populateExpensesChart(dateInputs[0], dateInputs[1]);
 } 
 
 var data = {
@@ -53,11 +53,12 @@ myLineChart.Line(data, {
     maintainAspectRatio: true
 });
 
-var expensesChart = $("#expensesChart").get(0).getContext("2d");
 var populateExpensesChart = function($month, $year) {
+    $('#expensesChart').replaceWith('<canvas id="expensesChart" width="500" height="500"></canvas>');
+    var expensesChart = $("#expensesChart").get(0).getContext("2d");
     var expensesData = []
     $.ajax({ url: 'Expenses_Function.php',
-                data: { month: "december", year: "2015" },
+                data: { month: $month, year: $year },
                 type: 'post',
                 success: function (output) {
                     try {
@@ -91,42 +92,42 @@ var populateExpensesChart = function($month, $year) {
                 }
     });
 }
-populateExpensesChart("december","2015");
+populateExpensesChart("february","2016");
 
-    var datasets = []
-    $.ajax({ url: 'Net_Worth_Function.php',
-                type: 'post',
-                success: function (output) {
-                    try {
-                        var results = JSON.parse(output);
-                        for (var i in results.Data) {
-                            datasets.push({
-                                label: results.Data[i].Name,
-                                fillColor: results.Data[i].Colour,
-                                strokeColor: results.Data[i].Colour,
-                                pointColor: results.Data[i].Colour,
-                                pointHighlightFill: results.Data[i].Colour,
-                                data: results.Data[i].Data
-                            })
-                        }
-                        
-                        var netWorthData = {
-                            labels: results.Labels,
-                            datasets: datasets
-                        };
-
-                        var ctx = $("#netWorthChart").get(0).getContext("2d");
-                        var myLineChart = new Chart(ctx);
-                        myLineChart.Line(netWorthData, {
-                            pointDotRadius: 6,
-                            bezierCurve: true,
-                            scaleShowVerticalLines: false,
-                            scaleGridLineColor: "black",
-                            responsive: true,
-                            maintainAspectRatio: true
-                        });
-                    } catch(exception) {
-                        console.log(exception);
+var datasets = []
+$.ajax({ url: 'Net_Worth_Function.php',
+            type: 'post',
+            success: function (output) {
+                try {
+                    var results = JSON.parse(output);
+                    for (var i in results.Data) {
+                        datasets.push({
+                            label: results.Data[i].Name,
+                            fillColor: results.Data[i].Colour,
+                            strokeColor: results.Data[i].Colour,
+                            pointColor: results.Data[i].Colour,
+                            pointHighlightFill: results.Data[i].Colour,
+                            data: results.Data[i].Data
+                        })
                     }
+                    
+                    var netWorthData = {
+                        labels: results.Labels,
+                        datasets: datasets
+                    };
+
+                    var ctx = $("#netWorthChart").get(0).getContext("2d");
+                    var myLineChart = new Chart(ctx);
+                    myLineChart.Line(netWorthData, {
+                        pointDotRadius: 6,
+                        bezierCurve: true,
+                        scaleShowVerticalLines: false,
+                        scaleGridLineColor: "black",
+                        responsive: true,
+                        maintainAspectRatio: true
+                    });
+                } catch(exception) {
+                    console.log(exception);
                 }
-    });
+            }
+});
