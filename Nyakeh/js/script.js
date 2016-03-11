@@ -99,19 +99,19 @@ populateExpensesChart("december","2015");
                 success: function (output) {
                     try {
                         var results = JSON.parse(output);
-                        for (var i in results) {
+                        for (var i in results.Data) {
                             datasets.push({
-                                label: results[i].Name,
-                                fillColor: results[i].Colour,
-                                strokeColor: results[i].Colour,
-                                pointColor: results[i].Colour,
-                                pointHighlightFill: results[i].Colour,
-                                data: results[i].Data
+                                label: results.Data[i].Name,
+                                fillColor: results.Data[i].Colour,
+                                strokeColor: results.Data[i].Colour,
+                                pointColor: results.Data[i].Colour,
+                                pointHighlightFill: results.Data[i].Colour,
+                                data: results.Data[i].Data
                             })
                         }
                         
                         var netWorthData = {
-                            labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                            labels: results.Labels,
                             datasets: datasets
                         };
 
