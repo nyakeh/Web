@@ -20,7 +20,7 @@
     }
     
     $expenseItems = array();
-    $sqlResult = mysqli_query($conn,"SELECT * FROM `net_worth`");
+    $sqlResult = mysqli_query($conn,"SELECT * FROM `net_worth` ORDER BY Date");
     
     $chartData = array();
     $dates = array();
