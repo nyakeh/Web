@@ -48,12 +48,42 @@
 
     <div class="section">
         <div class="container">
-            <div class="row">
-                <div class="nine columns">
+            <form>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="AnnualIncomeInput">Annual income</label>
+                        <input class="u-full-width" type="text" value="22000" id="AnnualIncomeInput" pattern="\d+(\.\d{2})?" required >
+                    </div>
+                    <div class="six columns">
+                        <!--<label for="exampleEmailInput">Monthly savings</label>
+                        <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">-->
+                        &nbsp
+                    </div>
                 </div>
-                <div class="three columns">
+                <div class="row">
+                    <div class="six columns">
+                        <label for="monthlySavingsInput">Monthly savings</label>
+                        <input class="u-full-width" type="text" value="300" id="monthlySavingsInput" pattern="\d+(\.\d{2})?" required>
+                    </div>
+                    <div class="six columns">
+                        <!--<label for="exampleEmailInput">Savings rate</label>
+                        <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">-->
+                        &nbsp
+                    </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="portfolioValueInput">Current portfolio value</label>
+                        <input class="u-full-width" type="text" value="940.80" id="portfolioValueInput" pattern="\d+(\.\d{2})?">
+                    </div>
+                    <div class="six columns">
+                        <!--<label for="exampleEmailInput">Your email</label>
+                        <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">-->
+                        &nbsp
+                    </div>
+                </div>
+                <input class="button-primary" type="submit" value="Submit">
+            </form>
         </div>
     </div>
 
