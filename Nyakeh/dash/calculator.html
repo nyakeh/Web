@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard | Early retirement calculator</title>
+    <meta name="theme-color" content="#477965">
+    <meta name="description" content="Early retirement calculator">
+    <meta name="author" content="Nyakeh Rogers">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/style_dashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-48357881-1', 'nyakeh.co.uk/dashboard/calculator');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a class="navbar-link" href="index#overview">Overview</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="index#expenses">Expenses</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="index#netWorth">Net Worth</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="index#summary">Summary</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Calculator</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="nine columns">
+                </div>
+                <div class="three columns">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="retirement">
+        <div class="row">
+            <h3>Retirement</h3>
+            <canvas id="financeChart"></canvas>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container" id="lifetime">
+            <div class="row">
+                <h3>Lifetime</h3>
+                <table class="u-full-width">
+                    <thead>
+                        <tr>
+                            <th>Years</th>
+                            <th>Income</th>
+                            <th>Expenses</th>
+                            <th>Invested</th>
+                            <th>ROI</th>
+                            <th>Net Worth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>34</td>
+                            <td>£748,000</td>
+                            <td>£583,440</td>
+                            <td>£164,560</td>
+                            <td>£298,330</td>
+                            <td>£462,890</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>by <a href="https://twitter.com/nyakehrogers" target="_blank">@nyakehrogers</a></p>
+        </div>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="../js/script.js"></script>
+
+</html>
