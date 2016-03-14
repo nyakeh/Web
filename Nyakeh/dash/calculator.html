@@ -52,7 +52,7 @@
                 <div class="row">
                     <div class="six columns">
                         <label for="costOfLivingInput">Cost of living</label>
-                        <input class="u-full-width" type="text" value="17500" id="costOfLivingInput" pattern="\d+(\.\d{2})?" required >
+                        <input class="u-full-width" type="text" value="17500" id="costOfLivingInput" pattern="\d+(\.\d{2})?" required>
                     </div>
                     <div class="six columns">
                         <!--<label for="exampleEmailInput">Monthly savings</label>
@@ -63,7 +63,7 @@
                 <div class="row">
                     <div class="six columns">
                         <label for="monthlySavingsInput">Monthly savings</label>
-                        <input class="u-full-width" type="text" value="300" id="monthlySavingsInput" pattern="\d+(\.\d{2})?" required>
+                        <input class="u-full-width" type="text" value="100" id="monthlySavingsInput" pattern="\d+(\.\d{2})?" required>
                     </div>
                     <div class="six columns">
                         <!--<label for="exampleEmailInput">Savings rate</label>
@@ -73,8 +73,8 @@
                 </div>
                 <div class="row">
                     <div class="six columns">
-                        <label for="portfolioValueInput">Current portfolio value</label>
-                        <input class="u-full-width" type="text" value="940.80" id="portfolioValueInput" pattern="\d+(\.\d{2})?">
+                        <label for="portfolioInput">Current portfolio value</label>
+                        <input class="u-full-width" type="text" value="5000" id="portfolioInput" pattern="\d+(\.\d{2})?">
                     </div>
                     <div class="six columns">
                         <!--<label for="exampleEmailInput">Your email</label>
@@ -84,6 +84,21 @@
                 </div>
                 <input class="button-primary" type="submit" value="Submit" id="calculatorSubmit">
             </form>
+
+            <div class="row">
+                <div class="three columns">
+                    <p>Principal return:</p>
+                    <p id="principalReturn"></p>
+                </div>
+                <div class="three columns">
+                    <p>Savings return:</p>
+                    <p id="savingsReturn"></p>
+                </div>
+                <div class="three columns">
+                    <p>Future Net Worth:</p>
+                    <p id="futureNetWorth"></p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -93,6 +108,7 @@
             <canvas id="financeChart"></canvas>
         </div>
     </div>
+
     <div class="section">
         <div class="container" id="lifetime">
             <div class="row">
