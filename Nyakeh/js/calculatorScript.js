@@ -6,9 +6,10 @@ $('#calculatorSubmit').click(function() {
     var costOfLiving = $('#costOfLivingInput').val();
     var monthlySaving = $('#monthlySavingsInput').val();
     var portfolio = $('#portfolioInput').val();
+    var years = $('#yearsInput').val();
 
     var monthlyInterestRate = (ANNUAL_RETURN_ON_INVESTMENT / MONTHS_PER_YEAR);
-    var monthsInTerm = MONTHS_PER_YEAR * (10);
+    var monthsInTerm = MONTHS_PER_YEAR * years;
     
     var termInterestRate = Math.pow((1 + monthlyInterestRate), monthsInTerm);
     var principalReturn = portfolio * termInterestRate;
