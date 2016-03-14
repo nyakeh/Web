@@ -16,7 +16,17 @@ $('#calculatorSubmit').click(function() {
     var compoundTermInterestRate = (termInterestRate-1) / monthlyInterestRate;
     var savingsReturn = monthlySaving * compoundTermInterestRate;
 
-    $('#principalReturn').text('£' + principalReturn.toFixed(2));
-    $('#savingsReturn').text('£' + savingsReturn.toFixed(2));
-    $('#futureNetWorth').text('£' + (principalReturn + savingsReturn).toFixed(2));
+    $('#principalReturn').text('£' + principalReturn.formatMoney());
+    $('#savingsReturn').text('£' + savingsReturn.formatMoney());
+    $('#futureNetWorth').text('£' + (principalReturn + savingsReturn).formatMoney());
 })
+
+Number.prototype.formatMoney = function(){
+var n = this,
+    c = 2,
+    t = ",",
+    s = n < 0 ? "-" : "", 
+    i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", 
+    j = (j = i.length) > 3 ? j % 3 : 0;
+   return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? "." + Math.abs(n - i).toFixed(c).slice(2) : "");
+ };
