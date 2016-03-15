@@ -9,9 +9,9 @@ $('#calculatorSubmit').click(function() {
     var withdrawalRate = $('#withdrawalRateInput').val() / 100;
 
     var yearsInvesting = [];
-    var principalReturnHistory = [];
-    var savingsReturnHistory = [];
-    var netWorthHistory = [];
+    var returnOnInvestmentHistory = [];
+    var netWorthHistory = [];    
+    var savingsAmountHistory = [];
 
     var requiredInvestedAmount = costOfLiving / withdrawalRate;
     var netWorth = portfolio;
@@ -30,10 +30,11 @@ $('#calculatorSubmit').click(function() {
         var compoundTermInterestRate = (termInterestRate - 1) / monthlyInterestRate;
         var savingsReturn = monthlySaving * compoundTermInterestRate;
         netWorth = principalReturn + savingsReturn;
-
-        principalReturnHistory.push(principalReturn);
-        savingsReturnHistory.push(savingsReturn);
-        netWorthHistory.push(netWorth);
+        
+        var totalSavedToDate = monthlySaving * monthsInTerm;
+        savingsAmountHistory.push(totalSavedToDate.toFixed(2));
+        returnOnInvestmentHistory.push((savingsReturn-totalSavedToDate).toFixed(2));
+        netWorthHistory.push(netWorth.toFixed(2));
     }
 
     $('#principalReturn').text('£' + principalReturn.formatMoney());
@@ -46,11 +47,11 @@ $('#calculatorSubmit').click(function() {
         datasets: [
             {
                 label: "My First dataset",
-                fillColor: "rgba(71,121,101,0.2)",
+                fillColor: "rgba(71,121,101,0.4)",
                 strokeColor: "rgba(71,121,101,1)",
                 pointColor: "rgba(71,121,101,1)",
                 pointHighlightFill: "rgba(71,121,101,0.2)",
-                data: principalReturnHistory
+                data: savingsAmountHistory
             },
             {
                 label: "My Second dataset",
@@ -58,7 +59,7 @@ $('#calculatorSubmit').click(function() {
                 strokeColor: "rgba(176,0,17,1)",
                 pointColor: "rgba(176,0,17,1)",
                 pointHighlightFill: "rgba(176,0,17,0.5)",
-                data: savingsReturnHistory
+                data: returnOnInvestmentHistory
             },
             {
                 label: "My Second dataset",
