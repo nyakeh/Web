@@ -1,16 +1,17 @@
-const ANNUAL_RETURN_ON_INVESTMENT = 0.05;
-const WITHDRAWAL_RATE = 0.04;
 const MONTHS_PER_YEAR = 12;
+var assumptionsHidden = true;
 
 $('#calculatorSubmit').click(function() {
     var costOfLiving = $('#costOfLivingInput').val();
     var monthlySaving = $('#monthlySavingsInput').val();
     var portfolio = $('#portfolioInput').val();
+    var interestRate = $('#interestRateInput').val()/100;
+    var withdrawalRate = $('#withdrawalRateInput').val()/100;
 
-    var requiredInvestedAmount = costOfLiving / WITHDRAWAL_RATE;
+    var requiredInvestedAmount = costOfLiving / withdrawalRate;
     var netWorth = portfolio;
     var years = 0;
-    var monthlyInterestRate = (ANNUAL_RETURN_ON_INVESTMENT / MONTHS_PER_YEAR);
+    var monthlyInterestRate = (interestRate / MONTHS_PER_YEAR);
     
     while (netWorth < requiredInvestedAmount) {
         years++;
@@ -28,7 +29,7 @@ $('#calculatorSubmit').click(function() {
     $('#savingsReturn').text('£' + savingsReturn.formatMoney());
     $('#futureNetWorth').text('£' + netWorth.formatMoney());
     $('#yearsTillRetirement').text(years + ' years');
-})
+});
 
 Number.prototype.formatMoney = function() {
     var n = this,

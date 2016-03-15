@@ -54,17 +54,17 @@
                         <label for="costOfLivingInput">Cost of living</label>
                         <input class="u-full-width" type="text" value="17500" id="costOfLivingInput" pattern="\d+(\.\d{2})?" required>
                     </div>
-                    <div class="six columns">
-                        &nbsp
-                    </div>
+                    <div class="six columns">&nbsp</div>
                 </div>
                 <div class="row">
                     <div class="six columns">
                         <label for="monthlySavingsInput">Monthly savings</label>
                         <input class="u-full-width" type="text" value="100" id="monthlySavingsInput" pattern="\d+(\.\d{2})?" required>
                     </div>
-                    <div class="six columns">
-                        &nbsp
+                    <div class="three columns">&nbsp</div>
+                    <div class="three columns">
+                        <label for="interestRateInput">Interest Rate (%)</label>
+                        <input class="u-full-width" type="text" value="5" id="interestRateInput" pattern="\d+(\.\d{2})?" required>
                     </div>
                 </div>
                 <div class="row">
@@ -72,15 +72,17 @@
                         <label for="portfolioInput">Current portfolio value</label>
                         <input class="u-full-width" type="text" value="5000" id="portfolioInput" pattern="\d+">
                     </div>
-                    <div class="six columns">
-                        &nbsp
+                    <div class="three columns">&nbsp</div>
+                    <div class="three columns">
+                        <label for="withdrawalRateInput">Withdrawal Rate (%)</label>
+                        <input class="u-full-width" type="text" value="4" id="withdrawalRateInput" pattern="\d+(\.\d{2})?" required>
                     </div>
                 </div>
                 <input class="button-primary" type="submit" value="Submit" id="calculatorSubmit">
             </form>
 
             <div class="row">
-                <h3>Lifetime</h3>
+                <h3>Results</h3>
                 <table class="u-full-width">
                     <thead>
                         <tr>
