@@ -66,6 +66,10 @@ span.gold {
     margin-top: 1%;
 }
 
+.assumptions {
+    display: none;
+}
+
 /* Bigger than 550 */
 
 @media (min-width: 550px) {
