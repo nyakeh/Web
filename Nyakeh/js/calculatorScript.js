@@ -8,13 +8,20 @@ $('#calculatorSubmit').click(function() {
     var interestRate = $('#interestRateInput').val() / 100;
     var withdrawalRate = $('#withdrawalRateInput').val() / 100;
 
+    var yearsInvesting = [];
+    var principalReturnHistory = [];
+    var savingsReturnHistory = [];
+    var netWorthHistory = [];
+
     var requiredInvestedAmount = costOfLiving / withdrawalRate;
     var netWorth = portfolio;
     var years = 0;
     var monthlyInterestRate = (interestRate / MONTHS_PER_YEAR);
+    var currentYear = new Date().getFullYear();
 
     while (netWorth < requiredInvestedAmount) {
         years++;
+        yearsInvesting.push(currentYear++);
         var monthsInTerm = MONTHS_PER_YEAR * years;
 
         var termInterestRate = Math.pow((1 + monthlyInterestRate), monthsInTerm);
@@ -23,12 +30,58 @@ $('#calculatorSubmit').click(function() {
         var compoundTermInterestRate = (termInterestRate - 1) / monthlyInterestRate;
         var savingsReturn = monthlySaving * compoundTermInterestRate;
         netWorth = principalReturn + savingsReturn;
+
+        principalReturnHistory.push(principalReturn);
+        savingsReturnHistory.push(savingsReturn);
+        netWorthHistory.push(netWorth);
     }
 
     $('#principalReturn').text('£' + principalReturn.formatMoney());
     $('#savingsReturn').text('£' + savingsReturn.formatMoney());
     $('#futureNetWorth').text('£' + netWorth.formatMoney());
     $('#yearsTillRetirement').text(years + ' years');
+
+    var data = {
+        labels: yearsInvesting,
+        datasets: [
+            {
+                label: "My First dataset",
+                fillColor: "rgba(71,121,101,0.2)",
+                strokeColor: "rgba(71,121,101,1)",
+                pointColor: "rgba(71,121,101,1)",
+                pointHighlightFill: "rgba(71,121,101,0.2)",
+                data: principalReturnHistory
+            },
+            {
+                label: "My Second dataset",
+                fillColor: "rgba(176,0,17,0.2)",
+                strokeColor: "rgba(176,0,17,1)",
+                pointColor: "rgba(176,0,17,1)",
+                pointHighlightFill: "rgba(176,0,17,0.5)",
+                data: savingsReturnHistory
+            },
+            {
+                label: "My Second dataset",
+                fillColor: "rgba(121,101,71,0.2)",
+                strokeColor: "rgba(121,101,71,1)",
+                pointColor: "rgba(121,101,71,1)",
+                pointHighlightFill: "rgba(121,101,71,0.5)",
+                data: netWorthHistory
+            }
+        ]
+    };
+
+    var ctx = $("#retirementChart").get(0).getContext("2d");
+    var myLineChart = new Chart(ctx);
+    myLineChart.Line(data, {
+        pointDotRadius: 4,
+        datasetStrokeWidth: 4,
+        bezierCurve: true,
+        scaleShowVerticalLines: false,
+        scaleGridLineColor: "black",
+        responsive: true,
+        maintainAspectRatio: true
+    });
 });
 
 $('#assumptionsToggle').click(function() {
