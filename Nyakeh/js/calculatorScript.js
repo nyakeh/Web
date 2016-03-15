@@ -84,10 +84,8 @@ $('#calculatorSubmit').click(function() {
         scaleGridLineColor: "black",
         responsive: true,
         maintainAspectRatio: true,
-        multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>"
+        multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>",
     });
-    var legend = retirementChart.generateLegend();
-    $('#retirementLegend').get(0).innerHTML(legend);
 });
 
 $('#assumptionsToggle').click(function() {
