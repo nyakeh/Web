@@ -27,7 +27,7 @@ $('#calculatorSubmit').click(function() {
     $('#principalReturn').text('£' + principalReturn.formatMoney());
     $('#savingsReturn').text('£' + savingsReturn.formatMoney());
     $('#futureNetWorth').text('£' + netWorth.formatMoney());
-    $('#yearsTillRetirement').text(years + 'years');
+    $('#yearsTillRetirement').text(years + ' years');
 })
 
 Number.prototype.formatMoney = function() {
