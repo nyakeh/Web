@@ -10,7 +10,7 @@ $('#calculatorSubmit').click(function() {
 
     var yearsInvesting = [];
     var returnOnInvestmentHistory = [];
-    var netWorthHistory = [];    
+    var netWorthHistory = [];
     var savingsAmountHistory = [];
 
     var requiredInvestedAmount = costOfLiving / withdrawalRate;
@@ -21,7 +21,8 @@ $('#calculatorSubmit').click(function() {
 
     while (netWorth < requiredInvestedAmount) {
         years++;
-        yearsInvesting.push(currentYear++);
+        currentYear++;
+
         var monthsInTerm = MONTHS_PER_YEAR * years;
 
         var termInterestRate = Math.pow((1 + monthlyInterestRate), monthsInTerm);
@@ -30,11 +31,12 @@ $('#calculatorSubmit').click(function() {
         var compoundTermInterestRate = (termInterestRate - 1) / monthlyInterestRate;
         var savingsReturn = monthlySaving * compoundTermInterestRate;
         netWorth = principalReturn + savingsReturn;
-        
+
+        yearsInvesting.push(currentYear);
         var totalSavedToDate = monthlySaving * monthsInTerm;
-        savingsAmountHistory.push(totalSavedToDate.toFixed(2));
-        returnOnInvestmentHistory.push((savingsReturn-totalSavedToDate).toFixed(2));
-        netWorthHistory.push(netWorth.toFixed(2));
+        savingsAmountHistory.push(totalSavedToDate.toFixed());
+        returnOnInvestmentHistory.push((savingsReturn - totalSavedToDate).toFixed());
+        netWorthHistory.push(netWorth.toFixed());
     }
 
     $('#principalReturn').text('£' + principalReturn.formatMoney());
@@ -46,43 +48,46 @@ $('#calculatorSubmit').click(function() {
         labels: yearsInvesting,
         datasets: [
             {
-                label: "My First dataset",
-                fillColor: "rgba(71,121,101,0.4)",
+                label: "Net Worth",
+                fillColor: "rgba(0,0,0,0.2)",
+                strokeColor: "rgba(0,0,0,1)",
+                pointColor: "rgba(0,0,0,1)",
+                pointHighlightFill: "rgba(0,0,0,0.5)",
+                data: netWorthHistory
+            },
+            {
+                label: "Saved",
+                fillColor: "rgba(71,121,101,0.2)",
                 strokeColor: "rgba(71,121,101,1)",
                 pointColor: "rgba(71,121,101,1)",
                 pointHighlightFill: "rgba(71,121,101,0.2)",
                 data: savingsAmountHistory
             },
             {
-                label: "My Second dataset",
-                fillColor: "rgba(176,0,17,0.2)",
-                strokeColor: "rgba(176,0,17,1)",
-                pointColor: "rgba(176,0,17,1)",
-                pointHighlightFill: "rgba(176,0,17,0.5)",
-                data: returnOnInvestmentHistory
-            },
-            {
-                label: "My Second dataset",
+                label: "ROI",
                 fillColor: "rgba(121,101,71,0.2)",
                 strokeColor: "rgba(121,101,71,1)",
                 pointColor: "rgba(121,101,71,1)",
                 pointHighlightFill: "rgba(121,101,71,0.5)",
-                data: netWorthHistory
+                data: returnOnInvestmentHistory
             }
         ]
     };
 
     var ctx = $("#retirementChart").get(0).getContext("2d");
-    var myLineChart = new Chart(ctx);
-    myLineChart.Line(data, {
+    var retirementChart = new Chart(ctx);
+    retirementChart.Line(data, {
         pointDotRadius: 4,
         datasetStrokeWidth: 4,
         bezierCurve: true,
         scaleShowVerticalLines: false,
         scaleGridLineColor: "black",
         responsive: true,
-        maintainAspectRatio: true
+        maintainAspectRatio: true,
+        multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>"
     });
+    var legend = retirementChart.generateLegend();
+    $('#retirementLegend').get(0).innerHTML(legend);
 });
 
 $('#assumptionsToggle').click(function() {
