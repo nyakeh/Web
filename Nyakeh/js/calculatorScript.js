@@ -2,6 +2,10 @@ const MONTHS_PER_YEAR = 12;
 var assumptionsHidden = true;
 
 $('#calculatorSubmit').click(function() {
+    calculateRetirement();
+});
+
+var calculateRetirement = function() {
     var costOfLiving = $('#costOfLivingInput').val();
     var monthlySaving = $('#monthlySavingsInput').val();
     var portfolio = $('#portfolioInput').val();
@@ -73,7 +77,8 @@ $('#calculatorSubmit').click(function() {
             }
         ]
     };
-
+    
+    $('#retirementChart').replaceWith('<canvas id="retirementChart"></canvas>');
     var ctx = $("#retirementChart").get(0).getContext("2d");
     var retirementChart = new Chart(ctx);
     retirementChart.Line(data, {
@@ -84,9 +89,9 @@ $('#calculatorSubmit').click(function() {
         scaleGridLineColor: "black",
         responsive: true,
         maintainAspectRatio: true,
-        multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>",
+        multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>"
     });
-});
+};
 
 $('#assumptionsToggle').click(function() {
     if (assumptionsHidden) {
@@ -107,3 +112,5 @@ Number.prototype.formatMoney = function() {
         j = (j = i.length) > 3 ? j % 3 : 0;
     return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? "." + Math.abs(n - i).toFixed(c).slice(2) : "");
 };
+
+calculateRetirement();
