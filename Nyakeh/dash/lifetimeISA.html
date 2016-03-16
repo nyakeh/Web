@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Dashboard | Early retirement calculator</title>
+    <title>Dashboard | Lifetime ISA calculator</title>
     <meta name="theme-color" content="#477965">
-    <meta name="description" content="Early retirement calculator">
+    <meta name="description" content="Lifetime ISA calculator">
     <meta name="author" content="Nyakeh Rogers">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
@@ -28,7 +28,7 @@
             m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-48357881-1', 'nyakeh.co.uk/dash/calculator');
+        ga('create', 'UA-48357881-1', 'nyakeh.co.uk/dash/lifetimeIsa');
         ga('send', 'pageview');
     </script>
 </head>
@@ -41,8 +41,8 @@
                 <li class="navbar-item"><a class="navbar-link" href="index#expenses">Expenses</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="index#netWorth">Net Worth</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="index#summary">Summary</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#">Calculator</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="lifetimeISA">Lifetime ISA</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="calculator">Calculator</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Lifetime ISA</a></li>
             </ul>
         </div>
     </nav>
@@ -50,13 +50,13 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <h3>Early retirement calculator</h3>
+                <h3>Lifetime ISA calculator</h3>
             </div>
             <form action="javascript:void(0);">
                 <div class="row">
                     <div class="six columns">
-                        <label for="costOfLivingInput">Cost of living</label>
-                        <input class="u-full-width" type="text" value="17500" id="costOfLivingInput" pattern="\d+(\.\d{2})?" required>
+                        <label for="ageInput">Age on 6 April 2017</label>
+                        <input class="u-full-width" type="text" value="24" id="ageInput" pattern="\d+" required>
                     </div>
                     <div class="three columns">&nbsp</div>
                     <div class="three columns">
@@ -65,24 +65,13 @@
                 </div>
                 <div class="row">
                     <div class="six columns">
-                        <label for="monthlySavingsInput">Monthly savings</label>
-                        <input class="u-full-width" type="text" value="300" id="monthlySavingsInput" pattern="\d+(\.\d{2})?" required>
+                        <label for="yearlyContributionInput">Yearly contribution</label>
+                        <input class="u-full-width" type="text" value="4000" id="yearlyContributionInput" pattern="\d+(\.\d{2})?" required>
                     </div>
                     <div class="three columns">&nbsp</div>
                     <div class="three columns assumptions">
                         <label for="interestRateInput">Interest Rate (%)</label>
-                        <input class="u-full-width" type="text" value="5" id="interestRateInput" pattern="\d+(\.\d{2})?" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="six columns">
-                        <label for="portfolioInput">Current portfolio value</label>
-                        <input class="u-full-width" type="text" value="1000" id="portfolioInput" pattern="\d+">
-                    </div>
-                    <div class="three columns">&nbsp</div>
-                    <div class="three columns assumptions">
-                        <label for="withdrawalRateInput">Withdrawal Rate (%)</label>
-                        <input class="u-full-width" type="text" value="4" id="withdrawalRateInput" pattern="\d+(\.\d{2})?" required>
+                        <input class="u-full-width" type="text" value="4" id="interestRateInput" pattern="\d+(\.\d{2})?" required>
                     </div>
                 </div>
                 <input class="button-primary" type="submit" value="Submit" id="calculatorSubmit">
@@ -93,26 +82,21 @@
                 <table class="u-full-width">
                     <thead>
                         <tr>
-                            <th>Years Till Retirement</th>
-                            <th>Principal return</th>
-                            <th>Savings return</th>
-                            <th>Future Net Worth</th>
+                            <th>Your Contribution</th>
+                            <th>Government Bonus</th>
+                            <th>ISA Interest</th>
+                            <th>Lifetime ISA Total</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="yearsTillRetirement">&nbsp</td>
-                            <td id="principalReturn">&nbsp</td>
-                            <td id="savingsReturn">&nbsp</td>
-                            <td id="futureNetWorth">&nbsp</td>
+                            <td id="yourContribution">&nbsp</td>
+                            <td id="governmentBonus">&nbsp</td>
+                            <td id="ISAInterest">&nbsp</td>
+                            <td id="lifetimeISATotal">&nbsp</td>
                         </tr>
                     </tbody>
                 </table>
-            </div>
-
-            <div class="row">
-                <h3>Net Worth <span class="red">vs</span> <span class="green">Saved</span> <span class="red">vs</span> <span class="gold">ROI</span></h3>
-                <canvas id="retirementChart"></canvas>
             </div>
         </div>
     </div>
@@ -124,6 +108,6 @@
     </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="../js/calculatorScript.js"></script>
+<script src="../js/lifetimeISAScript.js"></script>
 
 </html>
