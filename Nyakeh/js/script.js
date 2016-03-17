@@ -50,7 +50,8 @@ myLineChart.Line(data, {
     scaleShowVerticalLines: false,
     scaleGridLineColor: "black",
     responsive: true,
-    maintainAspectRatio: true
+    maintainAspectRatio: true,
+    multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>"
 });
 
 var populateExpensesChart = function($month, $year) {
@@ -127,7 +128,12 @@ $.ajax({ url: 'Net_Worth_Function.php',
                         scaleShowVerticalLines: false,
                         scaleGridLineColor: "black",
                         responsive: true,
-                        maintainAspectRatio: true
+                        maintainAspectRatio: true,                        
+                        multiTooltipTemplate: "<%= datasetLabel %>: <%= value %>",
+                        scaleOverride : true,
+                        scaleSteps : 16,
+                        scaleStepWidth : 250,
+                        scaleStartValue : -250 
                     });
                 } catch(exception) {
                     console.log(exception);
