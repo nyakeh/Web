@@ -65,6 +65,11 @@ var populateExpensesChart = function($month, $year) {
                     try {
                         var results = JSON.parse(output);                        
                         var table = '<table><thead><tr><th>Category</th><th>Amount</th></tr></thead><tbody>';
+                        
+                        results.sort(function(a, b){
+                            return a.Amount - b.Amount;
+                        })
+                        
                         for (var i in results) {
                             r = Math.floor(Math.random() * 200);
                             g = Math.floor(Math.random() * 200);
@@ -79,8 +84,8 @@ var populateExpensesChart = function($month, $year) {
                             
                             table += '<tr><td>'+results[i].Category+'</td><td>£'+results[i].Amount+'</td></tr>';
                         }
-                        var myExpencesChart = new Chart(expensesChart);
-                        myExpencesChart.Pie(expensesData,{
+                        var myExpensesChart = new Chart(expensesChart);
+                        myExpensesChart.Pie(expensesData,{
                             percentageInnerCutout : 0,
                             responsive: true,
                             maintainAspectRatio: true
