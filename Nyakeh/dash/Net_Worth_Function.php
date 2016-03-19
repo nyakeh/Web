@@ -30,7 +30,7 @@
     $investmentAmounts = array();
     while($row = mysqli_fetch_assoc($sqlResult)){   
         $date = date_create($row['Date']);
-        $dates[] = date_format($date, 'M/y');;
+        $dates[] = date_format($date, 'M/y');
         $currentAmounts[] = $row['Current'];
         $graduateAmounts[] = $row['Graduate'];
         $pensionAmounts[] = $row['Pension'];

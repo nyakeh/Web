@@ -106,6 +106,7 @@ $.ajax({ url: 'Net_Worth_Function.php',
             success: function (output) {
                 try {
                     var results = JSON.parse(output);
+                    
                     for (var i in results.Data) {
                         var lineColour = results.Data[i].Colour + "1)";
                         var fillColour = results.Data[i].Colour+"0.2)"
@@ -139,6 +140,74 @@ $.ajax({ url: 'Net_Worth_Function.php',
                         scaleSteps : 16,
                         scaleStepWidth : 250,
                         scaleStartValue : -250 
+                    });
+                } catch(exception) {
+                    console.log(exception);
+                }
+            }
+});
+
+var savingRateDataset = []
+$.ajax({ url: 'Saving_Rate_Function.php',
+            type: 'post',
+            success: function (output) {
+                try {
+                    var results = JSON.parse(output);
+                    console.log("results.EarningData.Data: "+results.EarningData.Data);
+                    console.log("results.SpendingData.Data: "+results.SpendingData.Data);
+                    var earningLineColour = results.EarningData.Colour + "1)";
+                    var earningFillColour = results.EarningData.Colour + "0.5)";
+                    savingRateDataset.push({
+                        label: results.EarningData.Name,
+                        fillColor: earningFillColour,
+                        strokeColor: earningLineColour,
+                        highlightFill: earningFillColour,
+                        highlightStroke: earningLineColour,
+                        data: results.EarningData.Data
+                    });
+                    
+                    var spendingLineColour = results.SpendingData.Colour + "1)";
+                    var spendingFillColour = results.SpendingData.Colour + "0.5)";
+                    savingRateDataset.push({
+                        label: results.SpendingData.Name,
+                        fillColor: spendingFillColour,
+                        strokeColor: spendingLineColour,
+                        highlightFill: spendingFillColour,
+                        highlightStroke: spendingLineColour,
+                        data: results.SpendingData.Data
+                    });
+                    
+                    var savingRateData = {
+                        labels: results.Labels,
+                        Datasets: savingRateDataset
+                    };
+                    
+                    var data = {
+                    labels: ["January", "February", "March", "April", "May", "June", "July"],
+                    datasets: [
+                        {
+                            label: "My First dataset",
+                            fillColor: "rgba(220,220,220,0.5)",
+                            strokeColor: "rgba(220,220,220,0.8)",
+                            highlightFill: "rgba(220,220,220,0.75)",
+                            highlightStroke: "rgba(220,220,220,1)",
+                            data: [65.43, 59.20, 80, 81, 56, 55, 40]
+                        },
+                        {
+                            label: "My Second dataset",
+                            fillColor: "rgba(151,187,205,0.5)",
+                            strokeColor: "rgba(151,187,205,0.8)",
+                            highlightFill: "rgba(151,187,205,0.75)",
+                            highlightStroke: "rgba(151,187,205,1)",
+                            data: [28, 48, 40, 19, 86, 27, 90]
+                        }
+                    ]
+                    };
+
+                    var ctx = $("#savingRateChart").get(0).getContext("2d");
+                    var savingRateChart = new Chart(ctx);
+                    savingRateChart.Bar(data, {
+                        barShowStroke: false
                     });
                 } catch(exception) {
                     console.log(exception);
