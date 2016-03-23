@@ -3,8 +3,8 @@
     global $conn;
         
     $accountColour = array(
-        "Earning" => "rgba(71,121,101,",
-        "Spending" => "rgba(61,91,121,");
+        "Earned" => "rgba(71,121,101,",
+        "Spent" => "rgba(176,0,17,");
         
     class SavingRateAccount {
         public $Name = "";
@@ -28,11 +28,11 @@
     
     while($row = mysqli_fetch_assoc($earningResults)){
         $earningAmounts[] = $row['Value'];
-    }        
+    }
     $earning = new SavingRateAccount();
-    $earning->Name = "Earning";
+    $earning->Name = "Earned";
     $earning->Data = $earningAmounts;
-    $earning->Colour = $accountColour["Earning"];
+    $earning->Colour = $accountColour["Earned"];
     
     while($row = mysqli_fetch_assoc($spendingResults)){
         $date = date_create($row['Date']);
@@ -52,9 +52,9 @@
     }
     
     $spending = new SavingRateAccount();
-    $spending->Name = "Spending";
+    $spending->Name = "Spent";
     $spending->Data = $spendingMonthSums;
-    $spending->Colour = $accountColour["Spending"];
+    $spending->Colour = $accountColour["Spent"];
     
     $result = new SavingRateResult();
     $result->Labels = $dates;
