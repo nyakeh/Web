@@ -19,11 +19,12 @@
     }
     
     $expenseItems = array();
-    $spendingResults = mysqli_query($conn,"SELECT * FROM `current_account` WHERE Value < 0");
-    $earningResults = mysqli_query($conn,"SELECT * FROM `current_account` WHERE Description LIKE '%CODEWEAVERS%'");
+    $spendingResults = mysqli_query($conn,"SELECT * FROM `current_account` WHERE Value < 0 ORDER BY Date");
+    $earningResults = mysqli_query($conn,"SELECT * FROM `current_account` WHERE Description LIKE '%CODEWEAVERS%' ORDER BY Date");
     
     $earningAmounts = array();
     $spendingAmounts = array();
+    $dates = array();
     
     while($row = mysqli_fetch_assoc($earningResults)){
         $earningAmounts[] = $row['Value'];
@@ -38,9 +39,10 @@
         $month = date_format($date, 'M,y');
         
         if(isset($expenseItems[$month])) {
-            $expenseItems[$month] += $row['Value'];
+            $expenseItems[$month] += -$row['Value'];
         } else{
-            $expenseItems[$month] = $row['Value'];
+            $expenseItems[$month] = -$row['Value'];
+            $dates[] = $month;
         }
     }
   
@@ -55,7 +57,7 @@
     $spending->Colour = $accountColour["Spending"];
     
     $result = new SavingRateResult();
-    $result->Labels = ["Earning","Spending"];
+    $result->Labels = $dates;
     $result->EarningData = $earning;
     $result->SpendingData = $spending;
     

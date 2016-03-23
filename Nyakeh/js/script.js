@@ -56,7 +56,7 @@ myLineChart.Line(data, {
 
 var populateExpensesChart = function($month, $year) {
     $('#expensesChart').replaceWith('<canvas id="expensesChart" width="500" height="500"></canvas>');
-    var expensesChart = $("#expensesChart").get(0).getContext("2d");
+    var expensesCanvas = $("#expensesChart").get(0).getContext("2d");
     var expensesData = []
     $.ajax({ url: 'Expenses_Function.php',
                 data: { month: $month, year: $year },
@@ -84,8 +84,8 @@ var populateExpensesChart = function($month, $year) {
                             
                             table += '<tr><td>'+results[i].Category+'</td><td>£'+results[i].Amount+'</td></tr>';
                         }
-                        var myExpensesChart = new Chart(expensesChart);
-                        myExpensesChart.Pie(expensesData,{
+                        var expensesChart = new Chart(expensesCanvas);
+                        expensesChart.Pie(expensesData,{
                             percentageInnerCutout : 0,
                             responsive: true,
                             maintainAspectRatio: true
@@ -125,9 +125,9 @@ $.ajax({ url: 'Net_Worth_Function.php',
                         datasets: datasets
                     };
 
-                    var ctx = $("#netWorthChart").get(0).getContext("2d");
-                    var myLineChart = new Chart(ctx);
-                    myLineChart.Line(netWorthData, {
+                    var netWorthCanvas = $("#netWorthChart").get(0).getContext("2d");
+                    var netWorthChart = new Chart(netWorthCanvas);
+                    netWorthChart.Line(netWorthData, {
                         pointDotRadius: 4,
                         datasetStrokeWidth : 4,
                         bezierCurve: true,
@@ -179,34 +179,12 @@ $.ajax({ url: 'Saving_Rate_Function.php',
                     
                     var savingRateData = {
                         labels: results.Labels,
-                        Datasets: savingRateDataset
+                        datasets: savingRateDataset
                     };
                     
-                    var data = {
-                    labels: ["January", "February", "March", "April", "May", "June", "July"],
-                    datasets: [
-                        {
-                            label: "My First dataset",
-                            fillColor: "rgba(220,220,220,0.5)",
-                            strokeColor: "rgba(220,220,220,0.8)",
-                            highlightFill: "rgba(220,220,220,0.75)",
-                            highlightStroke: "rgba(220,220,220,1)",
-                            data: [65.43, 59.20, 80, 81, 56, 55, 40]
-                        },
-                        {
-                            label: "My Second dataset",
-                            fillColor: "rgba(151,187,205,0.5)",
-                            strokeColor: "rgba(151,187,205,0.8)",
-                            highlightFill: "rgba(151,187,205,0.75)",
-                            highlightStroke: "rgba(151,187,205,1)",
-                            data: [28, 48, 40, 19, 86, 27, 90]
-                        }
-                    ]
-                    };
-
-                    var ctx = $("#savingRateChart").get(0).getContext("2d");
-                    var savingRateChart = new Chart(ctx);
-                    savingRateChart.Bar(data, {
+                    var savingRateCanvas = $("#savingRateChart").get(0).getContext("2d");
+                    var savingRateChart = new Chart(savingRateCanvas);
+                    savingRateChart.Bar(savingRateData, {
                         barShowStroke: false
                     });
                 } catch(exception) {
