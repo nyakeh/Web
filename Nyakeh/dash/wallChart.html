@@ -36,13 +36,45 @@
             </div>
             <div class="container" id="overview">
                 <div class="row">
-                    <h3><span class="green">Made</span> - <span class="red">Spent</span> - <span class="gold">4% rule</span></h3>
+                    <h4><span class="green">Made</span> - <span class="red">Spent</span> - <span class="gold">4% rule</span></h4>
                     <canvas id="wallChart" class="twelve columns"></canvas>
                 </div>
             </div>
         </div>
     </div>
-    
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <h3>Control Panel</h3>
+            </div>
+            <h4>Add new entry</h4>
+            <form action="javascript:void(0);">
+                <div class="row">
+                    <div class="three columns">
+                        <label for="madeInput">Made</label>
+                        <input class="u-full-width" type="text" value="1000" id="madeInput" pattern="\d+(\.\d{1,2})?" required>
+                    </div>
+                    <div class="three columns">
+                        <label for="spentInput">Spent</label>
+                        <input class="u-full-width" type="text" value="1000" id="spentInput" pattern="\d+(\.\d{1,2})?" required>
+                    </div>
+                    <div class="three columns">
+                        <label for="investedInput">Invested</label>
+                        <input class="u-full-width" type="text" value="0" id="investedInput" pattern="\d+(\.\d{1,2})?" required>
+                    </div>
+                    <div class="three columns">
+                        <label for="dateInput">Date</label>
+                        <input class="u-full-width" type="date" value="" id="dateInput" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <input class="button-primary" type="submit" value="Submit" id="checkInSubmit">
+                </div>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <p>by <a href="https://twitter.com/nyakehrogers" target="_blank">@nyakehrogers</a></p>
