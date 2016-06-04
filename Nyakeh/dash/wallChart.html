@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wall Chart | Tracking monthly personal finance check-ins</title>
+    <meta name="theme-color" content="#477965">
+    <meta name="description" content="Tracking monthly personal finance check-ins.">
+    <meta name="author" content="Nyakeh Rogers">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="../img/favicon.ico" />
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/style_dashboard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-list">
+                <li class="navbar-item"><a class="navbar-link" href="index">Overview</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Wall Chart</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="calculator">Calculator</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="lifetimeISA">Lifetime ISA</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <h3>Wall Chart</h3>
+            </div>
+            <div class="container" id="overview">
+                <div class="row">
+                    <h3><span class="green">Made</span> - <span class="red">Spent</span> - <span class="gold">4% rule</span></h3>
+                    <canvas id="wallChart" class="twelve columns"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>by <a href="https://twitter.com/nyakehrogers" target="_blank">@nyakehrogers</a></p>
+        </div>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="../js/script.js"></script>
+
+</html>
