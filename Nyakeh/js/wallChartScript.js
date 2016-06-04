@@ -9,11 +9,22 @@ $('#wallChartCheckin').submit(function () {
     $.ajax({
         url: 'Wall_Chart.php',
         data: { date: date, made: made, spent: spent, invested: invested },
-        type: 'put',
+        type: 'post',
         success: function (output) {
-            console.log('Success feedback');
+            console.log('Success feedback:' + output);
         }
     });
 });
 
+var calculateRetirement = function() {
+	$.ajax({
+        url: 'Wall_Chart.php',
+        type: 'get',
+        success: function (output) {
+            console.log('Success feedback:' + output);
+        }
+    });
+};
+
 $('#dateInput').val(new Date().toISOString().slice(0, 10));
+calculateRetirement();
