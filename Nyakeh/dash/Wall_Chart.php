@@ -3,19 +3,19 @@
     global $conn;    
     
     class Entry {
-        public $Date = 0;
+        public $Date = '';
         public $Made = 0;
         public $Spent = 0;
         public $Invested = 0;
     }
     
-    if (isset($_POST['date'])) {
+    if (!empty(isset($_POST['date']))) {
         $date = $_POST['date'];    
         $made = $_POST['made'];
         $spent = $_POST['spent'];
         $invested = $_POST['invested'];
         
-        mysqli_query($conn,"INSERT INTO `wall_chart` (Date, Made, Spent, Invested) VALUES (".$date.",".$made.",".$spent.",".$invested.");");
+        mysqli_query($conn,"INSERT INTO `wall_chart` (Date, Made, Spent, Invested) VALUES ('".$date."',".$made.",".$spent.",".$invested.");");
     } else {
         $sqlResult = mysqli_query($conn,"SELECT * FROM `wall_chart` ORDER BY Date;");
         
