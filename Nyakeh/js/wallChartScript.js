@@ -1,3 +1,5 @@
+var summaryHidden = true;
+
 Number.prototype.formatMoney = function () {
     var n = this,
         c = 2,
@@ -150,6 +152,16 @@ var calculateRetirement = function () {
         }
     });
 };
+
+$('#summaryToggle').click(function() {
+    if (summaryHidden) {
+        $('.summary').show();
+        summaryHidden = false;
+    } else {
+        $('.summary').hide();
+        summaryHidden = true;
+    }
+});
 
 $('#dateInput').val(new Date().toISOString().slice(0, 10));
 calculateRetirement();

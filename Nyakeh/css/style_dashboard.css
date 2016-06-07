@@ -66,7 +66,7 @@ span.gold {
     margin-top: 1%;
 }
 
-.assumptions {
+.assumptions, .summary {
     display: none;
 }
 
