@@ -30,20 +30,20 @@ var calculateRetirement = function () {
         success: function (output) {
             try {
                 var results = JSON.parse(output);
-                var checkInTable = '<table><thead><tr><th>Date</th><th>Made</th><th>Spent</th><th>Invested</th></tr></thead><tbody>';
+                var datasetTable = '<table><thead><tr><th>Date</th><th>Made</th><th>Spent</th><th>Invested</th></tr></thead><tbody>';
                 var chartLabels = [];
                 var madeData = [];
                 var spentData = [];
                 var investedData = [];
                 for (var i in results) {
-                    checkInTable += '<tr><td>' + results[i].Date + '</td><td>£' + results[i].Made + '</td><td>£' + results[i].Spent + '</td><td>£' + results[i].Invested + '</td></tr>';
+                    datasetTable += '<tr><td>' + results[i].Date + '</td><td>£' + results[i].Made + '</td><td>£' + results[i].Spent + '</td><td>£' + results[i].Invested + '</td></tr>';
                     chartLabels.push(results[i].Date)
                     madeData.push(results[i].Made)
                     spentData.push(results[i].Spent)
                     investedData.push(results[i].Invested)
                 }
-                checkInTable += '</tbody></table>';
-                $("#checkInTable").html(checkInTable);
+                datasetTable += '</tbody></table>';
+                $("#datasetTable").html(datasetTable);
                 var data = {
                     labels: chartLabels,
                     datasets: [
@@ -153,12 +153,12 @@ var calculateRetirement = function () {
     });
 };
 
-$('#summaryToggle').click(function() {
+$('#datasetToggle').click(function() {
     if (summaryHidden) {
-        $('.summary').show();
+        $('.dataset').show();
         summaryHidden = false;
     } else {
-        $('.summary').hide();
+        $('.dataset').hide();
         summaryHidden = true;
     }
 });
