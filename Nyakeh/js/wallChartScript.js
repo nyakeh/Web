@@ -10,6 +10,10 @@ Number.prototype.formatMoney = function () {
     return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? "." + Math.abs(n - i).toFixed(c).slice(2) : "");
 };
 
+var percentageFrom = function ($value){
+    return ($value * 100).toFixed(0)  +  '%';
+}
+
 var extractMonth = function ($date) {
     var month = {
         "01": "January",
@@ -167,23 +171,27 @@ var initialise = function () {
                 $("#movingAveragesTable").html(movingAveragesTable);
 
                 var changeLogTable = '<table><tbody>';
-                var headerRow = '<thead><tr>'
-                var spentRow = '<tr>'
-                var madeRow = '<tr>'
+                var headerRow = '<tr><thead><td></td>'
+                var spentAmountRow = '<tr><td>Spent (£)</td>'
+                var madeAmountRow = '<tr><td>Made (£)</td>'
+                var spentPercentRow = '<tr><td>Spent (%)</td>'
+                var madePercentRow = '<tr><td>Made (%)</td>'
                 var monthCount = 1;
                 for (var i = spentData.length; i--;) {
                     if (monthCount > 12) {
                         break;
                     }
                     headerRow += '<td>' + (extractMonth(checkInDates[i])) + '</td>';
-                    spentRow += '<td>' + (parseInt(spentData[i]) - parseInt(spentData[i - 1])) + '</td>';
-                    madeRow += '<td>' + (parseInt(madeData[i]) - parseInt(madeData[i - 1])) + '</td>';
+                    spentAmountRow += '<td>' + (parseInt(spentData[i]) - parseInt(spentData[i - 1])) + '</td>';
+                    madeAmountRow += '<td>' + (parseInt(madeData[i]) - parseInt(madeData[i - 1])) + '</td>';
+                    spentPercentRow += '<td>' + percentageFrom((parseInt(spentData[i]) / parseInt(spentData[i - 1]))-1) + '</td>';
+                    madePercentRow += '<td>' + percentageFrom((parseInt(madeData[i]) / parseInt(madeData[i - 1]))-1) + '</td>';
                     monthCount++;
                 }
                 headerRow += '</tr></thead>';
-                spentRow += '</tr>';
-                madeRow += '</tr>';
-                changeLogTable += headerRow + spentRow + madeRow + '</tbody></table>';
+                spentAmountRow += '</tr>';
+                madeAmountRow += '</tr>';
+                changeLogTable += headerRow + spentPercentRow + spentAmountRow + madePercentRow + madeAmountRow + '</tbody></table>';
                 $("#changeLogTable").html(changeLogTable);
             } catch (exception) {
                 console.log(exception);
