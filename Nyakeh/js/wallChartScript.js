@@ -10,6 +10,24 @@ Number.prototype.formatMoney = function () {
     return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? "." + Math.abs(n - i).toFixed(c).slice(2) : "");
 };
 
+var extractMonth = function ($date) {
+    var month = {
+        "01": "January",
+        "02": "February",
+        "03": "March",
+        "04": "April",
+        "05": "May",
+        "06": "June",
+        "07": "July",
+        "08": "August",
+        "09": "September",
+        "10": "October",
+        "11": "November",
+        "12": "December"
+    };
+    return month[$date.substring(5, 7)];
+}
+
 $('#wallChartCheckin').submit(function () {
     var made = $('#madeInput').val();
     var spent = $('#spentInput').val();
@@ -31,13 +49,13 @@ var initialise = function () {
             try {
                 var results = JSON.parse(output);
                 var datasetTable = '<table><thead><tr><th>Date</th><th>Made</th><th>Spent</th><th>Invested</th></tr></thead><tbody>';
-                var chartLabels = [];
+                var checkInDates = [];
                 var madeData = [];
                 var spentData = [];
                 var investedData = [];
                 for (var i in results) {
                     datasetTable += '<tr><td>' + results[i].Date + '</td><td>£' + results[i].Made + '</td><td>£' + results[i].Spent + '</td><td>£' + results[i].Invested + '</td></tr>';
-                    chartLabels.push(results[i].Date)
+                    checkInDates.push(results[i].Date)
                     madeData.push(results[i].Made)
                     spentData.push(results[i].Spent)
                     investedData.push(results[i].Invested)
@@ -45,7 +63,7 @@ var initialise = function () {
                 datasetTable += '</tbody></table>';
                 $("#datasetTable").html(datasetTable);
                 var data = {
-                    labels: chartLabels,
+                    labels: checkInDates,
                     datasets: [
                         {
                             label: "Made",
@@ -120,7 +138,7 @@ var initialise = function () {
                         responsive: true
                     }
                 });
-                
+
 
                 var movingAveragesTable = '<table><thead><tr><th>Subset</th><th>Made</th><th>Spent</th><th>Invested</th></tr></thead><tbody>';
                 if (results.length >= 3) {
@@ -129,7 +147,7 @@ var initialise = function () {
                     var threeMonthInvestedAverage = (parseInt(investedData[investedData.length - 1]) + parseInt(investedData[investedData.length - 2]) + parseInt(investedData[investedData.length - 3])) / 3;
                     movingAveragesTable += '<tr><td>3 Months</td><td>£' + threeMonthMadeAverage.formatMoney() + '</td><td>£' + threeMonthSpentAverage.formatMoney() + '</td><td>£' + threeMonthInvestedAverage.formatMoney() + '</td></tr>';
 
-                    
+
                     if (results.length >= 6) {
                         var sixMonthMadeAverage = (parseInt(madeData[madeData.length - 1]) + parseInt(madeData[madeData.length - 2]) + parseInt(madeData[madeData.length - 3]) + parseInt(madeData[madeData.length - 4]) + parseInt(madeData[madeData.length - 5]) + parseInt(madeData[madeData.length - 6])) / 6;
                         var sixMonthSpentAverage = (parseInt(spentData[spentData.length - 1]) + parseInt(spentData[spentData.length - 2]) + parseInt(spentData[spentData.length - 3]) + parseInt(spentData[spentData.length - 4]) + parseInt(spentData[spentData.length - 5]) + parseInt(spentData[spentData.length - 6])) / 6;
@@ -147,17 +165,25 @@ var initialise = function () {
                 }
                 movingAveragesTable += '</tbody></table>';
                 $("#movingAveragesTable").html(movingAveragesTable);
-                
-                var changeLogTable = '<table><tbody><tr>';
+
+                var changeLogTable = '<table><tbody>';
+                var headerRow = '<thead><tr>'
+                var spentRow = '<tr>'
+                var madeRow = '<tr>'
                 var monthCount = 1;
-                for(var i = spentData.length; i--;){
-                    if (monthCount > 12) { 
-                        break; 
+                for (var i = spentData.length; i--;) {
+                    if (monthCount > 12) {
+                        break;
                     }
-                    changeLogTable += '<td>' + (parseInt(spentData[i])-parseInt(spentData[i - 1])) + '</td>';
+                    headerRow += '<td>' + (extractMonth(checkInDates[i])) + '</td>';
+                    spentRow += '<td>' + (parseInt(spentData[i]) - parseInt(spentData[i - 1])) + '</td>';
+                    madeRow += '<td>' + (parseInt(madeData[i]) - parseInt(madeData[i - 1])) + '</td>';
                     monthCount++;
                 }
-                changeLogTable += '</tr></tbody></table>';
+                headerRow += '</tr></thead>';
+                spentRow += '</tr>';
+                madeRow += '</tr>';
+                changeLogTable += headerRow + spentRow + madeRow + '</tbody></table>';
                 $("#changeLogTable").html(changeLogTable);
             } catch (exception) {
                 console.log(exception);
@@ -166,7 +192,7 @@ var initialise = function () {
     });
 };
 
-$('#datasetToggle').click(function() {
+$('#datasetToggle').click(function () {
     if (summaryHidden) {
         $('.dataset').show();
         summaryHidden = false;
