@@ -23,7 +23,7 @@ $('#wallChartCheckin').submit(function () {
     });
 });
 
-var calculateRetirement = function () {
+var initialise = function () {
     $.ajax({
         url: 'Wall_Chart.php',
         type: 'get',
@@ -121,6 +121,7 @@ var calculateRetirement = function () {
                     }
                 });
                 
+
                 var movingAveragesTable = '<table><thead><tr><th>Subset</th><th>Made</th><th>Spent</th><th>Invested</th></tr></thead><tbody>';
                 if (results.length >= 3) {
                     var threeMonthMadeAverage = (parseInt(madeData[madeData.length - 1]) + parseInt(madeData[madeData.length - 2]) + parseInt(madeData[madeData.length - 3])) / 3;
@@ -128,6 +129,7 @@ var calculateRetirement = function () {
                     var threeMonthInvestedAverage = (parseInt(investedData[investedData.length - 1]) + parseInt(investedData[investedData.length - 2]) + parseInt(investedData[investedData.length - 3])) / 3;
                     movingAveragesTable += '<tr><td>3 Months</td><td>£' + threeMonthMadeAverage.formatMoney() + '</td><td>£' + threeMonthSpentAverage.formatMoney() + '</td><td>£' + threeMonthInvestedAverage.formatMoney() + '</td></tr>';
 
+                    
                     if (results.length >= 6) {
                         var sixMonthMadeAverage = (parseInt(madeData[madeData.length - 1]) + parseInt(madeData[madeData.length - 2]) + parseInt(madeData[madeData.length - 3]) + parseInt(madeData[madeData.length - 4]) + parseInt(madeData[madeData.length - 5]) + parseInt(madeData[madeData.length - 6])) / 6;
                         var sixMonthSpentAverage = (parseInt(spentData[spentData.length - 1]) + parseInt(spentData[spentData.length - 2]) + parseInt(spentData[spentData.length - 3]) + parseInt(spentData[spentData.length - 4]) + parseInt(spentData[spentData.length - 5]) + parseInt(spentData[spentData.length - 6])) / 6;
@@ -145,7 +147,18 @@ var calculateRetirement = function () {
                 }
                 movingAveragesTable += '</tbody></table>';
                 $("#movingAveragesTable").html(movingAveragesTable);
-
+                
+                var changeLogTable = '<table><tbody><tr>';
+                var monthCount = 1;
+                for(var i = spentData.length; i--;){
+                    if (monthCount > 12) { 
+                        break; 
+                    }
+                    changeLogTable += '<td>' + (parseInt(spentData[i])-parseInt(spentData[i - 1])) + '</td>';
+                    monthCount++;
+                }
+                changeLogTable += '</tr></tbody></table>';
+                $("#changeLogTable").html(changeLogTable);
             } catch (exception) {
                 console.log(exception);
             }
@@ -164,4 +177,4 @@ $('#datasetToggle').click(function() {
 });
 
 $('#dateInput').val(new Date().toISOString().slice(0, 10));
-calculateRetirement();
+initialise();
