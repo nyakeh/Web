@@ -10,8 +10,8 @@ Number.prototype.formatMoney = function () {
     return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? "." + Math.abs(n - i).toFixed(c).slice(2) : "");
 };
 
-var percentageFrom = function ($value){
-    return ($value * 100).toFixed(0)  +  '%';
+var percentageFrom = function ($value) {
+    return ($value * 100).toFixed(0) + '%';
 }
 
 var extractMonth = function ($date) {
@@ -143,14 +143,12 @@ var initialise = function () {
                     }
                 });
 
-
                 var movingAveragesTable = '<table><thead><tr><th>Subset</th><th>Made</th><th>Spent</th><th>Invested</th></tr></thead><tbody>';
                 if (results.length >= 3) {
                     var threeMonthMadeAverage = (parseInt(madeData[madeData.length - 1]) + parseInt(madeData[madeData.length - 2]) + parseInt(madeData[madeData.length - 3])) / 3;
                     var threeMonthSpentAverage = (parseInt(spentData[spentData.length - 1]) + parseInt(spentData[spentData.length - 2]) + parseInt(spentData[spentData.length - 3])) / 3;
                     var threeMonthInvestedAverage = (parseInt(investedData[investedData.length - 1]) + parseInt(investedData[investedData.length - 2]) + parseInt(investedData[investedData.length - 3])) / 3;
                     movingAveragesTable += '<tr><td>3 Months</td><td>£' + threeMonthMadeAverage.formatMoney() + '</td><td>£' + threeMonthSpentAverage.formatMoney() + '</td><td>£' + threeMonthInvestedAverage.formatMoney() + '</td></tr>';
-
 
                     if (results.length >= 6) {
                         var sixMonthMadeAverage = (parseInt(madeData[madeData.length - 1]) + parseInt(madeData[madeData.length - 2]) + parseInt(madeData[madeData.length - 3]) + parseInt(madeData[madeData.length - 4]) + parseInt(madeData[madeData.length - 5]) + parseInt(madeData[madeData.length - 6])) / 6;
@@ -171,21 +169,21 @@ var initialise = function () {
                 $("#movingAveragesTable").html(movingAveragesTable);
 
                 var changeLogTable = '<table><tbody>';
-                var headerRow = '<tr><thead><td></td>'
-                var spentAmountRow = '<tr><td>Spent (£)</td>'
-                var madeAmountRow = '<tr><td>Made (£)</td>'
-                var spentPercentRow = '<tr><td>Spent (%)</td>'
-                var madePercentRow = '<tr><td>Made (%)</td>'
+                var headerRow = '<thead><tr><th></th>'
+                var spentAmountRow = '<tr><td>Spent</td>'
+                var madeAmountRow = '<tr><td>Made</td>'
+                var spentPercentRow = '<tr><td>Spent</td>'
+                var madePercentRow = '<tr><td>Made</td>'
                 var monthCount = 1;
                 for (var i = spentData.length; i--;) {
                     if (monthCount > 12) {
                         break;
                     }
-                    headerRow += '<td>' + (extractMonth(checkInDates[i])) + '</td>';
+                    headerRow += '<th>' + (extractMonth(checkInDates[i])) + '</th>';
                     spentAmountRow += '<td>' + (parseInt(spentData[i]) - parseInt(spentData[i - 1])) + '</td>';
                     madeAmountRow += '<td>' + (parseInt(madeData[i]) - parseInt(madeData[i - 1])) + '</td>';
-                    spentPercentRow += '<td>' + percentageFrom((parseInt(spentData[i]) / parseInt(spentData[i - 1]))-1) + '</td>';
-                    madePercentRow += '<td>' + percentageFrom((parseInt(madeData[i]) / parseInt(madeData[i - 1]))-1) + '</td>';
+                    spentPercentRow += '<td>' + percentageFrom((parseInt(spentData[i]) / parseInt(spentData[i - 1])) - 1) + '</td>';
+                    madePercentRow += '<td>' + percentageFrom((parseInt(madeData[i]) / parseInt(madeData[i - 1])) - 1) + '</td>';
                     monthCount++;
                 }
                 headerRow += '</tr></thead>';
@@ -193,6 +191,14 @@ var initialise = function () {
                 madeAmountRow += '</tr>';
                 changeLogTable += headerRow + spentPercentRow + spentAmountRow + madePercentRow + madeAmountRow + '</tbody></table>';
                 $("#changeLogTable").html(changeLogTable);
+
+                $('#changeLogTable td').each(function () {
+                    if (parseInt($(this).text()) > 0) {
+                        $(this).css('color', '#b00011');
+                    } else if (parseInt($(this).text()) < 0) {
+                        $(this).css('color', '#477965');
+                    }
+                });
             } catch (exception) {
                 console.log(exception);
             }
