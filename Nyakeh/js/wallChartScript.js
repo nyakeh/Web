@@ -34,7 +34,7 @@ var extractMonth = function ($date) {
 
 var populateFuturePredictions = function ($timePeriod, $MonthlySpending) {    
     var annualSpending = ($MonthlySpending * 12);
-    $("#futurePredictions").append("<p>At " + $timePeriod + " pace... <br> You're annual spending will be <b>£" + annualSpending.formatMoney() + "</b>.</p>");
+    $("#futurePredictions").append("<p>At " + $timePeriod + " pace... <br> Your annual spending will be <b>£" + annualSpending.formatMoney() + "</b>.</p>");
 }
 
 $('#wallChartCheckin').submit(function () {
