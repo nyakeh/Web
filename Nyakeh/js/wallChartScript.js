@@ -32,6 +32,11 @@ var extractMonth = function ($date) {
     return month[$date.substring(5, 7)];
 }
 
+var populateFuturePredictions = function ($lastMonthsSpentSum) {    
+    var annualSpending = ($lastMonthsSpentSum * 12);
+    $("#futurePredictions").html("At last months pace... <br> You're annual spending will be <b>£" + annualSpending.formatMoney() + "</b>.");
+}
+
 $('#wallChartCheckin').submit(function () {
     var made = $('#madeInput').val();
     var spent = $('#spentInput').val();
@@ -168,12 +173,11 @@ var initialise = function () {
                 movingAveragesTable += '</tbody></table>';
                 $("#movingAveragesTable").html(movingAveragesTable);
 
-                var changeLogTable = '<table><tbody>';
-                var headerRow = '<thead><tr><th></th>'
-                var spentAmountRow = '<tr><td>Spent</td>'
-                var madeAmountRow = '<tr><td>Made</td>'
-                var spentPercentRow = '<tr><td>Spent</td>'
-                var madePercentRow = '<tr><td>Made</td>'
+                var headerRow = '<thead><tr><th></th>';
+                var spentAmountRow = '<tr><td>Spent</td>';
+                var madeAmountRow = '<tr><td>Made</td>';
+                var spentPercentRow = '<tr><td>Spent</td>';
+                var madePercentRow = '<tr><td>Made</td>';
                 var monthCount = 1;
                 for (var i = spentData.length; i--;) {
                     if (monthCount > 12) {
@@ -189,7 +193,7 @@ var initialise = function () {
                 headerRow += '</tr></thead>';
                 spentAmountRow += '</tr>';
                 madeAmountRow += '</tr>';
-                changeLogTable += headerRow + spentPercentRow + spentAmountRow + madePercentRow + madeAmountRow + '</tbody></table>';
+                var changeLogTable = '<table><tbody>' + headerRow + spentPercentRow + spentAmountRow + madePercentRow + madeAmountRow + '</tbody></table>';
                 $("#changeLogTable").html(changeLogTable);
 
                 $('#changeLogTable td').each(function () {
@@ -199,6 +203,8 @@ var initialise = function () {
                         $(this).css('color', '#477965');
                     }
                 });
+
+                populateFuturePredictions(parseInt(spentData[spentData.length - 1]));
             } catch (exception) {
                 console.log(exception);
             }
