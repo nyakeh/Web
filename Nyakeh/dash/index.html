@@ -22,9 +22,6 @@
         <div class="container">
             <ul class="navbar-list">
                 <li class="navbar-item"><a class="navbar-link" href="#">Overview</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#expenses">Expenses</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#netWorth">Net Worth</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#savingRate">Saving Rate</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="wallChart">Wall Chart</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="calculator">Calculator</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="lifetimeISA">Lifetime ISA</a></li>
@@ -47,7 +44,7 @@
     </div>
 
     <div class="section">
-        <div class="container" id="expenses">
+        <div class="container">
             <div class="row">
                 <h3 class="six columns">Expenses breakdown for</h3>
                 <select id="expensesMonthSelector" onchange="changeExpensesMonth(this.value)" class="three columns">
@@ -79,7 +76,7 @@
         </div>
     </div>
 
-    <div class="container" id="netWorth">
+    <div class="container">
         <div class="row">
             <h3>Net Worth</h3>
             <canvas id="netWorthChart" class="twelve columns"></canvas>
@@ -87,7 +84,7 @@
     </div>
 
     <div class="section">
-        <div class="container" id="savingRate">
+        <div class="container">
             <div class="row">
                 <h3>Saving Rate</h3>
                 <canvas id="savingRateChart" class="twelve columns"></canvas>
