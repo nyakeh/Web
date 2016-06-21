@@ -32,9 +32,9 @@ var extractMonth = function ($date) {
     return month[$date.substring(5, 7)];
 }
 
-var populateFuturePredictions = function ($lastMonthsSpentSum) {    
-    var annualSpending = ($lastMonthsSpentSum * 12);
-    $("#futurePredictions").html("At last months pace... <br> You're annual spending will be <b>£" + annualSpending.formatMoney() + "</b>.");
+var populateFuturePredictions = function ($timePeriod, $MonthlySpending) {    
+    var annualSpending = ($MonthlySpending * 12);
+    $("#futurePredictions").append("<p>At " + $timePeriod + " pace... <br> You're annual spending will be <b>£" + annualSpending.formatMoney() + "</b>.</p>");
 }
 
 $('#wallChartCheckin').submit(function () {
@@ -155,18 +155,22 @@ var initialise = function () {
                     var threeMonthInvestedAverage = (parseInt(investedData[investedData.length - 1]) + parseInt(investedData[investedData.length - 2]) + parseInt(investedData[investedData.length - 3])) / 3;
                     movingAveragesTable += '<tr><td>3 Months</td><td>£' + threeMonthMadeAverage.formatMoney() + '</td><td>£' + threeMonthSpentAverage.formatMoney() + '</td><td>£' + threeMonthInvestedAverage.formatMoney() + '</td></tr>';
 
+                    populateFuturePredictions("<b>last</b> months", parseInt(spentData[spentData.length - 1]));
+                    populateFuturePredictions("<b>three</b> months", threeMonthSpentAverage);
+
                     if (results.length >= 6) {
                         var sixMonthMadeAverage = (parseInt(madeData[madeData.length - 1]) + parseInt(madeData[madeData.length - 2]) + parseInt(madeData[madeData.length - 3]) + parseInt(madeData[madeData.length - 4]) + parseInt(madeData[madeData.length - 5]) + parseInt(madeData[madeData.length - 6])) / 6;
                         var sixMonthSpentAverage = (parseInt(spentData[spentData.length - 1]) + parseInt(spentData[spentData.length - 2]) + parseInt(spentData[spentData.length - 3]) + parseInt(spentData[spentData.length - 4]) + parseInt(spentData[spentData.length - 5]) + parseInt(spentData[spentData.length - 6])) / 6;
                         var sixMonthInvestedAverage = (parseInt(investedData[investedData.length - 1]) + parseInt(investedData[investedData.length - 2]) + parseInt(investedData[investedData.length - 3]) + parseInt(investedData[investedData.length - 4]) + parseInt(investedData[investedData.length - 5]) + parseInt(investedData[investedData.length - 6])) / 6;
-
                         movingAveragesTable += '<tr><td>6 Months</td><td>£' + sixMonthMadeAverage.formatMoney() + '</td><td>£' + sixMonthSpentAverage.formatMoney() + '</td><td>£' + sixMonthInvestedAverage.formatMoney() + '</td></tr>';
+                        
+                        populateFuturePredictions("<b>six</b> months", sixMonthSpentAverage);
                         if (results.length >= 12) {
                             var twelveMonthMadeAverage = (parseInt(madeData[madeData.length - 1]) + parseInt(madeData[madeData.length - 2]) + parseInt(madeData[madeData.length - 3]) + parseInt(madeData[madeData.length - 4]) + parseInt(madeData[madeData.length - 5]) + parseInt(madeData[madeData.length - 6]) + parseInt(madeData[madeData.length - 7]) + parseInt(madeData[madeData.length - 8]) + parseInt(madeData[madeData.length - 9]) + parseInt(madeData[madeData.length - 10]) + parseInt(madeData[madeData.length - 11]) + parseInt(madeData[madeData.length - 12])) / 12;
                             var twelveMonthSpentAverage = (parseInt(spentData[spentData.length - 1]) + parseInt(spentData[spentData.length - 2]) + parseInt(spentData[spentData.length - 3]) + parseInt(spentData[spentData.length - 4]) + parseInt(spentData[spentData.length - 5]) + parseInt(spentData[spentData.length - 6]) + parseInt(spentData[spentData.length - 7]) + parseInt(spentData[spentData.length - 8]) + parseInt(spentData[spentData.length - 9]) + parseInt(spentData[spentData.length - 10]) + parseInt(spentData[spentData.length - 11]) + parseInt(spentData[spentData.length - 12])) / 12;
                             var twelveMonthInvestedAverage = (parseInt(investedData[investedData.length - 1]) + parseInt(investedData[investedData.length - 2]) + parseInt(investedData[investedData.length - 3]) + parseInt(investedData[investedData.length - 4]) + parseInt(investedData[investedData.length - 5]) + parseInt(investedData[investedData.length - 6]) + parseInt(investedData[investedData.length - 7]) + parseInt(investedData[investedData.length - 8]) + parseInt(investedData[investedData.length - 9]) + parseInt(investedData[investedData.length - 10]) + parseInt(investedData[investedData.length - 11]) + parseInt(investedData[investedData.length - 12])) / 12;
-
                             movingAveragesTable += '<tr><td>12 Months</td><td>£' + twelveMonthMadeAverage.formatMoney() + '</td><td>£' + twelveMonthSpentAverage.formatMoney() + '</td><td>£' + twelveMonthInvestedAverage.formatMoney() + '</td></tr>';
+                            populateFuturePredictions("<b>twelve</b> months", twelveMonthSpentAverage);
                         }
                     }
                 }
@@ -203,8 +207,6 @@ var initialise = function () {
                         $(this).css('color', '#477965');
                     }
                 });
-
-                populateFuturePredictions(parseInt(spentData[spentData.length - 1]));
             } catch (exception) {
                 console.log(exception);
             }
