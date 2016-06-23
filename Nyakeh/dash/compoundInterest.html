@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Dashboard | Lifetime ISA calculator</title>
+    <title>Dashboard | Compound interest calculator</title>
     <meta name="theme-color" content="#477965">
-    <meta name="description" content="Lifetime ISA calculator">
+    <meta name="description" content="Compound interest calculator">
     <meta name="author" content="Nyakeh Rogers">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/skeleton.css">
     <link rel="stylesheet" href="../css/style_dashboard.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 </head>
 
 <body>
@@ -24,8 +24,8 @@
                 <li class="navbar-item"><a class="navbar-link" href="index">Overview</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="wallChart">Wall Chart</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="calculator">Calculator</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#">Lifetime ISA</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="compoundInterest">Compound</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="lifetimeISA">Lifetime ISA</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#">Compound</a></li>
             </ul>
         </div>
     </nav>
@@ -33,13 +33,13 @@
     <div class="section">
         <div class="container">
             <div class="row">
-                <h3>Lifetime ISA calculator</h3>
+                <h3>Compound Interest Calculator</h3>
             </div>
             <form action="javascript:void(0);">
                 <div class="row">
                     <div class="six columns">
-                        <label for="ageInput">Age on 6 April 2017</label>
-                        <input class="u-full-width" type="text" value="24" id="ageInput" pattern="\d+" required>
+                        <label for="monthlyInvestmentInput">Monthly Investment</label>
+                        <input class="u-full-width" type="text" value="540" id="monthlyInvestmentInput" pattern="\d+(\.\d{1,2})?" required>
                     </div>
                     <div class="three columns">&nbsp</div>
                     <div class="three columns">
@@ -48,14 +48,21 @@
                 </div>
                 <div class="row">
                     <div class="six columns">
-                        <label for="ContributionInput">Monthly contribution</label>
-                        <input class="u-full-width" type="text" value="333.33" id="ContributionInput" pattern="\d+(\.\d{1,2})?" required>
+                        <label for="yearsInvestingForInput">Years investing for</label>
+                        <input class="u-full-width" type="text" value="1" id="yearsInvestingForInput" pattern="\d+" required>
                     </div>
                     <div class="three columns">&nbsp</div>
                     <div class="three columns assumptions">
                         <label for="interestRateInput">Interest Rate (%)</label>
                         <input class="u-full-width" type="text" value="5" id="interestRateInput" pattern="\d+(\.\d{1,2})?" required>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="six columns">
+                        <label for="yearsToGrowInput">Years to grow</label>
+                        <input class="u-full-width" type="text" value="10" id="yearsToGrowInput" pattern="\d+">
+                    </div>
+                    <div class="six columns">&nbsp</div>
                 </div>
                 <input class="button-primary" type="submit" value="Submit" id="calculatorSubmit">
             </form>
@@ -65,21 +72,24 @@
                 <table class="u-full-width">
                     <thead>
                         <tr>
-                            <th>Personal Contribution</th>
-                            <th>Government Bonus</th>
-                            <th>ISA Interest Earned</th>
-                            <th>Lifetime ISA Total</th>
+                            <th>Total Contribution</th>
+                            <th>Investment return</th>
+                            <th>Future Sum</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="personalContribution">&nbsp</td>
-                            <td id="governmentBonus">&nbsp</td>
-                            <td id="ISAInterest">&nbsp</td>
-                            <td id="lifetimeISATotal">&nbsp</td>
+                            <td id="totalContribution">&nbsp</td>
+                            <td id="investmentReturn">&nbsp</td>
+                            <td id="futureSum">&nbsp</td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="row">
+                <h3>Chart</h3>
+                <canvas id="compoundInterestChart"></canvas>
             </div>
         </div>
     </div>
@@ -91,6 +101,6 @@
     </footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="../js/lifetimeISAScript.js"></script>
+<script src="../js/compoundInterestScript.js"></script>
 
 </html>
