@@ -20,15 +20,20 @@ var calculateCompoundInterest = function() {
     var yearsInvesting = $('#yearsInvestingForInput').val();
     var yearsToGrow = $('#yearsToGrowInput').val();
     var interestRate = $('#interestRateInput').val() / 100;
-
     var monthsInvesting = yearsInvesting * MONTHS_PER_YEAR;
-    var totalContribution = monthlyInvestment * monthsInvesting;
-
+    
     var monthlyInterestRate = (interestRate / MONTHS_PER_YEAR);
-    var termInterestRate = Math.pow((1 + monthlyInterestRate), monthsInvesting);
-    var compoundTermInterestRate = (termInterestRate - 1) / monthlyInterestRate;
-    var futureSum = monthlyInvestment * compoundTermInterestRate;
+    var investingTermInterestRate = Math.pow((1 + monthlyInterestRate), monthsInvesting);
+    var compoundTermInterestRate = (investingTermInterestRate - 1) / monthlyInterestRate;
+    var investmentPeriodSum = monthlyInvestment * compoundTermInterestRate;
+
+    var monthsGrowingInvestment = MONTHS_PER_YEAR * yearsToGrow;
+    var growthTermInterestRate = Math.pow((1 + monthlyInterestRate), monthsGrowingInvestment);
+    var futureSum = investmentPeriodSum * growthTermInterestRate;
+
+    var totalContribution = monthlyInvestment * monthsInvesting;
     var investmentReturn = futureSum - totalContribution;
+
     $('#totalContribution').text('£' + totalContribution.formatMoney());
     $('#investmentReturn').text('£' + investmentReturn.formatMoney());
     $('#futureSum').text('£' + futureSum.formatMoney());
