@@ -15,7 +15,7 @@ span.green {
     color: #477965;
 }
 
-span.red {
+span.red, #error_feedback {
     color: #b00011;
 }
 
