@@ -35,8 +35,10 @@ var extractMonth = function ($date) {
 var populateFuturePredictions = function ($timePeriod, $Spending, $Income) {
     var annualSpending = ($Spending * 12);
     var annualIncome = ($Income * 12);
+    var profit = (annualIncome - annualSpending);
     $("#futurePredictions").append("<p>At " + $timePeriod + " pace... <br> Annual spending will be <span class=\"red\"><b>£" + annualSpending.formatMoney() +
-        "</b></span>. <br> Annual net income will be <span class=\"green\"><b>£" + annualIncome.formatMoney() + "</b></span>.</p>");
+        "</b></span>. <br> Annual net income will be <span class=\"green\"><b>£" + annualIncome.formatMoney() + "</b></span>." +
+        " <br> Leaving <span class=\"gold\"><b>£" + profit.formatMoney() + "</b></span> Profit.</p>");
 }
 
 $('#wallChartCheckin').submit(function () {
